@@ -1,0 +1,41 @@
+{
+    "name": "Clone",
+    "description": "A PostCSS Front-End clone used to init new projects.",
+    "version": "0.3.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/joshdrink/clone"
+    },
+    "license": "CC-BY-4.0",
+    "devDependencies": {
+        "npm-watch": "latest",
+        "postcss-cli": "latest",
+        "node-notifier": "latest",
+        "postcss-import": "latest",
+        "postcss-mixins": "latest",
+        "postcss-nested": "latest",
+        "autoprefixer": "latest",
+        "postcss-simple-vars": "latest",
+        "postcss-color-function": "latest",
+        "cssnano": "latest"
+    },
+    "watch": {
+        "post": {
+            "patterns": ["src", "post"],
+            "extensions": "css"
+        }
+    },
+    "scripts": {
+        "fontawesome": "cp bower_components/fontawesome/css/font-awesome.min.css vendor/ && cp -r bower_components/fontawesome/fonts/* fonts",
+        "ionicons": "cp bower_components/ionicons/css/ionicons.min.css vendor/ && cp bower_components/ionicons/fonts/* fonts",
+        "jquery": "cp bower_components/jquery/dist/jquery.min.js vendor/",
+        "matchMedia": "cp bower_components/matchMedia/matchMedia.js vendor/",
+        "modernizr": "cd bower_components/modernizr/ && npm install && node ./bin/modernizr -c ../../modernizr-config.json && cd ../../ && cp bower_components/modernizr/modernizr.js vendor/",
+        "normalize": "cp bower_components/normalize.css/normalize.css vendor/",
+        "slick": "cp bower_components/slick-carousel/slick/slick.css vendor/ && cp bower_components/slick-carousel/slick/slick.js vendor/ && cp bower_components/slick-carousel/slick/slick-theme.css vendor/",
+        "clone": "bower install && rm -rf vendor && mkdir vendor && rm -rf fonts && mkdir fonts && npm run fontawesome && npm run ionicons && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick",
+        "notify": "node notify.js",
+        "post": "postcss post/*.css -c postcss.config.js -d css && node notify.js",
+        "watch": "npm-watch"
+    }
+}

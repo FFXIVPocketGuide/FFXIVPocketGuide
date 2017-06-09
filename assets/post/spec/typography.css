@@ -1,0 +1,116 @@
+/* =============================================================================
+
+    TYPOGRAPHY CSS
+    Authored by Josh Beveridge
+
+============================================================================= */
+
+/* Google Fonts ============================================================= */
+
+/* Typekit Fonts ============================================================ */
+$font-aktiv: "aktiv-grotesk",sans-serif;
+$font-pt: "pt-serif",serif;
+
+/* Custom Fonts ============================================================= */
+
+/* Font Standard ============================================================ */
+html,
+body {
+    font-size: 100%;
+
+    @media $(cinema) {
+        font-size: 120%;
+    }
+
+}
+
+/* Sitewide Typography ====================================================== */
+::selection {
+    background: $black;
+    color: $white;
+}
+
+$font-white: rgba(255, 255, 255, .95);
+$font-black: rgba(0, 0, 0, .85);
+
+$font-scale-small: 0.707rem;
+$font-scale-regular: 1rem;
+
+/* Headings ================================================================= */
+[class*="heading--"] {
+    color: $font-black;
+    font-family: $font-aktiv;
+    font-weight: 800;
+    margin: 0;
+}
+
+.heading--01 {
+    font-size: 3.157rem;
+    line-height: 3.5rem;
+}
+
+.heading--02 {
+    font-size: 2.369rem;
+    line-height: 2.5rem;
+}
+
+.heading--03 {
+    font-size: 1.777rem;
+    line-height: 2rem;
+}
+
+.heading--04 {
+    font-size: 1.333rem;
+    line-height: 1.5rem;
+}
+
+.heading--05 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+/* Buttons ================================================================== */
+[class*="button--"] {
+    border: .3rem solid $white;
+    color: $font-black;
+    display: inline-block;
+    font-family: $font-aktiv;
+    font-weight: 300;
+    padding: 2rem 2.5rem;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.no-touchevents {
+
+    [class*="button--"]:hover {
+        border: .3rem solid $red;
+        transition: all .2s ease;
+    }
+
+}
+
+[class*="button--"][class*="small"] {
+    font-size: $font-scale-small;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+}
+
+[class*="button--"][class*="white"] {
+    border-color: $white;
+    color: $white;
+}
+
+[class*="button--"][class*="red"] {
+    border-color: $red;
+}
+
+.no-touchevents {
+
+    [class*="button--"][class*="red"]:hover {
+        background: $red;
+        color: $font-white;
+        transition: all .2s ease;
+    }
+
+}

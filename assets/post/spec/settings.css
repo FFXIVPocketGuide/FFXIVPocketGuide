@@ -1,0 +1,101 @@
+/* =============================================================================
+
+    SETTINGS CSS
+    Authored by Josh Beveridge
+
+============================================================================= */
+
+/* Media Variables ========================================================== */
+$portrait: screen and (orientation: portrait);
+/*$(portrait) {}*/
+
+$landscape: screen and (orientation: landscape);
+/*$(landscape) {}*/
+
+$p-phone: screen and (min-width: 320px);
+/*$(p-phone) {}*/
+
+$l-phone: screen and (min-width: 480px);
+/*$(l-phone) {}*/
+
+$p-tablet: screen and (min-width: 48em);
+/*$(p-tablet) {}*/
+
+$l-tablet: screen and (min-width: 64em);
+/*$(l-tablet) {}*/
+
+$desktop: screen and (min-width: 64.01em);
+/*$(desktop) {}*/
+
+$cinema: screen and (min-width: 100em);
+/*$(cinema) {}*/
+
+$cinema-xl: screen and (min-width: 110em);
+/*$(cinema-xl) {}*/
+
+/* Sections ================================================================= */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+section {
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+$small-padding: 3rem;
+$medium-padding: calc(3rem*1.33);
+$large-padding: calc(3rem*2);
+
+.page-container {
+    margin: 0 auto;
+    padding: 0 $small-padding;
+    position: relative;
+
+    @media $(p-tablet) {
+        padding: 0 $medium-padding;
+    }
+
+    @media screen and (min-width: 60rem) {
+        max-width: 50rem;
+        padding: 0;
+    }
+
+    @media $(desktop) {
+        max-width: 60rem;
+    }
+
+    @media $(cinema) {
+        max-width: 70rem;
+    }
+
+}
+
+.content-container {
+    margin: 0 auto;
+    padding: 0 $small-padding;
+    position: relative;
+
+    @media $(p-tablet) {
+        padding: 0 $medium-padding;
+    }
+
+    @media screen and (min-width: 55rem) {
+        max-width: 45rem;
+        padding: 0;
+    }
+
+    @media $(cinema) {
+        max-width: 50rem;
+    }
+
+}

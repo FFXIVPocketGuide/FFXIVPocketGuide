@@ -1,0 +1,32 @@
+{
+  "name": "Clone",
+  "version": "0.3.0",
+  "homepage": "https://github.com/joshdrink/clone",
+  "authors": [
+    "Josh Beveridge <imjoshdrink@gmail.com>",
+    "Justin Bellefontaine <jbvalo@gmail.com>"
+  ],
+  "description": "A PostCSS Front-End clone used to init new projects.",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "latest",
+    "normalize.css": "latest",
+    "matchMedia": "latest",
+    "modernizr": "latest",
+    "jquery": "latest",
+    "ionicons": "latest",
+    "slick-carousel": "latest"
+  }
+}

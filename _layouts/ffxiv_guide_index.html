@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head_ffxiv.html %}
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="{{ "/assets/vendor/jquery.min.js" | prepend: site.baseurl }}"></script>
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="{{ "/assets/vendor/modernizr.js" | prepend: site.baseurl }}"></script>
+
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="{{ "/assets/vendor/ionicons.min.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+
+        <!-- Normalize -->
+        <link rel="stylesheet" href="{{ "/assets/vendor/normalize.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+
+    </head>
+
+    <body>
+
+        <section class="guide-index__hero" style="background-image: url('{{ "/assets/img/ffxiv/guide_index.jpg" | prepend: site.baseurl }}')">
+
+            <div class="guide-index__hero-overlay"></div>
+
+            <div class="content-container">
+
+                <h1 class="heading--01 guide-index__title">FFXIV<br><span class="heading--02">Pocket Guide</span></h1>
+
+                {% if page.url contains "dungeons" %}
+                    <h3 class="heading--03 guide-index__subtitle">- Dungeons -</h3>
+                {% endif %}
+                {% if page.url contains "trials" %}
+                    <h3 class="heading--03 guide-index__subtitle">- Trials -</h3>
+                {% endif %}
+                {% if page.url contains "raids" %}
+                    <h3 class="heading--03 guide-index__subtitle">- Raids -</h3>
+                {% endif %}
+
+                <p class="guide-index__intro">A collection of mobile friendly guides to help players navigate group content in Final Fantasy XIV. All guide content has been transcribed from the extremely helpful video guides produced by MTQCapture.</p>
+
+                <p class="guide-index__roadmap"><a href="https://trello.com/b/x1tgw9DF" title="Go to the FFXIV Pocket Guide Development Roadmap." target="_blank">Find out what guides are coming next.</a></p>
+
+                <a href="https://www.youtube.com/channel/UC5BtIO_vMNvds5sgE-JI6KA" title="Visit MTQCapture's YouTube channel." target="_blank" class="mtqLinkHome button--small--white guide-index__hero-button">Go to MTQCapture's Channel</a>
+
+                <a id="list" title="Anchor's the Page to the Duty List."></a>
+
+            </div>
+
+            <div class="page-container guide-index__hero-category-wrapper">
+                <a href="/ffxiv/#list" title="View a list of all instances." class="guide-index__hero-category
+                {% if page.permalink == '/ffxiv/' %}
+                    active
+                {% endif %}">All</a>
+                <a href="/ffxiv/dungeons/#list" title="View a list of dungeon specific instances." class="guide-index__hero-category
+                {% if page.url contains 'dungeons' %}
+                    active
+                {% endif %}">Dungeons</a>
+                <a href="/ffxiv/trials/#list" title="View a list of trial specific instances." class="guide-index__hero-category
+                {% if page.url contains 'trials' %}
+                    active
+                {% endif %}">Trials</a>
+                <a href="/ffxiv/raids/#list" title="View a list of raid specific instances." class="guide-index__hero-category
+                {% if page.url contains 'raids' %}
+                    active
+                {% endif %}">Raids</a>
+            </div>
+
+        </section>
+
+        <section class="guide-index__list">
+
+            <div class="page-container">
+
+                <div class="flex-grid">
+
+                    <form class="guide-index__search-form">
+                        <label for="guideFilter">Search for a guide...</label>
+                        <input id="guideFilter" type="text" placeholder="Ifrit Ex...">
+                    </form>
+
+                    <!-- Coming Soon -->
+                    {% if page.permalink == "/ffxiv/" %}
+
+                        <div class="box med-1of2 lg-1of3 guide-index__list-item">
+
+                            <div class="guide-index__list-item-link" style="background-image: url('{{ "/assets/img/ffxiv/alex_soul_savage.jpg" | prepend: site.baseurl }}')">
+
+                                <div class="guide-index__list-item-overlay"></div>
+
+                                <h3 class="heading--04 guide-index__list-item-title">[A12S] Alexander: The Soul of the Creator (Savage)</h3>
+
+                                <h5 class="heading--05 guide-index__ilvl">Coming Soon!</h5>
+
+                            </div>
+
+                        </div>
+
+                        <div class="box med-1of2 lg-1of3 guide-index__list-item">
+
+                            <div class="guide-index__list-item-link" style="background-image: url('{{ "/assets/img/ffxiv/tam_tara.jpg" | prepend: site.baseurl }}')">
+
+                                <div class="guide-index__list-item-overlay"></div>
+
+                                <h3 class="heading--03 guide-index__list-item-title">Tam Tara Deepcroft</h3>
+
+                                <h5 class="heading--05 guide-index__ilvl">Coming Soon!</h5>
+
+                            </div>
+
+                        </div>
+
+                    {% endif %}
+
+                    {% for guide in site.ffxiv_guides %}
+
+                        {% if page.permalink == "/ffxiv/" %}
+
+                            <div class="box med-1of2 lg-1of3 guide-index__list-item">
+
+                                <a href="{{ guide.url }}" title="Go to the {{ guide.title}} Guide" class="guide-index__list-item-link" style="background-image: url('{% for image in guide.image %}{{ image.url }}{% endfor %}')">
+
+                                    <div class="guide-index__list-item-overlay"></div>
+
+                                    <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+
+                                    <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+
+                                </a>
+
+                            </div>
+
+                        {% elsif page.url contains "dungeons" %}
+
+                            {% if guide.instanceType == "dungeon" %}
+
+                                <div class="box med-1of2 lg-1of3 guide-index__list-item">
+
+                                    <a href="{{ guide.url }}" title="Go to the {{ guide.title}} Guide" class="guide-index__list-item-link" style="background-image: url('{% for image in guide.image %}{{ image.url }}{% endfor %}')">
+
+                                        <div class="guide-index__list-item-overlay"></div>
+
+                                        <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+
+                                        <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+
+                                    </a>
+
+                                </div>
+
+                            {% endif %}
+
+                        {% elsif page.url contains "trials" %}
+
+                            {% if guide.instanceType == "trial" %}
+
+                                <div class="box med-1of2 lg-1of3 guide-index__list-item">
+
+                                    <a href="{{ guide.url }}" title="Go to the {{ guide.title}} Guide" class="guide-index__list-item-link" style="background-image: url('{% for image in guide.image %}{{ image.url }}{% endfor %}')">
+
+                                        <div class="guide-index__list-item-overlay"></div>
+
+                                        <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+
+                                        <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+
+                                    </a>
+
+                                </div>
+
+                            {% endif %}
+
+                        {% elsif page.url contains "raids" %}
+
+                            {% if guide.instanceType == "raid" %}
+
+                                <div class="box med-1of2 lg-1of3 guide-index__list-item">
+
+                                    <a href="{{ guide.url }}" title="Go to the {{ guide.title}} Guide" class="guide-index__list-item-link" style="background-image: url('{% for image in guide.image %}{{ image.url }}{% endfor %}')">
+
+                                        <div class="guide-index__list-item-overlay"></div>
+
+                                        <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+
+                                        <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+
+                                    </a>
+
+                                </div>
+
+                            {% endif %}
+
+                        {% endif %}
+
+                    {% endfor %}
+
+                    <div class="box full guide-index__no-result">
+                        <h4 class="heading--04">Sorry, the guide you're looking for doesn't exist!</h4>
+                        <p>Check out what's coming next <a href="https://trello.com/b/x1tgw9DF" title="Go to the FFXIV Pocket Guide Development Roadmap." target="_blank">here</a>.</p>
+                        <p>Want to suggest a guide? Tweet your ideas to <a href="https://twitter.com/intent/tweet?screen_name=FF14PocketGuide" title="Tweet at the Pocket Guide" target="_blank">@FF14PocketGuide</a>!</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        {% include attribution.html %}
+
+        {% include scripts.html %}
+
+    </body>
+
+</html>

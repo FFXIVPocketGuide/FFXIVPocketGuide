@@ -1,0 +1,50 @@
+/* =============================================================================
+
+    PRIMARY CSS
+    Authored by Josh Beveridge
+
+============================================================================= */
+
+/* SPEC ===================================================================== */
+
+    /* Spec: Palette ======================================================== */
+    @import 'spec/palette.css';
+
+    /* Spec: Settings ======================================================= */
+    @import 'spec/settings.css';
+
+    /* Spec: Typography ===================================================== */
+    @import 'spec/typography.css';
+
+/* LAYOUT =================================================================== */
+
+    /* Layout: Grid ========================================================= */
+    @import 'layout/grid.css';
+
+    /* Layout: Grid (IE11) ================================================== */
+    @import 'layout/grid-ie11.css';
+
+/* BLOCKS =================================================================== */
+
+    /* Landing Splash ======================================================= */
+    @import "blocks/splash.css";
+
+    /* FFXIV ================================================================ */
+
+        /* Guide Index Hero */
+        @import "blocks/ffxiv/guide-index-hero.css";
+
+        /* Guide Index List */
+        @import "blocks/ffxiv/guide-index-list.css";
+
+        /* Guide Return Link */
+        @import "blocks/ffxiv/guide-return.css";
+
+        /* Guide Hero */
+        @import "blocks/ffxiv/guide-hero.css";
+
+        /* Guide Content */
+        @import "blocks/ffxiv/guide-content.css";
+
+        /* Attribution */
+        @import "blocks/ffxiv/attribution.css";

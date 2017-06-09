@@ -1,0 +1,51 @@
+/* =============================================================================
+
+    ATTRIBUTION CSS
+    Authored by Josh Beveridge
+
+============================================================================= */
+.attribution {
+    border-top: 1px solid #cccccc;
+    padding: $small-padding 0;
+    text-align: center;
+
+    @media $(p-tablet) {
+        padding: $medium-padding 0;
+    }
+
+    @media $(l-tablet) {
+        padding: $large-padding 0;
+    }
+}
+
+.attribution__title {
+    margin: 0 0 calc($small-padding/2) 0;
+
+    @media $(p-tablet) {
+        margin: 0 0 $medium-padding 0;
+    }
+
+}
+
+.attribution__link {
+    margin: 0 0 calc($small-padding/2) 0;
+
+    @media $(p-tablet) {
+        margin: 0 0 $medium-padding 0;
+    }
+
+}
+
+.attribution__copy {
+    color: #cccccc;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+
+    a {
+        color: $red;
+    }
+
+}

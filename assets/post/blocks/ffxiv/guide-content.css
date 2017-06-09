@@ -1,0 +1,123 @@
+/* =============================================================================
+
+    GUIDE HERO CSS
+    Authored by Josh Beveridge
+
+============================================================================= */
+.guide__content {
+    padding: $small-padding 0;
+
+    @media $(p-tablet) {
+        padding: $medium-padding 0;
+    }
+
+    @media $(l-tablet) {
+        padding: $large-padding 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 0 0 calc($small-padding/2);
+
+        li {
+            font-family: $font-pt;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+    }
+
+}
+
+.guide__event {
+
+    &:last-child {
+
+        hr {
+            display: none;
+        }
+
+    }
+
+}
+
+.guide__mechanic-accordion-trigger {
+    cursor: pointer;
+}
+
+.guide__mechanic-content-wrapper {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+}
+
+.guide__mechanic-title {
+    margin: calc($small-padding/2) 0 calc($small-padding/4);
+}
+
+.guide__mechanic-combo-title {
+    margin: calc($small-padding/4) 0;
+}
+
+.guide__mechanic-tag-list {
+    margin: 0 0 calc($small-padding/4) calc(($small-padding/6)*(-1));
+}
+
+.guide__mechanic-tag {
+    color: $red;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 700;
+    margin: 0 calc($small-padding/6);
+}
+
+.guide__mechanic-list {
+
+    li {
+        color: $font-black;
+    }
+
+}
+
+.guide__mechanic-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guide__mechanic-image {
+    width: 100%;
+}
+
+/* Alerts =================================================================== */
+.guide__alerts {
+    background: $red-faded;
+    border: .3rem solid $red;
+    border-radius: 3px;
+    margin: calc($small-padding/2) 0;
+    padding: calc($small-padding/2);
+}
+
+.guide__alerts-label {
+    color: $font-black;
+    margin: 0 0 calc($small-padding/4) 0;
+}
+
+.guide__alerts-list {
+    color: $font-black;
+}
+
+.guide__alerts-item {
+
+}
+
+/* Divider ================================================================== */
+.guide__event-divider {
+    background: #cccccc;
+    border: none;
+    height: 1px;
+    margin: calc($small-padding/2) 0;
+}

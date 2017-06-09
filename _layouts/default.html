@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="{{ "/assets/vendor/jquery.min.js" | prepend: site.baseurl }}"></script>
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="{{ "/assets/vendor/modernizr.js" | prepend: site.baseurl }}"></script>
+
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="{{ "/assets/vendor/ionicons.min.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+
+        <!-- Normalize -->
+        <link rel="stylesheet" href="{{ "/assets/vendor/normalize.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+
+    </head>
+
+    <body class="water">
+
+        {{ content }}
+
+        {% include scripts.html %}
+
+    </body>
+
+</html>
