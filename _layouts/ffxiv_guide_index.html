@@ -42,7 +42,7 @@
 
                 <p class="guide-index__intro">A collection of mobile friendly guides to help players navigate group content in Final Fantasy XIV. All guide content has been transcribed from the extremely helpful video guides produced by MTQCapture.</p>
 
-                <p class="guide-index__roadmap"><a href="https://trello.com/b/x1tgw9DF" title="Go to the FFXIV Pocket Guide Development Roadmap." target="_blank">Find out what guides are coming next.</a></p>
+                <!-- <p class="guide-index__roadmap"><a href="https://trello.com/b/x1tgw9DF" title="Go to the FFXIV Pocket Guide Development Roadmap." target="_blank">Find out what guides are coming next.</a></p> -->
 
                 <a href="https://www.youtube.com/channel/UC5BtIO_vMNvds5sgE-JI6KA" title="Visit MTQCapture's YouTube channel." target="_blank" class="mtqLinkHome button--small--white guide-index__hero-button">Go to MTQCapture's Channel</a>
 
@@ -51,19 +51,19 @@
             </div>
 
             <div class="page-container guide-index__hero-category-wrapper">
-                <a href="/ffxiv/#list" title="View a list of all instances." class="guide-index__hero-category
-                {% if page.permalink == '/ffxiv/' %}
+                <a href="/#list" title="View a list of all instances." class="guide-index__hero-category
+                {% if page.permalink == '/' %}
                     active
                 {% endif %}">All</a>
-                <a href="/ffxiv/dungeons/#list" title="View a list of dungeon specific instances." class="guide-index__hero-category
+                <a href="/dungeons/#list" title="View a list of dungeon specific instances." class="guide-index__hero-category
                 {% if page.url contains 'dungeons' %}
                     active
                 {% endif %}">Dungeons</a>
-                <a href="/ffxiv/trials/#list" title="View a list of trial specific instances." class="guide-index__hero-category
+                <a href="/trials/#list" title="View a list of trial specific instances." class="guide-index__hero-category
                 {% if page.url contains 'trials' %}
                     active
                 {% endif %}">Trials</a>
-                <a href="/ffxiv/raids/#list" title="View a list of raid specific instances." class="guide-index__hero-category
+                <a href="/raids/#list" title="View a list of raid specific instances." class="guide-index__hero-category
                 {% if page.url contains 'raids' %}
                     active
                 {% endif %}">Raids</a>
@@ -83,7 +83,7 @@
                     </form>
 
                     <!-- Coming Soon -->
-                    {% if page.permalink == "/ffxiv/" %}
+                    {% if page.permalink == "/" %}
 
                         <div class="box med-1of2 lg-1of3 guide-index__list-item">
 
@@ -117,7 +117,7 @@
 
                     {% for guide in site.ffxiv_guides %}
 
-                        {% if page.permalink == "/ffxiv/" %}
+                        {% if page.permalink == "/" %}
 
                             <div class="box med-1of2 lg-1of3 guide-index__list-item">
 

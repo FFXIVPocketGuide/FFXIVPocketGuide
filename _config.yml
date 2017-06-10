@@ -39,4 +39,4 @@ exclude:
 collections:
     ffxiv_guides:
         output: true
-        permalink: /ffxiv/:title
+        permalink: /:title
