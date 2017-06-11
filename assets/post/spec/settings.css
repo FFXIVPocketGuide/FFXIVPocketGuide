@@ -58,7 +58,7 @@ $large-padding: calc(3rem*2);
 
 .page-container {
     margin: 0 auto;
-    padding: 0 $small-padding;
+    padding: 0 calc($small-padding/2);
     position: relative;
 
     @media $(p-tablet) {
@@ -82,7 +82,7 @@ $large-padding: calc(3rem*2);
 
 .content-container {
     margin: 0 auto;
-    padding: 0 $small-padding;
+    padding: 0 calc($small-padding/2);
     position: relative;
 
     @media $(p-tablet) {

@@ -38,6 +38,43 @@ attacks:
               - tag: "Tether"
             notes:
               - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+sequence:
+  - phase: 01
+    attacks:
+      - attack: "Attack Name"
+      - attack: "Attack Name"
+    alerts:
+      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+    mechanics:
+      - mechanic:
+        - title: "Attack 01"
+          notes:
+            - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+  - phase: 02
+    attacks:
+      - attack: "Attack Name"
+      - attack: "Attack Name"
+    alerts:
+      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+    mechanics:
+      - mechanic:
+        - title: "Attack 01"
+          notes:
+            - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+  - phase: 03
+    attacks:
+      - attack: "Attack Name"
+      - attack: "Attack Name"
+    alerts:
+      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
+    mechanics:
+      - mechanic:
+        - title: "Attack 01"
+          notes:
+            - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
 stances:
   - stance:
     - title: "Parry Stance"
@@ -54,43 +91,6 @@ spawns:
        - attack: "Attack 02"
       notes:
         - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-sequence:
-  - phase: "01"
-    attacks:
-      - attack: "Attack Name"
-      - attack: "Attack Name"
-    alerts:
-      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-    mechanics:
-      - mechanic:
-        - title: "Attack 01"
-          notes:
-            - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-  - phase: "02"
-    attacks:
-      - attack: "Attack Name"
-      - attack: "Attack Name"
-    alerts:
-      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-    mechanics:
-      - mechanic:
-        - title: "Attack 01"
-          notes:
-            - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-  - phase: "03"
-    attacks:
-      - attack: "Attack Name"
-      - attack: "Attack Name"
-    alerts:
-      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-      - alert: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
-    mechanics:
-      - mechanic:
-        - title: "Attack 01"
-          notes:
-            - note: "This AoE will drop on random players - it's important to stack before the cast goes off in order to bait where the AoE will drop and maintain your safe space."
 ---
 
 <!--

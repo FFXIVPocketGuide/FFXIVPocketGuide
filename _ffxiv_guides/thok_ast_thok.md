@@ -11,211 +11,161 @@ ilvl: 53
 instanceType: "trial"
 mtqvid: "https://youtu.be/HQ7GAofEJBw"
 attacks:
-  - attack:
-      - title: "Blinding Blade"
-        phases:
-          - phase: 01
-          - phase: 02
-          - phase: 03
+  - title: "Blinding Blade"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Cleave"
+    notes:
+      - note: "This frontal cleave has high damage - face Ravana away from the raid."
+  - title: "Tapasya"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Cleave"
+      - tag: "Knockback"
+    notes:
+      - note: "This frontal cleave will hit 3 times."
+  - title: "The Seeing Wing"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Physical DPS"
+    tags:
+      - tag: "Knockback"
+    notes:
+      - note: "This attack will damage and knock back all physical attacks."
+  - title: "Prelude to Slaughter"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Combo Mechanic"
+    combo:
+      - title: "Phase 01"
         roles:
           - role: "Everyone"
         tags:
-          - tag: "Cleave"
+          - tag: "Circular AoE"
         notes:
-          - note: "This frontal cleave has high damage - face Ravana away from the raid."
-  - attack:
-      - title: "Tapasya"
-        phases:
-          - phase: 01
-          - phase: 02
-          - phase: 03
+          - note: "Prelude has a 15 second cast timer - use this to effectively move out of range to avoid Ravana's first large AoE spin."
+      - title: "Phase 02"
         roles:
           - role: "Everyone"
         tags:
-          - tag: "Cleave"
-          - tag: "Knockback"
+          - tag: "Column AoE"
         notes:
-          - note: "This frontal cleave will hit 3 times."
-  - attack:
-      - title: "The Seeing Wing"
-        phases:
-          - phase: 01
-          - phase: 02
-          - phase: 03
+          - note: "The cirular AoE is followed by Ravana jumping into the air and placing many overlapping column AoEs all over the arena - run to a safe area to avoid damage."
+      - title: "Phase 03"
         roles:
-          - role: "Physical DPS"
+          - role: "Everyone"
         tags:
-          - tag: "Knockback"
+          - tag: "Donut AoE"
         notes:
-          - note: "This attack will damage and knock back all physical attacks."
-  - attack:
-      - title: "Prelude to Slaughter"
-        phases:
-          - phase: 01
+          - note: "The final phase of this attack is an arena-wide donut AoE - run to the center of the arena to avoid damage."
+  - title: "Slaughter"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Combo Mechanic"
+    combo:
+      - title: "Phase 01"
         roles:
           - role: "Everyone"
         tags:
-          - tag: "Combo Mechanic"
-        combo:
-          - title: "Phase 01"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Circular AoE"
-            notes:
-              - note: "Prelude has a 15 second cast timer - use this to effectively move out of range to avoid Ravana's first large AoE spin."
-          - title: "Phase 02"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Column AoE"
-            notes:
-              - note: "The cirular AoE is followed by Ravana jumping into the air and placing many overlapping column AoEs all over the arena - run to a safe area to avoid damage."
-          - title: "Phase 03"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Donut AoE"
-            notes:
-              - note: "The final phase of this attack is an arena-wide donut AoE - run to the center of the arena to avoid damage."
-  - attack:
-      - title: "Slaughter"
-        phases:
-          - phase: 01
-          - phase: 03
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Combo Mechanic"
-        combo:
-          - title: "Phase 01"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Cone AoE"
-            notes:
-              - note: "Slaughter has a 15 second cast timer - use this to effectively move directly behind Ravana to avoid damage."
-          - title: "Phase 02A"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Column AoE"
-            notes:
-              - note: "After the cone, Ravana will jump into the air and place 2 column AoEs in an 'X' pattern - stand in the safe zones to avoid damage, but watch out for the purple markers placed on members of your party."
-          - title: "Phase 02B"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Markers"
-            notes:
-              - note: "During the column AoEs, Ravana will mark two players with larger purple AoEs - spread apart and avoid other players."
-  - attack:
-      - title: "Bloody Fuller"
-        phases:
-          - phase: 02
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Ultimate"
+          - tag: "Cone AoE"
         notes:
-          - note: "This attack's strength is determined by how long 'Spirit Ghana' and 'Moon Ghana' spawns are allowed to live."
-          - note: "Spawns will summon swords as time passes, increasing the damage Bloody Fuller will do."
-          - note: "Ravana will throw the entire raid into the air when he executes this attack."
-  - attack:
-      - title: "Pillars of Heaven"
-        phases:
-          - phase: 03
+          - note: "Slaughter has a 15 second cast timer - use this to effectively move directly behind Ravana to avoid damage."
+      - title: "Phase 02A"
         roles:
           - role: "Everyone"
         tags:
-          - tag: "Raid-Wide AoE"
-          - tag: "Knockback"
+          - tag: "Column AoE"
         notes:
-          - note: "This attack does raid-wide damage and will hit the whole team with knockback - use the remaining walls on the arena to keep from falling off."
-  - attack:
-      - title: "Rose Orbs"
-        phases:
-          - phase: 03
+          - note: "After the cone, Ravana will jump into the air and place 2 column AoEs in an 'X' pattern - stand in the safe zones to avoid damage, but watch out for the purple markers placed on members of your party."
+      - title: "Phase 02B"
         roles:
           - role: "Everyone"
         tags:
-          - tag: "Tether"
+          - tag: "Markers"
         notes:
-          - note: "Orbs will spawn around the arena and tether to players."
-          - note: "These orbs will add a vulnerability up debuff if they hit players - run away from them until the tether breaks."
-  - attack:
-      - title: "Swift Slaughter"
-        phases:
-          - phase: 03
+          - note: "During the column AoEs, Ravana will mark two players with larger purple AoEs - spread apart and avoid other players."
+  - title: "Bloody Fuller"
+    phases:
+      - phase: 02
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Ultimate"
+    notes:
+      - note: "This attack's strength is determined by how long 'Spirit Ghana' and 'Moon Ghana' spawns are allowed to live."
+      - note: "Spawns will summon swords as time passes, increasing the damage Bloody Fuller will do."
+      - note: "Ravana will throw the entire raid into the air when he executes this attack."
+  - title: "Pillars of Heaven"
+    phases:
+      - phase: 03
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Raid-Wide AoE"
+      - tag: "Knockback"
+    notes:
+      - note: "This attack does raid-wide damage and will hit the whole team with knockback - use the remaining walls on the arena to keep from falling off."
+  - title: "Rose Orbs"
+    phases:
+      - phase: 03
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Tether"
+    notes:
+      - note: "Orbs will spawn around the arena and tether to players."
+      - note: "These orbs will add a vulnerability up debuff if they hit players - run away from them until the tether breaks."
+  - title: "Swift Slaughter"
+    phases:
+      - phase: 03
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Combo Mechanic"
+    combo:
+      - title: "Phase 01"
         roles:
           - role: "Everyone"
         tags:
-          - tag: "Combo Mechanic"
-        combo:
-          - title: "Phase 01"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Markers"
-            notes:
-              - note: "4 players will be marked with up to 4 swords - Ravana will attack each player in the order of their sword marker (1, 2, 3, 4)."
-          - title: "Phase 02"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Donut AoE"
-            notes:
-              - note: "Ravana will immediately follow these markers up with a arena-wide donut AoE - run to the center to avoid taking damage."
-          - title: "Phase 03"
-            roles:
-              - role: "Everyone"
-            tags:
-              - tag: "Circular AoE"
-            notes:
-              - note: "The final step in this attack is a large circular AoE - run towards the edge of the arena to avoid damage."
-  - attack:
-      - title: "Atma-Linga"
-        phases:
-          - phase: 03
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Raid-Wide AoE"
+          - tag: "Markers"
         notes:
-          - note: "Ravana will do a raid-wide stomp, doing moderate damage."
-stances:
-  - stance:
-    - title: "Parry Stance"
-      attacks:
-        - attack: "The Seeing Wing"
-      notes:
-        - note: "Ravana will enter this stance when he executes 'The Seeing Wing' - physical damage dealers should be wary of knockback."
-  - stance:
-    - title: "Damage Stance"
-      attacks:
-        - attack: "Prelude to Slaughter"
-        - attack: "Slaughter"
-        - attack: "Swift Slaughter"
-      notes:
-        - note: "When in his damage stance, Ravana will execute one of the 3 slaughter attacks - pay attention to his cast bar to prepare for the appropriate one."
-  - stance:
-    - title: "Defensive Stance"
-      attacks:
-        - attack: "Rose Orbs"
-      notes:
-        - note: "During his defensive stance, Ravana will fixate on the second threat target."
-        - note: "All other players should stay behind him and avoid 'Rose Orb' tethers as necessary."
-spawns:
-  - spawn:
-    - title: "Spirit Ghana"
-      notes:
-        - note: "Along with Moon Ghana adds, Spirit Ghanas act as a minor DPS check."
-        - note: "The faster these adds are killed, the lower the damage Ravana will do when he executes 'Bloody Fuller'."
-  - spawn:
-    - title: "Moon Ghana"
-      notes:
-        - note: "Moon Ghana adds have much more health than Spirit Ghanas and act as a minor DPS check."
-        - note: "The faster these adds are killed, the lower the damage Ravana will do when he executes 'Bloody Fuller'."
+          - note: "4 players will be marked with up to 4 swords - Ravana will attack each player in the order of their sword marker (1, 2, 3, 4)."
+      - title: "Phase 02"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Donut AoE"
+        notes:
+          - note: "Ravana will immediately follow these markers up with a arena-wide donut AoE - run to the center to avoid taking damage."
+      - title: "Phase 03"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Circular AoE"
+        notes:
+          - note: "The final step in this attack is a large circular AoE - run towards the edge of the arena to avoid damage."
+  - title: "Atma-Linga"
+    phases:
+      - phase: 03
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Raid-Wide AoE"
+    notes:
+      - note: "Ravana will do a raid-wide stomp, doing moderate damage."
 sequence:
   - phase: 01
     attacks:
@@ -255,11 +205,32 @@ sequence:
         - title: "Defensive Stance"
           notes:
             - note: "During the fight, Ravana will switch to his defensive stance and focus the second threat target - tanks should keep him facing away from the raid while everyone else stacks behind him."
+stances:
+  - title: "Parry Stance"
+    attacks:
+      - attack: "The Seeing Wing"
+    notes:
+      - note: "Ravana will enter this stance when he executes 'The Seeing Wing' - physical damage dealers should be wary of knockback."
+  - title: "Damage Stance"
+    attacks:
+      - attack: "Prelude to Slaughter"
+      - attack: "Slaughter"
+      - attack: "Swift Slaughter"
+    notes:
+      - note: "When in his damage stance, Ravana will execute one of the 3 slaughter attacks - pay attention to his cast bar to prepare for the appropriate one."
+  - title: "Defensive Stance"
+    attacks:
+      - attack: "Rose Orbs"
+    notes:
+      - note: "During his defensive stance, Ravana will fixate on the second threat target."
+      - note: "All other players should stay behind him and avoid 'Rose Orb' tethers as necessary."
+spawns:
+  - title: "Spirit Ghana"
+    notes:
+      - note: "Along with Moon Ghana adds, Spirit Ghanas act as a minor DPS check."
+      - note: "The faster these adds are killed, the lower the damage Ravana will do when he executes 'Bloody Fuller'."
+  - title: "Moon Ghana"
+    notes:
+      - note: "Moon Ghana adds have much more health than Spirit Ghanas and act as a minor DPS check."
+      - note: "The faster these adds are killed, the lower the damage Ravana will do when he executes 'Bloody Fuller'."
 ---
-
-<!--
-types: Boss, Miniboss, Add
-phase: 01, 02, etc.
-alerts: markers, special requirements, stack, raid organization, add phase
-mechanic tags: tankbuster, AoE, mechanic, markers, combo mechanic, variation, add, enrage timer, gaze, tether, stack
--->

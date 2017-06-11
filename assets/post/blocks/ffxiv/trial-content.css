@@ -8,6 +8,22 @@ body.new-trial {
     background: rgba(245, 245, 245, 1);
 }
 
+.guide-trial__return-link {
+    color: $red;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+
+    i {
+        margin: 0 .5rem 0 0;
+    }
+
+}
+
 .guide-trial__accordion-trigger {
     cursor: pointer;
 }
