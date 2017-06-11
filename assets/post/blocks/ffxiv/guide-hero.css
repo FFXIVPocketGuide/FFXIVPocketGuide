@@ -7,12 +7,12 @@
 .guide__hero {
     background-position: center;
     background-size: cover;
-    padding: $small-padding 0;
+    padding: calc($small-padding*2) 0 $small-padding 0;
     position: relative;
     text-align: center;
 
     @media $(p-tablet) {
-        padding: $medium-padding 0;
+        padding: calc($small-padding*2) 0 $medium-padding 0;
     }
 
     @media $(l-tablet) {

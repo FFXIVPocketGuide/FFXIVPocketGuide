@@ -22,15 +22,13 @@
 
     <body>
 
-        <a href="/" title="Return to the Raid Guide Index" class="guide__return-link">
-            <div class="page-container">
-                <span><i class="ionicons ion-chevron-left"></i> Return to the Index</span>
-            </div>
-        </a>
-
         <section class="guide__hero" style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')">
 
             <div class="guide__hero-overlay"></div>
+
+            <a href="/" title="Return to the Raid Guide Index" class="guide-trial__return-link">
+                <i class="ionicons ion-chevron-left"></i>Return to the Index
+            </a>
 
             <div class="content-container">
 
