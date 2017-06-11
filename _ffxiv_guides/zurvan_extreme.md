@@ -175,6 +175,29 @@ attacks:
           - tag: "Donut AoE"
         notes:
           - note: "Large circular AoE - the only safe space is within melee range of the boss."
+  - title: "The Demon's Claw & Wave Cannon"
+    phases:
+      - phase: 05
+    roles:
+      - role: "Everyone"
+    combo:
+      - title: "The Demon's Claw"
+        roles:
+          - role: "Tank"
+          - role: "Healer"
+        tags:
+          - tag: "Tankbuster"
+        notes:
+          - note: "This attack targets the main tank with high damage, a magic damage up debuff, knockback, and stun."
+          - note: "It is important for the tank to avoid being knocked off the edge - flip the boss around to be knocked back into the middle of the arena."
+      - title: "Wave Cannon"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Column AoE"
+        notes:
+          - note: "This attack will be telegraphed with a blue column and focus on the main tank."
+          - note: "Players can either stack in front of the tank to soak the damage or the tanks can use Hallowed Ground/Living Dead."
 sequence:
   - phase: 01
     attacks:
