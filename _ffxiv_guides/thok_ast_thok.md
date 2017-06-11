@@ -192,7 +192,7 @@ spawns:
 sequence:
   - phase: "01"
     attacks:
-      - attack: "Blind Blade"
+      - attack: "Blinding Blade"
       - attack: "Tapasya"
       - attack: "The Seeing Wing"
       - attack: "Prelude to Slaughter"
