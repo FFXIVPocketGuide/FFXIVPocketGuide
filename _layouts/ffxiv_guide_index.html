@@ -42,7 +42,7 @@
 
                 <p class="guide-index__intro">A collection of mobile friendly guides to help players navigate group content in Final Fantasy XIV. All guide content has been transcribed from the extremely helpful video guides produced by MTQCapture.</p>
 
-                <!-- <p class="guide-index__roadmap"><a href="https://trello.com/b/x1tgw9DF" title="Go to the FFXIV Pocket Guide Development Roadmap." target="_blank">Find out what guides are coming next.</a></p> -->
+                <p class="guide-index__roadmap">Follow <a href="https://twitter.com/FF14PocketGuide" title="Go to the FFXIV Pocket Guide Twitter." target="_blank">@FF14PocketGuide</a></p>
 
                 <a href="https://www.youtube.com/channel/UC5BtIO_vMNvds5sgE-JI6KA" title="Visit MTQCapture's YouTube channel." target="_blank" class="mtqLinkHome button--small--white guide-index__hero-button">Go to MTQCapture's Channel</a>
 
@@ -111,7 +111,7 @@
 
                                     <div class="guide-index__list-item-overlay"></div>
 
-                                    <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+                                    <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
                                     <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
 
@@ -129,7 +129,7 @@
 
                                         <div class="guide-index__list-item-overlay"></div>
 
-                                        <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+                                        <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
                                         <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
 
@@ -149,7 +149,7 @@
 
                                         <div class="guide-index__list-item-overlay"></div>
 
-                                        <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+                                        <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
                                         <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
 
@@ -169,7 +169,7 @@
 
                                         <div class="guide-index__list-item-overlay"></div>
 
-                                        <h3 class="{% if guide.title.size < 25 %}heading--03{% endif %} {% if guide.title.size > 25 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }}</h3>
+                                        <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
                                         <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
 

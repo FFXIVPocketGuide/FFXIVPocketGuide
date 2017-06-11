@@ -43,5 +43,8 @@
         /* Guide Content */
         @import "blocks/ffxiv/guide-content.css";
 
+        /* Trial Content */
+        @import "blocks/ffxiv/trial-content.css";
+
         /* Attribution */
         @import "blocks/ffxiv/attribution.css";

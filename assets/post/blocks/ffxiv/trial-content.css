@@ -1,0 +1,118 @@
+/* =============================================================================
+
+    GUIDE HERO CSS
+    Authored by Josh Beveridge
+
+============================================================================= */
+body.new-trial {
+    background: rgba(245, 245, 245, 1);
+}
+
+.guide-trial__accordion-trigger {
+    cursor: pointer;
+}
+
+.guide-trial__content-wrapper {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+}
+
+.guide-trial__item-title {
+    /*margin: calc($small-padding/2) 0 calc($small-padding/4);*/
+    margin: 0 0 1rem;
+}
+
+.guide-trial__type-tag-list {
+    margin: 1rem 0;
+}
+
+.guide-trial__type-tag {
+    background: $red;
+    border-radius: 3px;
+    color: $white;
+    display: inline-block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 700;
+    padding: .5rem;
+    margin: 0;
+}
+
+.guide-trial__role-tag {
+    background: $blue;
+    border-radius: 3px;
+    color: $white;
+    display: inline-block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 700;
+    padding: .5rem;
+    margin: 0;
+}
+
+.guide-trial__attack-order-wrapper {
+    margin: 1rem 0;
+}
+
+.guide-trial__attack-order-attack {
+    color: $blue;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 700;
+}
+
+.guide-trial__list {
+
+    li {
+        color: $font-black;
+    }
+
+}
+
+.guide-trial__combo-title {
+    margin: calc($small-padding/3) 0 0 0;
+}
+
+.guide-trial__image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guide-trial__image {
+    width: 100%;
+}
+
+.guide-trial__mechanic-section-title {
+    margin: 1rem 0;
+}
+
+.guide-trial__mechanic-title {
+    margin: 1rem 0 .2rem;
+}
+
+/* Alerts =================================================================== */
+.guide-trial__alerts {
+    /*background: $red-faded;*/
+    /*border: .3rem solid $red;*/
+    /*border-radius: 3px;*/
+    /*margin: calc($small-padding/2) 0;*/
+    /*padding: calc($small-padding/2);*/
+}
+
+.guide-trial__alerts-label {
+    color: $red;
+    margin: 1rem 0 .2rem;
+}
+
+.guide-trial__alerts-list {
+    color: $font-black;
+}
+
+.guide-trial__alerts-item {
+
+}

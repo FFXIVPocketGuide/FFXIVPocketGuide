@@ -5,6 +5,7 @@
 
 ============================================================================= */
 .attribution {
+    background: $white;
     border-top: 1px solid #cccccc;
     padding: $small-padding 0;
     text-align: center;

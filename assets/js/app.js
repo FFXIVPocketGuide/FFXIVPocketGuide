@@ -74,6 +74,10 @@
             $(this).siblings(".guide__mechanic-content-wrapper").toggleClass("active");
         });
 
+        $(".guide-trial__accordion-trigger").on("click", function(e) {
+            $(this).siblings(".guide-trial__content-wrapper").toggleClass("active");
+        });
+
     });
 
     // Google Analytics Conversion Tracker (MTQ Conversion Home) ===============

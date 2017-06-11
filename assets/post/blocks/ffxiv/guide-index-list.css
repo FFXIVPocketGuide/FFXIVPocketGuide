@@ -5,6 +5,7 @@
 
 ============================================================================= */
 .guide-index__list {
+    background: rgba(245, 245, 245, 1);
     padding: $small-padding 0;
 
     @media $(p-tablet) {

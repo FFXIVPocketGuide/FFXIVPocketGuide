@@ -95,7 +95,7 @@ $large-padding: calc(3rem*2);
     }
 
     @media $(cinema) {
-        max-width: 50rem;
+        /*max-width: 50rem;*/
     }
 
 }
