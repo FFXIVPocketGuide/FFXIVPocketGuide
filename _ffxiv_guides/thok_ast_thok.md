@@ -13,6 +13,10 @@ mtqvid: "https://youtu.be/HQ7GAofEJBw"
 attacks:
   - attack:
       - title: "Blinding Blade"
+        phases:
+          - phase: 01
+          - phase: 02
+          - phase: 03
         roles:
           - role: "Everyone"
         tags:
@@ -21,6 +25,10 @@ attacks:
           - note: "This frontal cleave has high damage - face Ravana away from the raid."
   - attack:
       - title: "Tapasya"
+        phases:
+          - phase: 01
+          - phase: 02
+          - phase: 03
         roles:
           - role: "Everyone"
         tags:
@@ -30,6 +38,10 @@ attacks:
           - note: "This frontal cleave will hit 3 times."
   - attack:
       - title: "The Seeing Wing"
+        phases:
+          - phase: 01
+          - phase: 02
+          - phase: 03
         roles:
           - role: "Physical DPS"
         tags:
@@ -38,6 +50,8 @@ attacks:
           - note: "This attack will damage and knock back all physical attacks."
   - attack:
       - title: "Prelude to Slaughter"
+        phases:
+          - phase: 01
         roles:
           - role: "Everyone"
         tags:
@@ -66,6 +80,9 @@ attacks:
               - note: "The final phase of this attack is an arena-wide donut AoE - run to the center of the arena to avoid damage."
   - attack:
       - title: "Slaughter"
+        phases:
+          - phase: 01
+          - phase: 03
         roles:
           - role: "Everyone"
         tags:
@@ -94,6 +111,8 @@ attacks:
               - note: "During the column AoEs, Ravana will mark two players with larger purple AoEs - spread apart and avoid other players."
   - attack:
       - title: "Bloody Fuller"
+        phases:
+          - phase: 02
         roles:
           - role: "Everyone"
         tags:
@@ -104,6 +123,8 @@ attacks:
           - note: "Ravana will throw the entire raid into the air when he executes this attack."
   - attack:
       - title: "Pillars of Heaven"
+        phases:
+          - phase: 03
         roles:
           - role: "Everyone"
         tags:
@@ -113,6 +134,8 @@ attacks:
           - note: "This attack does raid-wide damage and will hit the whole team with knockback - use the remaining walls on the arena to keep from falling off."
   - attack:
       - title: "Rose Orbs"
+        phases:
+          - phase: 03
         roles:
           - role: "Everyone"
         tags:
@@ -122,6 +145,8 @@ attacks:
           - note: "These orbs will add a vulnerability up debuff if they hit players - run away from them until the tether breaks."
   - attack:
       - title: "Swift Slaughter"
+        phases:
+          - phase: 03
         roles:
           - role: "Everyone"
         tags:
@@ -150,6 +175,8 @@ attacks:
               - note: "The final step in this attack is a large circular AoE - run towards the edge of the arena to avoid damage."
   - attack:
       - title: "Atma-Linga"
+        phases:
+          - phase: 03
         roles:
           - role: "Everyone"
         tags:
@@ -190,7 +217,7 @@ spawns:
         - note: "Moon Ghana adds have much more health than Spirit Ghanas and act as a minor DPS check."
         - note: "The faster these adds are killed, the lower the damage Ravana will do when he executes 'Bloody Fuller'."
 sequence:
-  - phase: "01"
+  - phase: 01
     attacks:
       - attack: "Blinding Blade"
       - attack: "Tapasya"
@@ -201,7 +228,7 @@ sequence:
       - alert: "Note that Ravana receives a stacking damage-up buff as the fight goes on - kill him as fast as possible."
       - alert: "Due his long cleave, tanks should face Ravana away from the raid at all times."
       - alert: "The arena for this fight is small and surrounded by fences that will be broken during the course of the fight - pay attention to whether the remaining fences are to avoid being knocked of the edge during 'Pillars of Heaven'."
-  - phase: "02"
+  - phase: 02
     attacks:
       - attack: "Ghana Spawns"
       - attack: "Bloody Fuller"
@@ -213,7 +240,7 @@ sequence:
           notes:
             - note: "Spirit and Moon Ghana adds will spawn and should be focused down as fast as possible - note that Moon Ghanas have much more health."
             - note: "The longer these adds are left alive, the more swords will spawn, increasing 'Bloody Fuller's' damage."
-  - phase: "03"
+  - phase: 03
     attacks:
       - attack: "Pillars of Heaven"
       - attack: "Rose Orbs"

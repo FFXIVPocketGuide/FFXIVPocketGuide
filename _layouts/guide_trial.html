@@ -52,78 +52,176 @@
 
             <div class="content-container">
 
-                <!-- Trial Attacks -->
-                {% if page.attacks %}
+                <!-- Trial Sequence -->
+                {% if page.sequence %}
 
                     <div class="guide__event">
 
-                        <h3 class="heading--03 guide-trial__accordion-trigger">Boss Attacks</h3>
+                        <h3 class="heading--03 guide-trial__accordion-trigger">Fight Sequence</h3>
 
                         <div class="guide-trial__content-wrapper">
 
-                            {% for item in page.attacks %}
+                            {% for phase in page.sequence %}
 
-                                {% for attack in item.attack %}
+                                <div class="guide__event-item">
 
-                                    <div class="guide__event-item">
+                                    <!-- Phase Name -->
+                                    <h4 class="heading--04 guide-trial__item-title">Phase: {{ phase.phase }}</h4>
 
-                                        <!-- Attack Name -->
-                                        <h4 class="heading--04 guide-trial__item-title">{{ attack.title }}</h4>
+                                    <!-- Phase Attacks -->
+                                    {% if phase.attacks %}
 
-                                        <!-- Attack Type -->
-                                        {% if attack.combo %}
-                                            <!-- Do nothing. -->
-                                        {% else %}
-                                            <div class="guide-trial__type-tag-list">
-                                                {% for role in attack.roles %}
-                                                    <span class="guide-trial__role-tag">{{ role.role }}</span>
-                                                {% endfor %}
-                                                {% for tag in attack.tags %}
-                                                    <span class="guide-trial__type-tag">{{ tag.tag }}</span>
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
-
-                                        <!-- Attack Notes -->
-                                        <ul class="guide-trial__notes">
-                                            {% for note in attack.notes %}
-                                                <li>
-                                                    {{ note.note }}
-                                                </li>
+                                        <div class="guide-trial__attack-order-wrapper">
+                                            {% for attack in phase.attacks %}
+                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} > {% endif %}</span>
                                             {% endfor %}
-                                        </ul>
+                                        </div>
 
-                                        <!-- Combo Attacks -->
-                                        {% for combo in attack.combo %}
+                                    {% endif %}
 
-                                            <h5 class="heading--05 guide-trial__combo-title">{{ combo.title }}</h5>
+                                    <!-- Phase Alerts -->
+                                    {% if phase.alerts %}
+                                        <div class="guide-trial__alerts">
 
-                                            <!-- Attack Type -->
-                                            <div class="guide-trial__type-tag-list">
-                                                {% for role in combo.roles %}
-                                                    <span class="guide-trial__role-tag">{{ role.role }}</span>
-                                                {% endfor %}
-                                                {% for tag in combo.tags %}
-                                                    <span class="guide-trial__type-tag">{{ tag.tag }}</span>
-                                                {% endfor %}
-                                            </div>
+                                            <h5 class="heading--05 guide-trial__alerts-label">Important Notes:</h5>
 
-                                            <!-- Attack Notes -->
-                                            <ul class="guide-trial__notes">
-
-                                                {% for note in combo.notes %}
-
-                                                    <li>
-                                                        {{ note.note }}
+                                            <ul class="guide-trial__alerts-list">
+                                                {% for alert in phase.alerts %}
+                                                    <li class="guide-trial__alerts-item">
+                                                        {{ alert.alert }}
                                                     </li>
-
                                                 {% endfor %}
-
                                             </ul>
+
+                                        </div>
+                                    {% endif %}
+
+                                    <!-- Phase Mechanics -->
+                                    {% if phase.mechanics %}
+
+                                        <h5 class="heading--05 guide-trial__mechanic-section-title">Phase Mechanics</h5>
+
+                                        {% for item in phase.mechanics %}
+
+                                            {% for mechanic in item.mechanic %}
+
+                                                <h6 class="heading--06 guide-trial__mechanic-title">{{ mechanic.title }}</h6>
+
+                                                <ul class="guide-trial__notes">
+                                                    {% for note in mechanic.notes %}
+                                                        <li>
+                                                            {{ note.note }}
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+
+                                            {% endfor %}
 
                                         {% endfor %}
 
-                                    </div>
+                                    {% endif %}
+
+                                </div>
+
+                                {% assign currentPhase = phase.phase %}
+
+                                {% for item in page.attacks %}
+
+                                    {% for attack in item.attack %}
+
+                                        {% for attackPhase in attack.phases %}
+
+                                            {% if attackPhase.phase == currentPhase %}
+
+                                                <div class="guide__event-item--attack">
+
+                                                    <div class="guide-trial__attack-trigger">
+
+                                                        <!-- Attack Name -->
+                                                        <h4 class="heading--04 guide-trial__item-title">{{ attack.title }}</h4>
+
+                                                    </div>
+
+                                                    <div class="guide-trial__attack-content">
+
+                                                        <!-- Attack Type -->
+                                                        {% if attack.combo %}
+                                                            <!-- Do nothing. -->
+                                                        {% else %}
+                                                            <div class="guide-trial__type-tag-list">
+                                                                {% for role in attack.roles %}
+                                                                    <span class="guide-trial__role-tag">{{ role.role }}</span>
+                                                                {% endfor %}
+                                                                {% for tag in attack.tags %}
+                                                                    <span class="guide-trial__type-tag">{{ tag.tag }}</span>
+                                                                {% endfor %}
+                                                            </div>
+                                                        {% endif %}
+
+                                                        <!-- Attack Notes -->
+                                                        {% if attack.notes %}
+                                                            <ul class="guide-trial__notes">
+                                                                {% for note in attack.notes %}
+                                                                    <li>
+                                                                        {{ note.note }}
+                                                                    </li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                        <!-- Combo Attacks -->
+                                                        {% for combo in attack.combo %}
+
+                                                            <h5 class="heading--05 guide-trial__combo-title">{{ combo.title }}</h5>
+
+                                                            <!-- Attack Type -->
+                                                            <div class="guide-trial__type-tag-list">
+                                                                {% for role in combo.roles %}
+                                                                    <span class="guide-trial__role-tag">{{ role.role }}</span>
+                                                                {% endfor %}
+                                                                {% for tag in combo.tags %}
+                                                                    <span class="guide-trial__type-tag">{{ tag.tag }}</span>
+                                                                {% endfor %}
+                                                            </div>
+
+                                                            <!-- Attack Notes -->
+                                                            <ul class="guide-trial__notes">
+
+                                                                {% for note in combo.notes %}
+
+                                                                    <li>
+                                                                        {{ note.note }}
+                                                                    </li>
+
+                                                                {% endfor %}
+
+                                                            </ul>
+
+                                                        {% endfor %}
+
+                                                        {% if attack.images %}
+
+                                                            <div class="flex-grid">
+
+                                                                {% for image in attack.images %}
+                                                                    <div class="box med-1of3 guide-trial__image-wrapper">
+                                                                        <img src="{{ image.url }}" alt="{{ image.alt }}" class="guide-trial__image">
+                                                                    </div>
+                                                                {% endfor %}
+
+                                                            </div>
+
+                                                        {% endif %}
+
+                                                    </div>
+
+                                                </div>
+
+                                            {% endif %}
+
+                                        {% endfor %}
+
+                                    {% endfor %}
 
                                 {% endfor %}
 
@@ -212,7 +310,7 @@
 
                                             <div class="guide-trial__attack-order-wrapper">
                                                 {% for attack in spawn.attacks %}
-                                                    <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} > {% endif %}</span>
+                                                    <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} | {% endif %}</span>
                                                 {% endfor %}
                                             </div>
 
@@ -228,87 +326,6 @@
                                         </ul>
 
                                     {% endfor %}
-
-                                </div>
-
-                            {% endfor %}
-
-                        </div>
-
-                    </div>
-
-                    <hr class="guide__event-divider">
-
-                {% endif %}
-
-                <!-- Trial Sequence -->
-                {% if page.sequence %}
-
-                    <div class="guide__event">
-
-                        <h3 class="heading--03 guide-trial__accordion-trigger">Fight Sequence</h3>
-
-                        <div class="guide-trial__content-wrapper">
-
-                            {% for phase in page.sequence %}
-
-                                <div class="guide__event-item">
-
-                                    <!-- Phase Name -->
-                                    <h4 class="heading--04 guide-trial__item-title">Phase: {{ phase.phase }}</h4>
-
-                                    <!-- Phase Attacks -->
-                                    {% if phase.attacks %}
-
-                                        <div class="guide-trial__attack-order-wrapper">
-                                            {% for attack in phase.attacks %}
-                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} > {% endif %}</span>
-                                            {% endfor %}
-                                        </div>
-
-                                    {% endif %}
-
-                                    <!-- Phase Alerts -->
-                                    {% if phase.alerts %}
-                                        <div class="guide-trial__alerts">
-
-                                            <h5 class="heading--05 guide-trial__alerts-label">Important Notes:</h5>
-
-                                            <ul class="guide-trial__alerts-list">
-                                                {% for alert in phase.alerts %}
-                                                    <li class="guide-trial__alerts-item">
-                                                        {{ alert.alert }}
-                                                    </li>
-                                                {% endfor %}
-                                            </ul>
-
-                                        </div>
-                                    {% endif %}
-
-                                    <!-- Phase Mechanics -->
-                                    {% if phase.mechanics %}
-
-                                        <h5 class="heading--05 guide-trial__mechanic-section-title">Phase Mechanics</h5>
-
-                                        {% for item in phase.mechanics %}
-
-                                            {% for mechanic in item.mechanic %}
-
-                                                <h6 class="heading--06 guide-trial__mechanic-title">{{ mechanic.title }}</h6>
-
-                                                <ul class="guide-trial__notes">
-                                                    {% for note in mechanic.notes %}
-                                                        <li>
-                                                            {{ note.note }}
-                                                        </li>
-                                                    {% endfor %}
-                                                </ul>
-
-                                            {% endfor %}
-
-                                        {% endfor %}
-
-                                    {% endif %}
 
                                 </div>
 

@@ -45,8 +45,16 @@
     background: $white;
     border-radius: 3px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
-    margin: calc($small-padding/2) 0;
+    margin: calc($small-padding/4) 0;
     padding: calc($small-padding/2);
+}
+
+.guide__event-item--attack {
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+    margin: calc($small-padding/4) 0;
+    padding: 0;
 }
 
 .guide__mechanic-accordion-trigger {

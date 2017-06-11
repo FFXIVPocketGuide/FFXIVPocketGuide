@@ -23,8 +23,6 @@ attacks:
       - title: "Attack Name"
         roles:
           - role: "DPS"
-        tags:
-          - tag: "Combo Mechanic"
         combo:
           - title: "Attack Name"
             roles:
