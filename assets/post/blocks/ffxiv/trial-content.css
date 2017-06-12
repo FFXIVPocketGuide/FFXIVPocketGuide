@@ -25,7 +25,12 @@ body.new-trial {
 }
 
 .guide-trial__accordion-trigger {
+    background: $red;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+    color: $white;
     cursor: pointer;
+    padding: calc($small-padding/2);
 }
 
 .guide-trial__content-wrapper {
@@ -51,6 +56,12 @@ body.new-trial {
         display: block;
     }
 
+}
+
+.guide-trial__status-icon {
+    display: inline-block;
+    margin: 0 0 -.2rem 0;
+    width: 1rem;
 }
 
 .guide-trial__item-title {
@@ -122,9 +133,15 @@ body.new-trial {
 }
 
 .guide-trial__image-wrapper {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    &.active {
+        flex: 0 0 100%;
+    }
+
 }
 
 .guide-trial__notes {

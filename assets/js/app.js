@@ -82,6 +82,16 @@
             $(this).siblings(".guide-trial__attack-content").toggleClass("active");
         });
 
+        // Guide Image Zoom ====================================================
+        $(".guide-trial__image-wrapper").on("click", function(e) {
+            if($(this).hasClass("active")) {
+                $(this).removeClass("active")
+            }
+            else {
+                $(this).addClass("active")
+            }
+        });
+
     });
 
     // Google Analytics Conversion Tracker (MTQ Conversion Home) ===============

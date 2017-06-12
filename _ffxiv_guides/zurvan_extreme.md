@@ -23,8 +23,6 @@ attacks:
   - title: "Soar & Flaming Halberd"
     phases:
       - phase: 02
-    roles:
-      - role: "Everyone"
     combo:
       - title: "Soar"
         roles:
@@ -142,16 +140,14 @@ attacks:
       - note: "The pattern that occurs decides the next AoE attack (see follow up)."
     images:
       - url: "/assets/img/ffxiv/zurvan/zurvan_ex_broken_seal_cluster.png"
-        alt: "Broken Seak Layout - Side Clusters"
+        alt: "Broken Seal Layout - Side Clusters"
       - url: "/assets/img/ffxiv/zurvan/zurvan_ex_broken_seal_inner.png"
-        alt: "Broken Seak Layout - Inner Circle"
+        alt: "Broken Seal Layout - Inner Circle"
       - url: "/assets/img/ffxiv/zurvan/zurvan_ex_broken_seal_outer.png"
-        alt: "Broken Seak Layout - Outer Circle"
+        alt: "Broken Seal Layout - Outer Circle"
   - title: "Broken Seal - Follow Up"
     phases:
       - phase: 05
-    roles:
-      - role: "Everyone"
     combo:
       - title: "(Side Clusters) Biting Halberd"
         roles:
@@ -178,8 +174,6 @@ attacks:
   - title: "The Demon's Claw & Wave Cannon"
     phases:
       - phase: 05
-    roles:
-      - role: "Everyone"
     combo:
       - title: "The Demon's Claw"
         roles:
@@ -206,12 +200,11 @@ sequence:
       - alert: "Tanks should be sure to keep Zurvan facing away from the raid as he has a heavy cleave."
       - alert: "Players can fall off when Zurvan destroys each quadrant of the platform - mind the telegraphs to avoid this."
     mechanics:
-      - mechanic:
-        - title: "Platform Quadrants"
-          tags:
-            - tag: "Mechanic"
-          notes:
-            - note: "Zurvan will eventually knock off each quadrant of the platform. The order is: East, North, West, South - be sure not to fall off."
+      - title: "Platform Quadrants"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "Zurvan will eventually knock off each quadrant of the platform. The order is: East, North, West, South - be sure not to fall off."
   - phase: 02
     attacks:
       - attack: "Soar & Flaming Halberd"
@@ -240,25 +233,22 @@ sequence:
       - alert: "Wits are the most important to destroy as they will cast meteor."
       - alert: "Wiles will cast a gaze that afflicts you with fear - face away."
     mechanics:
-      - mechanic:
-        - title: "Wave 01"
-          tags:
-            - tag: "Add"
-          notes:
-            - note: "Expect 4 'Thews' and 1 'Will' to spawn in the north."
-            - note: "The tank should grab these and everyone should DPS them down - beware 'Wills' as they do heavy tank damage."
-      - mechanic:
-        - title: "Wave 02"
-          tags:
-            - tag: "Add"
-          notes:
-            - note: "Expect 2 'Wills' in the west, 1 'Wile' in the south, and 1 'Wit' in the east."
-      - mechanic:
-        - title: "Wave 03"
-          tags:
-            - tag: "Add"
-          notes:
-            - note: "Expect 1 'Will' in the south, 1 'Wile' in the north, 1 'Wit' in the west, and 3 'Thews' in the east."
+      - title: "Wave 01"
+        tags:
+          - tag: "Adds"
+        notes:
+          - note: "Expect 4 'Thews' and 1 'Will' to spawn in the north."
+          - note: "The tank should grab these and everyone should DPS them down - beware 'Wills' as they do heavy tank damage."
+      - title: "Wave 02"
+        tags:
+          - tag: "Adds"
+        notes:
+          - note: "Expect 2 'Wills' in the west, 1 'Wile' in the south, and 1 'Wit' in the east."
+      - title: "Wave 03"
+        tags:
+          - tag: "Adds"
+        notes:
+          - note: "Expect 1 'Will' in the south, 1 'Wile' in the north, 1 'Wit' in the west, and 3 'Thews' in the east."
   - phase: 05
     attacks:
       - attack: "[Infinite Fire/Ice"

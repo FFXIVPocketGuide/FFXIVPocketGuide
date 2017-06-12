@@ -99,21 +99,17 @@
 
                                         <h5 class="heading--05 guide-trial__mechanic-section-title">Phase Mechanics</h5>
 
-                                        {% for item in phase.mechanics %}
+                                        {% for mechanic in phase.mechanics %}
 
-                                            {% for mechanic in item.mechanic %}
+                                            <h6 class="heading--06 guide-trial__mechanic-title">{{ mechanic.title }}</h6>
 
-                                                <h6 class="heading--06 guide-trial__mechanic-title">{{ mechanic.title }}</h6>
-
-                                                <ul class="guide-trial__notes">
-                                                    {% for note in mechanic.notes %}
-                                                        <li>
-                                                            {{ note.note }}
-                                                        </li>
-                                                    {% endfor %}
-                                                </ul>
-
-                                            {% endfor %}
+                                            <ul class="guide-trial__notes">
+                                                {% for note in mechanic.notes %}
+                                                    <li>
+                                                        {{ note.note }}
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
 
                                         {% endfor %}
 

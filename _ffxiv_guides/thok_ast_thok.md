@@ -185,11 +185,10 @@ sequence:
     alerts:
       - alert: "This phase begins when Ravana begins summoning adds - all players should focus down these adds to prevent extra damage during Bloody Fuller."
     mechanics:
-      - mechanic:
-        - title: "Spirit & Moon Ghana Spawns"
-          notes:
-            - note: "Spirit and Moon Ghana adds will spawn and should be focused down as fast as possible - note that Moon Ghanas have much more health."
-            - note: "The longer these adds are left alive, the more swords will spawn, increasing 'Bloody Fuller's' damage."
+      - title: "Spirit & Moon Ghana Spawns"
+        notes:
+          - note: "Spirit and Moon Ghana adds will spawn and should be focused down as fast as possible - note that Moon Ghanas have much more health."
+          - note: "The longer these adds are left alive, the more swords will spawn, increasing 'Bloody Fuller's' damage."
   - phase: 03
     attacks:
       - attack: "Pillars of Heaven"
@@ -201,10 +200,9 @@ sequence:
       - alert: "Be aware of which parts of the arena still contain fences - you'll need them to prevent yourself from falling off during 'Pillars of Heaven'."
       - alert: "All players should stack behind Ravana when he begins to cast 'Swift Slaughter' to avoid damage."
     mechanics:
-      - mechanic:
-        - title: "Defensive Stance"
-          notes:
-            - note: "During the fight, Ravana will switch to his defensive stance and focus the second threat target - tanks should keep him facing away from the raid while everyone else stacks behind him."
+      - title: "Defensive Stance"
+        notes:
+          - note: "During the fight, Ravana will switch to his defensive stance and focus the second threat target - tanks should keep him facing away from the raid while everyone else stacks behind him."
 stances:
   - title: "Parry Stance"
     attacks:
