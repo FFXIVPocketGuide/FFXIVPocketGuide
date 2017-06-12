@@ -23,7 +23,159 @@
     margin: 0 0 calc($small-padding/2) 0;
 
     @media $(p-tablet) {
-        margin: 0 0 $medium-padding 0;
+        margin: 0 0 calc($medium-padding/2) 0;
+    }
+
+}
+
+.attribution__form {
+    margin: 0 auto $small-padding auto;
+    max-width: 35rem;
+
+    @media $(p-tablet) {
+        margin: 0 auto $medium-padding auto;
+    }
+
+    .attribution__form-submission-message {
+        color: $red;
+        display: none;
+        margin: calc($small-padding) 0 0 0;
+        font-weight: 500;
+
+        @media $(p-tablet) {
+            margin: calc($medium-padding) 0 0 0;
+        }
+
+        @media $(l-tablet) {
+            margin: calc($large-padding - 2rem) 0 0 0;
+        }
+
+    }
+
+    label {
+        display: block;
+        color: $red;
+        font-family: $font-aktiv;
+        font-size: $font-scale-small;
+        font-weight: 800;
+        line-height: 1.5rem;
+        margin: calc($small-padding/2) 0 0 0;
+        text-align: left;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+    }
+
+    h5 {
+        margin: calc($small-padding/2) 0;
+    }
+
+    select {
+        /*appearance: none;*/
+        border: 1px solid #CCC;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 300;
+        outline: none;
+        padding: .5rem;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+
+    }
+
+    textarea {
+        appearance: none;
+        border: 1px solid #CCC;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 300;
+        height: 10rem;
+        outline: none;
+        padding: .5rem;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+
+    }
+
+    input[type="text"] {
+        appearance: none;
+        border: 1px solid #CCC;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 300;
+        outline: none;
+        padding: .5rem;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+
+    }
+
+    input[type="submit"] {
+        appearance: none;
+        background: none;
+        border: .3rem solid $white;
+        border-color: $red;
+        color: $font-black;
+        cursor: pointer;
+        display: inline-block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-small;
+        font-weight: 500;
+        margin: calc($small-padding/2) 0 0 0;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        transition: all .2s ease;
+
+        @media $(p-tablet) {
+            /*margin: $medium-padding 0 0 0;*/
+        }
+
+    }
+
+    &.submitted {
+
+        .attribution__form-submission-message {
+            display: block;
+        }
+
+        label,
+        h5,
+        select,
+        textarea,
+        input[type="text"],
+        input[type="submit"],
+        br {
+            display: none;
+        }
+
+    }
+
+}
+
+.no-touchevents {
+
+    .attribution__form {
+
+        input[type="submit"]:hover {
+            background: $red;
+            color: $font-white;
+            transition: all .2s ease;
+        }
+
     }
 
 }

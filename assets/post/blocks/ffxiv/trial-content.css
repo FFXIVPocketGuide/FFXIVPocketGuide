@@ -25,12 +25,20 @@ body.new-trial {
 }
 
 .guide-trial__accordion-trigger {
-    background: $red;
+    background: #333;
     border-radius: 3px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+    /*box-shadow: 0 3px 10px rgba(0, 0, 0, .35);*/
     color: $white;
     cursor: pointer;
     padding: calc($small-padding/2);
+    text-align: center;
+    transition: all .2s ease;
+
+    &.active {
+        /*box-shadow: inset 0 3px 10px rgba(0, 0, 0, 1);*/
+        transition: all .2s ease;
+    }
+
 }
 
 .guide-trial__content-wrapper {
@@ -44,7 +52,7 @@ body.new-trial {
 
 .guide-trial__attack-trigger {
     cursor: pointer;
-    padding: calc($small-padding/2);
+    padding: calc($small-padding/4) calc($small-padding/2);
 }
 
 .guide-trial__attack-content {
@@ -67,6 +75,10 @@ body.new-trial {
 .guide-trial__item-title {
     /*margin: calc($small-padding/2) 0 calc($small-padding/4);*/
     margin: 0;
+}
+
+.guide-trial__attack-title {
+    /*font-weight: 500;*/
 }
 
 .guide-trial__type-tag-list {
@@ -113,6 +125,11 @@ body.new-trial {
     font-family: $font-aktiv;
     font-size: $font-scale-regular;
     font-weight: 700;
+    line-height: 1.8;
+}
+
+.guide-trial__attack-order-divider {
+    color: $font-black;
 }
 
 .guide-trial__list {

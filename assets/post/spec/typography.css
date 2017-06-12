@@ -31,7 +31,7 @@ body {
 }
 
 $font-white: rgba(255, 255, 255, .95);
-$font-black: rgba(0, 0, 0, .85);
+$font-black: rgba(30, 30, 30, .85);
 
 $font-scale-small: 0.707rem;
 $font-scale-regular: 1rem;

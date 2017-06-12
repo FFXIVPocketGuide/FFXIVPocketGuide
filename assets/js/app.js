@@ -75,10 +75,12 @@
         });
 
         $(".guide-trial__accordion-trigger").on("click", function(e) {
+            $(this).toggleClass("active");
             $(this).siblings(".guide-trial__content-wrapper").toggleClass("active");
         });
 
         $(".guide-trial__attack-trigger").on("click", function(e) {
+            $(this).toggleClass("active");
             $(this).siblings(".guide-trial__attack-content").toggleClass("active");
         });
 
@@ -146,6 +148,37 @@
           hitCallback: submitClick
         });
 
+    });
+
+    // Google Analytics Conversion Tracker (Twitter) ===========================
+
+    // Adds a listener for the "submit" event.
+    $(".twitterLink").on("click", function(e) {
+
+        var clickedLink = $(this);
+
+        // Prevents the browser from submitting the form
+        // and thus unloading the current page.
+        event.preventDefault();
+
+        // Creates a timeout to call `submitForm` after one second.
+        setTimeout(submitClick, 1000);
+
+        function submitClick() {
+          var thisLink = clickedLink.attr("href");
+          location.href = thisLink;
+        }
+
+        // Sends the event to Google Analytics and
+        // resubmits the form once the hit is done.
+        ga('send', 'event', 'twitterLink', 'click', {
+          hitCallback: submitClick
+        });
+
+    });
+
+    $('#gform').on('submit', function(e) {
+        $('#gform').addClass("submitted");
     });
 
 })(jQuery);

@@ -71,7 +71,7 @@
 
                                         <div class="guide-trial__attack-order-wrapper">
                                             {% for attack in phase.attacks %}
-                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} > {% endif %}</span>
+                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} <span class="guide-trial__attack-order-divider">></span> {% endif %}</span>
                                             {% endfor %}
                                         </div>
 
@@ -132,7 +132,7 @@
                                                 <div class="guide-trial__attack-trigger">
 
                                                     <!-- Attack Name -->
-                                                    <h4 class="heading--04 guide-trial__item-title">{{ attack.title }}</h4>
+                                                    <h4 class="heading--04 guide-trial__attack-title">{{ attack.title }}</h4>
 
                                                 </div>
 
@@ -246,7 +246,7 @@
 
                                         <div class="guide-trial__attack-order-wrapper">
                                             {% for attack in stance.attacks %}
-                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} > {% endif %}</span>
+                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} <span class="guide-trial__attack-order-divider">></span> {% endif %}</span>
                                             {% endfor %}
                                         </div>
 
@@ -294,7 +294,7 @@
 
                                         <div class="guide-trial__attack-order-wrapper">
                                             {% for attack in spawn.attacks %}
-                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} | {% endif %}</span>
+                                                <span class="guide-trial__attack-order-attack">{{ attack.attack }}{% if forloop.last != true %} <span class="guide-trial__attack-order-divider">|</span> {% endif %}</span>
                                             {% endfor %}
                                         </div>
 

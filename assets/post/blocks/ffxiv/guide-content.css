@@ -43,16 +43,18 @@
 
 .guide__event-item {
     background: $white;
+    border: 1px solid #cccccc;
     border-radius: 3px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+    /*box-shadow: 0 3px 10px rgba(0, 0, 0, .35);*/
     margin: calc($small-padding/4) 0;
     padding: calc($small-padding/2);
 }
 
 .guide__event-item--attack {
     background: $white;
+    border: 1px solid #cccccc;
     border-radius: 3px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+    /*box-shadow: 0 3px 10px rgba(0, 0, 0, .35);*/
     margin: calc($small-padding/4) 0;
     padding: 0;
 }
@@ -132,7 +134,7 @@
 
 /* Divider ================================================================== */
 .guide__event-divider {
-    background: #cccccc;
+    background: $red;
     border: none;
     height: 1px;
     margin: calc($small-padding/2) 0;
