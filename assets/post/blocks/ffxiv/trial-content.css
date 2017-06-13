@@ -163,6 +163,11 @@ body.new-trial {
 
 .guide-trial__notes {
     margin: 1rem 0 0 0 !important;;
+
+    li {
+        color: $font-black;
+    }
+
 }
 
 .guide-trial__image {

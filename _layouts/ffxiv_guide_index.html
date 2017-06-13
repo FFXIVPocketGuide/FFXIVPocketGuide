@@ -127,7 +127,13 @@
 
                                     <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
-                                    <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                    {% if guide.ilvl %}
+                                        <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                    {% endif %}
+
+                                    {% if guide.plvl %}
+                                        <h5 class="heading--05 guide-index__ilvl">Player Level: {{ guide.plvl }}</h5>
+                                    {% endif %}
 
                                 </a>
 
@@ -145,7 +151,13 @@
 
                                         <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
-                                        <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                        {% if guide.ilvl %}
+                                            <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                        {% endif %}
+
+                                        {% if guide.plvl %}
+                                            <h5 class="heading--05 guide-index__ilvl">Player Level: {{ guide.plvl }}</h5>
+                                        {% endif %}
 
                                     </a>
 
@@ -165,7 +177,13 @@
 
                                         <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
-                                        <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                        {% if guide.ilvl %}
+                                            <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                        {% endif %}
+
+                                        {% if guide.plvl %}
+                                            <h5 class="heading--05 guide-index__ilvl">Player Level: {{ guide.plvl }}</h5>
+                                        {% endif %}
 
                                     </a>
 
@@ -185,7 +203,13 @@
 
                                         <h3 class="{% if guide.title.size < 20 %}heading--03{% endif %} {% if guide.title.size > 20 %}heading--04{% endif %} guide-index__list-item-title">{{ guide.title }} {% if guide.difficulty %}({{ guide.difficulty }}){% endif %}</h3>
 
-                                        <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                        {% if guide.ilvl %}
+                                            <h5 class="heading--05 guide-index__ilvl">Item Level: {{ guide.ilvl }}</h5>
+                                        {% endif %}
+
+                                        {% if guide.plvl %}
+                                            <h5 class="heading--05 guide-index__ilvl">Player Level: {{ guide.plvl }}</h5>
+                                        {% endif %}
 
                                     </a>
 

@@ -6,7 +6,7 @@ image:
     - url: "/assets/img/ffxiv/sastasha.jpg"
     - alt: "Sastasha"
 patch: "2.0 - A Realm Reborn"
-ilvl: "15"
+plvl: "15"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/tT3-1Yb787w"
 bosses:

@@ -73,14 +73,18 @@
     }
 
     select {
-        /*appearance: none;*/
+        appearance: none;
+        background: none;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: contain;
         border: 1px solid #CCC;
         display: block;
         font-family: $font-aktiv;
         font-size: $font-scale-regular;
         font-weight: 300;
         outline: none;
-        padding: .5rem;
+        padding: .5rem 3rem .5rem .5rem;
         width: 100%;
 
         &:focus {
@@ -91,6 +95,7 @@
 
     textarea {
         appearance: none;
+        background: none;
         border: 1px solid #CCC;
         display: block;
         font-family: $font-aktiv;
@@ -109,6 +114,7 @@
 
     input[type="text"] {
         appearance: none;
+        background: none;
         border: 1px solid #CCC;
         display: block;
         font-family: $font-aktiv;

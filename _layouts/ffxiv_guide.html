@@ -36,7 +36,13 @@
 
                 <h5 class="heading--05 guide__patch">Patch {{ page.patch }}</h5>
 
-                <h5 class="heading--05 guide__ilvl">Item Level: {{ page.ilvl }}</h5>
+                {% if page.ilvl %}
+                    <h5 class="heading--05 guide__ilvl">Item Level: {{ page.ilvl }}</h5>
+                {% endif %}
+
+                {% if page.plvl %}
+                    <h5 class="heading--05 guide__ilvl">Player Level: {{ page.plvl }}</h5>
+                {% endif %}
 
                 <p class="guide__intro">Note that this guide is not a replacement for first-hand experience. Please visit the original MTQCapture video guide for more comprehensive information.</p>
 

@@ -7,7 +7,7 @@ image:
 patchNumber: 3.0
 patchName: "Heavensward"
 difficulty: "Hard"
-ilvl: 53
+plvl: 53
 instanceType: "trial"
 mtqvid: "https://youtu.be/HQ7GAofEJBw"
 attacks:

@@ -160,7 +160,7 @@ attacks:
     notes:
       - note: "Players will be marked with red markers for a large crystal to drop on them - it is important that these crystals are placed in the locations indicated in the image below."
       - note: "These crystals will explode causing 'Tetrashatter' if Alexander is close to them - this will be used to determine Alexander's location later in the fight."
-      - note: "Judgement Crystal will alternate in the following pattern: 'Judgement Crystal' > 'Incinerating Heat' > 'Judgement Crystal' > '[Radiant] Sacrament' > 'Judgement Crystal' > 'Punishing Heat' > 'Judgement Crystal'."
+      - note: "Judgement Crystal will alternate in the following pattern: 'Judgement Crystal' > 'Incinerating Heat' > 'Judgement Crystal' > '(Radiant) Sacrament' > 'Judgement Crystal' > 'Punishing Heat' > 'Judgement Crystal'."
     images:
       - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_crystal_drops.png"
         alt: "Judgement Crystal Placement"
@@ -335,7 +335,7 @@ sequence:
       - attack: "Mega Holy"
       - attack: "Mega Holy"
       - attack: "Gravitational Anomaly"
-      - attack: "[Radiant] Sacrament"
+      - attack: "(Radiant) Sacrament"
       - attack: "Divine Spear"
       - attack: "Punishing Heat"
     alerts:
@@ -375,7 +375,7 @@ sequence:
       - attack: "Chronofoil"
       - attack: "Temporal Stasis 01"
       - attack: "Gravitational Anomaly"
-      - attack: "[Radiant] Sacrament"
+      - attack: "(Radiant) Sacrament"
       - attack: "Mega Holy"
       - attack: "Divine Spear"
       - attack: "Punishing Heat"
@@ -387,7 +387,7 @@ sequence:
     attacks:
       - attack: "Temporal Stasis 02"
       - attack: "Gravitational Anomaly"
-      - attack: "[Radiant] Sacrament"
+      - attack: "(Radiant) Sacrament"
       - attack: "Mega Holy"
       - attack: "Divine Spear"
       - attack: "Punishing Heat"

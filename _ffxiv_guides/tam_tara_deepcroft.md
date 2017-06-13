@@ -6,7 +6,7 @@ image:
     - url: "/assets/img/ffxiv/tam_tara.jpg"
     - alt: "The Tam-Tara Deepcroft"
 patch: "2.0 - A Realm Reborn"
-ilvl: "16"
+plvl: "16"
 instanceType: "dungeon"
 mtqvid: ""
 bosses:
