@@ -248,7 +248,7 @@ attacks:
         roles:
           - role: "Everyone"
         tags:
-          - tag: "Proximity AoE"
+          - tag: "Stack"
         notes:
           - note: "This attack targets a healer - only the 2 DPS players who hit the 'Void of Repentance' pools first will be available to help soak damage."
   - title: "Holy Bleed"
