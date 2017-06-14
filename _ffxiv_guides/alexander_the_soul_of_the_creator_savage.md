@@ -95,7 +95,7 @@ attacks:
     notes:
       - note: "This attack occurs after Alexander spawns 3 waves of adds."
       - note: "If <strong>ANY</strong> adds are alive when the cast goes off, you will wipe."
-      - note: "Thanks must Limit Break 3 at 3-5 seconds on the timer in order for the group to survive."
+      - note: "Tanks must Limit Break 3 at 3-5 seconds on the timer in order for the group to survive."
   - title: "Chronofoil"
     phases:
       - phase: 03
