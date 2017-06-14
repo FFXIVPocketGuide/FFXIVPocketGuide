@@ -450,7 +450,7 @@ spawns:
       - note: "These adds repetitively hit the group with a raid-wide AoE that increases their magic damage each time it casts - kill them as soon as possible."
   - title: "The General's Might"
     attacks:
-     - attack: "Tankbuster"
+      - attack: "Tankbuster"
     notes:
       - note: "This spawn will gain a stacking physical damage up buff over time."
       - note: "When this add spawns with 'The General's Time', be sure to keep it out of the Time's AoE."
