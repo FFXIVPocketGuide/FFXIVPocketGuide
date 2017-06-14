@@ -65,7 +65,18 @@
 
                         <div class="guide-trial__content-wrapper">
 
+                            <div class="flex-grid guide-trial__phase-menu">
+                                {% for phase in page.sequence %}
+                                <div class="box small-1of3 med-1of4 lg-1of6 guide-trial__phase-button-wrapper">
+                                    <a href="#phase{{ phase.phase }}" title="Go to phase {{ phase.phase }}" class="guide-trial__phase-button">Phase {{ phase.phase }}</a>
+                                </div>
+                                {% endfor %}
+                            </div>
+
                             {% for phase in page.sequence %}
+
+                                <!-- Phase Link -->
+                                <a id="phase{{ phase.phase }}"></a>
 
                                 <div class="guide__event-item">
 

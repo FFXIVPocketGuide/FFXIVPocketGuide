@@ -41,6 +41,28 @@ body.new-trial {
 
 }
 
+.guide-trial__phase-menu {
+    margin: 1rem -.5rem;
+}
+
+.guide-trial__phase-button-wrapper {
+    padding: .5rem;
+}
+
+.guide-trial__phase-button {
+    background: $red;
+    border-radius: 3px;
+    color: $white;
+    display: block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 700;
+    line-height: 1;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
 .guide-trial__content-wrapper {
     display: none;
 
