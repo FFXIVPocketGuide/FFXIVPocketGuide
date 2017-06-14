@@ -17,7 +17,7 @@ bosses:
           alerts:
             - alert: "These minibosses will spawn at each orb platform throughout the dungeon."
             - alert: "Allow the tank to build enough enmity before DPSing them down."
-        - mechanics:
+          mechanics:
             - title: "Enthunder"
               tags:
                 - tag: "Buff"
