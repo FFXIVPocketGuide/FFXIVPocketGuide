@@ -57,7 +57,7 @@ attacks:
       - tag: "Stack"
       - tag: "Marker"
     notes:
-      - note: "This attack will place a stack marker on one player and a red marker on another."
+      - note: "This attack will place a stack marker on a healer and a red marker on another player."
       - note: "All players except the one marked with the red marker should stack, while the marked player flees."
   - title: "Biting Halberd"
     phases:
