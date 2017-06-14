@@ -40,8 +40,9 @@ attacks:
         tags:
           - tag: "Marker"
         notes:
-          - note: "6 players will be marked (red circles) for this attack and it is crucial that they do not overlap - this is difficult as there are few safe areas during Soar."
+          - note: "All players but the healers will be marked (red circles) for this attack and it is crucial that they do not overlap - this is difficult as there are few safe areas during Soar."
           - note: "Players (blue dots) should arrange themselves according to the pattern Zurvan attacks with (see images for player locations)."
+          - note: "Healers can safely stack with another player."
     images:
       - url: "/assets/img/ffxiv/zurvan/zurvan_ex_soar_01.png"
         alt: "Soar Layout - Even"
