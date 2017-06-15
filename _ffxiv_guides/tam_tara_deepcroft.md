@@ -4,6 +4,7 @@ title:  "The Tam-Tara Deepcroft"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/ffxiv/tam_tara.jpg"
+    - urlSmall: "/assets/img/ffxiv/small/tam_tara.jpg"
     - alt: "The Tam-Tara Deepcroft"
 patch: "2.0 - A Realm Reborn"
 plvl: "16"

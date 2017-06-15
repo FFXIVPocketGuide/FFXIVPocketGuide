@@ -99,3 +99,17 @@ $large-padding: calc(3rem*2);
     }
 
 }
+
+/* Typekit Font Pop Fix ===================================================== */
+html {
+    opacity: 0;
+    transition: opacity 300ms ease 0ms;
+
+    /* Fade in the document when webfonts are loaded */
+    /* NOTE: This only works if Typekit is included and initialized */
+    &.wf-active {
+        opacity: 1 !important;
+        transition: opacity 300ms ease 100ms;
+    }
+
+}

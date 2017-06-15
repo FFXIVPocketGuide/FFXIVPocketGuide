@@ -4,6 +4,7 @@ title:  "Baelsar's Wall"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/ffxiv/baelsars_wall.jpg"
+    - urlSmall: "/assets/img/ffxiv/small/baelsars_wall.jpg"
     - alt: "Baelsar's Wall"
 patch: "3.5 - The Far Edge of Fate"
 ilvl: "230"

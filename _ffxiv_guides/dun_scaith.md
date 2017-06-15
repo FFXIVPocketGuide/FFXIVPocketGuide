@@ -4,6 +4,7 @@ title:  "Dun Scaith"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/ffxiv/dun_scaith.jpg"
+    - urlSmall: "/assets/img/ffxiv/small/dun_scaith.jpg"
     - alt: "Dun Scaith"
 patch: "3.5 - The Far Edge of Fate"
 ilvl: "235"

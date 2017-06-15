@@ -7,16 +7,16 @@
 .guide__hero {
     background-position: center;
     background-size: cover;
-    padding: calc($small-padding*2) 0 $small-padding 0;
+    padding: $small-padding 0;
     position: relative;
     text-align: center;
 
     @media $(p-tablet) {
-        padding: calc($small-padding*2) 0 $medium-padding 0;
+        padding: $medium-padding 0;
     }
 
     @media $(l-tablet) {
-        padding: $large-padding 0;
+        /*padding: $large-padding 0 $medium-padding;*/
     }
 
 }
@@ -32,13 +32,13 @@
 
 .guide__title {
     color: $white;
-    margin: 0 0 calc($small-padding/2) 0;
+    margin: 0 0 2.5rem 0;
     position: relative;
 }
 
 .guide__patch {
     color: $white;
-    font-size: $font-scale-small;
+    font-size: $font-scale-regular;
     font-weight: 500;
     margin: 0 0 calc($small-padding/4) 0;
     position: relative;
@@ -46,9 +46,9 @@
 
 .guide__ilvl {
     color: $red;
-    font-size: $font-scale-small;
+    font-size: $font-scale-regular;
     font-weight: 500;
-    margin: 0 0 calc($small-padding/4) 0;
+    margin: 0 0 calc($small-padding/2) 0;
     position: relative;
 }
 
@@ -67,5 +67,6 @@
 }
 
 .guide__hero-button {
+    margin: 1rem 0 0 0;
     position: relative;
 }

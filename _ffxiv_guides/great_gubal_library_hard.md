@@ -4,6 +4,7 @@ title:  "The Great Gubal Library (Hard)"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/ffxiv/great_gubal_hard.jpg"
+    - urlSmall: "/assets/img/ffxiv/small/great_gubal_hard.jpg"
     - alt: "The Great Gubal Library (Hard)"
 patch: "3.4 - Soul Surrender"
 ilvl: "210"

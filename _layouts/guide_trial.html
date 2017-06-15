@@ -26,9 +26,9 @@
 
             <div class="guide__hero-overlay"></div>
 
-            <a href="/" title="Return to the Raid Guide Index" class="guide-trial__return-link">
+            <!-- <a href="/" title="Return to the Raid Guide Index" class="guide-trial__return-link">
                 <i class="ionicons ion-chevron-left"></i>Return to the Index
-            </a>
+            </a> -->
 
             <div class="content-container">
 
@@ -44,7 +44,7 @@
                     <h5 class="heading--05 guide__ilvl">Player Level: {{ page.plvl }}</h5>
                 {% endif %}
 
-                <p class="guide__intro">Note that this guide is not a replacement for first-hand experience. Please visit the original MTQCapture video guide for more comprehensive information.</p>
+                <!-- <p class="guide__intro">Note that this guide is not a replacement for first-hand experience. Please visit the original MTQCapture video guide for more comprehensive information.</p> -->
 
                 <a href="{{ page.mtqvid }}" title="Visit the video guide for this raid." target="_blank" class="mtqLinkGuide button--small--white guide__hero-button">Watch MTQCapture's Video</a>
 
@@ -55,6 +55,20 @@
         <section class="guide__content">
 
             <div class="content-container">
+
+                <div class="guide__breadcrumbs-wrapper">
+                    <a href="/" title="Return to the Raid Guide Index" class="guide__breadcrumbs-link">Home</a><span> > </span>
+                    {% if page.instanceType == "dungeon" %}
+                        <a href="/dungeons/#list" title="Return to the Dungeon Guide Index" class="guide__breadcrumbs-link">Dungeons</a><span> > </span>
+                    {% endif %}
+                    {% if page.instanceType == "trial" %}
+                        <a href="/trials/#list" title="Return to the Trial Guide Index" class="guide__breadcrumbs-link">Trials</a><span> > </span>
+                    {% endif %}
+                    {% if page.instanceType == "raid" %}
+                        <a href="/raids/#list" title="Return to the Raid Guide Index" class="guide__breadcrumbs-link">Raids</a><span> > </span>
+                    {% endif %}
+                    <a href="{{ page.permalink }}" title="This guide!" class="guide__breadcrumbs-link active">{{ page.title | truncate: 15 }}</a>
+                </div>
 
                 <!-- Trial Sequence -->
                 {% if page.sequence %}

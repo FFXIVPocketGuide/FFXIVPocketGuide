@@ -4,6 +4,7 @@ title:  "[Ravana] Thok ast Thok"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/ffxiv/thok_ast_thok.jpg"
+    - urlSmall: "/assets/img/ffxiv/small/thok_ast_thok.jpg"
 patchNumber: 3.0
 patchName: "Heavensward"
 difficulty: "Hard"

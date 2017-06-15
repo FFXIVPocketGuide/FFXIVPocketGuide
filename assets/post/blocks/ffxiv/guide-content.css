@@ -5,14 +5,14 @@
 
 ============================================================================= */
 .guide__content {
-    padding: $small-padding 0;
+    padding: 2rem 0 $small-padding 0;
 
     @media $(p-tablet) {
-        padding: $medium-padding 0;
+        padding: $small-padding 0 $medium-padding 0;
     }
 
     @media $(l-tablet) {
-        padding: $large-padding 0;
+        padding: $small-padding 0 $large-padding 0;
     }
 
     ul {
@@ -25,6 +25,36 @@
             line-height: 1.5rem;
         }
 
+    }
+
+}
+
+.guide__breadcrumbs-wrapper {
+    padding: 0 0 2rem 0;
+
+    @media $(p-tablet) {
+        padding: 0 0 $small-padding 0;
+    }
+
+    span {
+        color: $font-black;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 800;
+        margin: 0 .5rem;
+    }
+
+}
+
+.guide__breadcrumbs-link {
+    color: $red;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 800;
+
+    &.active {
+        color: $font-black;
+        text-decoration: none;
     }
 
 }

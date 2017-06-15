@@ -63,7 +63,7 @@ bosses:
             - alert: "This phase will begin around the 90 second mark."
             - alert: "A second boss will enter the arena and must be <strong>TANKED AWAY</strong> from the first boss - if they are too close together, they will buff each others' attack."
             - alert: "It is important to DPS these bosses equally - when one is killed, the second will wipe the raid if not killed fast enough."
-            - alert: "Kill adds below the laser beam bomb indicators to mitigate their damage."
+            - alert: "Kill adds below the bomb indicators to mitigate their damage."
           mechanics:
             - title: "3000-Onze Missile & Emergency Deployment"
               tags:
@@ -76,7 +76,7 @@ bosses:
                 - title: "Emergency Deployment"
                   notes:
                     - note: "As before, adds will spawn and drop a puddle AoE when killed."
-                    - note: "These adds should be killed directly under the bombs' laser beams to nullify damage."
+                    - note: "These adds should be killed directly under the bombs to nullify damage."
             - title: "Quick Landing"
               tags:
                 - tag: "AoE"

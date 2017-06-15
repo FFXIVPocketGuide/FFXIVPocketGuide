@@ -4,6 +4,7 @@ title:  "Sastasha"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/ffxiv/sastasha.jpg"
+    - urlSmall: "/assets/img/ffxiv/small/sastasha.jpg"
     - alt: "Sastasha"
 patch: "2.0 - A Realm Reborn"
 plvl: "15"

@@ -4,6 +4,7 @@ title:  "[A12S] Alexander: The Soul of the Creator"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/ffxiv/alex_soul_savage.jpg"
+    - urlSmall: "/assets/img/ffxiv/small/alex_soul_savage.jpg"
 patchNumber: 3.4
 patchName: "Soul Surrender"
 difficulty: "Savage"
@@ -370,6 +371,7 @@ sequence:
           - tag: "Adds"
         notes:
           - note: "Expect 1 'The General's Might' and 1 'The General's Time' to spawn - Time will place an AoE that buffs Might - DPS Time down first and keep Might out of the AoE."
+          - note: "Both of these spawns have heavy tankbusters - healers watch your tanks' health."
   - phase: 03
     attacks:
       - attack: "Chronofoil"

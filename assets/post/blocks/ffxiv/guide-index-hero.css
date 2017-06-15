@@ -16,7 +16,7 @@
     }
 
     @media $(l-tablet) {
-        padding: $large-padding 0 0 0;
+        /*padding: $large-padding 0 0 0;*/
     }
 
 }
@@ -53,7 +53,7 @@
     font-family: $font-pt;
     font-size: 1rem;
     line-height: 1.5;
-    margin: 0 0 $small-padding 0;
+    margin: 0 0 0 0;
     position: relative;
 
     @media $(p-tablet) {
@@ -61,9 +61,17 @@
     }
 
     a {
-
+        color: $red;
     }
+}
 
+.guide-index__follow {
+    color: $white;
+    font-weight: 800;
+
+    a {
+        color: $red;
+    }
 }
 
 .guide-index__roadmap {
@@ -89,16 +97,20 @@
 }
 
 .guide-index__hero-category-wrapper {
+    color: $white;
+    font-family: $font-aktiv;
+    font-weight: 300;
+    line-height: 1;
     padding-top: $small-padding;
     position: relative;
 
     @media $(p-tablet) {
-        padding-top: $medium-padding;
+        /*padding-top: $medium-padding;*/
         text-align: left;
     }
 
     @media $(l-tablet) {
-        padding-top: $large-padding;
+        /*padding-top: $large-padding;*/
     }
 
 }
@@ -116,6 +128,14 @@
     &.active {
         border-bottom: .3rem solid $red;
         color: $red;
+    }
+
+    &:first-child {
+
+        @media $(p-tablet) {
+            margin-left: 0;
+        }
+
     }
 
 }
