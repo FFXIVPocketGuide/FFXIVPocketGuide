@@ -1,0 +1,34 @@
+/* =============================================================================
+
+    GUIDE BREADCRUMBS CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+.guide__breadcrumbs-wrapper {
+    padding: $padding-regular 0;
+
+    span {
+        color: $font-black;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 800;
+        margin: 0 .5rem;
+    }
+
+}
+
+.guide__breadcrumbs-link {
+    color: $red;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 800;
+
+    &.active {
+        color: $font-black;
+        text-decoration: none;
+    }
+
+}

@@ -1,0 +1,213 @@
+/* =============================================================================
+
+    SETTINGS CSS
+
+    Authored by:
+        - Josh Beveridge
+
+================================================================================
+
+    *** This file is not to be edited on a per project basis. ***
+
+============================================================================= */
+
+/* Media Variables ========================================================== */
+$portrait: screen and (orientation: portrait);
+/*$(portrait) {}*/
+
+$landscape: screen and (orientation: landscape);
+/*$(landscape) {}*/
+
+$p-phone: screen and (min-width: 320px);
+/*$(p-phone) {}*/
+
+$l-phone: screen and (min-width: 480px);
+/*$(l-phone) {}*/
+
+$p-tablet: screen and (min-width: 48em);
+/*$(p-tablet) {}*/
+
+$l-tablet: screen and (min-width: 64em);
+/*$(l-tablet) {}*/
+
+$desktop: screen and (min-width: 64.01em);
+/*$(desktop) {}*/
+
+$cinema: screen and (min-width: 100em);
+/*$(cinema) {}*/
+
+$cinema-xl: screen and (min-width: 110em);
+/*$(cinema-xl) {}*/
+
+/* Padding Units ============================================================ */
+$padding-unit: 1rem;
+
+$padding-small: calc($padding-unit * 1);
+$padding-regular: calc($padding-unit * 2);
+$padding-medium: calc($padding-unit * 4);
+$padding-large: calc($padding-unit * 6);
+$padding-xlarge: calc($padding-unit * 8);
+
+/* Standards ================================================================ */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+section {
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.page-container {
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+
+    @media $(p-tablet) {
+        padding: 0 4rem;
+    }
+
+    @media screen and (min-width: 60rem) {
+        max-width: 50rem;
+        padding: 0;
+    }
+
+    @media $(desktop) {
+        max-width: 60rem;
+    }
+
+    @media $(cinema) {
+        max-width: 70rem;
+    }
+
+}
+
+.content-container {
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+
+    @media $(p-tablet) {
+        padding: 0 4rem;
+    }
+
+    @media screen and (min-width: 55rem) {
+        max-width: 45rem;
+        padding: 0;
+    }
+
+}
+
+/* Elements ================================================================= */
+img,
+iframe {
+    max-width: 100%;
+}
+
+/* SVG Dimension Fix for IE ================================================= */
+[src*=".svg"] {
+    max-height: 100%;
+}
+
+/* Outdated Browser Note ==================================================== */
+.dated-browser-note {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: red;
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+    z-index: 9999;
+    text-align: center;
+    display: block;
+}
+
+/* Error Page ============================================================ */
+.error-type {
+    color: red !important;
+    font-size: 6rem !important;
+    font-weight: 100 !important;
+    margin: 0 !important;
+}
+
+.error-desc {
+    margin: 0 0 2rem !important;
+}
+
+/* Helper Classes ======================================================== */
+.full-wide {
+    width: 100% !important;
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.flush-top {
+    padding-top: 0 !important;
+}
+
+.flush-bottom {
+    padding-bottom: 0 !important;
+}
+
+.flush {
+    padding: 0 !important;
+}
+
+/* Gr(e/a)yscale ============================================================ */
+
+/* Black */
+$black: rgba(0, 0, 0, 1);
+
+/* Gr(e/a)yscale */
+$grey-10: hsla(0, 0%, 10%, 1);
+$grey-20: hsla(0, 0%, 20%, 1);
+$grey-30: hsla(0, 0%, 30%, 1);
+$grey-40: hsla(0, 0%, 40%, 1);
+$grey-50: hsla(0, 0%, 50%, 1);
+$grey-60: hsla(0, 0%, 60%, 1);
+$grey-70: hsla(0, 0%, 70%, 1);
+$grey-80: hsla(0, 0%, 80%, 1);
+$grey-90: hsla(0, 0%, 90%, 1);
+
+$gray-10: hsla(0, 0%, 10%, 1);
+$gray-20: hsla(0, 0%, 20%, 1);
+$gray-30: hsla(0, 0%, 30%, 1);
+$gray-40: hsla(0, 0%, 40%, 1);
+$gray-50: hsla(0, 0%, 50%, 1);
+$gray-60: hsla(0, 0%, 60%, 1);
+$gray-70: hsla(0, 0%, 70%, 1);
+$gray-80: hsla(0, 0%, 80%, 1);
+$gray-90: hsla(0, 0%, 90%, 1);
+
+/* White */
+$white: rgba(255, 255, 255, 1);
+
+/* Core Colours ============================================================= */
+$red: rgba(255, 0, 0, 1);
+$green: rgba(0, 255, 0, 1);
+$blue: rgba(0, 0, 255, 1);

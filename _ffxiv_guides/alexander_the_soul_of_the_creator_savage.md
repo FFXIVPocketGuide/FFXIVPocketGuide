@@ -1,10 +1,10 @@
 ---
-layout: guide_trial
+layout: guide_post
 title:  "[A12S] Alexander: The Soul of the Creator"
 date:   2017-04-09 18:00:14 -0300
 image:
-    - url: "/assets/img/ffxiv/alex_soul_savage.jpg"
-    - urlSmall: "/assets/img/ffxiv/small/alex_soul_savage.jpg"
+    - url: "/assets/img/raids/alex_12_s.jpg"
+    - urlSmall: "/assets/img/raids/small/alex_12_s.jpg"
 patchNumber: 3.4
 patchName: "Soul Surrender"
 difficulty: "Savage"
@@ -115,13 +115,13 @@ attacks:
       - tag: "Mechanic"
     notes:
       - note: "This attack will freeze time and combines multiple debuffs that complicate party placement."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_defamation.png' alt='Defamation Icon' class='guide-trial__status-icon'> <strong>Defamation</strong>: causes a very large AoE to spawn on a player and applies a Magic Vulnerability Up Debuff."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_shared_sentence.png' alt='Shared Sentence Icon' class='guide-trial__status-icon'> <strong>Shared Sentence</strong>: causes a small AoE and applies a Magic Vulnerability Up Debuff - this debuff requires another player that does not have Defamation or Shared Sentence."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_restraining_order.png' alt='Restraining Order Icon' class='guide-trial__status-icon'> <strong>Restraining Order</strong>: tethers two players together with a blue tether - these players should be as far apart as possible."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_house_arrest.png' alt='House Arrest Icon' class='guide-trial__status-icon'> <strong>House Arrest</strong>: tethers two players together with a green and red tether - these players should be as close together as possible."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_defamation.png' alt='Defamation Icon' class='guide-trial__status-icon'> <strong>Defamation</strong>: causes a very large AoE to spawn on a player and applies a Magic Vulnerability Up Debuff."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_shared_sentence.png' alt='Shared Sentence Icon' class='guide-trial__status-icon'> <strong>Shared Sentence</strong>: causes a small AoE and applies a Magic Vulnerability Up Debuff - this debuff requires another player that does not have Defamation or Shared Sentence."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_restraining_order.png' alt='Restraining Order Icon' class='guide-trial__status-icon'> <strong>Restraining Order</strong>: tethers two players together with a blue tether - these players should be as far apart as possible."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_house_arrest.png' alt='House Arrest Icon' class='guide-trial__status-icon'> <strong>House Arrest</strong>: tethers two players together with a green and red tether - these players should be as close together as possible."
       - note: "The debuffs will be distributed as such: <ul><li>3 DPS - Defamation</li><li>1 DPS & 1 Healer - Shared Sentence</li><li>2 Tanks - Restraining Order OR House Arrest</li><li>1 Healer - No Debuff</li></ul>"
     images:
-      - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_stasis_01.png"
+      - url: "/assets/img/raids/alex_12_s/alex_12_s_stasis_01.png"
         alt: "Debuff Placement During Stasis 01."
   - title: "Temporal Stasis 02"
     phases:
@@ -132,13 +132,13 @@ attacks:
       - tag: "Mechanic"
     notes:
       - note: "This attack will freeze time and combines multiple debuffs that complicate party placement."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_defamation.png' alt='Defamation Icon' class='guide-trial__status-icon'> <strong>Defamation</strong>: causes a very large AoE to spawn on a player and applies a Magic Vulnerability Up Debuff."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_shared_sentence.png' alt='Shared Sentence Icon' class='guide-trial__status-icon'> <strong>Shared Sentence</strong>: causes a small AoE and applies a Magic Vulnerability Up Debuff - this debuff requires another player that does not have Defamation or Shared Sentence."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_restraining_order.png' alt='Restraining Order Icon' class='guide-trial__status-icon'> <strong>Restraining Order</strong>: tethers two players together with a blue tether - these players should be as far apart as possible."
-      - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_house_arrest.png' alt='House Arrest Icon' class='guide-trial__status-icon'> <strong>House Arrest</strong>: tethers two players together with a green and red tether - these players should be as close together as possible."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_defamation.png' alt='Defamation Icon' class='guide-trial__status-icon'> <strong>Defamation</strong>: causes a very large AoE to spawn on a player and applies a Magic Vulnerability Up Debuff."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_shared_sentence.png' alt='Shared Sentence Icon' class='guide-trial__status-icon'> <strong>Shared Sentence</strong>: causes a small AoE and applies a Magic Vulnerability Up Debuff - this debuff requires another player that does not have Defamation or Shared Sentence."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_restraining_order.png' alt='Restraining Order Icon' class='guide-trial__status-icon'> <strong>Restraining Order</strong>: tethers two players together with a blue tether - these players should be as far apart as possible."
+      - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_house_arrest.png' alt='House Arrest Icon' class='guide-trial__status-icon'> <strong>House Arrest</strong>: tethers two players together with a green and red tether - these players should be as close together as possible."
       - note: "The debuffs will be distributed as such: <ul><li>1 Tank & 1 Healer - Defamation</li><li>2 DPS - Shared Sentence</li><li>1 Tank & 1 Healer - Restraining Order OR House Arrest</li><li>2 DPS - Restraining Order OR House Arrest</li></ul>"
     images:
-      - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_stasis_02.png"
+      - url: "/assets/img/raids/alex_12_s/alex_12_s_stasis_02.png"
         alt: "Debuff Placement During Stasis 02."
   - title: "Timegates"
     phases:
@@ -163,7 +163,7 @@ attacks:
       - note: "These crystals will explode causing 'Tetrashatter' if Alexander is close to them - this will be used to determine Alexander's location later in the fight."
       - note: "Judgement Crystal will alternate in the following pattern: 'Judgement Crystal' > 'Incinerating Heat' > 'Judgement Crystal' > '(Radiant) Sacrament' > 'Judgement Crystal' > 'Punishing Heat' > 'Judgement Crystal'."
     images:
-      - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_crystal_drops.png"
+      - url: "/assets/img/raids/alex_12_s/alex_12_s_crystal_drops.png"
         alt: "Judgement Crystal Placement"
   - title: "Inception 01 & Tetrashatter & Sacrament"
     phases:
@@ -193,7 +193,7 @@ attacks:
           - note: "When he appears, Alexander will immediately cast Sacrament."
           - note: "Players should move as far away from Tetrashatter as possible while remaining in Sacrament's diagonal safe zones (see image)."
     images:
-      - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_inception_01.png"
+      - url: "/assets/img/raid/alex_12_s/alex_12_s_inception_01.png"
         alt: "Inception Safe Zone Example"
   - title: "Inception 02 & Tetrashatter & Sacrament"
     phases:
@@ -207,10 +207,10 @@ attacks:
         notes:
           - note: "Alexander will disappear and reappear randomly at one of the red dots around the arena (grey circles on the image) - 'Tetrashatter' will be used to predict his location."
           - note: "This time, players will have to deal with the following Debuffs:"
-          - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_defamation.png' alt='Defamation Icon' class='guide-trial__status-icon'> <strong>Defamation</strong>: causes a very large AoE to spawn on a player and applies a Magic Vulnerability Up Debuff."
-          - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_shared_sentence.png' alt='Shared Sentence Icon' class='guide-trial__status-icon'> <strong>Shared Sentence</strong>: causes a small AoE and applies a Magic Vulnerability Up Debuff - this debuff requires another player that does not have Defamation or Shared Sentence."
-          - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_restraining_order.png' alt='Restraining Order Icon' class='guide-trial__status-icon'> <strong>Restraining Order</strong>: tethers two players together with a blue tether - these players should be as far apart as possible."
-          - note: "<img src='/assets/img/ffxiv/alex_12_s/alex_12_s_house_arrest.png' alt='House Arrest Icon' class='guide-trial__status-icon'> <strong>House Arrest</strong>: tethers two players together with a green and red tether - these players should be as close together as possible."
+          - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_defamation.png' alt='Defamation Icon' class='guide-trial__status-icon'> <strong>Defamation</strong>: causes a very large AoE to spawn on a player and applies a Magic Vulnerability Up Debuff."
+          - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_shared_sentence.png' alt='Shared Sentence Icon' class='guide-trial__status-icon'> <strong>Shared Sentence</strong>: causes a small AoE and applies a Magic Vulnerability Up Debuff - this debuff requires another player that does not have Defamation or Shared Sentence."
+          - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_restraining_order.png' alt='Restraining Order Icon' class='guide-trial__status-icon'> <strong>Restraining Order</strong>: tethers two players together with a blue tether - these players should be as far apart as possible."
+          - note: "<img src='/assets/img/raids/alex_12_s/alex_12_s_house_arrest.png' alt='House Arrest Icon' class='guide-trial__status-icon'> <strong>House Arrest</strong>: tethers two players together with a green and red tether - these players should be as close together as possible."
           - note: "The debuffs will be distributed as such: <ul><li>Main Tank - Defamation</li><li>1 Healer - Shared Sentence</li><li>Off Tank & 1 DPS - Restraining Order OR House Arrest</li><li>1 Healer & 1 DPS - Restraining Order OR House Arrest</li><li>2 DPS - Restraining Order OR House Arrest</li></ul>"
       - title: "Tetrashatter"
         roles:
@@ -229,7 +229,7 @@ attacks:
           - note: "When he appears, Alexander will immediately cast Sacrament."
           - note: "Players should move as far away from Tetrashatter as possible while remaining in Sacrament's diagonal safe zones (see image)."
     images:
-      - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_inception_02.png"
+      - url: "/assets/img/raid/alex_12_s/alex_12_s_inception_02.png"
         alt: "Inception Safe Zone Example"
   - title: "Void of Repentance & Incinerating Heat"
     phases:
@@ -322,9 +322,9 @@ attacks:
           - note: "This column AoE (orange rectangles) shoots in 4 directions with Alexander at the center - safe zones are the boss' diagonals."
           - note: "Tanks should position Alexander appropriately to ensure that Sacrament's columns to not overlap with 'Void of Repentance' pools."
     images:
-      - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_repentance_01.png"
+      - url: "/assets/img/raids/alex_12_s/alex_12_s_repentance_01.png"
         alt: "Tanking Alexander in the North During Void of Repentance."
-      - url: "/assets/img/ffxiv/alex_12_s/alex_12_s_repentance_02.png"
+      - url: "/assets/img/raids/alex_12_s/alex_12_s_repentance_02.png"
         alt: "Tanking Alexander in the Center During Void of Repentance."
 sequence:
   - phase: 01

@@ -1,10 +1,10 @@
 ---
-layout: guide_trial
+layout: guide_post
 title:  "[Ravana] Thok ast Thok"
 date:   2017-04-09 18:00:14 -0300
 image:
-    - url: "/assets/img/ffxiv/thok_ast_thok.jpg"
-    - urlSmall: "/assets/img/ffxiv/small/thok_ast_thok.jpg"
+    - url: "/assets/img/trials/thok_ast_thok.jpg"
+    - urlSmall: "/assets/img/trials/small/thok_ast_thok.jpg"
 patchNumber: 3.0
 patchName: "Heavensward"
 difficulty: "Hard"
@@ -43,10 +43,6 @@ attacks:
   - title: "Prelude to Slaughter"
     phases:
       - phase: 01
-    roles:
-      - role: "Everyone"
-    tags:
-      - tag: "Combo Mechanic"
     combo:
       - title: "Phase 01"
         roles:

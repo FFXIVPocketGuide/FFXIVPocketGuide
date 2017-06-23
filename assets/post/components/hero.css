@@ -1,0 +1,111 @@
+/* =============================================================================
+
+    HERO CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+.hero {
+    background-position: center;
+    background-size: cover;
+    padding: calc($padding-unit * 3) 0 0 0;
+    position: relative;
+    text-align: center;
+
+    @media $(p-tablet) {
+        padding: calc($padding-unit * 5) 0 0 0;
+    }
+
+}
+
+.hero__overlay {
+    background: rgba(0, 0, 0, .75);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hero__title {
+    color: $white;
+    line-height: 1;
+    margin: 0 0 $padding-regular 0;
+    position: relative;
+
+    span {
+        color: $white;
+    }
+
+}
+
+.hero__intro {
+    color: $white;
+    font-family: $font-pt;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 0 0;
+    position: relative;
+
+    @media $(p-tablet) {
+        font-size: 1rem;
+    }
+
+    a {
+        color: $red;
+    }
+}
+
+.hero__follow-copy {
+    color: $white;
+    font-weight: 800;
+
+    a {
+        color: $red;
+    }
+}
+
+/* Hero Category Menu ======================================================= */
+.hero__category-wrapper {
+    color: $white;
+    font-family: $font-aktiv;
+    font-weight: 300;
+    line-height: 1;
+    /* Not using a variable for this padding because it has to correlate with the padding at the top of the hero (+1). */
+    padding-top: calc($padding-unit * 4);
+    position: relative;
+
+    @media $(p-tablet) {
+        /* Not using a variable for this padding because it has to correlate with the padding at the top of the hero (+1). */
+        padding-top: calc($padding-unit * 6);
+        text-align: left;
+    }
+
+}
+
+.hero__category {
+    color: $white;
+    display: inline-block;
+    font-family: $font-aktiv;
+    font-weight: 300;
+    line-height: 1;
+    margin: -.8rem .5rem 0 .5rem;
+    padding-bottom: .5rem;
+    text-decoration: none;
+
+    &.active {
+        border-bottom: .3rem solid $red;
+        color: $red;
+    }
+
+    &:first-child {
+
+        @media $(p-tablet) {
+            margin-left: 0;
+        }
+
+    }
+
+}

@@ -1,0 +1,18 @@
+<!-- Event Puzzle -->
+<div class="guide__notes-wrapper">
+
+    {% for step in mechanic.steps %}
+
+        <!-- Mechanics Group Title -->
+        <h5 class="heading--05">Step {{ step.step }}</h5>
+
+        <!-- Stance Notes -->
+        <ul class="guide__notes-list">
+            {% for note in step.notes %}
+                <li class="guide__notes-item">{{ note.note }}</li>
+            {% endfor %}
+        </ul>
+
+    {% endfor %}
+
+</div>

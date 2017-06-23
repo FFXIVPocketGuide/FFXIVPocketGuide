@@ -1,0 +1,53 @@
+/* =============================================================================
+
+    GUIDE ALERTS CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+.guide__alerts-wrapper {
+    margin: $padding-unit 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &+.guide__mechanics-wrapper {
+        margin-top: $padding-regular;
+    }
+
+    h5 {
+        color: $red;
+        margin-bottom: $padding-small;
+    }
+
+}
+
+.guide__alerts-list {
+    margin-top: $padding-small;
+    padding: 0 0 0 $padding-regular;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+.guide__alerts-item {
+    color: $font-black;
+    font-family: $font-pt;
+    font-size: $font-scale-regular;
+    line-height: 1.5;
+    margin: 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}

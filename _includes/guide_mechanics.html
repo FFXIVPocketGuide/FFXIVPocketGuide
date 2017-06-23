@@ -1,0 +1,36 @@
+<!-- Duty Puzzles ========================================================== -->
+<div class="guide__event">
+
+    <div class="guide__event-accordion-trigger accordion-trigger">
+        <h2 class="heading--02">
+            {% if page.instanceType == "dungeon" %}Dungeon Mechanics{% endif %}
+            {% if page.instanceType == "raid" %}Raid Mechanics{% endif %}
+        </h2>
+    </div>
+
+    <!-- Guide Event Accordion Content -->
+    <div class="guide__event-accordion-content accordion-content">
+
+        <!-- Opens the Boss Loop -->
+        {% for mechanic in page.mechanics %}
+
+            <div class="guide__event-object">
+
+                <!-- Event Title -->
+                <h4 class="heading--04">{{ mechanic.title }}</h4>
+
+                <!-- Opens the Step Loop -->
+                {% if mechanic.steps %}
+                    <!-- Include Guide Skill Script -->
+                    {% include _components/guide_mechanic.html %}
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<hr class="guide__event-divider">

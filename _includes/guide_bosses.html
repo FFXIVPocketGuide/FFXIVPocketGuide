@@ -1,0 +1,89 @@
+<!-- Duty Bosses =========================================================== -->
+<div class="guide__event">
+
+    <div class="guide__event-accordion-trigger accordion-trigger">
+        <h2 class="heading--02">
+            {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
+            {% if page.instanceType == "raid" %}Raid Bosses{% endif %}
+        </h2>
+    </div>
+
+    <!-- Guide Event Accordion Content -->
+    <div class="guide__event-accordion-content accordion-content active">
+
+        <!-- Opens the Boss Loop -->
+        {% for boss in page.bosses %}
+
+            <!-- Boss Accordion Trigger -->
+            <div class="guide__boss-accordion-trigger accordion-trigger">
+                <h3 class="heading--03">{{ boss.title }}</h3>
+            </div>
+
+            <!-- Boss Accordion Content -->
+            <div class="guide__boss-accordion-content accordion-content">
+
+                <!-- Opens the Sequence Loop -->
+                {% for phase in boss.sequence %}
+
+                    <div class="guide__event-object">
+
+                        <!-- Event Title -->
+                        <h4 class="heading--04">Phase: {{ phase.phase }}</h4>
+
+                        <!-- Opens the Attack Loop -->
+                        {% if phase.attacks %}
+                            <!-- Include Guide Skill Script -->
+                            {% include _components/guide_skill_script.html %}
+                        {% endif %}
+
+                        <!-- Opens the Alerts Loop -->
+                        {% if phase.alerts %}
+                            <!-- Include Guide Alerts -->
+                            {% include _components/guide_alerts.html %}
+                        {% endif %}
+
+                        <!-- Opens the Mechanics Loops -->
+                        {% if phase.mechanics %}
+                            <!-- Include Guide Mechanics -->
+                            {% include _components/guide_phase_mechanics.html %}
+                        {% endif %}
+
+                    </div>
+
+                    <!-- Determines the current phase. -->
+                    {% assign currentPhase = phase.phase %}
+
+                    <!-- Enters the boss attack loop. -->
+                    {% for attack in boss.attacks %}
+
+                        <!-- Enters the attack's phases. -->
+                        {% for attackPhase in attack.phases %}
+
+                            <!-- Checks to see if any of the attack's phases are equal to the current phase. -->
+                            {% if attackPhase.phase == currentPhase %}
+
+                                <!-- Attack Partial -->
+                                <div class="guide__event-object--attack">
+
+                                    <!-- Include Attack Template -->
+                                    {% include _components/guide_attack.html %}
+
+                                </div>
+
+                            {% endif %}
+
+                        {% endfor %}
+
+                    {% endfor %}
+
+                {% endfor %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<hr class="guide__event-divider">

@@ -1,0 +1,36 @@
+/* =============================================================================
+
+    OPTIONS CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+/* Typekit - Fade Page in on Font Load ====================================== */
+
+    /* NOTE: This only works if Typekit is included and initialized */
+
+    html {
+        opacity: 0;
+        transition: opacity 300ms ease 0ms;
+        &.wf-active {
+            opacity: 1 !important;
+            transition: opacity 300ms ease 0ms;
+        }
+    }
+
+/* Accordion Triggers ======================================================= */
+.accordion-trigger {
+
+}
+
+.accordion-content {
+    cursor: pointer;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+}

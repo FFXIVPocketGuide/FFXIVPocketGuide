@@ -1,0 +1,14 @@
+<!-- Event Alerts -->
+<div class="guide__alerts-wrapper">
+
+    <!-- Alert Title -->
+    <h5 class="heading--05">Important Notes:</h5>
+
+    <!-- Alert List -->
+    <ul class="guide__alerts-list">
+        {% for alert in phase.alerts %}
+            <li class="guide__alerts-item">{{ alert.alert }}</li>
+        {% endfor %}
+    </ul>
+
+</div>

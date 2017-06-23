@@ -1,0 +1,28 @@
+/* =============================================================================
+
+    GUIDE SKILL SCRIPT CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+.guide__skill-script-wrapper {
+    margin: $padding-unit 0;
+}
+
+.guide__skill-script-attack {
+    color: $blue;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.guide__skill-script-divider {
+    color: $font-black;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 700;
+    line-height: 1.8;
+}

@@ -1,50 +1,81 @@
 /* =============================================================================
 
     PRIMARY CSS
-    Authored by Josh Beveridge
+
+    Authored by:
+        - Josh Beveridge
 
 ============================================================================= */
 
+/* CORE ===================================================================== */
+
+    /* These files are for Clone"s foundation - the grid, settings, etc. */
+
+    /* Clone"s Settings */
+    @import "core/settings.css";
+
+    /* Clone"s Flexbox Grid */
+    @import "core/grid.css";
+
+    /* Flexbox Grid IE11 Fallback */
+    @import "core/grid-ie11.css";
+
+/* PLUGINS ================================================================== */
+
+    /* These files are specific to plugins used to make certain UI elements faster to style. */
+
 /* SPEC ===================================================================== */
 
-    /* Spec: Palette ======================================================== */
-    @import 'spec/palette.css';
+    /* These files include sitewide styles such as palette, general typography, forms, etc. */
 
-    /* Spec: Settings ======================================================= */
-    @import 'spec/settings.css';
+    /* Site Palette */
+    @import "spec/palette.css";
 
-    /* Spec: Typography ===================================================== */
-    @import 'spec/typography.css';
+    /* Site Typography */
+    @import "spec/typography.css";
 
-/* LAYOUT =================================================================== */
+    /* Site Options */
+    @import "spec/options.css";
 
-    /* Layout: Grid ========================================================= */
-    @import 'layout/grid.css';
+/* COMPONENTS =============================================================== */
 
-    /* Layout: Grid (IE11) ================================================== */
-    @import 'layout/grid-ie11.css';
+    /* These files are for your website"s unique section elements. */
 
-/* BLOCKS =================================================================== */
+    /* Hero */
+    @import "components/hero.css";
 
-    /* FFXIV ================================================================ */
+    /* (Subpage) Header */
+    @import "components/header.css";
 
-        /* Guide Index Hero */
-        @import "blocks/ffxiv/guide-index-hero.css";
+    /* Guide Index */
+    @import "components/guide-index.css";
 
-        /* Guide Index List */
-        @import "blocks/ffxiv/guide-index-list.css";
+    /* Guide Content */
+    @import "components/guide-content.css";
 
-        /* Guide Return Link */
-        @import "blocks/ffxiv/guide-return.css";
+    /* Guide Breadcrumbs */
+    @import "components/guide-breadcrumbs.css";
 
-        /* Guide Hero */
-        @import "blocks/ffxiv/guide-hero.css";
+    /* Guide Events */
+    @import "components/guide-event.css";
 
-        /* Guide Content */
-        @import "blocks/ffxiv/guide-content.css";
+    /* Guide Sequence Menu */
+    @import "components/guide-sequence-menu.css";
 
-        /* Trial Content */
-        @import "blocks/ffxiv/trial-content.css";
+    /* Guide Skill Script */
+    @import "components/guide-skill-script.css";
 
-        /* Attribution */
-        @import "blocks/ffxiv/attribution.css";
+    /* Guide Alerts */
+    @import "components/guide-alerts.css";
+
+    /* Guide Mechanics */
+    @import "components/guide-mechanics.css";
+
+    /* Guide Notes */
+    @import "components/guide-notes.css";
+
+    /* Guide Attack */
+    @import "components/guide-attack.css";
+
+    /* Footer */
+    @import "components/footer.css";

@@ -1,0 +1,83 @@
+<!-- Duty Sequence ========================================================= -->
+<div class="guide__event">
+
+    <div class="guide__event-accordion-trigger accordion-trigger">
+        <h2 class="heading--02">Fight Sequence</h2>
+    </div>
+
+    <!-- Guide Event Accordion Content -->
+    <div class="guide__event-accordion-content accordion-content">
+
+        <!-- Sequence Menu -->
+        <div class="flex-grid guide__sequence-menu-list">
+            {% for phase in page.sequence %}
+                <div class="box small-1of3 med-1of4 lg-1of6 guide__sequence-menu-item">
+                    <a href="#phase{{ phase.phase }}" title="Go to phase {{ phase.phase }}" class="guide__sequence-menu-link">Phase {{ phase.phase }}</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Opens the Sequence Loop -->
+        {% for phase in page.sequence %}
+
+            <!-- Phase Link -->
+            <a id="phase{{ phase.phase }}"></a>
+
+            <div class="guide__event-object">
+
+                <!-- Event Title -->
+                <h4 class="heading--04">Phase: {{ phase.phase }}</h4>
+
+                <!-- Opens the Attack Loop -->
+                {% if phase.attacks %}
+                    <!-- Include Guide Skill Script -->
+                    {% include _components/guide_skill_script.html %}
+                {% endif %}
+
+                <!-- Opens the Alerts Loop -->
+                {% if phase.alerts %}
+                    <!-- Include Guide Alerts -->
+                    {% include _components/guide_alerts.html %}
+                {% endif %}
+
+                <!-- Opens the Mechanics Loops -->
+                {% if phase.mechanics %}
+                    <!-- Include Guide Mechanics -->
+                    {% include _components/guide_phase_mechanics.html %}
+                {% endif %}
+
+            </div>
+
+            <!-- Determines the current phase. -->
+            {% assign currentPhase = phase.phase %}
+
+            <!-- Enters the attack loop. -->
+            {% for attack in page.attacks %}
+
+                <!-- Enters the attack's phases. -->
+                {% for attackPhase in attack.phases %}
+
+                    <!-- Checks to see if any of the attack's phases are equal to the current phase. -->
+                    {% if attackPhase.phase == currentPhase %}
+
+                        <!-- Attack Partial -->
+                        <div class="guide__event-object--attack">
+
+                            <!-- Include Attack Template -->
+                            {% include _components/guide_attack.html %}
+
+                        </div>
+
+                    {% endif %}
+
+                {% endfor %}
+
+            {% endfor %}
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<hr class="guide__event-divider">

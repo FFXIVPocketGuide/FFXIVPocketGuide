@@ -1,0 +1,39 @@
+<!-- Duty Stances ========================================================== -->
+<div class="guide__event">
+
+    <div class="guide__event-accordion-trigger accordion-trigger">
+        <h2 class="heading--02">Boss Stances</h2>
+    </div>
+
+    <!-- Guide Event Accordion Content -->
+    <div class="guide__event-accordion-content accordion-content">
+
+        <!-- Opens the Stance Loop -->
+        {% for stance in page.stances %}
+
+            <div class="guide__event-object">
+
+                <!-- Event Title -->
+                <h4 class="heading--04">{{ stance.title }}</h4>
+
+                <!-- Stance Attacks -->
+                {% if stance.attacks %}
+                    <!-- Include Guide Skill Script -->
+                    {% include _components/guide_skill_script.html %}
+                {% endif %}
+
+                <!-- Stance Notes -->
+                {% if stance.notes %}
+                    <!-- Include Guide Notes -->
+                    {% include _components/guide_notes.html %}
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<hr class="guide__event-divider">

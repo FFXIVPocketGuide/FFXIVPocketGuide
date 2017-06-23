@@ -1,0 +1,210 @@
+/* =============================================================================
+
+    FOOTER CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+footer,
+section.footer {
+    background: $white;
+    border-top: 1px solid #cccccc;
+    padding: $padding-regular 0;
+    text-align: center;
+
+    @media $(p-tablet) {
+        padding: $padding-medium 0;
+    }
+
+}
+
+.footer__title {
+    margin: 0 0 $padding-regular 0;
+
+    @media $(p-tablet) {
+        /*margin: 0 0 calc($medium-padding/2) 0;*/
+    }
+
+}
+
+.footer__form {
+    margin: 0 auto $padding-regular auto;
+    max-width: 35rem;
+
+    @media $(p-tablet) {
+        margin: 0 auto $padding-medium auto;
+    }
+
+    .footer__form-submission-message {
+        color: $red;
+        display: none;
+        /*margin: calc($small-padding) 0 0 0;*/
+        font-weight: 500;
+
+        @media $(p-tablet) {
+            /*margin: calc($medium-padding) 0 0 0;*/
+        }
+
+        @media $(l-tablet) {
+            /*margin: calc($large-padding - 2rem) 0 0 0;*/
+        }
+
+    }
+
+    label {
+        display: block;
+        color: $red;
+        font-family: $font-aktiv;
+        font-size: $font-scale-small;
+        font-weight: 800;
+        line-height: 1.5rem;
+        text-align: left;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+    }
+
+    h5 {
+        margin: $padding-regular 0;
+    }
+
+    select {
+        appearance: none;
+        background: none;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 1px solid #CCC;
+        border-radius: 0;
+        color: $font-black;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0 0 $padding-small 0;
+        outline: none;
+        padding: .5rem 3rem .5rem .5rem;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+
+    }
+
+    textarea {
+        appearance: none;
+        background: none;
+        border: 1px solid #CCC;
+        color: $font-black;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 300;
+        height: 10rem;
+        line-height: 1.5;
+        margin: 0 0 $padding-small 0;
+        outline: none;
+        padding: .5rem;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+
+    }
+
+    input[type="text"] {
+        appearance: none;
+        background: none;
+        border: 1px solid #CCC;
+        color: $font-black;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0 0 $padding-small 0;
+        outline: none;
+        padding: .5rem;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+
+    }
+
+    input[type="submit"] {
+        appearance: none;
+        background: none;
+        border: .3rem solid $white;
+        border-color: $red;
+        color: $font-black;
+        cursor: pointer;
+        display: inline-block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-small;
+        font-weight: 500;
+        margin: $padding-unit 0 0 0;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        transition: all .2s ease;
+    }
+
+    &.submitted {
+
+        .footer__form-submission-message {
+            display: block;
+        }
+
+        label,
+        h5,
+        select,
+        textarea,
+        input[type="text"],
+        input[type="submit"],
+        br {
+            display: none;
+        }
+
+    }
+
+}
+
+.no-touchevents {
+
+    .footer__form {
+
+        input[type="submit"]:hover {
+            background: $red;
+            color: $font-white;
+            transition: all .2s ease;
+        }
+
+    }
+
+}
+
+.footer__link {
+
+}
+
+.footer__copy {
+    color: #cccccc;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+
+    a {
+        color: $red;
+    }
+
+}

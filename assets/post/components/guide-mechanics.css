@@ -1,0 +1,52 @@
+/* =============================================================================
+
+    GUIDE MECHANICS CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+.guide__mechanics-wrapper {
+    margin: $padding-unit 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    ul+h6 {
+        margin-top: $padding-regular;
+    }
+
+    h5 {
+        margin-bottom: $padding-small;
+    }
+
+}
+
+.guide__mechanics-list {
+    margin-top: $padding-small;
+    padding: 0 0 0 $padding-regular;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+.guide__mechanics-item {
+    color: $font-black;
+    font-family: $font-pt;
+    font-size: $font-scale-regular;
+    line-height: 1.5;
+    margin: 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}

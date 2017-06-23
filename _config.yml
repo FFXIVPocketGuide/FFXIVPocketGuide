@@ -36,6 +36,8 @@ exclude:
   - Gemfile.lock
   - assets/node_modules
   - assets/bower_components
+  - assets_old/node_modules
+  - assets_old/bower_components
   - temp_guides
 collections:
     ffxiv_guides:

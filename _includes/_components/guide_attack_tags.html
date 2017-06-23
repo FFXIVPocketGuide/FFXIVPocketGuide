@@ -1,0 +1,29 @@
+<!-- Standard Attack Tags -->
+{% if attack.roles or attack.tags %}
+    <div class="guide__attack-tags-wrapper">
+
+        {% for role in attack.roles %}
+            <span class="guide__attack-role-tag">{{ role.role }}</span>
+        {% endfor %}
+
+        {% for tag in attack.tags %}
+            <span class="guide__attack-type-tag">{{ tag.tag }}</span>
+        {% endfor %}
+
+    </div>
+{% endif %}
+
+<!-- Combo Attack Tags -->
+{% if combo.roles or combo.tags %}
+    <div class="guide__attack-tags-wrapper">
+
+        {% for role in combo.roles %}
+            <span class="guide__attack-role-tag">{{ role.role }}</span>
+        {% endfor %}
+
+        {% for tag in combo.tags %}
+            <span class="guide__attack-type-tag">{{ tag.tag }}</span>
+        {% endfor %}
+
+    </div>
+{% endif %}

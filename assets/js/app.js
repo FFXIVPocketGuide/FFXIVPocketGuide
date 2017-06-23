@@ -1,7 +1,9 @@
 // =============================================================================
 
     // APP JS
-    // Authored by Josh Beveridge
+
+    // Authored by:
+        // - Josh Beveridge
 
 // =============================================================================
 
@@ -11,11 +13,6 @@
 
         var $root = $('html, body');
 
-        // User Agent Data Attributes ==========================================
-        var ua = navigator.userAgent;
-        ua = ua.toString();
-        $('body').attr('id', ua);
-
         // Disabled Button Clicks ==============================================
         $('.disabled').on('click', function(e){
             e.preventDefault();
@@ -23,25 +20,14 @@
             return false;
         });
 
-        // Smooth Scrolling ====================================================
-        $('a[href*="#"]:not([href="#"])').on('click',function() {
-
-            $root.animate({
-                scrollTop: $( $(this).attr('href') ).offset().top
-            }, 500); // change the duration of your animation in ms
-
-            return false;
-
-         });
-
         // FFXIV Guide Filters =================================================
         $("#guideFilter").keyup(function(e) {
 
             var input = this.value.toLowerCase()
 
-            $(".guide-index__list .guide-index__list-item").each(function () {
+            $(".guide-index .guide-index__guide").each(function () {
 
-                var headingText  = $(this).find(".guide-index__list-item-title").text().toLowerCase();
+                var headingText  = $(this).find(".guide-index__guide-title").text().toLowerCase();
 
                 if (headingText.indexOf(input) >= 0) {
                     $(this).show();
@@ -51,7 +37,7 @@
                 }
             });
 
-            if($(".guide-index__list-item:visible").length) {
+            if($(".guide-index__guide:visible").length) {
                 $(".guide-index__no-result").hide();
             }
             else {
@@ -70,22 +56,13 @@
         });
 
         // FFXIV Guide Accordions ==============================================
-        $(".guide__mechanic-accordion-trigger").on("click", function(e) {
-            $(this).siblings(".guide__mechanic-content-wrapper").toggleClass("active");
-        });
-
-        $(".guide-trial__accordion-trigger").on("click", function(e) {
+        $(".accordion-trigger").on("click", function(e) {
             $(this).toggleClass("active");
-            $(this).siblings(".guide-trial__content-wrapper").toggleClass("active");
-        });
-
-        $(".guide-trial__attack-trigger").on("click", function(e) {
-            $(this).toggleClass("active");
-            $(this).siblings(".guide-trial__attack-content").toggleClass("active");
+            $(this).next(".accordion-content").toggleClass("active");
         });
 
         // Guide Image Zoom ====================================================
-        $(".guide-trial__image-wrapper").on("click", function(e) {
+        $(".guide__attack-image-item").on("click", function(e) {
             if($(this).hasClass("active")) {
                 $(this).removeClass("active")
             }
@@ -124,17 +101,12 @@
     });
 
     // Google Analytics Conversion Tracker (MTQ Conversion Guide) ==============
-
-    // Adds a listener for the "submit" event.
     $(".mtqLinkGuide").on("click", function(e) {
 
         var clickedLink = $(this);
 
-        // Prevents the browser from submitting the form
-        // and thus unloading the current page.
         event.preventDefault();
 
-        // Creates a timeout to call `submitForm` after one second.
         setTimeout(submitClick, 1000);
 
         function submitClick() {
@@ -142,8 +114,6 @@
           location.href = thisLink;
         }
 
-        // Sends the event to Google Analytics and
-        // resubmits the form once the hit is done.
         ga('send', 'event', 'mtqLinkGuide', 'click', {
           hitCallback: submitClick
         });
@@ -151,17 +121,12 @@
     });
 
     // Google Analytics Conversion Tracker (Twitter) ===========================
-
-    // Adds a listener for the "submit" event.
     $(".twitterLink").on("click", function(e) {
 
         var clickedLink = $(this);
 
-        // Prevents the browser from submitting the form
-        // and thus unloading the current page.
         event.preventDefault();
 
-        // Creates a timeout to call `submitForm` after one second.
         setTimeout(submitClick, 1000);
 
         function submitClick() {
@@ -169,8 +134,6 @@
           location.href = thisLink;
         }
 
-        // Sends the event to Google Analytics and
-        // resubmits the form once the hit is done.
         ga('send', 'event', 'twitterLink', 'click', {
           hitCallback: submitClick
         });

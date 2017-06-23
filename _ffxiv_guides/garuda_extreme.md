@@ -1,10 +1,10 @@
 ---
-layout: guide_trial
+layout: guide_post
 title:  "[Garuda] The Howling Eye"
 date:   2017-04-09 18:00:14 -0300
 image:
-    - url: "/assets/img/ffxiv/garuda_ex.jpg"
-    - urlSmall: "/assets/img/ffxiv/small/garuda_ex.jpg"
+    - url: "/assets/img/trials/garuda_ex.jpg"
+    - urlSmall: "/assets/img/trials/small/garuda_ex.jpg"
 patchNumber: 2.1
 patchName: "A Realm Awoken"
 difficulty: "Extreme"

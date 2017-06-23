@@ -1,0 +1,30 @@
+/* =============================================================================
+
+    GUIDE SEQUENCE MENU CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+
+.guide__sequence-menu-list {
+    margin: $padding-unit calc(($padding-unit / 2) * -1);
+}
+
+.guide__sequence-menu-item {
+    padding: calc($padding-unit / 2);
+}
+
+.guide__sequence-menu-link {
+    background: $red;
+    border-radius: 3px;
+    color: $white;
+    display: block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 700;
+    line-height: 1;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
