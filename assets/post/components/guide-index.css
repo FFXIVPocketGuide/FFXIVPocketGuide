@@ -24,7 +24,7 @@
 /* Index Search Form ======================================================== */
 .guide-index__search-form {
     /* The +1 here accounts for the label above. */
-    padding: 0 0 calc($padding-regular + 1) 0;
+    padding: 0 0 calc($padding-unit) 0;
     width: 100%;
 
     label {
@@ -61,7 +61,15 @@
 }
 
 /* No Results =============================================================== */
-.guide-index__no-result {
+.guide-index__empty {
+
+    @media $(p-tablet) {
+        padding: $padding-regular $padding-unit;
+    }
+
+}
+
+.guide-index__null-state {
     display: none;
     text-align: center;
 
@@ -83,6 +91,29 @@
 }
 
 /* Guide Index ============================================================== */
+.guide-index__section-title {
+
+    @media $(p-tablet) {
+        padding: 0 $padding-unit !important;
+    }
+
+    h3 {
+        font-family: $font-cinzel;
+        font-size: $font-scale-h3;
+        font-weight: 500;
+        margin: calc($padding-regular * 1.5) 0 0 0;
+        text-transform: uppercase;
+    }
+
+    hr {
+        background: $red;
+        border: none;
+        height: 1px;
+        margin: .5rem 0 1rem 0;
+    }
+
+}
+
 .guide-index__guide {
     padding: $padding-unit 0;
 

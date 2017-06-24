@@ -31,6 +31,7 @@
 
 .hero__title {
     color: $white;
+    /*font-family: $font-cinzel !important;*/
     line-height: 1;
     margin: 0 0 $padding-regular 0;
     position: relative;

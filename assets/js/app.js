@@ -20,30 +20,50 @@
             return false;
         });
 
+        // Input Focus =========================================================
+        if($(".guide-index").length) {
+            $("#guideFilter").focus();
+        }
+
         // FFXIV Guide Filters =================================================
         $("#guideFilter").keyup(function(e) {
 
             var input = this.value.toLowerCase()
 
-            $(".guide-index .guide-index__guide").each(function () {
+            $(".guide-index .flex-grid").each(function(e) {
 
-                var headingText  = $(this).find(".guide-index__guide-title").text().toLowerCase();
+                $(this).find(".guide-index__guide").each(function(e) {
 
-                if (headingText.indexOf(input) >= 0) {
+                    var headingText  = $(this).find(".guide-index__guide-title").text().toLowerCase();
+
+                    if (headingText.indexOf(input) >= 0) {
+                        $(this).show();
+                        $(this).addClass("show");
+                    }
+                    else {
+                        $(this).hide();
+                        $(this).removeClass("show");
+                    }
+
+                });
+
+                if($(this).find(".guide-index__guide.show").length) {
                     $(this).show();
                 }
                 else {
                     $(this).hide();
                 }
+
             });
 
-            if($(".guide-index__guide:visible").length) {
-                $(".guide-index__no-result").hide();
+            if($(".guide-index__guide.show").length) {
+                $(".guide-index__null-state").hide();
             }
             else {
-                $(".guide-index__no-result").show();
+                $(".guide-index__null-state").show();
             }
 
+            // Prevents the user from submitting the form with the enter key.
             $('.guide-index__search-form').on('keyup keypress', function(e) {
                 var keyCode = e.keyCode || e.which;
                 if (keyCode === 13) {
@@ -53,6 +73,7 @@
             });
 
             e.preventDefault();
+
         });
 
         // FFXIV Guide Accordions ==============================================
