@@ -61,14 +61,6 @@
 }
 
 /* No Results =============================================================== */
-.guide-index__empty {
-
-    @media $(p-tablet) {
-        padding: $padding-regular $padding-unit;
-    }
-
-}
-
 .guide-index__null-state {
     display: none;
     text-align: center;
@@ -81,6 +73,11 @@
         color: $font-black;
         font-family: $font-pt;
         font-size: $font-scale-regular;
+        margin: $padding-regular 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         a {
             color: $red;
