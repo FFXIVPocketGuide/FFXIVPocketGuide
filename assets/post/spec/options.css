@@ -22,11 +22,11 @@
 
 /* Accordion Triggers ======================================================= */
 .accordion-trigger {
-
+    cursor: pointer;
 }
 
 .accordion-content {
-    cursor: pointer;
+    /*cursor: pointer;*/
     display: none;
 
     &.active {
