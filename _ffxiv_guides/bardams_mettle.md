@@ -41,7 +41,7 @@ bosses:
           - tag: "Tether"
           - tag: "Proximity AoE"
         notes:
-          - note: "The boss will tether to a player and telegraph a column in their direction - this player to should run as far away from the boss as possible to reduce the damage taken."
+          - note: "The boss will tether to a player and telegraph a column in their direction - this player should run as far away from the boss as possible to reduce the damage taken."
       - title: "Warcry & Earthquake"
         phases:
           - phase: 01
