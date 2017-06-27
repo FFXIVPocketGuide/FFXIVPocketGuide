@@ -74,7 +74,7 @@ bosses:
         alerts:
           - alert: "Players should be aware of Galura's attack Rush - the boss will charge at the tethered player and deal damage based on proximity."
           - alert: "The various animal mobs have different attack patterns - make note of which animals are near the boss when it casts Warcry."
-  - title: "Bardem"
+  - title: "Bardam"
     sequence:
       - phase: 01
         attacks:
