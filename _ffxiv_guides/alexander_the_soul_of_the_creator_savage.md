@@ -193,7 +193,7 @@ attacks:
           - note: "When he appears, Alexander will immediately cast Sacrament."
           - note: "Players should move as far away from Tetrashatter as possible while remaining in Sacrament's diagonal safe zones (see image)."
     images:
-      - url: "/assets/img/raid/alex_12_s/alex_12_s_inception_01.png"
+      - url: "/assets/img/raids/alex_12_s/alex_12_s_inception_01.png"
         alt: "Inception Safe Zone Example"
   - title: "Inception 02 & Tetrashatter & Sacrament"
     phases:
@@ -229,7 +229,7 @@ attacks:
           - note: "When he appears, Alexander will immediately cast Sacrament."
           - note: "Players should move as far away from Tetrashatter as possible while remaining in Sacrament's diagonal safe zones (see image)."
     images:
-      - url: "/assets/img/raid/alex_12_s/alex_12_s_inception_02.png"
+      - url: "/assets/img/raids/alex_12_s/alex_12_s_inception_02.png"
         alt: "Inception Safe Zone Example"
   - title: "Void of Repentance & Incinerating Heat"
     phases:
