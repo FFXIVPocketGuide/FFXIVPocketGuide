@@ -3,7 +3,7 @@ layout: guide_post
 title:  "[Zurvan] Containment Bay Z1T9"
 date:   2017-04-09 18:00:14 -0300
 image:
-    - url: "/assets/img/trials/zurvan_ex.jpg"
+    - url: "/assets/img/trials/zurvan_ex_ex.jpg"
     - urlSmall: "/assets/img/trials/small/zurvan_ex.jpg"
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
@@ -45,9 +45,9 @@ attacks:
           - note: "Players (blue dots) should arrange themselves according to the pattern Zurvan attacks with (see images for player locations)."
           - note: "Healers can safely stack with another player."
     images:
-      - url: "/assets/img/trials/zurvan/zurvan_ex_soar_01.png"
+      - url: "/assets/img/trials/zurvan_ex/zurvan_ex_soar_01.png"
         alt: "Soar Layout - Even"
-      - url: "/assets/img/trials/zurvan/zurvan_ex_soar_02.png"
+      - url: "/assets/img/trials/zurvan_ex/zurvan_ex_soar_02.png"
         alt: "Soar Layout - Cluster"
   - title: "Demonic Dive"
     phases:
@@ -141,11 +141,11 @@ attacks:
       - note: "Players tethered with fire should stand in the red, ice in the blue - be sure to stay near your tether partner!"
       - note: "The pattern that occurs decides the next AoE attack (see follow up)."
     images:
-      - url: "/assets/img/trials/zurvan/zurvan_ex_broken_seal_cluster.png"
+      - url: "/assets/img/trials/zurvan_ex/zurvan_ex_broken_seal_cluster.png"
         alt: "Broken Seal Layout - Side Clusters"
-      - url: "/assets/img/trials/zurvan/zurvan_ex_broken_seal_inner.png"
+      - url: "/assets/img/trials/zurvan_ex/zurvan_ex_broken_seal_inner.png"
         alt: "Broken Seal Layout - Inner Circle"
-      - url: "/assets/img/trials/zurvan/zurvan_ex_broken_seal_outer.png"
+      - url: "/assets/img/trials/zurvan_ex/zurvan_ex_broken_seal_outer.png"
         alt: "Broken Seal Layout - Outer Circle"
   - title: "Broken Seal - Follow Up"
     phases:
