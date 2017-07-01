@@ -3,7 +3,7 @@ layout: guide_post
 title:  "[Zurvan] Containment Bay Z1T9"
 date:   2017-04-09 18:00:14 -0300
 image:
-    - url: "/assets/img/trials/zurvan_ex_ex.jpg"
+    - url: "/assets/img/trials/zurvan_ex.jpg"
     - urlSmall: "/assets/img/trials/small/zurvan_ex.jpg"
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
