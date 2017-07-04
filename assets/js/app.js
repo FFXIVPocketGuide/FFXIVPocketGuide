@@ -28,7 +28,8 @@
         // FFXIV Guide Filters =================================================
         $("#guideFilter").keyup(function(e) {
 
-            var input = this.value.toLowerCase()
+            var input = this.value.toLowerCase().trim()
+            var terms = input.split(" ");
 
             $(".guide-index .flex-grid").each(function(e) {
 
@@ -36,7 +37,25 @@
 
                     var headingText  = $(this).find(".guide-index__guide-title").text().toLowerCase();
 
-                    if (headingText.indexOf(input) >= 0) {
+                    /*
+                    This is currently setup for "OR" or "ANY" searching.
+                    If any phrase matches the item will be shown. You can switch
+                    this to "AND" or "ALL" searching by doing the following:
+                    1. change the declaration of show to true by default.
+                    2. negate the conditional in the forEach example:
+                        if ( !(headingText.indexOf(term.trim()) >= 0) ) {
+                    3. change the assignment inside the conditional to false
+                    */
+
+                    var show = true;
+
+                    terms.forEach(function(term){
+                        if ( !(headingText.indexOf(term.trim()) >= 0) ) {
+                            show = false;
+                        }
+                    });
+
+                    if (show) {
                         $(this).show();
                         $(this).addClass("show");
                     }
