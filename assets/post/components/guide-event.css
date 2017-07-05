@@ -8,19 +8,54 @@
 ============================================================================= */
 
 .guide__event {
-
+    background: $white;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    margin: 0 0 $padding-unit 0;
 }
 
 .guide__event-accordion-trigger {
-    background: #333;
-    border-radius: 3px;
     cursor: pointer;
-    margin: 0 0 $padding-unit 0;
-    padding: $padding-regular;
-    text-align: center;
 
-    h2 {
-        color: $white;
+    .box {
+        padding: $padding-unit;
+
+        @media $(p-tablet) {
+            padding: $padding-regular;
+        }
+
+        &:first-child {
+
+        }
+
+        &:last-child {
+            padding: $padding-unit 0;
+            text-align: center;
+
+            @media $(p-tablet) {
+                padding: $padding-regular;
+                text-align: right;
+            }
+
+        }
+
+    }
+
+    &.active {
+
+        .box {
+
+            &:last-child {
+
+                i {
+                    color: $red;
+                    transform: rotate(180deg);
+                }
+
+            }
+
+        }
+
     }
 
 }
@@ -31,20 +66,58 @@
 
 /* Boss Accordions ========================================================== */
 .guide__boss-accordion-trigger {
-    background: $white;
-    border: 1px solid #CCCCCC;
-    border-radius: 3px;
+    background: #333;
+    border-top: 1px solid black;
     cursor: pointer;
-    margin: 0 0 $padding-unit 0;
-    padding: $padding-unit $padding-regular;
-    text-align: center;
+    /*padding: $padding-unit $padding-regular;*/
 
-    h3 {
-        /*color: $red;*/
+    .box {
+        padding: $padding-unit;
+
+        @media $(p-tablet) {
+            padding: $padding-regular;
+        }
+
+        &:first-child {
+
+            h3 {
+                color: $white;
+            }
+
+        }
+
+        &:last-child {
+            padding: $padding-unit 0;
+            text-align: center;
+
+            @media $(p-tablet) {
+                padding: $padding-regular;
+                text-align: right;
+            }
+
+            h3 {
+                color: $white;
+            }
+
+        }
+
     }
 
     &.active {
-        border: 1px solid $red;
+
+        .box {
+
+            &:last-child {
+
+                i {
+                    color: $red;
+                    transform: rotate(180deg);
+                }
+
+            }
+
+        }
+
     }
 
 }
@@ -56,9 +129,9 @@
 /* Event Objects ============================================================ */
 .guide__event-object {
     background: $white;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    margin: 0 0 $padding-unit;
+    border-top: 1px solid #cccccc;
+    /*border-radius: 3px;*/
+    /*margin: 0 0 $padding-unit;*/
     padding: $padding-unit;
 
     @media $(p-tablet) {
@@ -69,9 +142,9 @@
 
 .guide__event-object--attack {
     background: $white;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    margin: 0 0 $padding-unit;
+    border-top: 1px solid #cccccc;
+    /*border-radius: 3px;*/
+    /*margin: 0 0 $padding-unit;*/
     padding: 0;
 }
 

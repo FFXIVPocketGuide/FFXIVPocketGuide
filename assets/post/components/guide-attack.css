@@ -8,16 +8,53 @@
 ============================================================================= */
 
 .guide__attack-accordion-trigger {
-    padding: $padding-unit;
 
-    @media $(p-tablet) {
-        padding: $padding-unit $padding-regular;
+    .box {
+        padding: $padding-unit;
+
+        @media $(p-tablet) {
+            padding: $padding-unit $padding-regular;
+        }
+
+        &:first-child {
+
+        }
+
+        &:last-child {
+            padding: $padding-unit 0;
+            text-align: center;
+
+            @media $(p-tablet) {
+                padding: $padding-unit $padding-regular;
+                text-align: right;
+            }
+
+        }
+
+    }
+
+    &.active {
+
+        .box {
+
+            &:last-child {
+
+                i {
+                    color: $red;
+                    transform: rotate(180deg);
+                }
+
+            }
+
+        }
+
     }
 
 }
 
 .guide__attack-accordion-content {
-    border-top: 1px solid #CCCCCC;
+    /*background: rgba(245, 245, 245, 1);*/
+    border-top: 1px solid #EAEAEA;
     padding: calc($padding-small / 2) $padding-unit $padding-unit $padding-unit;
 
     @media $(p-tablet) {
@@ -73,7 +110,7 @@
 /* Attack Notes ============================================================= */
 .guide__attack-notes-list {
     margin-top: $padding-small;
-    padding: 0 $padding-regular;
+    padding: 0 0 0 1.2rem;
 
     &:last-child {
         margin-bottom: 0;

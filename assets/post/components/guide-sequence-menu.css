@@ -8,7 +8,13 @@
 ============================================================================= */
 
 .guide__sequence-menu-list {
-    margin: $padding-unit calc(($padding-unit / 2) * -1);
+    border-top: 1px solid #CCCCCC;
+    padding: $padding-unit calc($padding-unit - ($padding-unit / 2));
+
+    @media $(p-tablet) {
+        padding: $padding-unit calc($padding-regular - ($padding-unit / 2));
+    }
+
 }
 
 .guide__sequence-menu-item {

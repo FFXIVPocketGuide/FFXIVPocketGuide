@@ -27,7 +27,7 @@
 
 .guide__alerts-list {
     margin-top: $padding-small;
-    padding: 0 0 0 $padding-regular;
+    padding: 0 0 0 1.2rem;
 
     &:last-child {
         margin-bottom: 0;

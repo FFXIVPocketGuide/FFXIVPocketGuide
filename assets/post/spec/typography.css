@@ -17,7 +17,11 @@ $font-pt: "pt-serif",serif;
 /* Font Standard ============================================================ */
 html,
 body {
-    font-size: 90%;
+    font-size: 80%;
+
+    @media screen and (min-width: 412px) {
+        font-size: 90%;
+    }
 
     @media $(p-tablet) {
         font-size: 100%;
@@ -58,6 +62,16 @@ $font-scale-regular: 1rem;
     font-weight: 800;
     line-height: 1.2;
     margin: 0;
+
+    a {
+
+    }
+
+    i {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
 }
 
 .heading--01 {
