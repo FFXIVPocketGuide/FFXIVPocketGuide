@@ -17,6 +17,23 @@
             margin: calc($padding-unit * -1)
         }
 
+        &:first-of-type {
+
+            .guide-index__section-title {
+
+                h3 {
+                    margin: 1.5rem 0 0 0;
+
+                    @media $(p-tablet) {
+                        margin: calc($padding-regular * 1.5) 0 0 0;
+                    }
+                    
+                }
+
+            }
+
+        }
+
     }
 
 }
