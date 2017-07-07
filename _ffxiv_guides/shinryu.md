@@ -105,7 +105,7 @@ attacks:
       - tag: "Spawn"
     notes:
       - note: "This attack always occurs in 3s and will hit the arena with a proximity AoE followed by spawning adds."
-  - title: "Ultimate"
+  - title: "Protostar"
     phases:
       - phase: 02
     roles:
@@ -225,23 +225,23 @@ sequence:
       - attack: "Wave 02"
       - attack: "Egg Drop"
       - attack: "Wave 03"
-      - attack: "Ultimate"
+      - attack: "Protostar"
     alerts:
       - alert: "This phase of the fight involves destroying 3 waves of adds, with each wave beginning with multiple proximity AoEs."
       - alert: "Players should prepare for Shinryu's ultimate when all 3 waves have been destroyed - expect an Active Time Maneuver."
     mechanics:
       - title: "Wave 01"
         notes:
-          - note: "This wave of adds is preceded by 3 proximity AoEs - run to the only safe corner to reduce damage."
+          - note: "This wave of adds is preceded by 3 proximity AoEs - run to a safe zone to reduce damage."
           - note: "1 Hakkinryu and 2 Ginryu adds will spawn that will cast Fireball and Death Sentence AoEs and hit players with debuffs."
       - title: "Wave 02"
         notes:
-          - note: "This wave of adds is preceded by 3 proximity AoEs - run to the only safe corner to reduce damage."
+          - note: "This wave of adds is preceded by 3 proximity AoEs - run to zone to reduce damage."
           - note: "1 Hakkinryu and 2 Ginryu adds will spawn that will cast Fireball and Death Sentence AoEs and hit players with debuffs."
       - title: "Wave 03"
         notes:
-          - note: "This wave of adds is preceded by 3 proximity AoEs - run to the only safe corner to reduce damage."
-          - note: "1 Hakkinryu and 2 Ginryu adds will spawn that will cast Fireball and Death Sentence AoEs and hit players with debuffs."
+          - note: "This wave of adds is preceded by 4 proximity AoEs - find a safe zone to reduce damage."
+          - note: "4 Ginryu adds will spawn that will cast Fireball AoEs and hit players with debuffs."
   - phase: 03
     attacks:
       - attack: "Divebomb"
