@@ -29,6 +29,7 @@ github_username:  joshdrink
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 include:
   - _pages
 exclude:
