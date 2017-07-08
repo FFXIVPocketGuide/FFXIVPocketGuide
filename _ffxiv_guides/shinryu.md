@@ -214,7 +214,7 @@ sequence:
       - alert: "Tanks will have to stack to soak damage from Akh Morn."
       - alert: "The second Corrupted Aether attack will be one of either Hellfire or Judgement Bolt - look for the cast to prepare appropriately."
     mechanics:
-      - title: "Corrupted Aether Duty Gauge"
+      - title: "Duty Gauge: Corrupted Aether"
         notes:
           - note: "Over time the duty gauge will fill with Corrupted Aether and allow the boss to use a special attack modeled after one of the previous trials."
   - phase: 02
@@ -264,7 +264,7 @@ sequence:
           - note: "The arena during this phase is made up of 9 tiles all of which can be destroyed except the grey tile in the middle."
           - note: "As the fight progresses, Shinryu will use Tail Slap, slamming his tail down onto the tiles."
           - note: "If a tile is hit more than once, it will be permanently destroyed."
-      - title: "Corrupted Aether Duty Gauge"
+      - title: "Duty Gauge: Corrupted Aether"
         notes:
           - note: "Over time the duty gauge will fill with Corrupted Aether and allow the boss to use a special attack modeled after one of the previous trials."
 ---
