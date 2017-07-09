@@ -28,6 +28,8 @@ bosses:
           - phase: 01
         roles:
           - role: ""
+        dutyActions:
+          - action: ""
         tags:
           - tag: ""
         notes:
@@ -39,6 +41,8 @@ bosses:
           - title: ""
             roles:
               - role: ""
+            dutyActions:
+              - action: ""
             tags:
               - tag: ""
             notes:

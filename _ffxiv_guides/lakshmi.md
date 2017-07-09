@@ -61,48 +61,30 @@ attacks:
     notes:
       - note: "2 players are marked with telegraphed circular AoEs - once placed, these AoEs will grow in size."
       - note: "Marked players should try to place these puddles on the edge of the platform and next to each other to minimize the affected space."
-  - title: "Vril Bubbles & Seduce"
+  - title: "Seduce"
     phases:
       - phase: 01
-    combo:
-      - title: "Vril Bubbles"
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Mechanic"
-          - tag: "Duty Action"
-        notes:
-          - note: "Vril is used as a currency that allows the activation of a Duty Action."
-          - note: "Collect Vril by running into one of the blue bubbles - this will allow you to activate your Bubble action."
-      - title: "Seduce"
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Ultimate"
-        notes:
-          - note: "This is Lakshmi's ultimate and when she leaves the arena, all players should activate their Vril Bubble duty action in order to survive."
-  - title: "Vril Bubbles & Divine Denial"
+    roles:
+      - role: "Everyone"
+    dutyActions:
+      - action: "Vril"
+    tags:
+      - tag: "Ultimate"
+    notes:
+      - note: "This is Lakshmi's ultimate and when she leaves the arena, all players should activate their Vril Bubble duty action in order to survive."
+  - title: "Divine Denial"
     phases:
       - phase: 02
-    combo:
-      - title: "Vril Bubbles"
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Mechanic"
-          - tag: "Duty Action"
-        notes:
-          - note: "Vril is used as a currency that allows the activation of a Duty Action."
-          - note: "Collect Vril by running into one of the blue bubbles - this will allow you to activate your Bubble action."
-      - title: "Divine Denial"
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Knockback"
-          - tag: "Area AoE"
-        notes:
-          - note: "Lakshmi will move to the center of the arena and activate an area wide telegraph."
-          - note: "All players should activate their Vril Bubble duty action and move towards the center to avoid being pushed off the edge."
+    roles:
+      - role: "Everyone"
+    dutyActions:
+      - action: "Vril"
+    tags:
+      - tag: "Knockback"
+      - tag: "Area AoE"
+    notes:
+      - note: "Lakshmi will move to the center of the arena and activate an area wide telegraph."
+      - note: "All players should activate their Vril Bubble duty action and move towards the center to avoid being pushed off the edge."
   - title: "Path of Light"
     phases:
       - phase: 02
@@ -151,14 +133,14 @@ sequence:
       - attack: "Hand of Grace"
       - attack: "The Pull of Light"
       - attack: "Hand of Beauty"
-      - attack: "Vril Bubbles & Seduce"
+      - attack: "Seduce"
     alerts:
       - alert: "Both Hand of Grace and Hand of Beauty might feel overwhelming at first - marked players should move to a safe spot and <strong>STOP MOVING</strong> to allow the rest of the group to enter a safe zone."
       - alert: "Lakshmi's ultimate, Seduce, will wipe you if you do not activate your Vril Bubble duty action."
     mechanics:
-      - title: "Vril Bubbles"
+      - title: "Duty Action: Vril"
         notes:
-          - note: "This mechanic involves collecting Vril in order to unlock a special duty-specific skill called Bubble."
+          - note: "This mechanic involves collecting Vril in order to unlock a special duty-specific skill called Vril Bubble."
           - note: "Blue bubbles will spawn around the arena that players can collect to replenish their Vril."
           - note: "This Bubble skill is used to negate damage from both Lakshmi's ultimate and Divine Denial."
   - phase: 02
