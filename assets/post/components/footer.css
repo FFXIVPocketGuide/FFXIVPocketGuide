@@ -7,10 +7,38 @@
 
 ============================================================================= */
 
+/* Raid Message */
+.raid-message__wrapper {
+    margin: calc($padding-unit*3) 0 calc($padding-unit*1.5);
+    text-align: center;
+
+    @media $(l-tablet) {
+        margin: calc($padding-unit*4) 0 calc($padding-unit*2.5);
+    }
+
+}
+
+.raid-message__copy {
+
+    i {
+        vertical-align: text-bottom;
+    }
+
+}
+
+.raid-message__link {
+
+    a {
+        color: $red;
+    }
+
+}
+
+/* Footer */
 footer,
 section.footer {
     background: $white;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid rgba(30, 30, 30);
     padding: $padding-regular 0;
     text-align: center;
 

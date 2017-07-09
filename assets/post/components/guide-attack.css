@@ -8,6 +8,11 @@
 ============================================================================= */
 
 .guide__attack-accordion-trigger {
+    background: rgba(70, 70, 70, 1);
+
+    h4 {
+        color: $white;
+    }
 
     .box {
         padding: $padding-unit;

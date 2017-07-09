@@ -9,13 +9,18 @@
 
 .guide__event {
     background: $white;
-    border: 1px solid #CCCCCC;
+    border: 1px solid rgba(10, 10, 10, 1);
     border-radius: 3px;
     margin: 0 0 $padding-unit 0;
 }
 
 .guide__event-accordion-trigger {
+    background: rgba(30, 30, 30, 1);
     cursor: pointer;
+
+    h3 {
+        color: $white;
+    }
 
     .box {
         padding: $padding-unit;
@@ -66,7 +71,7 @@
 
 /* Boss Accordions ========================================================== */
 .guide__boss-accordion-trigger {
-    background: #333;
+    background: rgba(50, 50, 50, 1);
     border-top: 1px solid black;
     cursor: pointer;
     /*padding: $padding-unit $padding-regular;*/
@@ -129,7 +134,7 @@
 /* Event Objects ============================================================ */
 .guide__event-object {
     background: $white;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid black;
     /*border-radius: 3px;*/
     /*margin: 0 0 $padding-unit;*/
     padding: $padding-unit;
@@ -142,7 +147,7 @@
 
 .guide__event-object--attack {
     background: $white;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid black;
     /*border-radius: 3px;*/
     /*margin: 0 0 $padding-unit;*/
     padding: 0;
