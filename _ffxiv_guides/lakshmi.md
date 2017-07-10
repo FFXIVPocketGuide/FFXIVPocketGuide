@@ -128,7 +128,7 @@ attacks:
 sequence:
   - phase: 01
     attacks:
-      - attack: "Dreaming Kshatriya"
+      - attack: "Dreaming Kshatriya x2"
       - attack: "Stotram"
       - attack: "Hand of Grace"
       - attack: "The Pull of Light"
