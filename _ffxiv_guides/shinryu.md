@@ -241,7 +241,7 @@ sequence:
       - title: "Wave 03"
         notes:
           - note: "This wave of adds is preceded by 4 proximity AoEs - find a safe zone to reduce damage."
-          - note: "4 Ginryu adds will spawn that will cast Fireball AoEs and hit players with debuffs."
+          - note: "5 Ginryu adds will spawn that will cast Fireball AoEs and hit players with debuffs."
   - phase: 03
     attacks:
       - attack: "Divebomb"
