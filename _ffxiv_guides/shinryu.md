@@ -244,8 +244,8 @@ sequence:
           - note: "5 Ginryu adds will spawn that will cast Fireball AoEs and hit players with debuffs."
   - phase: 03
     attacks:
-      - attack: "Gyre Charge"
-      - attack: "[Tail Slap"
+      - attack: "[Gyre Charge"
+      - attack: "Tail Slap"
       - attack: "Burning Chains"
       - attack: "Levin Bolt"
       - attack: "Dragonfist"
