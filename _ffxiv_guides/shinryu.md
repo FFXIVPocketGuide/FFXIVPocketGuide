@@ -116,7 +116,7 @@ attacks:
     notes:
       - note: "Shinryu's ultimate will hit the whole group with damage and then bind all players in place."
       - note: "An Active Time Maneuver will activate and all players will be required to rapidly press a button to escape their chains."
-  - title: "Divebomb"
+  - title: "Gyre Charge"
     phases:
       - phase: 03
     roles:
@@ -244,7 +244,7 @@ sequence:
           - note: "5 Ginryu adds will spawn that will cast Fireball AoEs and hit players with debuffs."
   - phase: 03
     attacks:
-      - attack: "Divebomb"
+      - attack: "Gyre Charge"
       - attack: "[Tail Slap"
       - attack: "Burning Chains"
       - attack: "Levin Bolt"
