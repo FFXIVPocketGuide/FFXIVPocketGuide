@@ -1,0 +1,30 @@
+
+<!-- Guide Content ========================================================= -->
+
+<div class="guide-content">
+
+    <!-- Duty Notes ======================================================== -->
+    {% if page.mechanics %}
+
+        <a id="guideNotes"></a>
+        {% include guide-notes.html %}
+
+    {% endif %}
+
+    <!-- Duty Bosses ======================================================= -->
+    {% if page.bosses %}
+
+        <a id="guideBosses"></a>
+        {% include guide-bosses.html %}
+
+    {% endif %}
+
+    <!-- Duty Fight Summary ================================================ -->
+    {% if page.sequence %}
+
+        <a id="guideSummary"></a>
+        {% include guide_sequence.html %}
+
+    {% endif %}
+
+</div>

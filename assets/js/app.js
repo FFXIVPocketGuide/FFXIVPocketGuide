@@ -21,9 +21,24 @@
         });
 
         // Input Focus =========================================================
-        if($(".guide-index").length) {
+        if($(".sidebar__form").length) {
             $("#guideFilter").focus();
         }
+
+        // Menu Trigger ========================================================
+        $(".sidebar__trigger").on("click", function(e) {
+            $(this).toggleClass("active");
+            $(".site-grid__sidebar-overlay").toggleClass("active");
+            $(".site-grid__sidebar").toggleClass("active");
+        });
+
+        $(".site-grid__sidebar-overlay").on("click", function(e) {
+            if ($(".site-grid__sidebar").hasClass("active")) {
+                $(".sidebar__trigger").removeClass("active");
+                $(this).removeClass("active");
+                $(".site-grid__sidebar").removeClass("active");
+            }
+        });
 
         // FFXIV Guide Filters =================================================
         $("#guideFilter").keyup(function(e) {
@@ -31,11 +46,11 @@
             var input = this.value.toLowerCase().trim()
             var terms = input.split(" ");
 
-            $(".guide-index .flex-grid").each(function(e) {
+            $(".site-index .index-grid").each(function(e) {
 
-                $(this).find(".guide-index__guide").each(function(e) {
+                $(this).find(".index-item").each(function(e) {
 
-                    var headingText  = $(this).find(".guide-index__guide-title").text().toLowerCase();
+                    var headingText  = $(this).find(".index-item__title").text().toLowerCase();
 
                     /*
                     This is currently setup for "OR" or "ANY" searching.
@@ -66,26 +81,43 @@
 
                 });
 
-                if($(this).find(".guide-index__guide.show").length) {
+                if($(this).find(".index-item.show").length) {
+                    var expansion = $(this).attr("data-expansion");
                     $(this).show();
+                    $(".index-divider").each(function(e) {
+                        if ($(this).attr("data-expansion") == expansion) {
+                            $(this).show();
+                        }
+                    });
                 }
                 else {
+                    var expansion = $(this).attr("data-expansion");
                     $(this).hide();
+                    $(".index-divider").each(function(e) {
+                        if ($(this).attr("data-expansion") == expansion) {
+                            $(this).hide();
+                        }
+                    });
                 }
 
             });
 
-            if($(".guide-index__guide.show").length) {
-                $(".guide-index__null-state").hide();
+            if($(".index-item.show").length) {
+                $(".index-null-state").hide();
             }
             else {
-                $(".guide-index__null-state").show();
+                $(".index-null-state").show();
             }
 
             // Prevents the user from submitting the form with the enter key.
-            $('.guide-index__search-form').on('keyup keypress', function(e) {
+            $('.sidebar__form').on('keyup keypress', function(e) {
                 var keyCode = e.keyCode || e.which;
                 if (keyCode === 13) {
+                    if ($(".site-grid__sidebar").hasClass("active")) {
+                        $(".sidebar__trigger").removeClass("active");
+                        $(".site-grid__sidebar-overlay").removeClass("active");
+                        $(".site-grid__sidebar").removeClass("active");
+                    }
                     e.preventDefault();
                     return false;
                 }
@@ -96,9 +128,9 @@
         });
 
         // FFXIV Guide Accordions ==============================================
-        $(".accordion-trigger").on("click", function(e) {
+        $("[class*='guide__accordion-trigger']").on("click", function(e) {
             $(this).toggleClass("active");
-            $(this).next(".accordion-content").toggleClass("active");
+            $(this).next("[class*='guide__accordion-content']").toggleClass("active");
         });
 
         // Guide Image Zoom ====================================================

@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/tam_tara.jpg"
 patchNumber: 2.0
 patchName: "A Realm Reborn"
+difficulty: "Normal"
 plvl: "16"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/_8xWuLi7iVM"

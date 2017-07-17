@@ -1,4 +1,22 @@
-<!-- Attack Template -->
+
+<!-- Attack Template ======================================================= -->
+
+<div class="guide__accordion-trigger--03">
+    <h2 class="guide__accordion-trigger-title">
+        <i class="material-icons">expand_more</i>
+        {{ attack.title }}
+        {% if attack.combo %}
+
+        {% else %}
+            {% include _components/guide-attack-types.html %}
+        {% endif %}
+    </h2>
+</div>
+
+<div class="guide__accordion-content--03">
+
+</div>
+
 <div class="guide__attack-wrapper">
 
     <!-- Attack Accordion Trigger -->

@@ -1,12 +1,13 @@
 ---
 layout: guide_post
-title:  "The Great Gubal Library (Hard)"
+title:  "The Great Gubal Library"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/dungeons/great_gubal_hard.jpg"
     - urlSmall: "/assets/img/dungeons/small/great_gubal_hard.jpg"
 patchNumber: 3.4
 patchName: "Soul Surrender"
+difficulty: "Hard"
 ilvl: "210"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/y2wp0wfMnXY"

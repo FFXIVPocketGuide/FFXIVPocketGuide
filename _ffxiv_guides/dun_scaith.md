@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/raids/small/dun_scaith.jpg"
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
+difficulty: "Normal"
 ilvl: "235"
 instanceType: "raid"
 mtqvid: "https://youtu.be/uNrzJdfTNLs"

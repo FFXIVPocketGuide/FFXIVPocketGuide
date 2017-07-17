@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/bardams_mettle.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: "65"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/yNgyWqajeHA"

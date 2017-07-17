@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/shisui.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: 63
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/1JJdTI2nI80"

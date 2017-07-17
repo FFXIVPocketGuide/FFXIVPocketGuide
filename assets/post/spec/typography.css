@@ -33,9 +33,9 @@ body {
 
 }
 
-/* 1.414 Scale */
+/* 1.250 Scale */
 
-$font-scale: 1.333;
+$font-scale: 1.250;
 
 $font-scale-h1: calc(1rem*($font-scale*($font-scale*($font-scale*($font-scale)))));
 $font-scale-h2: calc(1rem*($font-scale*($font-scale*($font-scale))));

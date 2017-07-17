@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/temple_of_the_fist.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: "70"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/qsvyVRhQ-pc"

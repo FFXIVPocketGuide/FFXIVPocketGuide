@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/baelsars_wall.jpg"
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
+difficulty: "Normal"
 ilvl: 230
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/CdS3lto8nVw"

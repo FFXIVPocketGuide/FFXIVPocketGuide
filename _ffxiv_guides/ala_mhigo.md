@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/ala_mhigo.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: 70
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/I1Le_MATl5k"

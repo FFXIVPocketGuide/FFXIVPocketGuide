@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/kugane_castle.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: "70"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/iW0d0r6R9pc"

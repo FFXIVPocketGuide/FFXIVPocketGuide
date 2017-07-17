@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/trials/small/susano.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Hard"
 plvl: 63
 instanceType: "trial"
 mtqvid: "https://youtu.be/tMHjAazDxfs"

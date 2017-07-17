@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/raids/small/alex_1.jpg"
 patchNumber: 3.0
 patchName: "Heavensward"
+difficulty: "Normal"
 ilvl: "170"
 instanceType: "raid"
 mtqvid: "https://youtu.be/JR2anBXKVes"

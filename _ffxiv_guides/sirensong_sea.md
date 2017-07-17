@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/sirensong_sea.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: "61"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/2ma65teviMM"

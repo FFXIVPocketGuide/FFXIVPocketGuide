@@ -1,0 +1,95 @@
+/* =============================================================================
+
+    GUIDE METADATA CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+.guide-metadata {
+    background: $palette-white;
+    border: 1px solid $palette-borders;
+    border-radius: 5px 0 0 5px;
+}
+
+.guide-metadata__wrapper {
+    border-bottom: 1px solid $palette-borders;
+    padding: calc($unit * 1.5);
+}
+
+[class*="guide-metadata__difficulty"] {
+    color: $palette-white;
+    display: block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 800;
+    padding: $unit calc($unit * 2);
+    text-align: center;
+    width: 100%;
+
+    &[class*="normal"] {
+        background: $palette-green;
+    }
+
+    &[class*="hard"] {
+        background: $palette-yellow;
+    }
+
+    &[class*="extreme"] {
+        background: $palette-red;
+    }
+
+}
+
+.guide-metadata__subtitle {
+    color: $font-black;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 800;
+    margin: 1rem 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    span {
+        color: $palette-red;
+        display: block;
+        font-weight: 400;
+        margin: calc($unit / 2) 0 0 0;
+    }
+
+}
+
+.guide-metadata__menu {
+    list-style: none;
+    margin: 0;
+    padding: calc($unit * 1.5);
+
+    .guide-metadata__subtitle {
+        margin: 0;
+    }
+
+    li {
+        margin: $unit 0;
+    }
+
+}
+
+.guide-metadata__submenu {
+    list-style: disc;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: calc($unit / 2) 0 calc($unit / 2) calc($unit * 1.5);
+    }
+
+}
+
+.guide-metadata__menu-link {
+    color: $palette-red;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 400;
+}

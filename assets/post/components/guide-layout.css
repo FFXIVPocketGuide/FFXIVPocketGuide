@@ -1,0 +1,25 @@
+/* =============================================================================
+
+    GUIDE LAYOUT CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+.guide-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: calc($unit * 2);
+
+    @media $(media-navigation) {
+        grid-template-columns: 25% 75%;
+        padding: calc($unit * 3);
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        grid-template-columns: 20% 80%;
+        padding: calc($unit * 5);
+    }
+
+}

@@ -1,0 +1,32 @@
+/* =============================================================================
+
+    CSS GRID CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+$unit: 1rem;
+
+$media-navigation: screen and (orientation: landscape) and (min-width: 64em);
+
+.site-grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    height: 100vh;
+    max-width: 100%;
+
+    @media $(media-navigation) {
+        grid-template-columns: 25vw 75vw;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        grid-template-columns: 20vw 80vw;
+    }
+
+}
+
+.site-grid__content-wrapper {
+    background: $palette-grey;
+    overflow: auto;
+}

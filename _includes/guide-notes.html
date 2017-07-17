@@ -1,0 +1,52 @@
+
+<!-- Guide Notes =========================================================== -->
+
+<div class="guide__accordion">
+
+    <div class="guide__accordion-trigger--01">
+        <i class="material-icons">expand_more</i>
+        <h2 class="guide__accordion-trigger-title">
+            {% if page.instanceType == "dungeon" %}Dungeon Notes{% endif %}
+            {% if page.instanceType == "raid" %}Raid Notes{% endif %}
+        </h2>
+    </div>
+
+    <!-- Guide Event Accordion Content -->
+    <div class="guide__accordion-content--01">
+
+        <!-- Opens the Notes Loop -->
+        {% for mechanic in page.mechanics %}
+
+            <div class="guide__content-container">
+
+                <!-- Event Title -->
+                <h3>{{ mechanic.title }}</h3>
+
+                <!-- Opens the Step Loop -->
+                {% if mechanic.steps %}
+                    <div class="">
+
+                        {% for step in mechanic.steps %}
+
+                            <!-- Mechanics Group Title -->
+                            <h4>Step {{ step.step }}</h4>
+
+                            <!-- Stance Notes -->
+                            <ul class="">
+                                {% for note in step.notes %}
+                                    <li class="">{{ note.note }}</li>
+                                {% endfor %}
+                            </ul>
+
+                        {% endfor %}
+
+                    </div>
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>

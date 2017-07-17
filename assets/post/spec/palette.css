@@ -8,6 +8,28 @@
 ============================================================================= */
 
 /* Custom Colours =========================================================== */
+$palette-black: rgba(30, 30, 30, 1);
+$palette-grey: rgba(240, 240, 240, 1);
+$palette-white: rgba(255, 255, 255, 1);
+$palette-red: rgba(255, 87, 92, 1);
+$palette-purple: rgba(155, 64, 191, 1);
+$palette-green: rgba(82, 233, 108, 1);
+$palette-yellow: rgba(254, 195, 78, 1);
+
+$palette-overlay: rgba(5, 5, 5, .7);
+
+$palette-menu-active: rgba(255, 87, 92, .7);
+
+$palette-borders: #95989A;
+
+$palette-index-tag-green: rgba(82, 233, 108, .7);
+$palette-index-tag-yellow: rgba(254, 195, 78, .7);
+$palette-index-tag-red: rgba(255, 87, 92, .7);
+
+$palette-accordion-1: rgba(30, 30, 30, 1);
+$palette-accordion-2: rgba(40, 40, 40, 1);
+$palette-accordion-3: rgba(50, 50, 50, 1);
+
 $red: #ff575c;
 $red-faded: rgba(255, 87, 92, .2);
 $blue: #36b8ea;

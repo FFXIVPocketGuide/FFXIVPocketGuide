@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/raids/small/delta_02.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: 70
 instanceType: "raid"
 mtqvid: "https://youtu.be/dAGTYL_iSDw"

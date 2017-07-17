@@ -1,0 +1,108 @@
+/* =============================================================================
+
+    SITE HEADER CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+.site-header {
+    padding: 0;
+
+    @media $(media-navigation) {
+        padding: 0 calc($unit * 3);
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        padding: 0 calc($unit * 5);
+    }
+
+}
+
+.site-header__grid {
+    align-items: center;
+    background-position: center 25%;
+    background-size: cover;
+    border-radius: 0 0 5px 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    position: relative;
+
+    @media $(p-tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        grid-template-columns: 60% 40%;
+    }
+
+    &:before {
+        background: $palette-overlay;
+        content: " ";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+    }
+
+}
+
+.site-header__item-a {
+    padding: calc($unit * 3);
+    position: relative;
+    text-align: center;
+    z-index: 10;
+
+    @media $(p-tablet) {
+        text-align: left;
+    }
+
+}
+
+.site-header__item-b {
+    padding: 0 calc($unit * 3) calc($unit * 3) calc($unit * 3);
+    position: relative;
+    text-align: center;
+    z-index: 10;
+
+    @media $(p-tablet) {
+        padding: calc($unit * 3);
+        text-align: right;
+    }
+
+}
+
+.site-header__title {
+    color: $palette-white;
+    display: block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-h2;
+    font-weight: 800;
+    margin: 0;
+}
+
+.site-header__link {
+    border: 3px solid $palette-white;
+    color: $palette-white;
+    display: inline-block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-small;
+    font-weight: 400;
+    padding: $unit calc($unit * 2);
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.no-touchevents {
+
+    .site-header__link:hover {
+        background: $palette-red;
+        border: 3px solid $palette-red;
+        transition: all .2s ease;
+    }
+
+}

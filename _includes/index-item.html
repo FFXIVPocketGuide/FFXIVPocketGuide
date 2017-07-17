@@ -1,0 +1,26 @@
+
+<!-- Index Item ============================================================ -->
+
+<div class="index-item">
+
+    <a href="{{ guide.url }}" title="Go to the {{ guide.title}} Guide" class="index-item__link" style="background-image: url('{% for image in guide.image %}{{ image.urlSmall }}{% endfor %}')">
+
+        {% if guide.difficulty %}
+            <span class="index-item__tag--{% if guide.difficulty == 'Normal' %}normal{% elsif guide.difficulty == 'Hard' or guide.difficulty == 'Savage' %}hard{% elsif guide.difficulty == 'Extreme' %}extreme{% endif %}">
+                {{ guide.difficulty }}
+            </span>
+        {% endif %}
+
+        <h3 class="index-item__title {% if guide.title.size < 30 %}h3{% else %}h4{% endif %}">{{ guide.title }}<span>{{ guide.difficulty }}</span></h3>
+
+        {% if guide.ilvl %}
+            <h5 class="index-item__subtitle">Item Level: {{ guide.ilvl }}</h5>
+        {% endif %}
+
+        {% if guide.plvl %}
+            <h5 class="index-item__subtitle">Player Level: {{ guide.plvl }}</h5>
+        {% endif %}
+
+    </a>
+
+</div>

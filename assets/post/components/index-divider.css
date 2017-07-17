@@ -1,0 +1,47 @@
+/* =============================================================================
+
+    INDEX DIVIDER CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+.index-divider {
+    padding: calc($unit * 3) 0;
+    position: relative;
+    text-align: center;
+
+    @media $(media-navigation) {
+        /*padding: calc($unit * 3) 0;*/
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        /*padding: calc($unit * 3) 0;*/
+    }
+
+    &:before {
+        background: $palette-red;
+        content: " ";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: 100%;
+    }
+
+}
+
+.index-divider__title {
+    background: $palette-grey;
+    color: $font-black;
+    display: inline-block;
+    font-family: $font-cinzel;
+    font-size: $font-scale-h2;
+    margin: 0;
+    padding: 0 $unit;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 10;
+}

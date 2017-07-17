@@ -1,0 +1,52 @@
+
+<!-- Site Header =========================================================== -->
+
+<div class="site-header">
+
+    <div class="site-header__grid"
+        {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+            style="background-image: url('{{ "/assets/img/trials/ifrit_ex.jpg" | prepend: site.baseurl }}')"
+        {% else %}
+            style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')"
+        {% endif %}
+    >
+
+        <div class="site-header__item-a">
+
+            {% if page.pageClass == "home" %}
+                <h1 class="site-header__title">
+                    All Guides
+                </h1>
+            {% elsif page.pageClass == "dungeons" %}
+                <h1 class="site-header__title">
+                    Dungeon Guides
+                </h1>
+            {% elsif page.pageClass == "trials" %}
+                <h1 class="site-header__title">
+                    Trial Guides
+                </h1>
+            {% elsif page.pageClass == "raids" %}
+                <h1 class="site-header__title">
+                    Raid Guides
+                </h1>
+            {% else %}
+                <h1 class="site-header__title">
+                    {{ page.title }}
+                </h1>
+            {% endif %}
+
+        </div>
+
+        <div class="site-header__item-b">
+
+            {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+                <a href="https://www.youtube.com/user/MTQcapture" title="Go to MTQcapture's YouTube Channel" class="site-header__link">Video Guides by MTQcapture</a>
+            {% else %}
+                <a href="{{ page.mtqvid }}" title="Visit the video guide for this duty." target="_blank" class="mtqLinkGuide site-header__link">Watch MTQcapture's Video Guide</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>

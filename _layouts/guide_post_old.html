@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+    {% include site_head.html %}
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="{{ "/assets/vendor/jquery.min.js" | prepend: site.baseurl }}"></script>
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="{{ "/assets/vendor/modernizr.js" | prepend: site.baseurl }}"></script>
+
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="{{ "/assets/vendor/ionicons.min.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+
+        <!-- Normalize -->
+        <link rel="stylesheet" href="{{ "/assets/vendor/normalize.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+
+    </head>
+
+    <body>
+
+        <!-- Guide Header ================================================== -->
+        <header style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')">
+
+            <div class="header__overlay"></div>
+
+            <div class="content-container">
+
+                <h1 class="heading--01 header__title">{{ page.title }} {% if page.difficulty %}({{ page.difficulty }}){% endif %}</h1>
+
+                <h5 class="heading--05 header__patch">Patch {{ page.patchNumber }} - {{ page.patchName }}</h5>
+
+                {% if page.ilvl %}
+                    <h5 class="heading--05 header__ilvl">Item Level: {{ page.ilvl }}</h5>
+                {% endif %}
+
+                {% if page.plvl %}
+                    <h5 class="heading--05 header__ilvl">Player Level: {{ page.plvl }}</h5>
+                {% endif %}
+
+                <a href="{{ page.mtqvid }}" title="Visit the video guide for this raid." target="_blank" class="mtqLinkGuide button--small--white header__button">Watch MTQCapture's Video</a>
+
+            </div>
+
+        </header>
+
+        <!-- Guide Content ================================================= -->
+        <section class="guide__content">
+
+            <div class="content-container">
+
+                <!-- Guide Breadcrumbs ===================================== -->
+                <div class="guide__breadcrumbs-wrapper">
+                    <a href="/" title="Return to the Content Guide Index" class="guide__breadcrumbs-link">Home</a><span> > </span>
+                    {% if page.instanceType == "dungeon" %}
+                        <a href="/dungeons/#list" title="Return to the Dungeon Guide Index" class="guide__breadcrumbs-link">Dungeons</a><span> > </span>
+                    {% endif %}
+                    {% if page.instanceType == "trial" %}
+                        <a href="/trials/#list" title="Return to the Trial Guide Index" class="guide__breadcrumbs-link">Trials</a><span> > </span>
+                    {% endif %}
+                    {% if page.instanceType == "raid" %}
+                        <a href="/raids/#list" title="Return to the Raid Guide Index" class="guide__breadcrumbs-link">Raids</a><span> > </span>
+                    {% endif %}
+                    <a href="{{ page.permalink }}" title="This guide!" class="guide__breadcrumbs-link active">{{ page.title | truncate: 15 }}</a>
+                </div>
+
+                <!-- Duty Mechanics ======================================== -->
+                {% if page.mechanics %}
+
+                    {% include guide_mechanics.html %}
+
+                {% endif %}
+
+                <!-- Duty Bosses =========================================== -->
+                {% if page.bosses %}
+
+                    {% include guide_bosses.html %}
+
+                {% endif %}
+
+                <!-- Duty Fight Sequence =================================== -->
+                {% if page.sequence %}
+
+                    {% include guide_sequence.html %}
+
+                {% endif %}
+
+                <!-- Duty Stances ========================================== -->
+                {% if page.stances %}
+
+                    {% include guide_stances.html %}
+
+                {% endif %}
+
+                <!-- Duty Spawns =========================================== -->
+                {% if page.spawns %}
+
+                    {% include guide_spawns.html %}
+
+                {% endif %}
+
+                <!-- Raid Message ========================================== -->
+                <div class="raid-message__wrapper">
+                    <h4 class="heading--04 raid-message__copy">Happy raiding! <i class="material-icons">sentiment_very_satisfied</i></h4>
+                    <br>
+                    <h5 class="heading--05 raid-message__link">
+                        <a href="/" title="Return to the Guide Index">Return Home</a>
+                    </h5>
+                </div>
+
+            </div>
+
+        </section>
+
+        {% include footer.html %}
+
+        {% include scripts.html %}
+
+    </body>
+
+</html>

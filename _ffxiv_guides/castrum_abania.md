@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/castrum_abania.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: "69"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/cz4_gJ7Mbd8"

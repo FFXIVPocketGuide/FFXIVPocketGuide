@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/doma_castle.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Normal"
 plvl: "67"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/Z3rVn3UBy3w"

@@ -1,0 +1,171 @@
+/* =============================================================================
+
+    GUIDE ACCORDION CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+.guide__accordion {
+
+}
+
+[class*="guide__accordion-trigger--"] {
+    border-bottom: 1px solid $palette-white;
+    cursor: pointer;
+    position: relative;
+
+    &[class*="01"] {
+        background: $palette-accordion-1;
+        padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 5);
+
+        i {
+            left: 2rem;
+        }
+
+    }
+
+    &[class*="02"] {
+        background: $palette-accordion-2;
+        padding: calc($unit * 1.5) calc($unit * 2) calc($unit * 1.5) calc($unit * 6);
+
+        i {
+            left: 3rem;
+        }
+
+    }
+
+    &[class*="03"] {
+        background: $palette-accordion-3;
+        padding: $unit calc($unit * 2) $unit calc($unit * 7);
+
+        &[class*="attack"] {
+            background: rgb(70,70,70);
+            background: -moz-linear-gradient(left, $palette-accordion-3 20%, $palette-red 100%);
+            background: -webkit-linear-gradient(left, $palette-accordion-3 20%, $palette-red 100%);
+            background: linear-gradient(to right, $palette-accordion-3 20%, $palette-red 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464646', endColorstr='#ff575c',GradientType=1 );
+        }
+
+        &[class*="dutyAction"] {
+            background: rgb(70,70,70);
+            background: -moz-linear-gradient(left, $palette-accordion-3 20%, $palette-purple 100%);
+            background: -webkit-linear-gradient(left, $palette-accordion-3 20%, $palette-purple 100%);
+            background: linear-gradient(to right, $palette-accordion-3 20%, $palette-purple 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464646', endColorstr='#9b40bf',GradientType=1 );
+        }
+
+        i {
+            left: 4rem;
+        }
+
+    }
+
+    &.active {
+
+        i {
+            color: $palette-red;
+            transform: translate(0, -50%) rotate(180deg);
+            transition: all .2s ease;
+        }
+
+    }
+
+    i {
+        color: $palette-white;
+        margin: 0 calc($unit * 2) 0 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+}
+
+.guide__accordion-trigger-title {
+    color: $palette-white;
+    display: inline-block;
+    font-family: $font-aktiv;
+    font-weight: 700;
+    margin: 0;
+    width: 100%;
+}
+
+h2.guide__accordion-trigger-title {
+    font-size: $font-scale-h2;
+}
+
+h3.guide__accordion-trigger-title {
+    font-size: $font-scale-h3;
+}
+
+h4.guide__accordion-trigger-title {
+    font-size: $font-scale-h4;
+}
+
+h5.guide__accordion-trigger-title {
+    font-size: $font-scale-regular;
+}
+
+.guide__accordion-tag-wrapper {
+    /*float: right;
+    line-height: 1;
+    vertical-align: middle;*/
+}
+
+.guide__accordion-tag {
+    border-right: 1px solid $palette-white;
+    display: inline-block;
+    font-size: $font-scale-small;
+    padding: 0 calc(($unit / 2) + 4px) 0 calc($unit / 2);
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        border-right: 0;
+    }
+
+}
+
+[class*='guide__accordion-content'] {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+}
+
+[class*="guide__accordion-content--"] {
+
+    &[class*="01"] {
+
+        .guide__accordion-copy-wrapper {
+            padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 5);
+        }
+
+    }
+
+    &[class*="02"] {
+
+        .guide__accordion-copy-wrapper {
+            padding: calc($unit * 1.5) calc($unit * 2) calc($unit * 1.5) calc($unit * 6);
+        }
+
+    }
+
+    &[class*="03"] {
+
+        .guide__accordion-copy-wrapper {
+            padding: $unit calc($unit * 2) $unit calc($unit * 7);
+        }
+
+    }
+}
+
+.guide__accordion-copy-wrapper {
+    border-bottom: 1px solid $palette-borders;
+}

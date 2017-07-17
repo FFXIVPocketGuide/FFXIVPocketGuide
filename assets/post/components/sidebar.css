@@ -1,0 +1,247 @@
+/* =============================================================================
+
+    SIDEBAR CSS
+
+    Authored by:
+        - Josh Beveridge
+
+============================================================================= */
+.sidebar__trigger {
+    appearance: none;
+    background: $palette-red;
+    border: 3px solid $palette-red;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    max-width: 10rem;
+    outline: none;
+    padding: $unit calc($unit * 2);
+    position: fixed;
+    right: 0;
+    bottom: calc($unit * 2);
+    width: 50vw;
+    z-index: 110;
+
+    @media $(media-navigation) {
+        display: none;
+    }
+
+    span i {
+        font-size: inherit;
+        line-height: inherit;
+        margin: 0 calc($unit / 2) 0 calc(($unit / 2) * -1);
+        vertical-align: bottom;
+    }
+
+    .sidebar__trigger-inactive {
+        color: $palette-white;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 400;
+    }
+
+    .sidebar__trigger-active {
+        color: $palette-white;
+        display: none;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 400;
+    }
+
+    &.active {
+
+        .sidebar__trigger-inactive {
+            display: none;
+        }
+
+        .sidebar__trigger-active {
+            display: block;
+        }
+
+    }
+
+}
+
+.site-grid__sidebar-overlay {
+    background: $palette-overlay;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+    transition: opacity .2s ease;
+    width: 100%;
+    z-index: 100;
+
+    @media $(media-navigation) {
+        display: none;
+    }
+
+    &.active {
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: opacity .2s ease;
+    }
+
+}
+
+.site-grid__sidebar {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    max-width: 35rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+    transition: transform .2s ease;
+    width: 85%;
+    z-index: 105;
+
+    @media $(media-navigation) {
+        box-shadow: none !important;
+        max-width: none;
+        position: relative !important;
+        transform: translate(0, 0) !important;
+        width: 100% !important;
+    }
+
+    &.active {
+        box-shadow: 2px 0 5px rgba(0, 0, 0, .5);
+        transform: translate(0, 0);
+        transition: transform .2s ease;
+    }
+
+    &:before {
+        background: $palette-overlay;
+        content: " ";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+    }
+
+}
+
+.sidebar__wrapper {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.sidebar__title {
+    margin: 0;
+    text-align: center;
+
+    a {
+        color: $palette-white;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-h1;
+        font-weight: 800;
+        padding: calc($unit * 4) calc($unit * 1.5) calc($unit * (4-1.5)) calc($unit * 1.5);
+        text-decoration: none;
+        width: 100%;
+
+        br {
+            display: none;
+
+            @media $(l-tablet) {
+                display: inline;
+            }
+
+        }
+
+    }
+
+}
+
+.sidebar__form {
+    padding: calc($unit * 1.5);
+
+    label {
+        color: $palette-red;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-small;
+        font-weight: 400;
+        margin: 0 0 calc($unit / 2) 0;
+        width: 100%;
+    }
+
+    input {
+        border: 1px solid $palette-black;
+        color: $font-black;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 400;
+        outline: none;
+        padding: $unit;
+        transition: border-color .2s ease;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $palette-red;
+            transition: border-color .2s ease;
+        }
+
+    }
+
+}
+
+.sidebar__menu {
+    margin: 0;
+    padding: 0 0 calc($unit * 4) 0;
+
+    dt {
+        display: none;
+    }
+
+    dd {
+        margin: 0;
+
+        a {
+            color: $palette-white;
+            display: block;
+            font-family: $font-aktiv;
+            font-size: $font-scale-regular;
+            font-weight: 400;
+            padding: calc($unit * 1.5);
+            text-align: center;
+            text-decoration: none;
+            transition: background .2s ease;
+            width: 100%;
+
+            &.active {
+                background: $palette-menu-active;
+            }
+
+        }
+
+    }
+
+}
+
+.no-touchevents {
+
+    .sidebar__menu {
+
+        dd {
+
+            a:hover {
+                background: $palette-menu-active;
+                transition: background .2s ease;
+            }
+
+        }
+
+    }
+
+}

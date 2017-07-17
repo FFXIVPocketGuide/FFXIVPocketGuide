@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/sastasha.jpg"
 patchNumber: 2.0
 patchName: "A Realm Reborn"
+difficulty: "Normal"
 plvl: "15"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/tT3-1Yb787w"

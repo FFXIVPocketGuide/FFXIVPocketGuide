@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/trials/small/shinryu.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Hard"
 plvl: 70
 instanceType: "trial"
 mtqvid: "https://youtu.be/nOaV_O97uzM"

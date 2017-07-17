@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/xelphatol.jpg"
 patchNumber: 3.4
 patchName: "Soul Surrender"
+difficulty: "Normal"
 ilvl: "210"
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/5WXk2BWz-gQ"

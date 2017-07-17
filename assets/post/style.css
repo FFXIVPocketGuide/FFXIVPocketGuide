@@ -37,18 +37,43 @@
     /* Site Options */
     @import "spec/options.css";
 
+    /* Site Options */
+    @import "spec/site-grid.css";
+
 /* COMPONENTS =============================================================== */
 
     /* These files are for your website"s unique section elements. */
 
-    /* Hero */
-    @import "components/hero.css";
+    /* Sidebar */
+    @import "components/sidebar.css";
+
+    /* Site Header */
+    @import "components/site-header.css";
+
+    /* Index Divider */
+    @import "components/index-divider.css";
+
+    /* Index Grid */
+    @import "components/index-grid.css";
+
+    /* Index Null State */
+    @import "components/index-null-state.css";
+
+    /* Guide Layout */
+    @import "components/guide-layout.css";
+
+    /* Guide Metadata */
+    @import "components/guide-metadata.css";
+
+    /* Guide Content */
+    @import "components/guide-content.css";
+
+    /* Guide Accordion */
+    @import "components/guide-accordion.css";
+
 
     /* (Subpage) Header */
     @import "components/header.css";
-
-    /* Guide Index */
-    @import "components/guide-index.css";
 
     /* Guide Content */
     @import "components/guide-content.css";

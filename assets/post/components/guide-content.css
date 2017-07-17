@@ -7,7 +7,14 @@
 
 ============================================================================= */
 
-.guide__content {
-    background: rgba(245, 245, 245, 1);
-    padding: 0 0 $padding-regular 0;
+.guide-content {
+    background: $palette-accordion-1;
+    border-top: 1px solid $palette-borders;
+    border-right: 1px solid $palette-borders;
+    border-bottom: 1px solid $palette-borders;
+    border-radius: 0 5px 5px 0;
+}
+
+.guide__content-container {
+    max-width: 45rem;
 }

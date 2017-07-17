@@ -1,0 +1,17 @@
+<div class="guide__accordion-tag-wrapper">
+
+    {% if attack.combo %}
+        <span class="guide__accordion-tag">Combo</span>
+    {% else %}
+
+        {% for action in attack.dutyActions %}
+            <span class="guide__accordion-tag">{{ action.action }}</span>
+        {% endfor %}
+
+        {% for tag in attack.tags %}
+            <span class="guide__accordion-tag">{{ tag.tag }}</span>
+        {% endfor %}
+
+    {% endif %}
+
+</div>

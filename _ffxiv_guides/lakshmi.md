@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/trials/small/lakshmi.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Hard"
 plvl: 67
 instanceType: "trial"
 mtqvid: "https://youtu.be/GjlaH-p187o"

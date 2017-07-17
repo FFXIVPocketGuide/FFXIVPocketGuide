@@ -1,0 +1,42 @@
+
+<!-- Sidebar =============================================================== -->
+
+<div class="sidebar__wrapper">
+
+    <h1 class="sidebar__title">
+        <a href="/" title="Return to the Pocket Guide Home Page">
+            FFXIV<br>
+            Pocket<br>
+            Guide
+        </a>
+    </h1>
+
+    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+        <form class="sidebar__form">
+            <label for="guideFilter">Search for a guide...</label>
+            <input id="guideFilter" type="text" placeholder="Lakshmi Ex, A12s, etc...">
+        </form>
+    {% endif %}
+
+    <dl class="sidebar__menu">
+        <dt></dt>
+        {% if page.pageClass != "home" and page.pageClass != "dungeons" and page.pageClass != "trials" and page.pageClass != "raids" %}
+            <dd>
+                <a href="/" title="Return to the Pocket Guide Home Page">Go Home</a>
+            </dd>
+        {% endif %}
+        <dd>
+            <a href="/" title="View All Guides" {% if page.pageClass == "home" %}class="active"{% endif %}>All Guides</a>
+        </dd>
+        <dd>
+            <a href="/dungeons" title="View Dungeon Guides" {% if page.pageClass == "dungeons" %}class="active"{% endif %}>Dungeons</a>
+        </dd>
+        <dd>
+            <a href="/trials" title="View Trial Guides" {% if page.pageClass == "trials" %}class="active"{% endif %}>Trials</a>
+        </dd>
+        <dd>
+            <a href="/raids" title="View Raid Guides" {% if page.pageClass == "raids" %}class="active"{% endif %}>Raids</a>
+        </dd>
+    </dl>
+
+</div>

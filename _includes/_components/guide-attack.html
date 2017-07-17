@@ -1,0 +1,40 @@
+
+<!-- Attack Template ======================================================= -->
+
+<div class="guide__accordion-trigger--03--{% if attack.dutyActions %}dutyAction{% else %}attack{% endif %}">
+    <i class="material-icons">expand_more</i>
+    <h4 class="guide__accordion-trigger-title">
+        {{ attack.title }}
+        {% include _components/guide-attack-types.html %}
+    </h4>
+</div>
+
+<div class="guide__accordion-content--03">
+    <!-- Standard Attacks -->
+    {% if attack.combo %}
+        <!-- Do nothing. -->
+    {% else %}
+        {% include _components/guide_attack_tags.html %}
+        {% include _components/guide_attack_notes.html %}
+    {% endif %}
+
+    <!-- Combo Attacks -->
+    {% for combo in attack.combo %}
+        <h5 class="heading--05">{{ combo.title }}</h5>
+        {% include _components/guide_attack_tags.html %}
+        {% include _components/guide_attack_notes.html %}
+    {% endfor %}
+
+    <!-- Attack Images -->
+    {% if attack.images %}
+        <div class="flex-grid guide__attack-image-list">
+
+            {% for image in attack.images %}
+                <div class="box med-1of3 guide__attack-image-item">
+                    <img src="{{ image.url }}" alt="{{ image.alt }}">
+                </div>
+            {% endfor %}
+
+        </div>
+    {% endif %}
+</div>

@@ -1,0 +1,183 @@
+
+<!-- Guide Index (Dungeons) ================================================ -->
+
+<!-- Stormblood Guide Index ================================ -->
+
+<!-- Check to see if there are Stormblood Guides - if not, don't include the opening markup. -->
+{% assign counter = 0 %}
+{% for guide in site.ffxiv_guides %}
+    {% if guide.instanceType == "dungeon" %}
+        {% if guide.patchNumber >= 4.0 %}
+            {% if guide.patchNumber < 5.0 %}
+                {% assign counter = counter | plus: 1 %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if counter > 0 %}
+    <div class="index-divider" data-expansion="sb">
+        <h2 class="index-divider__title">Stormblood</h2>
+    </div>
+
+    <div class="index-grid" data-expansion="sb">
+{% endif %}
+
+        <!-- Display Stormblood Guides -->
+        {% assign counter = 0 %}
+
+        {% for guide in site.ffxiv_guides %}
+
+            {% if guide.instanceType == "dungeon" %}
+
+                {% if guide.patchNumber >= 4.0 %}
+
+                    {% if guide.patchNumber < 5.0 %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-item.html %}
+
+                    {% endif %}
+
+                {% endif %}
+
+            {% endif %}
+
+        {% endfor %}
+
+<!-- Check to see if there are Stormblood Guides - if not, don't include the closing div. -->
+{% assign counter = 0 %}
+{% for guide in site.ffxiv_guides %}
+    {% if guide.instanceType == "dungeon" %}
+        {% if guide.patchNumber >= 4.0 %}
+            {% if guide.patchNumber < 5.0 %}
+                {% assign counter = counter | plus: 1 %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if counter > 0 %}
+    </div>
+{% endif %}
+
+<!-- Heavensward Guide Index =============================== -->
+
+<!-- Check to see if there are A Realm Reborn Guides - if not, don't include the opening markup. -->
+{% assign counter = 0 %}
+{% for guide in site.ffxiv_guides %}
+    {% if guide.instanceType == "dungeon" %}
+        {% if guide.patchNumber >= 3.0 %}
+            {% if guide.patchNumber < 4.0 %}
+                {% assign counter = counter | plus: 1 %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if counter > 0 %}
+    <div class="index-divider" data-expansion="hw">
+        <h2 class="index-divider__title">Heavensward</h2>
+    </div>
+
+    <div class="index-grid" data-expansion="hw">
+{% endif %}
+
+        {% assign counter = 0 %}
+
+        {% for guide in site.ffxiv_guides %}
+
+            {% if guide.instanceType == "dungeon" %}
+
+                {% if guide.patchNumber >= 3.0 %}
+
+                    {% if guide.patchNumber < 4.0 %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-item.html %}
+
+                    {% endif %}
+
+                {% endif %}
+
+            {% endif %}
+
+        {% endfor %}
+
+<!-- Check to see if there are Heavensward Guides - if not, don't include the closing div. -->
+{% assign counter = 0 %}
+{% for guide in site.ffxiv_guides %}
+    {% if guide.instanceType == "dungeon" %}
+        {% if guide.patchNumber >= 3.0 %}
+            {% if guide.patchNumber < 4.0 %}
+                {% assign counter = counter | plus: 1 %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if counter > 0 %}
+    </div>
+{% endif %}
+
+<!-- A Realm Reborn Guide Index ============================ -->
+
+<!-- Check to see if there are A Realm Reborn Guides - if not, don't include the opening markup. -->
+{% assign counter = 0 %}
+{% for guide in site.ffxiv_guides %}
+    {% if guide.instanceType == "dungeon" %}
+        {% if guide.patchNumber >= 2.0 %}
+            {% if guide.patchNumber < 3.0 %}
+                {% assign counter = counter | plus: 1 %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if counter > 0 %}
+    <div class="index-divider" data-expansion="arr">
+        <h2 class="index-divider__title">A Realm Reborn</h2>
+    </div>
+
+    <div class="index-grid" data-expansion="arr">
+{% endif %}
+
+        {% assign counter = 0 %}
+
+        {% for guide in site.ffxiv_guides %}
+
+            {% if guide.instanceType == "dungeon" %}
+
+                {% if guide.patchNumber >= 2.0 %}
+
+                    {% if guide.patchNumber < 3.0 %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-item.html %}
+
+                    {% endif %}
+
+                {% endif %}
+
+            {% endif %}
+
+        {% endfor %}
+
+<!-- Check to see if there are A Realm Reborn Guides - if not, don't include the closing div. -->
+{% assign counter = 0 %}
+{% for guide in site.ffxiv_guides %}
+    {% if guide.instanceType == "dungeon" %}
+        {% if guide.patchNumber >= 2.0 %}
+            {% if guide.patchNumber < 3.0 %}
+                {% assign counter = counter | plus: 1 %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if counter > 0 %}
+    </div>
+{% endif %}
