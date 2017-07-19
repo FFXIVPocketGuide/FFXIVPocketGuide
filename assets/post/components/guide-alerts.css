@@ -8,31 +8,19 @@
 ============================================================================= */
 
 .guide__alerts-wrapper {
-    margin: $padding-unit 0;
+    display: block;
+    margin: $unit 0 calc($unit * 2) 0;
+    max-width: 45rem;
+    width: 100%;
 
     &:last-child {
         margin-bottom: 0;
-    }
-
-    &+.guide__mechanics-wrapper {
-        margin-top: $padding-regular;
-    }
-
-    h5 {
-        color: $red;
-        margin-bottom: $padding-small;
     }
 
 }
 
 .guide__alerts-list {
-    margin-top: $padding-small;
-    padding: 0 0 0 1.2rem;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
+    padding: 0 0 0 calc($unit * 1.2);
 }
 
 .guide__alerts-item {
@@ -41,13 +29,4 @@
     font-size: $font-scale-regular;
     line-height: 1.5;
     margin: 0;
-
-    &:first-child {
-        margin-top: 0;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
 }

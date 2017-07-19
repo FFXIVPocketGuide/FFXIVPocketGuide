@@ -9,12 +9,32 @@
 .guide-metadata {
     background: $palette-white;
     border: 1px solid $palette-borders;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 5px 0 0;
+
+    @media $(p-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 80em) {
+        border-radius: 5px 0 0 5px;
+        display: block;
+    }
+
 }
 
 .guide-metadata__wrapper {
     border-bottom: 1px solid $palette-borders;
     padding: calc($unit * 1.5);
+
+    @media $(p-tablet) {
+        border-bottom: none;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 80em) {
+        border-bottom: 1px solid $palette-borders;
+    }
+
 }
 
 [class*="guide-metadata__difficulty"] {
@@ -23,7 +43,7 @@
     font-family: $font-aktiv;
     font-size: $font-scale-regular;
     font-weight: 800;
-    padding: $unit calc($unit * 2);
+    padding: $unit;
     text-align: center;
     width: 100%;
 
@@ -66,12 +86,38 @@
     margin: 0;
     padding: calc($unit * 1.5);
 
+    @media $(p-tablet) {
+        border-left: 1px solid $palette-borders;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 80em) {
+        border-left: none;
+    }
+
     .guide-metadata__subtitle {
         margin: 0;
     }
 
     li {
         margin: $unit 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+}
+
+body[id*="Edge"],
+body[id*="Trident"] {
+
+    .guide-metadata__menu {
+
+        @media screen and (min-width: 48em) and (max-width: 79.9em) {
+            -ms-grid-column: 2;
+        }
+
     }
 
 }

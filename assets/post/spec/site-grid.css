@@ -17,11 +17,30 @@ $media-navigation: screen and (orientation: landscape) and (min-width: 64em);
     max-width: 100%;
 
     @media $(media-navigation) {
-        grid-template-columns: 25vw 75vw;
+        grid-template-columns: 23vw 77vw;
     }
 
     @media screen and (orientation: landscape) and (min-width: 70em) {
         grid-template-columns: 20vw 80vw;
+    }
+
+}
+
+body[id*="Edge"],
+body[id*="Trident"] {
+
+    .site-grid__sidebar {
+        height: 100vh;
+        -ms-grid-column: 1 !important;
+    }
+
+    .site-grid__content-wrapper {
+        height: 100vh;
+
+        @media $(media-navigation) {
+            -ms-grid-column: 2 !important;
+        }
+
     }
 
 }

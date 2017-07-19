@@ -13,11 +13,13 @@ instanceType: "raid"
 mtqvid: "https://youtu.be/JR2anBXKVes"
 bosses:
   - title: "Faust"
+    id: "boss01"
     sequence:
       - phase: 01
         alerts:
           - alert: "Burn this miniboss down while the off tank holds all other adds."
   - title: "Oppressor"
+    id: "boss02"
     attacks:
       - title: "Resin Bomb"
         phases:

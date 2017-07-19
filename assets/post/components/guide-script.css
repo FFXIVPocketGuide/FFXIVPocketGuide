@@ -1,13 +1,13 @@
 /* =============================================================================
 
-    GUIDE MECHANICS CSS
+    GUIDE SKILL SCRIPT CSS
 
     Authored by:
         - Josh Beveridge
 
 ============================================================================= */
 
-.guide__mechanics-wrapper {
+.guide__script-wrapper {
     display: block;
     margin: calc($unit * 2) 0;
     max-width: 45rem;
@@ -19,37 +19,28 @@
 
 }
 
-.guide__mechanics-title {
-    color: $font-black;
+.guide__script-attack {
+    color: $palette-red;
     font-family: $font-aktiv;
     font-size: $font-scale-regular;
-    font-weight: 800;
-    margin: 0;
-}
+    font-weight: 700;
+    line-height: 1.8;
 
-.guide__mechanics-list {
-    margin: $unit 0;
-    padding: 0 0 0 calc($unit * 1.2);
-
-    &:last-child {
-        margin-bottom: 0;
+    &.duty-action {
+        color: $palette-purple;
     }
 
 }
 
-.guide__mechanics-item {
+.guide__script-divider {
     color: $font-black;
-    font-family: $font-pt;
     font-size: $font-scale-regular;
-    line-height: 1.5;
-    margin: 0;
 
-    &:first-child {
-        margin-top: 0;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
+    i {
+        color: $font-black;
+        font-size: inherit;
+        line-height: 1;
+        vertical-align: middle;
     }
 
 }

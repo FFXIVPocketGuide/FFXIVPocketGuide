@@ -1,9 +1,9 @@
 
-<!-- Guide Bosses =========================================================== -->
+<!-- Guide Bosses ========================================================== -->
 
 <div class="guide__accordion">
 
-    <div class="guide__accordion-trigger--01 active">
+    <div class="guide__accordion-trigger--01 active" id="guideBosses">
         <i class="material-icons">expand_more</i>
         <h2 class="guide__accordion-trigger-title">
             {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
@@ -17,7 +17,7 @@
         <!-- Opens the Boss Loop -->
         {% for boss in page.bosses %}
 
-            <div class="guide__accordion-trigger--02">
+            <div class="guide__accordion-trigger--02" id="{{ boss.id }}">
                 <i class="material-icons">expand_more</i>
                 <h3 class="guide__accordion-trigger-title">
                     {{ boss.title }}
@@ -32,24 +32,24 @@
                     <div class="guide__accordion-copy-wrapper">
 
                         <!-- Event Title -->
-                        <h4 class="">Phase: {{ phase.phase }}</h4>
-
-                        <!-- Opens the Attack Loop -->
-                        {% if phase.attacks %}
-                            <!-- Include Guide Skill Script -->
-                            {% include _components/guide_skill_script.html %}
-                        {% endif %}
+                        <h4 class="guide__accordion-title">Phase {{ phase.phase }} Overview</h4>
 
                         <!-- Opens the Alerts Loop -->
                         {% if phase.alerts %}
                             <!-- Include Guide Alerts -->
-                            {% include _components/guide_alerts.html %}
+                            {% include _components/guide-alerts.html %}
                         {% endif %}
 
                         <!-- Opens the Mechanics Loops -->
                         {% if phase.mechanics %}
                             <!-- Include Guide Mechanics -->
-                            {% include _components/guide_phase_mechanics.html %}
+                            {% include _components/guide-mechanics.html %}
+                        {% endif %}
+
+                        <!-- Opens the Attack Loop -->
+                        {% if phase.attacks %}
+                            <!-- Include Guide Skill Script -->
+                            {% include _components/guide-script.html %}
                         {% endif %}
 
                     </div>

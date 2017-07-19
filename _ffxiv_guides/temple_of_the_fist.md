@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/qsvyVRhQ-pc"
 bosses:
   - title: "Sruti & Smriti"
+    id: "boss01"
     attacks:
       - title: "Coeurl AoEs"
         phases:
@@ -52,6 +53,7 @@ bosses:
           - alert: "These two bosses have a soft enrage in the form of Basic Instinct - if players kill one before the other, the remaining boss gets a buff that increases damage."
           - alert: "Kill both Coeurls at the same time to avoid complications and unnecessary damage."
   - title: "Arbuda"
+    id: "boss02"
     attacks:
       - title: "Cardinal Shift"
         phases:
@@ -135,6 +137,7 @@ bosses:
           - alert: "Players should be aware of Port and Star & Fore and Aft as they require specific positioning and will stack Vulnerability Up debuffs with each hit."
           - alert: "Sun and moon markers indicate that players should stand on the floor tile that matches their marker."
   - title: "Ivon Coeurlfist"
+    id: "boss03"
     attacks:
       - title: "Spirit Wave"
         phases:

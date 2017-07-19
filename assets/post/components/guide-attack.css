@@ -7,133 +7,80 @@
 
 ============================================================================= */
 
-.guide__attack-accordion-trigger {
-    background: rgba(70, 70, 70, 1);
-
-    h4 {
-        color: $white;
-    }
-
-    .box {
-        padding: $padding-unit;
-
-        @media $(p-tablet) {
-            padding: $padding-unit $padding-regular;
-        }
-
-        &:first-child {
-
-        }
-
-        &:last-child {
-            padding: $padding-unit 0;
-            text-align: center;
-
-            @media $(p-tablet) {
-                padding: $padding-unit $padding-regular;
-                text-align: right;
-            }
-
-        }
-
-    }
-
-    &.active {
-
-        .box {
-
-            &:last-child {
-
-                i {
-                    color: $red;
-                    transform: rotate(180deg);
-                }
-
-            }
-
-        }
-
-    }
-
-}
-
-.guide__attack-accordion-content {
-    /*background: rgba(245, 245, 245, 1);*/
-    border-top: 1px solid #EAEAEA;
-    padding: calc($padding-small / 2) $padding-unit $padding-unit $padding-unit;
-
-    @media $(p-tablet) {
-        padding: calc($padding-small / 2) $padding-regular $padding-unit $padding-regular;
-    }
-
-    ul+h5 {
-        margin-top: $padding-regular;
-    }
-
-    h5 {
-        margin-bottom: $padding-small;
-
-        &:first-child {
-            margin-top: $padding-unit;
-        }
-
-    }
-
-}
-
-/* Attack Tags ============================================================== */
+/* Attack Tags */
 .guide__attack-tags-wrapper {
-    margin: $padding-unit 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 0 calc($unit * 2) 0;
 }
 
-.guide__attack-action-tag {
-    background: $purple;
-    border-radius: 3px;
-    color: $white;
-    display: inline-block;
+.guide__attack-tags-wrapper--combo {
+    margin: calc($unit * 2) 0;
+}
+
+.guide__attack-tags-title {
+    color: $font-black;
     font-family: $font-aktiv;
-    font-size: $font-scale-small;
-    font-weight: 700;
-    line-height: 1;
-    padding: .5rem;
+    font-size: $font-scale-regular;
+    font-weight: 800;
     margin: 0;
 }
 
 .guide__attack-role-tag {
-    background: $blue;
-    border-radius: 3px;
-    color: $white;
+    color: $palette-blue;
     display: inline-block;
     font-family: $font-aktiv;
-    font-size: $font-scale-small;
-    font-weight: 700;
-    line-height: 1;
-    padding: .5rem;
-    margin: 0;
+    font-size: $font-scale-regular;
+    font-weight: 800;
+}
+
+.guide__attack-action-tag {
+    color: $palette-purple;
+    display: inline-block;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 800;
 }
 
 .guide__attack-type-tag {
-    background: $red;
-    border-radius: 3px;
-    color: $white;
+    color: $palette-red;
     display: inline-block;
     font-family: $font-aktiv;
-    font-size: $font-scale-small;
-    font-weight: 700;
-    line-height: 1;
-    padding: .5rem;
+    font-size: $font-scale-regular;
+    font-weight: 800;
+}
+
+/* Attack Notes */
+
+.guide__attack-notes-wrapper {
+    display: block;
+    max-width: 45rem;
+    width: 100%;
+
+    &:last-child {
+
+        .guide__attack-notes-list {
+            margin-bottom: 0;
+        }
+
+    }
+
+}
+
+.guide__attack-notes-title {
+    color: $font-black;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 800;
     margin: 0;
 }
 
-/* Attack Notes ============================================================= */
 .guide__attack-notes-list {
-    margin-top: $padding-small;
-    padding: 0 0 0 1.2rem;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
+    display: block;
+    margin: calc($unit / 2) 0 calc($unit * 2) 0;
+    /*max-width: 45rem;*/
+    padding: 0 0 0 calc($unit * 1.2);
+    width: 100%;
 }
 
 .guide__attack-notes-item {
@@ -163,13 +110,52 @@
 /* Attack Images ============================================================ */
 .guide__attack-image-list {
 
+    @media $(p-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+body[id*="Edge"],
+body[id*="Trident"] {
+
+    .guide__attack-image-item:nth-child(1) {
+
+        @media $(p-tablet) {
+            -ms-grid-column: 1;
+        }
+
+    }
+
+    .guide__attack-image-item:nth-child(2) {
+
+        @media $(p-tablet) {
+            -ms-grid-column: 2;
+        }
+
+    }
+
+    .guide__attack-image-item:nth-child(3) {
+
+        @media $(p-tablet) {
+            -ms-grid-column: 3;
+        }
+
+    }
+
 }
 
 .guide__attack-image-item {
     cursor: pointer;
 
     &.active {
-        flex: 0 0 100%;
+
+        @media $(p-tablet) {
+            grid-column-start: 1;
+            grid-column-end: 10;
+        }
+
     }
 
     img {

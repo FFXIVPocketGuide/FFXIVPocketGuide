@@ -12,9 +12,9 @@
     border: 3px solid $palette-red;
     border-radius: 5px 0 0 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
-    max-width: 10rem;
+    max-width: 8rem;
     outline: none;
-    padding: $unit calc($unit * 2);
+    padding: $unit;
     position: fixed;
     right: 0;
     bottom: calc($unit * 2);

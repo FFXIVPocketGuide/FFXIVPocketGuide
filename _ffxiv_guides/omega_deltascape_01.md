@@ -13,6 +13,7 @@ instanceType: "raid"
 mtqvid: "https://youtu.be/lSuUWMpZSMM"
 bosses:
   - title: "Alte Roite"
+    id: "boss01"
     attacks:
       - title: "Wyrmtail"
         phases:

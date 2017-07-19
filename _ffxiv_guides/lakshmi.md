@@ -105,7 +105,7 @@ attacks:
       - tag: "Stack"
     notes:
       - note: "A single player will be marked with an orange stack marker - all players not affected by another mechanic should move in to soak damage."
-  - title: "Alluring Arm (Hand of Grace & Hand of Beauty)"
+  - title: "Alluring Arm"
     phases:
       - phase: 02
     combo:

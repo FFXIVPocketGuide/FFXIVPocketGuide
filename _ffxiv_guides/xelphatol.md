@@ -21,6 +21,7 @@ mechanics:
           - note: "The moment they dock, focus down these balloons before any other enemy."
 bosses:
   - title: "Nuzal Hueloc"
+    id: "boss01"
     attacks:
       - title: "Short Burst"
         phases:
@@ -86,6 +87,7 @@ bosses:
             - note: "The boss will periodically fly into the air - players must use the 'Floating Turret' spawn to knock them into the air, hitting the boss out of the sky."
             - note: "Killing this add will send all players into the sky - be sure to stand right below the boss."
   - title: "Dotoli Ciloc"
+    id: "boss02"
     attacks:
       - title: "On Low"
         phases:
@@ -127,6 +129,7 @@ bosses:
           - alert: "When the boss moves to the center of the room, position yourself in front of a barrier to avoid being knocked off."
           - alert: "Red Markers will drop tornados where the player moves - place them on the edge of the arena away from barriers."
   - title: "Tozol Huatotl"
+    id: "boss03"
     attacks:
       - title: "Ixali Aero"
         phases:

@@ -13,6 +13,7 @@ instanceType: "raid"
 mtqvid: "https://youtu.be/uNrzJdfTNLs"
 bosses:
   - title: "Death Gaze Hollow"
+    id: "boss01"
     attacks:
       - title: "Spike of Darkness"
         phases:
@@ -126,6 +127,7 @@ bosses:
           - alert: "Stand in front of the ice crystals that drop to avoid being pushed off the edge."
           - alert: "Dark squares on the floor will kill you when Void Death IV is cast. These act as the boss’ enrage timer and will fill the ship if the boss is not killed fast enough."
   - title: "Ferdiad Hollow"
+    id: "boss02"
     attacks:
       - title: "Abyssal Scythe"
         phases:
@@ -224,16 +226,19 @@ bosses:
           - alert: "Blackbolt requires the raid to stack and will place a stack marker on the appropriate player."
           - alert: "<strong>Add Phase</strong> - kill adds and watch out for the large AoE that covers half the arena."
   - title: "Shadowcourt Handmaiden"
+    id: "boss03"
     sequence:
       - phase: 01
         alerts:
           - alert: "Coming Soon!"
   - title: "Proto Ultima"
+    id: "boss04"
     sequence:
       - phase: 01
         alerts:
           - alert: "Coming Soon!"
   - title: "Scathach"
+    id: "boss05"
     attacks:
       - title: "Thirty Thorns"
         phases:
@@ -386,6 +391,7 @@ bosses:
           - alert: "<strong>Add Phase</strong> - kill chimaeras while avoiding meteors. At least one player should stand in the meteor circle to soak up damage."
           - alert: "Thirty Cries requires the raid to stack and will place a stack marker on the <strong>MAIN TANK</strong>."
   - title: "Diabolos"
+    id: "boss06"
     attacks:
       - title: "Nightmare"
         phases:

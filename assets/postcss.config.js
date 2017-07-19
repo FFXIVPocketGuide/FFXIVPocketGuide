@@ -4,9 +4,10 @@ module.exports = {
         require('postcss-mixins')({}),
         require('postcss-nested')({}),
         require('autoprefixer')({
-            browsers: '> 2.5% in CZ',
-            flexbox: 'no-2009'}
-        ),
+            browsers: '> 2%',
+            flexbox: 'no-2009',
+            grid: true
+        }),
         require('postcss-simple-vars')({}),
         require('postcss-color-function')({}),
         require('cssnano')({

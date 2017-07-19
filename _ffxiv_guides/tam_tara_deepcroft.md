@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/_8xWuLi7iVM"
 bosses:
   - title: "Void Soulcounters"
+    id: "boss01"
     attacks:
       - title: "Enthunder"
         phases:
@@ -32,6 +33,7 @@ bosses:
           - alert: "These minibosses will spawn at each orb platform throughout the dungeon."
           - alert: "Allow the tank to build enough enmity before DPSing them down."
   - title: "Galvanth the Dominator"
+    id: "boss02"
     attacks:
       - title: "Mind Blast"
         phases:

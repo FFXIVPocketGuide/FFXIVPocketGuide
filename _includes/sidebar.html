@@ -29,13 +29,13 @@
             <a href="/" title="View All Guides" {% if page.pageClass == "home" %}class="active"{% endif %}>All Guides</a>
         </dd>
         <dd>
-            <a href="/dungeons" title="View Dungeon Guides" {% if page.pageClass == "dungeons" %}class="active"{% endif %}>Dungeons</a>
+            <a href="/dungeons" title="View Dungeon Guides" {% if page.pageClass == "dungeons" %}class="active"{% endif %} {% if page.instanceType == "dungeon" %}class="active"{% endif %}>Dungeons</a>
         </dd>
         <dd>
-            <a href="/trials" title="View Trial Guides" {% if page.pageClass == "trials" %}class="active"{% endif %}>Trials</a>
+            <a href="/trials" title="View Trial Guides" {% if page.pageClass == "trials" %}class="active"{% endif %} {% if page.instanceType == "trial" %}class="active"{% endif %}>Trials</a>
         </dd>
         <dd>
-            <a href="/raids" title="View Raid Guides" {% if page.pageClass == "raids" %}class="active"{% endif %}>Raids</a>
+            <a href="/raids" title="View Raid Guides" {% if page.pageClass == "raids" %}class="active"{% endif %} {% if page.instanceType == "raid" %}class="active"{% endif %}>Raids</a>
         </dd>
     </dl>
 

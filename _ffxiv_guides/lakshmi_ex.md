@@ -61,7 +61,7 @@ attacks:
       - tag: "Cone AoE"
     notes:
       - note: "This attack will target the second threat target - Off-tanks should position themselves away from the group to avoid hitting anyone else."
-  - title: "Alluring Arm (Hand of Grace & Hand of Beauty)"
+  - title: "Alluring Arm"
     phases:
       - phase: 01
     combo:
@@ -273,10 +273,15 @@ sequence:
     attacks:
       - attack: "Chanchala"
       - attack: "Divine Denial"
+        dutyActions: true
       - attack: "Enhanced Hand of Beauty"
+        dutyActions: true
       - attack: "Enhanced The Pull of Light"
+        dutyActions: true
       - attack: "Enhanced The Path of Light"
+        dutyActions: true
       - attack: "Divine Desire"
+        dutyActions: true
       - attack: "Chanchala ENDS"
       - attack: "The Pull of Light"
       - attack: "The Path of Light"
@@ -295,6 +300,7 @@ sequence:
       - attack: "[Water III]"
       - attack: "[Repeat]"
       - attack: "Alluring Embrace"
+        dutyActions: true
     alerts:
       - alert: "The goal of this phase is to recharge the whole group's Vril usage before the boss casts her Ultimate."
       - alert: "Don't forget to activate Vril when the boss begins to cast Alluring Embrace."
@@ -309,8 +315,11 @@ sequence:
     attacks:
       - attack: "Chanchala"
       - attack: "Divine Doubt"
+        dutyActions: true
       - attack: "Enhanced The Path of Light"
+        dutyActions: true
       - attack: "Enhanced The Pull of Light"
+        dutyActions: true
       - attack: "Chanchala ENDS"
       - attack: "Vril Restoration I"
       - attack: "The Pall of Light"
@@ -324,9 +333,12 @@ sequence:
     attacks:
       - attack: "[Chanchala"
       - attack: "Divine Doubt"
+        dutyActions: true
       - attack: "Enhanced The Pall of Light"
+        dutyActions: true
       - attack: "Vril Restoration II"
       - attack: "Enhanced Stotram"
+        dutyActions: true
       - attack: "Chanchala ENDS"
       - attack: "Alluring Arm"
       - attack: "The Pall of Light"

@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/y2wp0wfMnXY"
 bosses:
   - title: "Demon of the Tome"
+    id: "boss01"
     attacks:
       - title: "Foil"
         phases:
@@ -51,6 +52,7 @@ bosses:
         alerts:
           - alert: "Foil will drop books in quick succession in various AoE patterns - expect to move quickly."
   - title: "Living Flame"
+    id: "boss02"
     attacks:
       - title: "Searing Wind"
         phases:
@@ -128,12 +130,14 @@ bosses:
           - alert: "When players are marked with Sun or Moon markers, position yourselves on the corresponding symbol on the floor."
           - alert: "When players are marked with '+' or '-' markers, players who match the boss' symbol should run towards him, while everyone else runs as far away as possible."
   - title: "Apanda"
+    id: "boss03"
     sequence:
       - phase: 01
         alerts:
           - alert: "This miniboss will target Leylines with AoE attacks."
           - alert: "Kill this miniboss as soon as possible as its attack increases over time."
   - title: "Strix"
+    id: "boss04"
     attacks:
       - title: "Check Out"
         phases:

@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/Z3rVn3UBy3w"
 bosses:
   - title: "Magitek Rearguard"
+    id: "boss01"
     attacks:
       - title: "Garlean Fire"
         phases:
@@ -54,6 +55,7 @@ bosses:
         alerts:
           - alert: "Players should be aware of their positioning at all times during this fight - be sure not to step into an AoE while weaving away from the Rearguard Mine spawns."
   - title: "Magitek Hexadrone"
+    id: "boss02"
     attacks:
       - title: "Circle of Death"
         phases:
@@ -105,6 +107,7 @@ bosses:
           - alert: "This fight takes positioning further and requires you to avoid excessive movement while the Magitek Bits' column AoEs are present - running into their orange tethers will send you flying backwards."
           - alert: "Players should all stand next to the pillar when it spawns to soak damage from Magitek Missiles."
   - title: "Hypertuned Grynewaht"
+    id: "boss03"
     attacks:
       - title: "Chainsaw"
         phases:

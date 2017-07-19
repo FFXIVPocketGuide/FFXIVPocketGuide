@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/1JJdTI2nI80"
 bosses:
   - title: "Amikiri"
+    id: "boss01"
     attacks:
       - title: "Sharpstrike"
         phases:
@@ -68,6 +69,7 @@ bosses:
             notes:
               - note: "The boss will occasionally spawn an extra add - tanks should pick this up and players should kill it."
   - title: "Ruby Princess"
+    id: "boss02"
     attacks:
       - title: "Tornadogenesis"
         phases:
@@ -126,6 +128,7 @@ bosses:
               - note: "4 chests sit around the arena and will give players near them the Old buff."
               - note: "Players should assign chests at the beginning of the fight - they will be used to avoid the boss' attack Seduce."
   - title: "Shisui Yohi"
+    id: "boss03"
     attacks:
       - title: "Foul Nail"
         phases:

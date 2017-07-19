@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/cz4_gJ7Mbd8"
 bosses:
   - title: "Magna Roader"
+    id: "boss01"
     attacks:
       - title: "Wheel"
         phases:
@@ -64,6 +65,7 @@ bosses:
         alerts:
           - alert: "This boss has an attack that renders him immune to damage until he is hit with cannon fire from either of the turrets on the edge of the arena - when he begins to divebomb across the arena, DPS the Legion adds that run in and take control of the turrets to stop him."
   - title: "Number XXIV"
+    id: "boss02"
     attacks:
       - title: Stab
         phases:
@@ -115,6 +117,7 @@ bosses:
         alerts:
           - alert: "The primary mechanic in this fight revolves around ensuring you have a buff that matches the buff the boss has - the buff you have is determined by the pillars scattered around the arena."
   - title: "Inferno"
+    id: "boss03"
     attacks:
       - title: "Ketu Slash"
         phases:

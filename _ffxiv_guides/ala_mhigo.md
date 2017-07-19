@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/I1Le_MATl5k"
 bosses:
   - title: "Magitek Scorpion"
+    id: "boss01"
     attacks:
       - title: "Electromagnetic Field"
         phases:
@@ -51,6 +52,7 @@ bosses:
         alerts:
           - alert: "The boss' attacks will pverlap with increased difficulty as the fight progresses - be sure to avoid puddles splashed around the arena."
   - title: "Aulus Mal Asina"
+    id: "boss02"
     attacks:
       - title: "Mana Burst"
         phases:
@@ -126,6 +128,7 @@ bosses:
               - note: "Players will be knocked out of their bodies, preventing attacks."
               - note: "You'll have to dodge column AoEs and Deathclaw adds while you make your way back to your body before you can continue damaging the boss."
   - title: "Zenos Yae Galvus"
+    id: "boss03"
     attacks:
       - title: "Art of the Storm"
         phases:

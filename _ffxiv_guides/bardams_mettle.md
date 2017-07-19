@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/yNgyWqajeHA"
 bosses:
   - title: "Galura"
+    id: "boss01"
     attacks:
       - title: "Heave"
         phases:
@@ -76,6 +77,7 @@ bosses:
           - alert: "Players should be aware of Galura's attack Rush - the boss will charge at the tethered player and deal damage based on proximity."
           - alert: "The various animal mobs have different attack patterns - make note of which animals are near the boss when it casts Warcry."
   - title: "Bardam"
+    id: "boss02"
     sequence:
       - phase: 01
         attacks:
@@ -102,6 +104,7 @@ bosses:
           - alert: "During this final phase, 2 more golems will spawn and perform mechanics as well."
           - alert: "4 boulders will spawn and eventually be destroyed until 1 remains - this will be used to avoid damage from the meteor making its way to the arena. Players should place themselves between the meteor and the remaining boulder."
   - title: "Yol"
+    id: "boss03"
     attacks:
       - title: "Feather Cut"
         phases:

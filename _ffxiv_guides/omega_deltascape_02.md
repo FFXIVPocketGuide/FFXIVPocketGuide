@@ -13,6 +13,7 @@ instanceType: "raid"
 mtqvid: "https://youtu.be/dAGTYL_iSDw"
 bosses:
   - title: "Catastrophe"
+    id: "boss01"
     attacks:
       - title: "Tremblor"
         phases:
@@ -113,6 +114,8 @@ bosses:
       - title: "Antilight"
         phases:
           - phase: 01
+        dutyActions:
+          - action: "Levitate"
         combo:
           - title: "Antilight"
             roles:
@@ -189,20 +192,26 @@ bosses:
         attacks:
           - attack: "Tremblor"
           - attack: "Earthquake"
+            dutyActions: true
           - attack: "100 Gs"
           - attack: "Evilsphere"
           - attack: "Aetherial Rift"
+            dutyActions: true
           - attack: "Gravitational Explosion"
           - attack: "Paranormal Wave"
           - attack: "Maniacle Probe & Epicenter"
           - attack: "Antilight & Demon's Gaze"
+            dutyActions: true
           - attack: "Antilight"
+            dutyActions: true
           - attack: "Maniacle Probe & Epicenter"
           - attack: "-100 Gs"
           - attack: "Gravitational Wave"
           - attack: "Antilight & Aetherial Rift"
+            dutyActions: true
           - attack: "Maniacle Probe & Epicenter"
           - attack: "Antilight & Earthquake"
+            dutyActions: true
         alerts:
           - alert: "This boss uses a new mechanic in which attacks can hit on 1 of 2 'levels'."
           - alert: "Earthquake, Aetherial Rift, Gravitational Explosion, and certain versions of Antilight (Black AoEs) all hit players on the ground level."

@@ -9,10 +9,38 @@
 
 .guide-content {
     background: $palette-accordion-1;
-    border-top: 1px solid $palette-borders;
+    border-top: none;
     border-right: 1px solid $palette-borders;
     border-bottom: 1px solid $palette-borders;
-    border-radius: 0 5px 5px 0;
+    border-left: 1px solid $palette-borders;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+
+    @media screen and (orientation: landscape) and (min-width: 80em) {
+        border-top: 1px solid $palette-borders;
+        border-right: 1px solid $palette-borders;
+        border-bottom: 1px solid $palette-borders;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+    }
+
+}
+
+body[id*="Edge"],
+body[id*="Trident"] {
+
+    .guide-content {
+
+        @media screen and (max-width: 79.9em) {
+            -ms-grid-row: 2;
+        }
+
+        @media screen and (orientation: landscape) and (min-width: 80em) {
+            -ms-grid-column: 2;
+        }
+
+    }
+
 }
 
 .guide__content-container {

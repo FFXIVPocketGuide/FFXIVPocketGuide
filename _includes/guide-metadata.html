@@ -40,7 +40,7 @@
         {% if page.mechanics %}
 
             <li>
-                <a href="#guideNotes" title="" class="guide-metadata__menu-link">
+                <a href="#" data-id="guideNotes" title="Go to the Guide Notes" class="guide-metadata__menu-link">
                     {% if page.instanceType == "dungeon" %}Dungeon Notes{% endif %}
                     {% if page.instanceType == "raid" %}Raid Notes{% endif %}
                 </a>
@@ -52,14 +52,14 @@
 
             <li>
 
-                <a href="#guideBosses" title="" class="guide-metadata__menu-link">Dungeon Bosses</a>
+                <a href="#" data-id="guideBosses" title="Go to the Guide Bosses" class="guide-metadata__menu-link">Dungeon Bosses</a>
 
                 <ul class="guide-metadata__submenu">
 
                     {% for boss in page.bosses %}
 
                         <li>
-                            <a href="/" title="" class="guide-metadata__menu-link">{{ boss.title }}</a>
+                            <a href="#" data-id="{{ boss.id }}" title="Go to {{ boss.title }}" class="guide-metadata__menu-link">{{ boss.title }}</a>
                         </li>
 
                     {% endfor %}
@@ -74,14 +74,14 @@
 
             <li>
 
-                <a href="#guideSummary" title="" class="guide-metadata__menu-link">Fight Summary</a>
+                <a href="#" data-id="guideSummary" title="Go to the Guide Summary" class="guide-metadata__menu-link">Fight Summary</a>
 
                 <ul class="guide-metadata__submenu">
 
                     {% for phase in page.sequence %}
 
                         <li>
-                            <a href="/" title="" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
+                            <a href="#" data-id="phase{{ phase.phase }}" title="Go to {{ phase.phase }}" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
                         </li>
 
                     {% endfor %}

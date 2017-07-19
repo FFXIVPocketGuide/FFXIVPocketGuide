@@ -7,7 +7,7 @@
 
 ============================================================================= */
 .site-index {
-    padding: 0 0 calc($unit * 2) 0;
+    padding: 0 0 calc($unit * 7.5) 0;
 
     @media $(media-navigation) {
         padding: 0 0 calc($unit * 3) 0;
@@ -24,7 +24,7 @@
     grid-template-columns: 1fr;
     grid-column-gap: calc($unit * 1.5);
     grid-row-gap: calc($unit * 1.5);
-    padding: 0 calc($unit * 2);
+    padding: 0 calc($unit * 1.5);
 
     @media $(p-tablet) {
         grid-template-columns: 1fr 1fr;
@@ -47,6 +47,272 @@
 .index-item {
     border-radius: 5px;
     overflow: hidden;
+}
+
+body[id*="Edge"],
+body[id*="Trident"] {
+    height: 100%;
+
+    .index-grid {
+        display: block;
+
+        @media $(p-tablet) {
+            display: -ms-grid;
+        }
+
+        @media screen and (min-width: 48em) and (max-width: 64em) {
+            grid-template-columns: 1fr 1.5rem 1fr;
+        }
+
+        @media $(desktop) {
+            grid-template-columns: 1fr 1.5rem 1fr 1.5rem 1fr;
+        }
+
+        @media $(desktop) {
+            -ms-grid-column-gap: calc($unit * 1.5);
+            -ms-grid-row-gap: calc($unit * 1.5);
+        }
+
+    }
+
+    .index-item {
+        margin-bottom: 1.5rem;
+
+        /* 1 Columns */
+
+        /* 2 Columns */
+        &:nth-child(even) {
+            @media screen and (min-width: 48em) and (max-width: 64em) {
+                -ms-grid-column: 3;
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            @media $(p-tablet) {
+                -ms-grid-row: 1;
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            @media $(p-tablet) {
+                -ms-grid-row: 2;
+            }
+        }
+
+        &:nth-child(5),
+        &:nth-child(6) {
+            @media $(p-tablet) {
+                -ms-grid-row: 3;
+            }
+        }
+
+        &:nth-child(7),
+        &:nth-child(8) {
+            @media $(p-tablet) {
+                -ms-grid-row: 4;
+            }
+        }
+
+        &:nth-child(9),
+        &:nth-child(10) {
+            @media $(p-tablet) {
+                -ms-grid-row: 5;
+            }
+        }
+
+        &:nth-child(11),
+        &:nth-child(12) {
+            @media $(p-tablet) {
+                -ms-grid-row: 6;
+            }
+        }
+
+        &:nth-child(13),
+        &:nth-child(14) {
+            @media $(p-tablet) {
+                -ms-grid-row: 7;
+            }
+        }
+
+        &:nth-child(15),
+        &:nth-child(16) {
+            @media $(p-tablet) {
+                -ms-grid-row: 8;
+            }
+        }
+
+        &:nth-child(17),
+        &:nth-child(18) {
+            @media $(p-tablet) {
+                -ms-grid-row: 9;
+            }
+        }
+
+        &:nth-child(19),
+        &:nth-child(20) {
+            @media $(p-tablet) {
+                -ms-grid-row: 10;
+            }
+        }
+
+        &:nth-child(21),
+        &:nth-child(22) {
+            @media $(p-tablet) {
+                -ms-grid-row: 11;
+            }
+        }
+
+        &:nth-child(23),
+        &:nth-child(24) {
+            @media $(p-tablet) {
+                -ms-grid-row: 12;
+            }
+        }
+
+        &:nth-child(25),
+        &:nth-child(26) {
+            @media $(p-tablet) {
+                -ms-grid-row: 13;
+            }
+        }
+
+        /* 3 Columns */
+        &:nth-child(3n-1) {
+            @media $(desktop) {
+                -ms-grid-column: 3;
+            }
+        }
+
+        &:nth-child(3n+0) {
+            @media $(desktop) {
+                -ms-grid-column: 5;
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            @media $(desktop) {
+                -ms-grid-row: 1;
+            }
+        }
+
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            @media $(desktop) {
+                -ms-grid-row: 2;
+            }
+        }
+
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9) {
+            @media $(desktop) {
+                -ms-grid-row: 3;
+            }
+        }
+
+        &:nth-child(10),
+        &:nth-child(11),
+        &:nth-child(12) {
+            @media $(desktop) {
+                -ms-grid-row: 4;
+            }
+        }
+
+        &:nth-child(13),
+        &:nth-child(14),
+        &:nth-child(15) {
+            @media $(desktop) {
+                -ms-grid-row: 5;
+            }
+        }
+
+        &:nth-child(16),
+        &:nth-child(17),
+        &:nth-child(18) {
+            @media $(desktop) {
+                -ms-grid-row: 6;
+            }
+        }
+
+        &:nth-child(19),
+        &:nth-child(20),
+        &:nth-child(21) {
+            @media $(desktop) {
+                -ms-grid-row: 7;
+            }
+        }
+
+        &:nth-child(22),
+        &:nth-child(23),
+        &:nth-child(24) {
+            @media $(desktop) {
+                -ms-grid-row: 8;
+            }
+        }
+
+        &:nth-child(25),
+        &:nth-child(26),
+        &:nth-child(27) {
+            @media $(desktop) {
+                -ms-grid-row: 9;
+            }
+        }
+
+        &:nth-child(28),
+        &:nth-child(29),
+        &:nth-child(30) {
+            @media $(desktop) {
+                -ms-grid-row: 10;
+            }
+        }
+
+        &:nth-child(31),
+        &:nth-child(32),
+        &:nth-child(33) {
+            @media $(desktop) {
+                -ms-grid-row: 11;
+            }
+        }
+
+        &:nth-child(34),
+        &:nth-child(35),
+        &:nth-child(36) {
+            @media $(desktop) {
+                -ms-grid-row: 12;
+            }
+        }
+
+        &:nth-child(37),
+        &:nth-child(38),
+        &:nth-child(39) {
+            @media $(desktop) {
+                -ms-grid-row: 13;
+            }
+        }
+
+        &:nth-child(40),
+        &:nth-child(41),
+        &:nth-child(42) {
+            @media $(desktop) {
+                -ms-grid-row: 14;
+            }
+        }
+
+        &:nth-child(43),
+        &:nth-child(44),
+        &:nth-child(45) {
+            @media $(desktop) {
+                -ms-grid-row: 15;
+            }
+        }
+
+    }
+
 }
 
 .index-item__link {

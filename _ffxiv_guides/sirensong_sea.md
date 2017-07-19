@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/2ma65teviMM"
 bosses:
   - title: "Lugat"
+    id: "boss01"
     attacks:
       - title: "Amorphous Applause"
         phases:
@@ -69,6 +70,7 @@ bosses:
         alerts:
           - alert: "This boss has a few attacks that will push and pull players - be ready to move out of AoEs."
   - title: "The Governor"
+    id: "boss02"
     attacks:
       - title: "Shadowflow"
         phases:
@@ -128,6 +130,7 @@ bosses:
           - alert: "Healer should watch out for raid wide damage."
           - alert: "Players should pay attention too the movement of Shadowsplit adds to determine where the safe zones will be during the following Shadowflow."
   - title: "Lorelei"
+    id: "boss03"
     attacks:
       - title: "Ill Will"
         phases:

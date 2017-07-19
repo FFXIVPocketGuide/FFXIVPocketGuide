@@ -1,0 +1,13 @@
+<!-- Event Skill Script -->
+<div class="guide__script-wrapper">
+
+    <!-- Boss Attack Loop -->
+    {% for attack in phase.attacks %}
+        <span class="guide__script-attack {% if attack.dutyActions %}duty-action{% endif %}">{{ attack.attack }}</span>
+        <!-- Checks to see if this is the last attack to prevent a final divider element. -->
+        {% if forloop.last != true %}
+            <span class="guide__script-divider"><i class="material-icons">play_arrow</i></span>
+        {% endif %}
+    {% endfor %}
+
+</div>

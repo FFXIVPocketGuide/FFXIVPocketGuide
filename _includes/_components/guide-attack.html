@@ -1,7 +1,7 @@
 
 <!-- Attack Template ======================================================= -->
 
-<div class="guide__accordion-trigger--03--{% if attack.dutyActions %}dutyAction{% else %}attack{% endif %}">
+<div class="guide__accordion-trigger--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% else %}--attack{% endif %}">
     <i class="material-icons">expand_more</i>
     <h4 class="guide__accordion-trigger-title">
         {{ attack.title }}
@@ -9,32 +9,36 @@
     </h4>
 </div>
 
-<div class="guide__accordion-content--03">
-    <!-- Standard Attacks -->
-    {% if attack.combo %}
-        <!-- Do nothing. -->
-    {% else %}
-        {% include _components/guide_attack_tags.html %}
-        {% include _components/guide_attack_notes.html %}
-    {% endif %}
+<div class="guide__accordion-content--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% else %}--attack{% endif %}">
 
-    <!-- Combo Attacks -->
-    {% for combo in attack.combo %}
-        <h5 class="heading--05">{{ combo.title }}</h5>
-        {% include _components/guide_attack_tags.html %}
-        {% include _components/guide_attack_notes.html %}
-    {% endfor %}
+    <div class="guide__accordion-copy-wrapper">
 
-    <!-- Attack Images -->
-    {% if attack.images %}
-        <div class="flex-grid guide__attack-image-list">
+        <!-- Standard Attacks -->
+        {% if attack.combo %}
+            <!-- Do nothing. -->
+        {% else %}
+            {% include _components/guide-attack-notes.html %}
+        {% endif %}
 
-            {% for image in attack.images %}
-                <div class="box med-1of3 guide__attack-image-item">
-                    <img src="{{ image.url }}" alt="{{ image.alt }}">
-                </div>
-            {% endfor %}
+        <!-- Combo Attacks -->
+        {% for combo in attack.combo %}
+            {% include _components/guide-combo-tags.html %}
+            {% include _components/guide-attack-notes.html %}
+        {% endfor %}
 
-        </div>
-    {% endif %}
+        <!-- Attack Images -->
+        {% if attack.images %}
+            <div class="guide__attack-image-list">
+
+                {% for image in attack.images %}
+                    <div class="guide__attack-image-item">
+                        <img src="{{ image.url }}" alt="{{ image.alt }}">
+                    </div>
+                {% endfor %}
+
+            </div>
+        {% endif %}
+
+    </div>
+
 </div>

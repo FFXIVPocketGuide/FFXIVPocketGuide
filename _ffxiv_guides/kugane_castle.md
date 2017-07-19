@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/iW0d0r6R9pc"
 bosses:
   - title: "Zuiko-maru"
+    id: "boss01"
     attacks:
       - title: "Clearout"
         phases:
@@ -63,6 +64,7 @@ bosses:
         alerts:
           - alert: "Harakiri Kosho adds will stun the player they are tethered to if they get too close - DPS should run away from their tethered add and focus on the opposite add to avoid being caught."
   - title: "Dojun-maru"
+    id: "boss02"
     attacks:
       - title: "Clockwork Medium"
         phases:
@@ -102,6 +104,7 @@ bosses:
         alerts:
           - alert: "Joi Onmitsu adds will explode for heavy raid wide damage if they are not killed fast enough."
   - title: "Yojimbo"
+    id: "boss03"
     attacks:
       - title: "Payday & Zanmato"
         phases:

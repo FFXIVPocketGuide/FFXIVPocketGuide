@@ -23,6 +23,7 @@ mechanics:
           - note: "If the incorrect colour is interacted with, enemies may spawn."
 bosses:
   - title: "Chopper"
+    id: "boss01"
     attacks:
       - title: "Circular AoE"
         phases:
@@ -41,6 +42,7 @@ bosses:
           - alert: "A memo item early on in the dungeon will tell players which colour of coral to interact with in order to enter this fight."
           - alert: "This boss is intended to teach the basics of a tank and spank - simply DPS him down."
   - title: "Captain Madison"
+    id: "boss02"
     attacks:
       - title: "Scurvy Dogs"
         phases:
@@ -62,6 +64,7 @@ bosses:
           - alert: "Similarly to the first encounter, this boss is a tank and spank."
           - alert: "Tanks prepare for the boss to summon 'Scurvy Dog' adds at the end of the encounter."
   - title: "Denn the Orcatoothed"
+    id: "boss03"
     attacks:
       - title: "Frontal Cone AoE"
         phases:

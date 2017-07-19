@@ -13,6 +13,7 @@ instanceType: "dungeon"
 mtqvid: "https://youtu.be/CdS3lto8nVw"
 bosses:
   - title: "Magitek Predator"
+    id: "boss01"
     attacks:
       - title: "Magitek Claw"
         phases:
@@ -65,6 +66,7 @@ bosses:
           - alert: "Adds will spawn and tether to DPS players - these can't be tanked and should be killed as soon as possible."
           - alert: "Red Markers indicate that players should move away from others and expect high damage."
   - title: "Armored Weapon"
+    id: "boss02"
     attacks:
       - title: "Launcher"
         phases:
@@ -124,6 +126,7 @@ bosses:
           - alert: "When players are hit with the 'Extreme Caution' debuff, <strong>STOP MOVING AND ATTACKING</strong> to avoid damage."
           - alert: "If you are targeted with Diffractive Laser while you have 'Extreme Caution', allow 'Extreme Caution' to fall off before moving out of the puddle."
   - title: "The Griffin"
+    id: "boss03"
     attacks:
       - title: "Beak of the Griffin"
         phases:

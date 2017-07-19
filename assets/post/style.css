@@ -71,36 +71,17 @@
     /* Guide Accordion */
     @import "components/guide-accordion.css";
 
-
-    /* (Subpage) Header */
-    @import "components/header.css";
-
-    /* Guide Content */
-    @import "components/guide-content.css";
-
-    /* Guide Breadcrumbs */
-    @import "components/guide-breadcrumbs.css";
-
-    /* Guide Events */
-    @import "components/guide-event.css";
-
-    /* Guide Sequence Menu */
-    @import "components/guide-sequence-menu.css";
-
-    /* Guide Skill Script */
-    @import "components/guide-skill-script.css";
-
     /* Guide Alerts */
     @import "components/guide-alerts.css";
 
     /* Guide Mechanics */
     @import "components/guide-mechanics.css";
 
-    /* Guide Notes */
-    @import "components/guide-notes.css";
+    /* Guide Script */
+    @import "components/guide-script.css";
 
-    /* Guide Attack */
+    /* Combo Attacks */
     @import "components/guide-attack.css";
 
-    /* Footer */
-    @import "components/footer.css";
+    /* Combo Tags */
+    @import "components/combo-tags.css";

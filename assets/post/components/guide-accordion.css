@@ -8,6 +8,10 @@
 ============================================================================= */
 .guide__accordion {
 
+    &:last-child {
+        margin-bottom: -2px;
+    }
+
 }
 
 [class*="guide__accordion-trigger--"] {
@@ -17,46 +21,205 @@
 
     &[class*="01"] {
         background: $palette-accordion-1;
-        padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 5);
+        padding: calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5) calc($unit * 4.5);
+
+        @media $(media-navigation) {
+            padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 5);
+        }
 
         i {
-            left: 2rem;
+            left: 1.5rem;
+
+            @media $(media-navigation) {
+                left: 2rem;
+            }
+
         }
 
     }
 
     &[class*="02"] {
         background: $palette-accordion-2;
-        padding: calc($unit * 1.5) calc($unit * 2) calc($unit * 1.5) calc($unit * 6);
+        padding: calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5) calc($unit * 4.5);
+
+        @media $(media-navigation) {
+            padding: calc($unit * 1.5) calc($unit * 2) calc($unit * 1.5) calc($unit * 8);
+        }
 
         i {
-            left: 3rem;
+            left: 1.5rem;
+
+            @media $(media-navigation) {
+                left: 5rem;
+            }
+
+        }
+
+        &[class*="combo"] {
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-yellow 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-yellow 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 5%, $palette-yellow 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff575c',GradientType=1 );
+            padding: calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5) calc($unit * 4.5);
+
+            @media $(media-navigation) {
+                padding: $unit calc($unit * 2) $unit calc($unit * 8);
+            }
+
+            &:before {
+                background: $palette-accordion-3;
+                content: " ";
+                display: block;
+                height: 100%;
+                opacity: .7;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+            }
+
+        }
+
+        &[class*="attack"] {
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-red 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-red 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 5%, $palette-red 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff575c',GradientType=1 );
+            padding: calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5) calc($unit * 4.5);
+
+            @media $(media-navigation) {
+                padding: $unit calc($unit * 2) $unit calc($unit * 8);
+            }
+
+            &:before {
+                background: $palette-accordion-3;
+                content: " ";
+                display: block;
+                height: 100%;
+                opacity: .7;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+            }
+
+        }
+
+        &[class*="dutyAction"] {
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-purple 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-purple 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 5%, $palette-purple 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#9b40bf',GradientType=1 );
+            padding: calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5) calc($unit * 4.5);
+
+            @media $(media-navigation) {
+                padding: $unit calc($unit * 2) $unit calc($unit * 8);
+            }
+
+            &:before {
+                background: $palette-accordion-3;
+                content: " ";
+                display: block;
+                height: 100%;
+                opacity: .7;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+            }
+
         }
 
     }
 
     &[class*="03"] {
         background: $palette-accordion-3;
-        padding: $unit calc($unit * 2) $unit calc($unit * 7);
+        padding: calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5) calc($unit * 4.5);
+        position: relative;
 
-        &[class*="attack"] {
-            background: rgb(70,70,70);
-            background: -moz-linear-gradient(left, $palette-accordion-3 20%, $palette-red 100%);
-            background: -webkit-linear-gradient(left, $palette-accordion-3 20%, $palette-red 100%);
-            background: linear-gradient(to right, $palette-accordion-3 20%, $palette-red 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464646', endColorstr='#ff575c',GradientType=1 );
-        }
-
-        &[class*="dutyAction"] {
-            background: rgb(70,70,70);
-            background: -moz-linear-gradient(left, $palette-accordion-3 20%, $palette-purple 100%);
-            background: -webkit-linear-gradient(left, $palette-accordion-3 20%, $palette-purple 100%);
-            background: linear-gradient(to right, $palette-accordion-3 20%, $palette-purple 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464646', endColorstr='#9b40bf',GradientType=1 );
+        @media $(media-navigation) {
+            padding: $unit calc($unit * 2) $unit calc($unit * 11);
         }
 
         i {
-            left: 4rem;
+            left: 1.5rem;
+
+            @media $(media-navigation) {
+                left: 8rem;
+            }
+
+        }
+
+        &[class*="combo"] {
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-yellow 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-yellow 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 5%, $palette-yellow 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff575c',GradientType=1 );
+
+            &:before {
+                background: $palette-accordion-3;
+                content: " ";
+                display: block;
+                height: 100%;
+                opacity: .7;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+            }
+
+        }
+
+        &[class*="attack"] {
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-red 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-red 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 5%, $palette-red 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff575c',GradientType=1 );
+
+            &:before {
+                background: $palette-accordion-3;
+                content: " ";
+                display: block;
+                height: 100%;
+                opacity: .7;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+            }
+
+        }
+
+        &[class*="dutyAction"] {
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-purple 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 5%, $palette-purple 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 5%, $palette-purple 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#9b40bf',GradientType=1 );
+
+            &:before {
+                background: $palette-accordion-3;
+                content: " ";
+                display: block;
+                height: 100%;
+                opacity: .7;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+            }
+
         }
 
     }
@@ -79,6 +242,7 @@
         transform: translate(0, -50%);
         transition: all .2s ease;
         vertical-align: middle;
+        z-index: 10;
     }
 
 }
@@ -89,7 +253,9 @@
     font-family: $font-aktiv;
     font-weight: 700;
     margin: 0;
+    position: relative;
     width: 100%;
+    z-index: 10;
 }
 
 h2.guide__accordion-trigger-title {
@@ -114,11 +280,11 @@ h5.guide__accordion-trigger-title {
     vertical-align: middle;*/
 }
 
-.guide__accordion-tag {
+[class*="guide__accordion-tag--"] {
     border-right: 1px solid $palette-white;
     display: inline-block;
     font-size: $font-scale-small;
-    padding: 0 calc(($unit / 2) + 4px) 0 calc($unit / 2);
+    padding: 0 4px 0 0;
 
     &:first-child {
         padding-left: 0;
@@ -126,6 +292,22 @@ h5.guide__accordion-trigger-title {
 
     &:last-child {
         border-right: 0;
+    }
+
+    &[class*="combo"] {
+        color: $palette-yellow;
+    }
+
+    &[class*="role"] {
+        color: $palette-blue;
+    }
+
+    &[class*="duty-action"] {
+        color: $palette-purple;
+    }
+
+    &[class*="attack"] {
+        color: $palette-red;
     }
 
 }
@@ -144,7 +326,12 @@ h5.guide__accordion-trigger-title {
     &[class*="01"] {
 
         .guide__accordion-copy-wrapper {
-            padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 5);
+            padding: calc($unit * 1.5);
+
+            @media $(media-navigation) {
+                padding: calc($unit * 2.5) calc($unit * 2.5) calc($unit * 2.5) calc($unit * 5);
+            }
+
         }
 
     }
@@ -152,7 +339,51 @@ h5.guide__accordion-trigger-title {
     &[class*="02"] {
 
         .guide__accordion-copy-wrapper {
-            padding: calc($unit * 1.5) calc($unit * 2) calc($unit * 1.5) calc($unit * 6);
+            padding: calc($unit * 1.5);
+
+            @media $(media-navigation) {
+                padding: calc($unit * 2.5) calc($unit * 2.5) calc($unit * 2.5) calc($unit * 8);
+            }
+
+        }
+
+        &[class*="combo"] {
+
+            .guide__accordion-copy-wrapper {
+                padding: calc($unit * 1.5);
+
+                @media $(media-navigation) {
+                    padding: $unit $unit $unit calc($unit * 8);
+                }
+
+            }
+
+        }
+
+        &[class*="attack"] {
+
+            .guide__accordion-copy-wrapper {
+                padding: calc($unit * 1.5);
+
+                @media $(media-navigation) {
+                    padding: $unit $unit $unit calc($unit * 8);
+                }
+
+            }
+
+        }
+
+        &[class*="dutyAction"] {
+
+            .guide__accordion-copy-wrapper {
+                padding: calc($unit * 1.5);
+
+                @media $(media-navigation) {
+                    padding: $unit $unit $unit calc($unit * 8);
+                }
+
+            }
+
         }
 
     }
@@ -160,12 +391,34 @@ h5.guide__accordion-trigger-title {
     &[class*="03"] {
 
         .guide__accordion-copy-wrapper {
-            padding: $unit calc($unit * 2) $unit calc($unit * 7);
+            padding: calc($unit * 1.5);
+
+            @media $(media-navigation) {
+                padding: $unit $unit $unit calc($unit * 11);
+            }
+
         }
 
     }
+
 }
 
 .guide__accordion-copy-wrapper {
+    background: $palette-white;
     border-bottom: 1px solid $palette-borders;
+}
+
+.guide__accordion-title {
+    color: $font-black;
+    font-family: $font-aktiv;
+    font-weight: 800;
+    margin: 0;
+}
+
+h4.guide__accordion-title {
+    font-size: $font-scale-h4;
+}
+
+h5.guide__accordion-title {
+    font-size: $font-scale-regular;
 }

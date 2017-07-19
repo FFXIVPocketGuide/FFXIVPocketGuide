@@ -1,0 +1,28 @@
+<!-- Standard Attack Notes -->
+
+<div class="guide__attack-notes-wrapper">
+
+    {% if combo.notes  %}
+        <!-- Do Nothing -->
+    {% else %}
+        <h5 class="guide__attack-notes-title">Other Notes:</h5>
+    {% endif %}
+
+    {% if attack.notes %}
+        <ul class="guide__attack-notes-list">
+            {% for note in attack.notes %}
+                <li class="guide__attack-notes-item">{{ note.note }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <!-- Combo Attack Notes -->
+    {% if combo.notes %}
+        <ul class="guide__attack-notes-list">
+            {% for note in combo.notes %}
+                <li class="guide__attack-notes-item">{{ note.note }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</div>

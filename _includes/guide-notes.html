@@ -3,7 +3,7 @@
 
 <div class="guide__accordion">
 
-    <div class="guide__accordion-trigger--01">
+    <div class="guide__accordion-trigger--01" id="guideNotes">
         <i class="material-icons">expand_more</i>
         <h2 class="guide__accordion-trigger-title">
             {% if page.instanceType == "dungeon" %}Dungeon Notes{% endif %}
@@ -17,7 +17,7 @@
         <!-- Opens the Notes Loop -->
         {% for mechanic in page.mechanics %}
 
-            <div class="guide__content-container">
+            <div class="guide__accordion-copy-wrapper">
 
                 <!-- Event Title -->
                 <h3>{{ mechanic.title }}</h3>

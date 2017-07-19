@@ -1,56 +1,40 @@
-<!-- Duty Sequence ========================================================= -->
-<div class="guide__event">
 
-    <div class="guide__event-accordion-trigger accordion-trigger flex-grid active">
-        <div class="box small-4of5 med-5of6">
-            <h3 class="heading--03">Fight Sequence</h3>
-        </div>
-        <div class="box small-1of5 med-1of6">
-            <h3 class="heading--03">
-                <i class="material-icons">expand_more</i>
-            </h3>
-        </div>
+<!-- Duty Sequence ========================================================= -->
+
+<div class="guide__accordion">
+
+    <div class="guide__accordion-trigger--01 active" id="guideSummary">
+        <i class="material-icons">expand_more</i>
+        <h2 class="guide__accordion-trigger-title">Fight Summary</h2>
     </div>
 
     <!-- Guide Event Accordion Content -->
-    <div class="guide__event-accordion-content accordion-content active">
-
-        <!-- Sequence Menu -->
-        <div class="flex-grid guide__sequence-menu-list">
-            {% for phase in page.sequence %}
-                <div class="box small-1of3 med-1of4 lg-1of6 guide__sequence-menu-item">
-                    <a href="#phase{{ phase.phase }}" title="Go to phase {{ phase.phase }}" class="guide__sequence-menu-link">Phase {{ phase.phase }}</a>
-                </div>
-            {% endfor %}
-        </div>
+    <div class="guide__accordion-content--01 active">
 
         <!-- Opens the Sequence Loop -->
         {% for phase in page.sequence %}
 
-            <!-- Phase Link -->
-            <a id="phase{{ phase.phase }}"></a>
-
-            <div class="guide__event-object">
+            <div class="guide__accordion-copy-wrapper" id="phase{{ phase.phase }}">
 
                 <!-- Event Title -->
-                <h4 class="heading--04">Phase: {{ phase.phase }}</h4>
-
-                <!-- Opens the Attack Loop -->
-                {% if phase.attacks %}
-                    <!-- Include Guide Skill Script -->
-                    {% include _components/guide_skill_script.html %}
-                {% endif %}
+                <h4 class="guide__accordion-title">Phase {{ phase.phase }} Overview</h4>
 
                 <!-- Opens the Alerts Loop -->
                 {% if phase.alerts %}
                     <!-- Include Guide Alerts -->
-                    {% include _components/guide_alerts.html %}
+                    {% include _components/guide-alerts.html %}
                 {% endif %}
 
                 <!-- Opens the Mechanics Loops -->
                 {% if phase.mechanics %}
                     <!-- Include Guide Mechanics -->
-                    {% include _components/guide_phase_mechanics.html %}
+                    {% include _components/guide-mechanics.html %}
+                {% endif %}
+
+                <!-- Opens the Attack Loop -->
+                {% if phase.attacks %}
+                    <!-- Include Guide Skill Script -->
+                    {% include _components/guide-script.html %}
                 {% endif %}
 
             </div>
@@ -67,13 +51,8 @@
                     <!-- Checks to see if any of the attack's phases are equal to the current phase. -->
                     {% if attackPhase.phase == currentPhase %}
 
-                        <!-- Attack Partial -->
-                        <div class="guide__event-object--attack">
-
-                            <!-- Include Attack Template -->
-                            {% include _components/guide_attack.html %}
-
-                        </div>
+                        <!-- Include Attack Template -->
+                        {% include _components/guide-attack.html %}
 
                     {% endif %}
 

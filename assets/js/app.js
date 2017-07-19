@@ -127,10 +127,32 @@
 
         });
 
+        // FFXIV Guide Menu ====================================================
+        $('.guide-metadata__menu-link').on("click", function(e) {
+
+            e.preventDefault();
+
+            var dataObject = $('#'+$(this).data('id'));
+
+            $("[class*='guide__accordion-trigger']").removeClass("active");
+            $("[class*='guide__accordion-content']").removeClass("active");
+
+            $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
+            $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
+            $(dataObject).addClass("active");
+            $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
+
+            $('.site-grid__content-wrapper').animate({
+                scrollTop: dataObject.position().top
+            }, 'slow');
+
+        });
+
         // FFXIV Guide Accordions ==============================================
         $("[class*='guide__accordion-trigger']").on("click", function(e) {
             $(this).toggleClass("active");
             $(this).next("[class*='guide__accordion-content']").toggleClass("active");
+            e.preventDefault();
         });
 
         // Guide Image Zoom ====================================================
