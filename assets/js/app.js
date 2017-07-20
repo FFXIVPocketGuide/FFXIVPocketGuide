@@ -174,6 +174,7 @@
                         $('body').scrollTop(top);
                     }
                     e.preventDefault();
+                    document.activeElement.blur();
                     return false;
                 }
             });
