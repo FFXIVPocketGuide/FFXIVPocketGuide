@@ -16,6 +16,10 @@
     border-radius: 0 0 5px 5px;
     overflow: hidden;
 
+    @media $(media-navigation) {
+        max-height: 100vh;
+    }
+
     @media screen and (orientation: landscape) and (min-width: 80em) {
         border-top: 1px solid $palette-borders;
         border-right: 1px solid $palette-borders;

@@ -102,6 +102,7 @@
 
     @media $(media-navigation) {
         box-shadow: none !important;
+        max-height: 100vh;
         max-width: none;
         position: relative !important;
         transform: translate(0, 0) !important;

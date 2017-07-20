@@ -21,7 +21,10 @@
     },
     "watch": {
         "post": {
-            "patterns": ["src", "post"],
+            "patterns": [
+                "src",
+                "post"
+            ],
             "extensions": "css"
         }
     },
