@@ -13,11 +13,11 @@ $media-navigation: screen and (orientation: landscape) and (min-width: 64em);
 .site-grid {
     display: grid;
     grid-template-columns: 100vw;
-    height: 100vh;
     max-width: 100%;
 
     @media $(media-navigation) {
         grid-template-columns: 23vw 77vw;
+        height: 100vh;
     }
 
     @media screen and (orientation: landscape) and (min-width: 70em) {
