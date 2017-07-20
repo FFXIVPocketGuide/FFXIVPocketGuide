@@ -40,31 +40,6 @@
             }
         });
 
-        function scrollToElement($element, time) {
-            var position = false;
-            var scrolled = $('.site-grid__content-wrapper').scrollTop();
-            console.log(scrolled);
-
-            try {
-                position = $element.position().top;
-            } catch (err) {
-                ;
-            }
-            if (!position) {
-                return;
-            }
-
-            if (typeof time === 'undefined' || !time) {
-                time = 1000; // default time
-            }
-
-            var scrollTo = position - scrolled;
-
-            $('.site-grid__content-wrapper').animate({
-                scrollTop : scrollTo
-            }, time);
-        }
-
         // FFXIV Issue Link ====================================================
         $(".site-header a").on("click", function(e) {
 
@@ -188,22 +163,40 @@
 
             e.preventDefault();
 
-            var dataObject = $('#'+$(this).data('id'));
-            var container = $('.site-grid__content-wrapper');
+            if (window.matchMedia("(orientation: landscape) and (min-width: 64em)").matches) {
+                var dataObject = $('#'+$(this).data('id'));
+                var container = $('.site-grid__content-wrapper');
 
-            $("[class*='guide__accordion-trigger']").removeClass("active");
-            $("[class*='guide__accordion-content']").removeClass("active");
+                $("[class*='guide__accordion-trigger']").removeClass("active");
+                $("[class*='guide__accordion-content']").removeClass("active");
 
-            $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
-            $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
-            $(dataObject).addClass("active");
-            $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
+                $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
+                $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
+                $(dataObject).addClass("active");
+                $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
 
-            var offSet = container.scrollTop() + dataObject.offset().top;
+                var offSet = container.scrollTop() + dataObject.offset().top;
 
-            container.animate({
-                scrollTop : offSet
-            }, 'slow');
+                container.animate({
+                    scrollTop : offSet
+                }, 'slow');
+            } else {
+                var dataObject = $('#'+$(this).data('id'));
+                var container = $('body');
+
+                $("[class*='guide__accordion-trigger']").removeClass("active");
+                $("[class*='guide__accordion-content']").removeClass("active");
+
+                $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
+                $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
+                $(dataObject).addClass("active");
+                $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
+                var offSet = dataObject.offset().top;
+
+                container.animate({
+                    scrollTop : offSet
+                }, 'slow');
+            }
 
         });
 
