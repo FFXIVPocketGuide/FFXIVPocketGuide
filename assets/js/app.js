@@ -46,7 +46,7 @@
             e.preventDefault();
 
             var dataObject = $('#'+$(this).data('id'));
-            var container = $('body');
+            var container = $('html,body');
             var offSet = container.scrollTop() + dataObject.offset().top;
 
             container.animate({
@@ -136,7 +136,7 @@
                     }
 
                     var top = $('body').position().top;
-                    $('body').scrollTop(top);
+                    $('html,body').scrollTop(top);
 
                     e.preventDefault();
 
@@ -157,7 +157,7 @@
             e.preventDefault();
 
             var dataObject = $('#'+$(this).data('id'));
-            var container = $('body');
+            var container = $('html,body');
 
             $("[class*='guide__accordion-trigger']").removeClass("active");
             $("[class*='guide__accordion-content']").removeClass("active");
