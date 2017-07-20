@@ -11,17 +11,11 @@ $unit: 1rem;
 $media-navigation: screen and (orientation: landscape) and (min-width: 64em);
 
 .site-grid {
-    display: grid;
-    grid-template-columns: 100vw;
     max-width: 100%;
+    width: 100%;
 
     @media $(media-navigation) {
-        grid-template-columns: 23vw 77vw;
-        height: 100vh;
-    }
-
-    @media screen and (orientation: landscape) and (min-width: 70em) {
-        grid-template-columns: 20vw 80vw;
+        overflow-x: hidden;
     }
 
 }
@@ -31,16 +25,52 @@ body[id*="Trident"] {
 
     .site-grid__sidebar {
         height: 100vh;
-        -ms-grid-column: 1 !important;
     }
 
-    .site-grid__content-wrapper {
-        height: 100vh;
+}
 
-        @media $(media-navigation) {
-            -ms-grid-column: 2 !important;
-        }
+.site-grid__sidebar {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    max-width: 35rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+    transition: transform .2s ease;
+    width: 85%;
+    z-index: 105;
 
+    @media $(media-navigation) {
+        box-shadow: none !important;
+        max-height: 100vh;
+        max-width: none;
+        position: fixed !important;
+        transform: translate(0, 0) !important;
+        width: 23vw;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        width: 20vw;
+    }
+
+    &.active {
+        box-shadow: 2px 0 5px rgba(0, 0, 0, .5);
+        transform: translate(0, 0);
+        transition: transform .2s ease;
+    }
+
+    &:before {
+        background: $palette-overlay;
+        content: " ";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
     }
 
 }
@@ -48,9 +78,18 @@ body[id*="Trident"] {
 .site-grid__content-wrapper {
     background: $palette-grey;
     overflow: auto;
+    position: relative;
 
     @media $(media-navigation) {
-        max-height: 100vh;
+        margin-left: 23vw;
+        max-width: 77%;
+        width: 77vw;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        margin-left: 20vw;
+        max-width: 80%;
+        width: 80vw;
     }
 
 }

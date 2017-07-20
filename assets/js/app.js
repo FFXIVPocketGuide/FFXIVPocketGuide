@@ -46,20 +46,12 @@
             e.preventDefault();
 
             var dataObject = $('#'+$(this).data('id'));
+            var container = $('body');
+            var offSet = container.scrollTop() + dataObject.offset().top;
 
-            if (window.matchMedia("(orientation: landscape) and (min-width: 64em)").matches) {
-                var container = $('.site-grid__content-wrapper');
-                var offSet = container.scrollTop() + dataObject.offset().top;
-                container.animate({
-                    scrollTop : offSet
-                }, 'slow');
-            } else {
-                var container = $('body');
-                var offSet = container.scrollTop() + dataObject.offset().top;
-                container.animate({
-                    scrollTop : offSet
-                }, 'slow');
-            }
+            container.animate({
+                scrollTop : offSet
+            }, 'slow');
 
         });
 
@@ -136,21 +128,22 @@
             $('.sidebar__form').on('keyup keypress', function(e) {
                 var keyCode = e.keyCode || e.which;
                 if (keyCode === 13) {
+
                     if ($(".site-grid__sidebar").hasClass("active")) {
                         $(".sidebar__trigger").removeClass("active");
                         $(".site-grid__sidebar-overlay").removeClass("active");
                         $(".site-grid__sidebar").removeClass("active");
                     }
-                    if (window.matchMedia("(orientation: landscape) and (min-width: 64em)").matches) {
-                        var top = $('.site-grid__content-wrapper').position().top;
-                        $('.site-grid__content-wrapper').scrollTop(top);
-                    } else {
-                        var top = $('body').position().top;
-                        $('body').scrollTop(top);
-                    }
+
+                    var top = $('body').position().top;
+                    $('body').scrollTop(top);
+
                     e.preventDefault();
+
                     document.activeElement.blur();
+
                     return false;
+
                 }
             });
 
@@ -163,40 +156,22 @@
 
             e.preventDefault();
 
-            if (window.matchMedia("(orientation: landscape) and (min-width: 64em)").matches) {
-                var dataObject = $('#'+$(this).data('id'));
-                var container = $('.site-grid__content-wrapper');
+            var dataObject = $('#'+$(this).data('id'));
+            var container = $('body');
 
-                $("[class*='guide__accordion-trigger']").removeClass("active");
-                $("[class*='guide__accordion-content']").removeClass("active");
+            $("[class*='guide__accordion-trigger']").removeClass("active");
+            $("[class*='guide__accordion-content']").removeClass("active");
 
-                $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
-                $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
-                $(dataObject).addClass("active");
-                $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
+            $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
+            $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
+            $(dataObject).addClass("active");
+            $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
 
-                var offSet = container.scrollTop() + dataObject.offset().top;
+            var offSet = dataObject.offset().top;
 
-                container.animate({
-                    scrollTop : offSet
-                }, 'slow');
-            } else {
-                var dataObject = $('#'+$(this).data('id'));
-                var container = $('body');
-
-                $("[class*='guide__accordion-trigger']").removeClass("active");
-                $("[class*='guide__accordion-content']").removeClass("active");
-
-                $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
-                $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
-                $(dataObject).addClass("active");
-                $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
-                var offSet = dataObject.offset().top;
-
-                container.animate({
-                    scrollTop : offSet
-                }, 'slow');
-            }
+            container.animate({
+                scrollTop : offSet
+            }, 'slow');
 
         });
 

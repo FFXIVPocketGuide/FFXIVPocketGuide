@@ -8,9 +8,10 @@
 ============================================================================= */
 
 /* Google Fonts ============================================================= */
-$font-aktiv: "aktiv-grotesk",sans-serif;
+/*$font-aktiv: "aktiv-grotesk",sans-serif;*/
+$font-aktiv: "Open Sans", sans-serif;
 $font-cinzel: "Cinzel", serif;
-$font-pt: "pt-serif",serif;
+$font-pt: "PT Serif", serif;
 
 /* Custom Fonts ============================================================= */
 

@@ -33,17 +33,6 @@
 
          });
 
-        // Data Link Handler ===================================================
-        $('[data-link-handler]').on('click',function(e){
-            if($('[data-link-target="'+$(this).attr('data-link-handler')+'"]').hasClass('active')) {
-                $('[data-link-target="'+$(this).attr('data-link-handler')+'"]').removeClass('active');
-            }
-            else {
-                $('[data-link-target="'+$(this).attr('data-link-handler')+'"]').addClass('active');
-            }
-            e.preventDefault();
-        });
-
     });
 
 })(jQuery);
