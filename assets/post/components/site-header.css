@@ -52,7 +52,6 @@
     align-items: center;
     background-position: center 25%;
     background-size: cover;
-    border-radius: 0 0 5px 5px;
     display: grid;
     grid-template-columns: 1fr;
     overflow: hidden;
@@ -60,6 +59,10 @@
 
     @media $(p-tablet) {
         grid-template-columns: 1fr 1fr;
+    }
+
+    @media $(media-navigation) {
+        border-radius: 0 0 5px 5px;
     }
 
     @media screen and (orientation: landscape) and (min-width: 70em) {

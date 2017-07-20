@@ -7,7 +7,7 @@
 
 ============================================================================= */
 .site-index {
-    padding: 0 0 calc($unit * 1.5) 0;
+    padding: 0 0 calc($unit * 3) 0;
 
     @media $(media-navigation) {
         padding: 0 0 calc($unit * 3) 0;
