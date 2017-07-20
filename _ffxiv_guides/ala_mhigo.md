@@ -50,7 +50,7 @@ bosses:
           - attack: "Tail Laser]"
           - attack: "[Repeat]"
         alerts:
-          - alert: "The boss' attacks will pverlap with increased difficulty as the fight progresses - be sure to avoid puddles splashed around the arena."
+          - alert: "The boss' attacks will overlap with increased difficulty as the fight progresses - be sure to avoid puddles splashed around the arena."
   - title: "Aulus Mal Asina"
     id: "boss02"
     attacks:
