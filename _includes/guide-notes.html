@@ -20,21 +20,21 @@
             <div class="guide__accordion-copy-wrapper">
 
                 <!-- Event Title -->
-                <h3>{{ mechanic.title }}</h3>
+                <h3 class="guide__accordion-title">{{ mechanic.title }}</h3>
 
                 <!-- Opens the Step Loop -->
                 {% if mechanic.steps %}
-                    <div class="">
+                    <div class="guide__mechanics-wrapper">
 
                         {% for step in mechanic.steps %}
 
                             <!-- Mechanics Group Title -->
-                            <h4>Step {{ step.step }}</h4>
+                            <h4 class="guide__mechanics-title">Step {{ step.step }}</h4>
 
                             <!-- Stance Notes -->
-                            <ul class="">
+                            <ul class="guide__mechanics-list">
                                 {% for note in step.notes %}
-                                    <li class="">{{ note.note }}</li>
+                                    <li class="guide__mechanics-item">{{ note.note }}</li>
                                 {% endfor %}
                             </ul>
 

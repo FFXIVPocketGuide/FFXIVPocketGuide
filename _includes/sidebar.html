@@ -4,7 +4,7 @@
 <div class="sidebar__wrapper">
 
     <h1 class="sidebar__title">
-        <a href="/" title="Return to the Pocket Guide Home Page">
+        <a href="/" title="Return to the Pocket Guide Home Page.">
             FFXIV<br>
             Pocket<br>
             Guide
@@ -22,20 +22,23 @@
         <dt></dt>
         {% if page.pageClass != "home" and page.pageClass != "dungeons" and page.pageClass != "trials" and page.pageClass != "raids" %}
             <dd>
-                <a href="/" title="Return to the Pocket Guide Home Page">Go Home</a>
+                <a href="/" title="Return to the Pocket Guide Home Page.">Go Home</a>
             </dd>
         {% endif %}
         <dd>
-            <a href="/" title="View All Guides" {% if page.pageClass == "home" %}class="active"{% endif %}>All Guides</a>
+            <a href="/" title="View All Guides." {% if page.pageClass == "home" %}class="active"{% endif %}>All Guides</a>
         </dd>
         <dd>
-            <a href="/dungeons" title="View Dungeon Guides" {% if page.pageClass == "dungeons" %}class="active"{% endif %} {% if page.instanceType == "dungeon" %}class="active"{% endif %}>Dungeons</a>
+            <a href="/dungeons" title="View Dungeon Guides." {% if page.pageClass == "dungeons" %}class="active"{% endif %} {% if page.instanceType == "dungeon" %}class="active"{% endif %}>Dungeons</a>
         </dd>
         <dd>
-            <a href="/trials" title="View Trial Guides" {% if page.pageClass == "trials" %}class="active"{% endif %} {% if page.instanceType == "trial" %}class="active"{% endif %}>Trials</a>
+            <a href="/trials" title="View Trial Guides." {% if page.pageClass == "trials" %}class="active"{% endif %} {% if page.instanceType == "trial" %}class="active"{% endif %}>Trials</a>
         </dd>
         <dd>
-            <a href="/raids" title="View Raid Guides" {% if page.pageClass == "raids" %}class="active"{% endif %} {% if page.instanceType == "raid" %}class="active"{% endif %}>Raids</a>
+            <a href="/raids" title="View Raid Guides." {% if page.pageClass == "raids" %}class="active"{% endif %} {% if page.instanceType == "raid" %}class="active"{% endif %}>Raids</a>
+        </dd>
+        <dd>
+            <a href="https://twitter.com/FF14PocketGuide" title="Follow along on Twitter for guide updates!" target="_blank" class="twitterLink"><i class="ionicons ion-social-twitter"></i>Updates</a></h5>
         </dd>
     </dl>
 

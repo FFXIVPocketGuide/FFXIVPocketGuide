@@ -85,3 +85,6 @@
 
     /* Combo Tags */
     @import "components/combo-tags.css";
+
+    /* Footer */
+    @import "components/footer.css";

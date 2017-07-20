@@ -9,11 +9,11 @@
 
 /* Raid Message */
 .raid-message__wrapper {
-    margin: calc($padding-unit*3) 0 calc($padding-unit*1.5);
+    margin: calc($unit * 3) 0 calc($unit * 1.5);
     text-align: center;
 
     @media $(l-tablet) {
-        margin: calc($padding-unit*4) 0 calc($padding-unit*2.5);
+        margin: calc($unit * 4) 0 calc($unit * 2.5);
     }
 
 }
@@ -37,24 +37,38 @@
 /* Footer */
 footer,
 section.footer {
-    background: $white;
-    border-top: 1px solid rgba(30, 30, 30);
-    padding: $padding-regular 0;
+    border-top: 1px solid $palette-borders;
+    padding: calc($unit * 1.5) 0 calc($unit * 7.5);
     text-align: center;
 
     @media $(p-tablet) {
-        padding: $padding-medium 0;
+        padding: calc($unit * 2) 0 calc($unit * 7.5);
+    }
+
+    @media $(media-navigation) {
+        padding: calc($unit * 3);
     }
 
 }
 
 .footer__title {
+    color: $font-black;
+    font-family: $font-aktiv;
+    font-size: $font-scale-h4;
+    font-weight: 800;
     margin: 0 0 $padding-regular 0;
 
     @media $(p-tablet) {
         /*margin: 0 0 calc($medium-padding/2) 0;*/
     }
 
+}
+
+.footer__subtitle {
+    color: $font-black;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 800;
 }
 
 .footer__form {
@@ -66,19 +80,11 @@ section.footer {
     }
 
     .footer__form-submission-message {
-        color: $red;
+        color: $palette-red;
         display: none;
-        /*margin: calc($small-padding) 0 0 0;*/
-        font-weight: 500;
-
-        @media $(p-tablet) {
-            /*margin: calc($medium-padding) 0 0 0;*/
-        }
-
-        @media $(l-tablet) {
-            /*margin: calc($large-padding - 2rem) 0 0 0;*/
-        }
-
+        font-family: $font-aktiv;
+        font-size: $font-scale-regular;
+        font-weight: 400;
     }
 
     label {
@@ -103,10 +109,11 @@ section.footer {
     select {
         appearance: none;
         background: none;
+        background-color: $palette-white;
         background-position: center right;
         background-repeat: no-repeat;
         background-size: contain;
-        border: 1px solid #CCC;
+        border: 1px solid $palette-borders;
         border-radius: 0;
         color: $font-black;
         display: block;
@@ -127,8 +134,8 @@ section.footer {
 
     textarea {
         appearance: none;
-        background: none;
-        border: 1px solid #CCC;
+        background: $palette-white;
+        border: 1px solid $palette-borders;
         color: $font-black;
         display: block;
         font-family: $font-aktiv;
@@ -149,8 +156,8 @@ section.footer {
 
     input[type="text"] {
         appearance: none;
-        background: none;
-        border: 1px solid #CCC;
+        background: $palette-white;
+        border: 1px solid $palette-borders;
         color: $font-black;
         display: block;
         font-family: $font-aktiv;
@@ -171,16 +178,15 @@ section.footer {
     input[type="submit"] {
         appearance: none;
         background: none;
-        border: .3rem solid $white;
-        border-color: $red;
+        border: 3px solid $palette-red;
         color: $font-black;
         cursor: pointer;
         display: inline-block;
         font-family: $font-aktiv;
         font-size: $font-scale-small;
-        font-weight: 500;
-        margin: $padding-unit 0 0 0;
-        padding: 1rem 1.5rem;
+        font-weight: 400;
+        margin: $unit 0 0 0;
+        padding: $unit calc($unit * 2);
         text-decoration: none;
         transition: all .2s ease;
     }
@@ -210,8 +216,9 @@ section.footer {
     .footer__form {
 
         input[type="submit"]:hover {
-            background: $red;
-            color: $font-white;
+            background: $palette-red;
+            border: 3px solid $palette-red;
+            color: $palette-white;
             transition: all .2s ease;
         }
 
@@ -224,7 +231,7 @@ section.footer {
 }
 
 .footer__copy {
-    color: #cccccc;
+    color: $palette-borders;
     font-family: $font-aktiv;
     font-size: $font-scale-small;
     font-weight: 500;
@@ -232,7 +239,7 @@ section.footer {
     margin: 0;
 
     a {
-        color: $red;
+        color: $palette-red;
     }
 
 }

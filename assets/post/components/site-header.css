@@ -19,6 +19,35 @@
 
 }
 
+.site-header__alert {
+    background: $palette-red;
+    display: block;
+    padding: calc($unit / 2) $unit;
+    text-align: center;
+
+    @media $(media-navigation) {
+        text-align: left;
+    }
+
+    p {
+        color: $palette-white;
+        display: block;
+        font-family: $font-aktiv;
+        font-size: $font-scale-small;
+        font-weight: 400;
+        margin: 0;
+
+        a {
+            color: rgba(0, 0, 0, .85);
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+    }
+
+}
+
 .site-header__grid {
     align-items: center;
     background-position: center 25%;

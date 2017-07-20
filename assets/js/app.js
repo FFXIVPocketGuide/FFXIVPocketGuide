@@ -40,6 +40,46 @@
             }
         });
 
+        function scrollToElement($element, time) {
+            var position = false;
+            var scrolled = $('.site-grid__content-wrapper').scrollTop();
+            console.log(scrolled);
+
+            try {
+                position = $element.position().top;
+            } catch (err) {
+                ;
+            }
+            if (!position) {
+                return;
+            }
+
+            if (typeof time === 'undefined' || !time) {
+                time = 1000; // default time
+            }
+
+            var scrollTo = position - scrolled;
+
+            $('.site-grid__content-wrapper').animate({
+                scrollTop : scrollTo
+            }, time);
+        }
+
+        // FFXIV Issue Link ====================================================
+        $(".site-header a").on("click", function(e) {
+
+            e.preventDefault();
+
+            var dataObject = $('#'+$(this).data('id'));
+            var container = $('.site-grid__content-wrapper');
+            var offSet = container.scrollTop() + dataObject.offset().top;
+
+            container.animate({
+                scrollTop : offSet
+            }, 'slow');
+
+        });
+
         // FFXIV Guide Filters =================================================
         $("#guideFilter").keyup(function(e) {
 
@@ -118,6 +158,9 @@
                         $(".site-grid__sidebar-overlay").removeClass("active");
                         $(".site-grid__sidebar").removeClass("active");
                     }
+                    $('.site-grid__content-wrapper').animate({
+                        scrollTop: $('.site-grid__content-wrapper').position().top
+                    }, 'slow');
                     e.preventDefault();
                     return false;
                 }
@@ -133,6 +176,7 @@
             e.preventDefault();
 
             var dataObject = $('#'+$(this).data('id'));
+            var container = $('.site-grid__content-wrapper');
 
             $("[class*='guide__accordion-trigger']").removeClass("active");
             $("[class*='guide__accordion-content']").removeClass("active");
@@ -142,8 +186,10 @@
             $(dataObject).addClass("active");
             $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
 
-            $('.site-grid__content-wrapper').animate({
-                scrollTop: dataObject.position().top
+            var offSet = container.scrollTop() + dataObject.offset().top;
+
+            container.animate({
+                scrollTop : offSet
             }, 'slow');
 
         });

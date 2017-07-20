@@ -145,7 +145,7 @@
         font-family: $font-aktiv;
         font-size: $font-scale-h1;
         font-weight: 800;
-        padding: calc($unit * 4) calc($unit * 1.5) calc($unit * (4-1.5)) calc($unit * 1.5);
+        padding: calc($unit * 4) calc($unit * 1.5);
         text-decoration: none;
         width: 100%;
 
@@ -163,7 +163,7 @@
 }
 
 .sidebar__form {
-    padding: calc($unit * 1.5);
+    padding: 0 calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5);
 
     label {
         color: $palette-red;
@@ -242,6 +242,15 @@
 
         }
 
+    }
+
+}
+
+.twitterLink {
+
+    i {
+        font-size: .9rem;
+        margin: 0 calc($unit / 2) 0 0;
     }
 
 }

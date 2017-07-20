@@ -8,15 +8,15 @@
 ============================================================================= */
 .index-null-state {
     display: none;
-    padding: calc($unit * 3) calc($unit * 2);
+    padding: calc($unit * 4.5) calc($unit * 2) calc($unit * 3) calc($unit * 2);
     text-align: center;
 
     @media $(media-navigation) {
-        padding: calc($unit * 2) calc($unit * 3);
+        padding: calc($unit * 7.5) calc($unit * 3) calc($unit * 4.5) calc($unit * 3);
     }
 
     @media screen and (orientation: landscape) and (min-width: 70em) {
-        padding: calc($unit * 3) calc($unit * 5);
+        padding: calc($unit * 7.5) calc($unit * 5) calc($unit * 3) calc($unit * 5);
     }
 
     &.active {
