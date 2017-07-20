@@ -48,4 +48,9 @@ body[id*="Trident"] {
 .site-grid__content-wrapper {
     background: $palette-grey;
     overflow: auto;
+
+    @media $(media-navigation) {
+        max-height: 100vh;
+    }
+
 }
