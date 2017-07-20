@@ -8,7 +8,9 @@ image:
 patchNumber: 4.0
 patchName: "Stormblood"
 difficulty: "Extreme"
-ilvl: "300"
+plvl: 70
+ilvl: 300
+order: 70300
 instanceType: "trial"
 mtqvid: "https://youtu.be/CFWPZb9q_Zo"
 attacks:

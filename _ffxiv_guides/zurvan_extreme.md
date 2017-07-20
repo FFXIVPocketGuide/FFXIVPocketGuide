@@ -8,7 +8,9 @@ image:
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
 difficulty: "Extreme"
+plvl: 60
 ilvl: 250
+order: 60250
 instanceType: "trial"
 mtqvid: "https://youtu.be/WdtOPon2eQk"
 attacks:

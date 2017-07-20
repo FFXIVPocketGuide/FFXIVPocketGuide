@@ -8,7 +8,9 @@ image:
 patchNumber: 4.0
 patchName: "Stormblood"
 difficulty: "Normal"
-plvl: "69"
+plvl: 69
+ilvl: 0
+order: 69000
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/cz4_gJ7Mbd8"
 bosses:

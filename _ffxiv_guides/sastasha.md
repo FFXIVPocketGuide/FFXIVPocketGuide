@@ -8,7 +8,9 @@ image:
 patchNumber: 2.0
 patchName: "A Realm Reborn"
 difficulty: "Normal"
-plvl: "15"
+plvl: 15
+ilvl: 0
+order: 15000
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/tT3-1Yb787w"
 mechanics:

@@ -8,7 +8,9 @@ image:
 patchNumber: 2.1
 patchName: "A Realm Awoken"
 difficulty: "Extreme"
+plvl: 50
 ilvl: 65
+order: 50065
 instanceType: "trial"
 mtqvid: "https://youtu.be/EXExe9zt-gI"
 attacks:

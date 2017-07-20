@@ -11,12 +11,12 @@
             </span>
         {% endif %}
 
-        {% if page.ilvl %}
-            <h5 class="guide-metadata__subtitle">Item Level: <span>{{ page.ilvl }}</span></h5>
-        {% endif %}
+        <h5 class="guide-metadata__subtitle">Player Level: <span>{{ page.plvl }}</span></h5>
 
-        {% if page.plvl %}
-            <h5 class="guide-metadata__subtitle">Player Level: <span>{{ page.plvl }}</span></h5>
+        {% if page.ilvl > 0 %}
+            <h5 class="guide-metadata__subtitle">Item Level: <span>{{ page.ilvl }}</span></h5>
+        {% else %}
+            <h5 class="guide-metadata__subtitle">Item Level: <span>N/A</span></h5>
         {% endif %}
 
         {% if page.patchNumber %}

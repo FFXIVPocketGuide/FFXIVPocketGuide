@@ -8,7 +8,9 @@ image:
 patchNumber: 3.0
 patchName: "Heavensward"
 difficulty: "Normal"
-ilvl: "170"
+plvl: 60
+ilvl: 170
+order: 60170
 instanceType: "raid"
 mtqvid: "https://youtu.be/JR2anBXKVes"
 bosses:

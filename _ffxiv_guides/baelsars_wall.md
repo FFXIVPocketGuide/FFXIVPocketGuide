@@ -8,7 +8,9 @@ image:
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
 difficulty: "Normal"
+plvl: 60
 ilvl: 230
+order: 60230
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/CdS3lto8nVw"
 bosses:

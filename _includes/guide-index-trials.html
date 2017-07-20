@@ -26,7 +26,9 @@
         <!-- Display Stormblood Guides -->
         {% assign counter = 0 %}
 
-        {% for guide in site.ffxiv_guides %}
+        {% assign sorted = site.ffxiv_guides | sort:"order" %}
+
+        {% for guide in sorted reversed %}
 
             {% if guide.instanceType == "trial" %}
 
@@ -86,7 +88,9 @@
 
         {% assign counter = 0 %}
 
-        {% for guide in site.ffxiv_guides %}
+        {% assign sorted = site.ffxiv_guides | sort:"order" %}
+
+        {% for guide in sorted reversed %}
 
             {% if guide.instanceType == "trial" %}
 
@@ -146,7 +150,9 @@
 
         {% assign counter = 0 %}
 
-        {% for guide in site.ffxiv_guides %}
+        {% assign sorted = site.ffxiv_guides | sort:"order" %}
+
+        {% for guide in sorted reversed %}
 
             {% if guide.instanceType == "trial" %}
 

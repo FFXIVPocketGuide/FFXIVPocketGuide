@@ -8,7 +8,9 @@ image:
 patchNumber: 3.4
 patchName: "Soul Surrender"
 difficulty: "Savage"
+plvl: 60
 ilvl: 245
+order: 60245
 instanceType: "raid"
 mtqvid: "https://youtu.be/7R5LE8ZzBFw"
 attacks:

@@ -9,6 +9,8 @@ patchNumber: 4.0
 patchName: "Stormblood"
 difficulty: "Hard"
 plvl: 63
+ilvl: 0
+order: 63000
 instanceType: "trial"
 mtqvid: "https://youtu.be/tMHjAazDxfs"
 attacks:

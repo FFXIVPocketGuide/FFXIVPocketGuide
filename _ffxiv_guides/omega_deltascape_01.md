@@ -9,6 +9,8 @@ patchNumber: 4.0
 patchName: "Stormblood"
 difficulty: "Normal"
 plvl: 70
+ilvl: 0
+order: 70000
 instanceType: "raid"
 mtqvid: "https://youtu.be/lSuUWMpZSMM"
 bosses:

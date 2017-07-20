@@ -8,7 +8,9 @@ image:
 patchNumber: 3.4
 patchName: "Soul Surrender"
 difficulty: "Normal"
-ilvl: "210"
+plvl: 60
+ilvl: 210
+order: 60210
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/5WXk2BWz-gQ"
 mechanics:

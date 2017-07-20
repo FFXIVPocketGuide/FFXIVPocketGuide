@@ -8,7 +8,9 @@ image:
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
 difficulty: "Normal"
-ilvl: "235"
+plvl: 60
+ilvl: 235
+order: 60235
 instanceType: "raid"
 mtqvid: "https://youtu.be/uNrzJdfTNLs"
 bosses:
