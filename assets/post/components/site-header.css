@@ -108,36 +108,6 @@
 
 }
 
-body[id*="Edge"],
-body[id*="Trident"] {
-
-    .site-header__grid {
-        display: block;
-
-        @media $(p-tablet) {
-            display: -ms-grid;
-        }
-
-    }
-
-    .site-header__item-a {
-
-        @media $(p-tablet) {
-            -ms-grid-column: 1 !important;
-        }
-
-    }
-
-    .site-header__item-b {
-
-        @media $(p-tablet) {
-            -ms-grid-column: 2 !important;
-        }
-
-    }
-
-}
-
 .site-header__title {
     color: $palette-white;
     display: block;

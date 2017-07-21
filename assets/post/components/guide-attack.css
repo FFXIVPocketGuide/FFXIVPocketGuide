@@ -117,35 +117,6 @@
 
 }
 
-body[id*="Edge"],
-body[id*="Trident"] {
-
-    .guide__attack-image-item:nth-child(1) {
-
-        @media $(p-tablet) {
-            -ms-grid-column: 1;
-        }
-
-    }
-
-    .guide__attack-image-item:nth-child(2) {
-
-        @media $(p-tablet) {
-            -ms-grid-column: 2;
-        }
-
-    }
-
-    .guide__attack-image-item:nth-child(3) {
-
-        @media $(p-tablet) {
-            -ms-grid-column: 3;
-        }
-
-    }
-
-}
-
 .guide__attack-image-item {
     cursor: pointer;
 

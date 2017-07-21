@@ -88,3 +88,6 @@
 
     /* Footer */
     @import "components/footer.css";
+
+    /* Microsoft Support */
+    @import "components/microsoft.css";

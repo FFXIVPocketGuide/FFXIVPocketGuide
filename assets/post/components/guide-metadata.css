@@ -109,19 +109,6 @@
 
 }
 
-body[id*="Edge"],
-body[id*="Trident"] {
-
-    .guide-metadata__menu {
-
-        @media screen and (min-width: 48em) and (max-width: 79.9em) {
-            -ms-grid-column: 2;
-        }
-
-    }
-
-}
-
 .guide-metadata__submenu {
     list-style: disc;
     margin: 0;

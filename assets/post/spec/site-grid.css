@@ -20,15 +20,6 @@ $media-navigation: screen and (orientation: landscape) and (min-width: 64em);
 
 }
 
-body[id*="Edge"],
-body[id*="Trident"] {
-
-    .site-grid__sidebar {
-        height: 100vh;
-    }
-
-}
-
 .site-grid__sidebar {
     background-position: center;
     background-size: cover;
