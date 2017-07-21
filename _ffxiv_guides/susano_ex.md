@@ -215,7 +215,8 @@ sequence:
     mechanics:
       - title: "Earth and Stone & The Sealed Gate"
         notes:
-          - note: "This mechanic will trap a player in a stone prison and shuffle it with 2 empty ones - the player will die if not freed fast enough."
+          - note: "This mechanic will trap a player in a stone prison and shuffle it with 3 empty ones - the player will die if not freed fast enough."
+          - note: "The correct prison will always be at the bottom of players' enmity list."
       - title: "Churning & Rasen Kaikyo x2"
         notes:
           - note: "Eventually players will be hit with Churning, only to then be hit with Rasen Kaikyo twice in a row."
