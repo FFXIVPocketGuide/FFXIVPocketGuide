@@ -138,7 +138,8 @@ attacks:
           - tag: "Mechanic"
         notes:
           - note: "Audio Cue: Earth and stone at our beck and call!"
-          - note: "This attack will encase one player in a stone prison and shuffle it amongst 2 other empty ones - players must free the trapped player before The Sealed Gate kills them."
+          - note: "This attack will encase one player in a stone prison and shuffle it amongst 3 other empty ones - players must free the trapped player before The Sealed Gate kills them."
+          - note: "The correct prison will always be at the bottom of players' enmity list."
       - title: "The Sealed Gate"
         roles:
           - role: "Everyone"
