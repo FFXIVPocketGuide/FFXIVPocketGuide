@@ -13,6 +13,7 @@ ilvl: 300
 order: 70300
 instanceType: "trial"
 mtqvid: "https://youtu.be/CFWPZb9q_Zo"
+bossName: "Susano"
 attacks:
   - title: "Assail"
     phases:

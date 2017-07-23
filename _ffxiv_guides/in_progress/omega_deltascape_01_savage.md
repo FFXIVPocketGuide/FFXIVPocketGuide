@@ -1,17 +1,21 @@
 ---
 layout: guide_post
-title:  "[O3] Omega: Deltascape V3.0"
+title:  "[O1S] Omega: Deltascape V1.0"
 date:   2017-04-09 18:00:14 -0300
 image:
-    - url: "/assets/img/raids/delta_03.jpg"
-    - urlSmall: "/assets/img/raids/small/delta_03.jpg"
+    - url: "/assets/img/raids/delta_01_savage.jpg"
+    - urlSmall: "/assets/img/raids/small/delta_01_savage.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
+difficulty: "Savage"
 plvl: 70
+ilvl: 310
+order: 70310
 instanceType: "raid"
 mtqvid: ""
 bosses:
   - title: "Alte Roite"
+    id: "boss01"
     attacks:
       - title: "Wyrmtail"
         phases:

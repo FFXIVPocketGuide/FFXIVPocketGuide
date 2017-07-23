@@ -1,20 +1,20 @@
 ---
 layout: guide_post
-title:  "[O4] Omega: Deltascape V4.0"
+title:  "[O3S] Omega: Deltascape V3.0"
 date:   2017-04-09 18:00:14 -0300
 image:
-    - url: "/assets/img/raids/delta_04.jpg"
-    - urlSmall: "/assets/img/raids/small/delta_04.jpg"
+    - url: "/assets/img/raids/delta_03_savage.jpg"
+    - urlSmall: "/assets/img/raids/small/delta_03_savage.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
-difficulty: "Normal"
+difficulty: "Savage"
 plvl: 70
-ilvl: 0
-order: 70008
+ilvl: 310
+order: 70312
 instanceType: "raid"
-mtqvid: "https://youtu.be/-QE38bqV1P0"
+mtqvid: ""
 bosses:
-  - title: "Exdeath"
+  - title: "Catastrophe"
     id: "boss01"
     attacks:
       - title: "Tremblor"

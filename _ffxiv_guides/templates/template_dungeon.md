@@ -9,7 +9,8 @@ patchNumber: 0.0
 patchName: "Sample Name"
 plvl: 000
 ilvl: 000
-instanceType: "dungeon/trial/raid"
+order: 00000
+instanceType: "dungeon/raid"
 mtqvid: "YouTube URL"
 mechanics:
   - title: ""
@@ -23,7 +24,7 @@ mechanics:
 bosses:
   - title: ""
     attacks:
-      - title: ""
+      - title: "Regular Attack"
         phases:
           - phase: 01
         roles:
@@ -34,10 +35,23 @@ bosses:
           - tag: ""
         notes:
           - note: ""
-      - title: "Combo Mechanic"
+      - title: "Combo Attack"
         phases:
           - phase: 01
         combo:
+          - title: ""
+            roles:
+              - role: ""
+            dutyActions:
+              - action: ""
+            tags:
+              - tag: ""
+            notes:
+              - note: ""
+      - title: "Attack with Variations"
+        phases:
+          - phase: 01
+        variation:
           - title: ""
             roles:
               - role: ""
@@ -51,6 +65,7 @@ bosses:
       - phase: 01
         attacks:
           - attack: ""
+            dutyActions: true
           - attack: ""
         alerts:
           - alert: ""

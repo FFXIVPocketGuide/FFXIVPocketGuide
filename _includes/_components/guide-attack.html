@@ -1,7 +1,7 @@
 
 <!-- Attack Template ======================================================= -->
 
-<div class="guide__accordion-trigger--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% else %}--attack{% endif %}">
+<div class="guide__accordion-trigger--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% elsif attack.variation %}--variation{% else %}--attack{% endif %}">
     <i class="material-icons">expand_more</i>
     <h4 class="guide__accordion-trigger-title">
         {{ attack.title }}
@@ -9,12 +9,14 @@
     </h4>
 </div>
 
-<div class="guide__accordion-content--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% else %}--attack{% endif %}">
+<div class="guide__accordion-content--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% elsif attack.variation %}--variation{% else %}--attack{% endif %}">
 
     <div class="guide__accordion-copy-wrapper">
 
         <!-- Standard Attacks -->
         {% if attack.combo %}
+            <!-- Do nothing. -->
+        {% elsif attack.variation %}
             <!-- Do nothing. -->
         {% else %}
             {% include _components/guide-attack-notes.html %}
@@ -22,6 +24,12 @@
 
         <!-- Combo Attacks -->
         {% for combo in attack.combo %}
+            {% include _components/guide-combo-tags.html %}
+            {% include _components/guide-attack-notes.html %}
+        {% endfor %}
+
+        <!-- Variation Attacks -->
+        {% for variation in attack.variation %}
             {% include _components/guide-combo-tags.html %}
             {% include _components/guide-attack-notes.html %}
         {% endfor %}

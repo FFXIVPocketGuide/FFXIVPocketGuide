@@ -13,6 +13,7 @@ ilvl: 0
 order: 53000
 instanceType: "trial"
 mtqvid: "https://youtu.be/HQ7GAofEJBw"
+bossName: "Ravana"
 attacks:
   - title: "Blinding Blade"
     phases:

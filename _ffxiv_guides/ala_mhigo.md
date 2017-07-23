@@ -10,7 +10,7 @@ patchName: "Stormblood"
 difficulty: "Normal"
 plvl: 70
 ilvl: 0
-order: 70000
+order: 70001
 instanceType: "dungeon"
 mtqvid: "https://youtu.be/I1Le_MATl5k"
 bosses:

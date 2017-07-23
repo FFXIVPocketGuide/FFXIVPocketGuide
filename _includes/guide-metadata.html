@@ -23,14 +23,6 @@
             <h5 class="guide-metadata__subtitle">Patch: <span>{{ page.patchNumber }} - {{ page.patchName }}</span></h5>
         {% endif %}
 
-        {% if page.dutyAction %}
-            <h5 class="guide-metadata__subtitle">Duty Action: <span>{{ page.dutyAction }}</span></h5>
-        {% endif %}
-
-        {% if page.dutyGauge %}
-            <h5 class="guide-metadata__subtitle">Duty Gauge: <span>{{ page.dutyGauge }}</span></h5>
-        {% endif %}
-
     </div>
 
     <ul class="guide-metadata__menu">
@@ -52,7 +44,10 @@
 
             <li>
 
-                <a href="#" data-id="guideBosses" title="Go to the Guide Bosses" class="guide-metadata__menu-link">Dungeon Bosses</a>
+                <a href="#" data-id="guideBosses" title="Go to the Guide Bosses" class="guide-metadata__menu-link">
+                    {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
+                    {% if page.instanceType == "raid" %}Raid Bosses{% endif %}
+                </a>
 
                 <ul class="guide-metadata__submenu">
 

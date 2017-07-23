@@ -13,6 +13,7 @@ ilvl: 65
 order: 50065
 instanceType: "trial"
 mtqvid: "https://youtu.be/EXExe9zt-gI"
+bossName: "Garuda"
 attacks:
   - title: "Downburst"
     phases:

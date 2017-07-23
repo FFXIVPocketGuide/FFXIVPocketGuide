@@ -13,6 +13,7 @@ ilvl: 245
 order: 60245
 instanceType: "raid"
 mtqvid: "https://youtu.be/7R5LE8ZzBFw"
+bossName: "Alexander Prime"
 attacks:
   - title: "Divine Spear"
     phases:

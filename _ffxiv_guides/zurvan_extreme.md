@@ -13,6 +13,7 @@ ilvl: 250
 order: 60250
 instanceType: "trial"
 mtqvid: "https://youtu.be/WdtOPon2eQk"
+bossName: "Zurvan"
 attacks:
   - title: "Flare Star"
     phases:

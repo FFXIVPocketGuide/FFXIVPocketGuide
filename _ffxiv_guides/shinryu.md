@@ -10,9 +10,10 @@ patchName: "Stormblood"
 difficulty: "Hard"
 plvl: 70
 ilvl: 0
-order: 70000
+order: 70002
 instanceType: "trial"
 mtqvid: "https://youtu.be/nOaV_O97uzM"
+bossName: "Shinryu"
 attacks:
   - title: "Corrupted Aether: Tidal Wave"
     phases:

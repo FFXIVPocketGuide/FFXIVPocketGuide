@@ -13,6 +13,7 @@ ilvl: 0
 order: 67000
 instanceType: "trial"
 mtqvid: "https://youtu.be/GjlaH-p187o"
+bossName: "Sri Lakshmi"
 attacks:
   - title: "Dreaming Kshatriya"
     phases:
