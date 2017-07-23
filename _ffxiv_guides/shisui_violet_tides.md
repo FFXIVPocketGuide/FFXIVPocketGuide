@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Shisui of the Violet Tides"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Shisui of the Violet Tides where you'll face off against Amikiri, Ruby Princess, and Shisui Yohi."
 image:
     - url: "/assets/img/dungeons/shisui.jpg"
     - urlSmall: "/assets/img/dungeons/small/shisui.jpg"

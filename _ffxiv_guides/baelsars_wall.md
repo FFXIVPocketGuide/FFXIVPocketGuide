@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Baelsar's Wall"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Baelsar's Wall where you'll face off against Magitek Predator, Armored Weapon, and The Griffin."
 image:
     - url: "/assets/img/dungeons/baelsars_wall.jpg"
     - urlSmall: "/assets/img/dungeons/small/baelsars_wall.jpg"

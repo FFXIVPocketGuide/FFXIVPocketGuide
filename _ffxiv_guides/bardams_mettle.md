@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Bardam's Mettle"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Bardam's Mettle where you'll face off against Galura, Bardam, and Yol."
 image:
     - url: "/assets/img/dungeons/bardams_mettle.jpg"
     - urlSmall: "/assets/img/dungeons/small/bardams_mettle.jpg"

@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[A12S] Alexander: The Soul of the Creator"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the 8 man raid Alexander: The Soul of the Creator (Savage) where you'll face off against Alexander Prime."
 image:
     - url: "/assets/img/raids/alex_12_s.jpg"
     - urlSmall: "/assets/img/raids/small/alex_12_s.jpg"

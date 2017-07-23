@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Doma Castle"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Doma Castle where you'll face off against Magitek Rearguard, Magitek Hexadrone, and Hypertuned Grynewaht."
 image:
     - url: "/assets/img/dungeons/doma_castle.jpg"
     - urlSmall: "/assets/img/dungeons/small/doma_castle.jpg"

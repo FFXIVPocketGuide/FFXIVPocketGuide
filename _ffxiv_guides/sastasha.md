@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Sastasha"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Sastasha where you'll face off against Chopper, Captain Madison, and Denn the Orcatoothed."
 image:
     - url: "/assets/img/dungeons/sastasha.jpg"
     - urlSmall: "/assets/img/dungeons/small/sastasha.jpg"

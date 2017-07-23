@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Xelphatol"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Xelphatol where you'll face off against Nuzal Hueloc, Dotoli Ciloc, and Tozol Huatotl."
 image:
     - url: "/assets/img/dungeons/xelphatol.jpg"
     - urlSmall: "/assets/img/dungeons/small/xelphatol.jpg"

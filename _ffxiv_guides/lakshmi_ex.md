@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[Sri Lakshmi] Emanation"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the trial Emanation (Extreme) where you'll face off against Sri Lakshmi."
 image:
     - url: "/assets/img/trials/lakshmi_ex.jpg"
     - urlSmall: "/assets/img/trials/small/lakshmi_ex.jpg"

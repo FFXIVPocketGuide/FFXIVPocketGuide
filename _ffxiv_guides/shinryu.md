@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[Shinryu] The Royal Menagerie"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the trial The Royal Menagerie (Hard) where you'll face off against Shinryu."
 image:
     - url: "/assets/img/trials/shinryu.jpg"
     - urlSmall: "/assets/img/trials/small/shinryu.jpg"

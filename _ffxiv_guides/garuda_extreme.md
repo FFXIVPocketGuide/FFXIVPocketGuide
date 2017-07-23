@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[Garuda] The Howling Eye"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the trial The Howling Eye (Extreme) where you'll face off against Garuda."
 image:
     - url: "/assets/img/trials/garuda_ex.jpg"
     - urlSmall: "/assets/img/trials/small/garuda_ex.jpg"

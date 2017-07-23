@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Guide Name"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the 8 man raid Omega: Deltascape V1.0 where you'll face off against Alte Roite."
 image:
     - url: "/assets/img/dungeons/.jpg"
     - urlSmall: "/assets/img/dungeons/small/.jpg"

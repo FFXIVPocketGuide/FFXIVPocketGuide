@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "The Sirensong Sea"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon The Sirensong Sea where you'll face off against Lugat, The Governor, and Lorelei."
 image:
     - url: "/assets/img/dungeons/sirensong_sea.jpg"
     - urlSmall: "/assets/img/dungeons/small/sirensong_sea.jpg"

@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Temple of the Fist"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Temple of the Fist where you'll face off against Sruti & Smriti, Arbuda, and Ivon Coeurlfist."
 image:
     - url: "/assets/img/dungeons/temple_of_the_fist.jpg"
     - urlSmall: "/assets/img/dungeons/small/temple_of_the_fist.jpg"

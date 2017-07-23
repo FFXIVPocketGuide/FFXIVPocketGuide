@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Ala Mhigo"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Ala Mhigo where you'll face off against Magitek Scorpion, Aulus Mal Asina, and Zenos Yae Galvus."
 image:
     - url: "/assets/img/dungeons/ala_mhigo.jpg"
     - urlSmall: "/assets/img/dungeons/small/ala_mhigo.jpg"

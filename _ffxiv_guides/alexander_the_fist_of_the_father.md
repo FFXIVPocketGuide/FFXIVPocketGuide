@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[A1] Alexander: The Fist of the Father"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the 8 man raid Alexander: The First of the Father where you'll face off against Faust and Oppressor."
 image:
     - url: "/assets/img/raids/alex_1.jpg"
     - urlSmall: "/assets/img/raids/small/alex_1.jpg"

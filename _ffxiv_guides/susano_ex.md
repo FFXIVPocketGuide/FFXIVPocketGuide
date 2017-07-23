@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[Susano] The Pool of Tribute"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the trial The Pool of Tribute (Extreme) where you'll face off against Susano."
 image:
     - url: "/assets/img/trials/susano_ex.jpg"
     - urlSmall: "/assets/img/trials/small/susano_ex.jpg"

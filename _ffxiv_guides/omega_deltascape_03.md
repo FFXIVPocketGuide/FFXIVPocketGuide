@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[O3] Omega: Deltascape V3.0"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the 8 man raid Omega: Deltascape V3.0 where you'll face off against Halicarnassus."
 image:
     - url: "/assets/img/raids/delta_03.jpg"
     - urlSmall: "/assets/img/raids/small/delta_03.jpg"

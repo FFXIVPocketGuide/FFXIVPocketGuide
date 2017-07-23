@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "The Tam-Tara Deepcroft"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon The Tam-Tara Deepcroft where you'll face off against Void Soulcounters and Galvanth the Dominator."
 image:
     - url: "/assets/img/dungeons/tam_tara.jpg"
     - urlSmall: "/assets/img/dungeons/small/tam_tara.jpg"

@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Dun Scaith"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the 24 man raid Dun Scaith where you'll face off against Death Gaze Hollow, Ferdiad Hollow, Shadowcourt Handmaiden, Proto Ultima, Scathach, and Diabolos."
 image:
     - url: "/assets/img/raids/dun_scaith.jpg"
     - urlSmall: "/assets/img/raids/small/dun_scaith.jpg"

@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[Ravana] Thok ast Thok"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the trial Thok ast Thok (Hard) where you'll face off against Ravana."
 image:
     - url: "/assets/img/trials/thok_ast_thok.jpg"
     - urlSmall: "/assets/img/trials/small/thok_ast_thok.jpg"

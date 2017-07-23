@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "[O2] Omega: Deltascape V2.0"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the 8 man raid Omega: Deltascape V2.0 where you'll face off against Catastrophe."
 image:
     - url: "/assets/img/raids/delta_02.jpg"
     - urlSmall: "/assets/img/raids/small/delta_02.jpg"

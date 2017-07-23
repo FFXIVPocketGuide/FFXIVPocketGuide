@@ -2,6 +2,7 @@
 layout: guide_post
 title:  "Castrum Abania"
 date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon Castrum Abania where you'll face off against Magna Roader, Number XXIV, and Inferno."
 image:
     - url: "/assets/img/dungeons/castrum_abania.jpg"
     - urlSmall: "/assets/img/dungeons/small/castrum_abania.jpg"
