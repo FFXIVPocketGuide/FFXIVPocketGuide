@@ -1,17 +1,17 @@
 ---
 layout: guide_post
-title:  "Guide Name"
+title:  "Copperbell Mines"
 date:   2017-04-09 18:00:14 -0300
 image:
     - url: "/assets/img/dungeons/.jpg"
     - urlSmall: "/assets/img/dungeons/small/.jpg"
-patchNumber: 0.0
-patchName: "Sample Name"
+patchNumber: 2.0
+patchName: "A Realm Reborn"
 difficulty: "Normal"
-plvl: 000
-ilvl: 000
-order: 00000
-instanceType: "dungeon/raid"
+plvl: 17
+ilvl: 0
+order: 17000
+instanceType: "dungeon"
 mtqvid: "YouTube URL"
 mechanics:
   - title: ""

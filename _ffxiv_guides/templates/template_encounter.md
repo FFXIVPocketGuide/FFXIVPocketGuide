@@ -7,6 +7,7 @@ image:
     - urlSmall: "/assets/img/dungeons/small/.jpg"
 patchNumber: 0.0
 patchName: "Sample Name"
+difficulty: "Normal"
 plvl: 000
 ilvl: 000
 order: 00000
