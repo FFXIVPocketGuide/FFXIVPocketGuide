@@ -2,7 +2,7 @@
 layout: guide_post
 title:  "Copperbell Mines"
 date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Copperbell Mines where you'll face off against ."
+description: "Read our Guide on the dungeon Copperbell Mines where you'll face off against Kottos the Gigas, Ichorous Ire, and Gyges the Great."
 image:
     - url: "/assets/img/dungeons/copperbell_mines.jpg"
     - urlSmall: "/assets/img/dungeons/small/copperbell_mines.jpg"
