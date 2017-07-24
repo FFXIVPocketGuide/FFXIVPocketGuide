@@ -25,6 +25,7 @@ mechanics:
           - note: ""
 bosses:
   - title: ""
+    id: "boss01"
     attacks:
       - title: "Regular Attack"
         phases:
