@@ -15,9 +15,23 @@
 
         <!-- Standard Attacks -->
         {% if attack.combo %}
-            <!-- Do nothing. -->
+            {% if attack.notes %}
+                <h5 class="guide__attack-notes-title">Important Notes:</h5>
+                <ul class="guide__attack-notes-list">
+                    {% for note in attack.notes %}
+                        <li class="guide__attack-notes-item">{{ note.note }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         {% elsif attack.variation %}
-            <!-- Do nothing. -->
+            {% if attack.notes %}
+                <h5 class="guide__attack-notes-title">Important Notes:</h5>
+                <ul class="guide__attack-notes-list">
+                    {% for note in attack.notes %}
+                        <li class="guide__attack-notes-item">{{ note.note }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         {% else %}
             {% include _components/guide-attack-notes.html %}
         {% endif %}
@@ -26,12 +40,32 @@
         {% for combo in attack.combo %}
             {% include _components/guide-combo-tags.html %}
             {% include _components/guide-attack-notes.html %}
+            <!-- Combo Images -->
+            {% if combo.images %}
+                <div class="guide__attack-image-list">
+                    {% for image in combo.images %}
+                        <div class="guide__attack-image-item">
+                            <img src="{{ image.url }}" alt="{{ image.alt }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
         {% endfor %}
 
         <!-- Variation Attacks -->
         {% for variation in attack.variation %}
             {% include _components/guide-combo-tags.html %}
             {% include _components/guide-attack-notes.html %}
+            <!-- Variation Images -->
+            {% if variation.images %}
+                <div class="guide__attack-image-list">
+                    {% for image in variation.images %}
+                        <div class="guide__attack-image-item">
+                            <img src="{{ image.url }}" alt="{{ image.alt }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
         {% endfor %}
 
         <!-- Attack Images -->

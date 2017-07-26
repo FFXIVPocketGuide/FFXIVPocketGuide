@@ -145,6 +145,7 @@ attacks:
         roles:
           - role: "Everyone"
         tags:
+          - tag: "Circular AoE"
           - tag: "Knockback"
         notes:
           - note: "This attack places a large tornado in the center of the arena that will kill players if it hits them."
@@ -154,7 +155,7 @@ attacks:
           - role: "Everyone"
         tags:
           - tag: "Marker"
-          - tag: "Puddle AoE"
+          - tag: "Circular AoE"
         notes:
           - note: "Players will be marked with purple markers and drop lightning AoE puddles where they stand."
           - note: "Players should keep their distance from each other to avoid overlap."

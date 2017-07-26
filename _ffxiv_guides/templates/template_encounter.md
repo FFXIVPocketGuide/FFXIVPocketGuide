@@ -30,6 +30,8 @@ attacks:
   - title: "Combo Attack"
     phases:
       - phase: 01
+    notes:
+      - note: ""
     combo:
       - title: ""
         roles:
@@ -43,6 +45,8 @@ attacks:
   - title: "Attack with Variations"
     phases:
       - phase: 01
+    notes:
+      - note: ""
     variation:
       - title: ""
         roles:
