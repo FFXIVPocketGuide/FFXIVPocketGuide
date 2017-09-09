@@ -65,7 +65,7 @@ attacks:
     dutyActions:
       - action: "Levitate"
     tags:
-      - tag: "Puddle AoE"
+      - tag: "Area AoE"
     notes:
       - note: "This attack covers the floor in a purple AoE that will slowly draw players into the ground, killing them if it is successful."
       - note: "Players should use their Duty Action to avoid this."
@@ -88,11 +88,11 @@ attacks:
       - tag: "Cone AoE"
     notes:
       - note: "This attack hits hard and has no cast - tanks should face the boss away from the group at all times."
-  - title: "Maniacle Probe & Epicenter"
+  - title: "Maniacal Probe & Epicenter"
     phases:
       - phase: 01
     combo:
-      - title: "Maniacle Probe"
+      - title: "Maniacal Probe"
         roles:
           - role: "Everyone"
         tags:
