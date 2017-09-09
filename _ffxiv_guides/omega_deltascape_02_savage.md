@@ -30,7 +30,7 @@ attacks:
     roles:
       - role: "Healer"
     tags:
-      - tag: "Raide Wide AoE"
+      - tag: "Raid Wide AoE"
     notes:
       - note: "This hits for moderate raid wide damage - heal as necessary."
       - note: "This attack always hits twice before Earthquake - players can use Levitate to avoid all 3 attacks."
