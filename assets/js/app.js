@@ -41,7 +41,7 @@
         });
 
         // FFXIV Issue Link ====================================================
-        $(".site-header a").on("click", function(e) {
+        $("#issueSubmissionLink").on("click", function(e) {
 
             e.preventDefault();
 
