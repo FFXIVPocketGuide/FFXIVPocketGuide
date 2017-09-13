@@ -53,4 +53,12 @@
 
     </div>
 
+    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+        <div class="expansion-menu">
+            <a href="#stormblood" class="expansion-menu__button">Stormblood</a>
+            <a href="#heavensward" class="expansion-menu__button">Heavensward</a>
+            <a href="#a_realm_reborn" class="expansion-menu__button">A Realm Reborn</a>
+        </div>
+    {% endif %}
+
 </div>
