@@ -9,7 +9,7 @@
 
     <div class="site-header__grid"
         {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
-            style="background-image: url('{{ "/assets/img/trials/ifrit_ex.jpg" | prepend: site.baseurl }}')"
+            style="background-image: url('{{ "/assets/img/guide_header.jpg" | prepend: site.baseurl }}')"
         {% else %}
             style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')"
         {% endif %}

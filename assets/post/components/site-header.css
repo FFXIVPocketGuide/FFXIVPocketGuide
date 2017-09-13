@@ -20,7 +20,7 @@
 }
 
 .site-header__alert {
-    background: $palette-black;
+    background: $palette-red;
     display: block;
     padding: calc($unit / 2) $unit;
     text-align: center;
@@ -38,7 +38,7 @@
         margin: 0;
 
         a {
-            color: $palette-red;
+            color: rgba(0, 0, 0, .5);
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
