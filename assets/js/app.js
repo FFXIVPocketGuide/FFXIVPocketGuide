@@ -41,7 +41,7 @@
         });
 
         // FFXIV Issue Link ====================================================
-        $(".site-header a").on("click", function(e) {
+        $("#issueSubmissionLink").on("click", function(e) {
 
             e.preventDefault();
 
@@ -190,73 +190,6 @@
             else {
                 $(this).addClass("active")
             }
-        });
-
-    });
-
-    // Google Analytics Conversion Tracker (MTQ Conversion Home) ===============
-
-    // Adds a listener for the "submit" event.
-    $(".mtqLinkHome").on("click", function(e) {
-
-        var clickedLink = $(this);
-
-        // Prevents the browser from submitting the form
-        // and thus unloading the current page.
-        event.preventDefault();
-
-        // Creates a timeout to call `submitForm` after one second.
-        setTimeout(submitClick, 1000);
-
-        function submitClick() {
-          var thisLink = clickedLink.attr("href");
-          location.href = thisLink;
-        }
-
-        // Sends the event to Google Analytics and
-        // resubmits the form once the hit is done.
-        ga('send', 'event', 'mtqLinkHome', 'click', {
-          hitCallback: submitClick
-        });
-
-    });
-
-    // Google Analytics Conversion Tracker (MTQ Conversion Guide) ==============
-    $(".mtqLinkGuide").on("click", function(e) {
-
-        var clickedLink = $(this);
-
-        event.preventDefault();
-
-        setTimeout(submitClick, 1000);
-
-        function submitClick() {
-          var thisLink = clickedLink.attr("href");
-          location.href = thisLink;
-        }
-
-        ga('send', 'event', 'mtqLinkGuide', 'click', {
-          hitCallback: submitClick
-        });
-
-    });
-
-    // Google Analytics Conversion Tracker (Twitter) ===========================
-    $(".twitterLink").on("click", function(e) {
-
-        var clickedLink = $(this);
-
-        event.preventDefault();
-
-        setTimeout(submitClick, 1000);
-
-        function submitClick() {
-          var thisLink = clickedLink.attr("href");
-          location.href = thisLink;
-        }
-
-        ga('send', 'event', 'twitterLink', 'click', {
-          hitCallback: submitClick
         });
 
     });
