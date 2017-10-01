@@ -38,9 +38,107 @@ attacks:
 sequence:
   - phase: 01
     attacks:
-      - attack: ""
-        # Include dutyActions: true only if the attack requires the use of a Duty Action.
-        dutyActions: true
+      - attack: "Critical Hit"
+      - attack: "Spellblade Holy & Pole Shift"
+      - attack: "The Queen's Waltz (Swords)"
+      - attack: "Haste"
+      - attack: "Spellblade X"
+      - attack: "Dimensional Wave"
+      - attack: "The Playing Field & Oink"
+    alerts:
+      - alert: ""
+    mechanics:
+      - title: ""
+        notes:
+          - note: ""
+  - phase: 02
+    attacks:
+      - attack: "Panel Swap (Briar Tiles)"
+      - attack: "The Queen's Waltz (Vines)"
+      - attack: "Haste"
+      - attack: "Spellblade X (Thunder III)"
+      - attack: "Critical Hit"
+      - attack: "Dimensional Wave"
+      - attack: "Place Token (White Flame)"
+      - attack: "Haste"
+      - attack: "Spellblade X (Blizzard III)"
+      - attack: "Mindjack"
+      - attack: "The Queen's Waltz (Vines)"
+      - attack: "Spellblade X (Fire III)"
+      - attack: "Dimensional Wave"
+    alerts:
+      - alert: ""
+    mechanics:
+      - title: ""
+        notes:
+          - note: ""
+  - phase: 03
+    attacks:
+      - attack: "Panel Swap (Cave Tiles)"
+      - attack: "Place Token (Great Dragon)"
+      - attack: "The Queen's Waltz (Spikes)"
+      - attack: "Ribbit"
+      - attack: "Dimensional Wave"
+      - attack: "Critical Hit"
+      - attack: "Place Dark Token (I)"
+      - attack: "Haste"
+      - attack: "Spellblade X"
+      - attack: "Dimensional Wave"
+    alerts:
+      - alert: ""
+    mechanics:
+      - title: ""
+        notes:
+          - note: ""
+  - phase: 04
+    attacks:
+      - attack: "Panel Swap (Book Tiles)"
+      - attack: "The Queen's Waltz (Folios)"
+      - attack: "Oink"
+      - attack: "Place Token (Apanda)"
+      - attack: "The Queen's Waltz (Folios)"
+      - attack: "Squelch"
+      - attack: "Dimensional Wave"
+      - attack: "Critical Hit"
+      - attack: "Dimensional Wave"
+      - attack: "Spellblade Holy & The Queen's Waltz (Folios)"
+      - attack: "Dimensional Wave"
+    alerts:
+      - alert: ""
+    mechanics:
+      - title: ""
+        notes:
+          - note: ""
+  - phase: 05
+    attacks:
+      - attack: "Panel Swap (All Tiles)"
+      - attack: "The Playing Field & Ribbit & Oink & Squelch"
+      - attack: "The Queen's Waltz (Random)"
+      - attack: "Spellblade Holy & Poleshift"
+      - attack: "Critical Hit"
+      - attack: "Mindjack & Place Dark Token (II)"
+      - attack: "The Queen's Waltz (Random)"
+      - attack: "Dimensional Wave"
+      - attack: "Haste"
+      - attack: "Spellblade X x2"
+      - attack: "Dimensional Wave"
+      - attack: "Place Token (Iron Giant & Ninjas)"
+      - attack: "Haste III"
+      - attack: "Dimensional Wave x4"
+      - attack: "The Queen's Waltz (Random)"
+      - attack: "Spellblade X"
+      - attack: "Dimensional Wave"
+      - attack: "Critical Hit"
+      - attack: "The Queen's Waltz (Random)"
+      - attack: "Spellblade Holy"
+      - attack: "Critical Hit"
+      - attack: "Mindjack & Place Dark Token (II)"
+      - attack: "The Queen's Waltz (Random)"
+      - attack: "Dimensional Wave"
+      - attack: "Haste"
+      - attack: "Spellblade X x2"
+      - attack: "Dimensional Wave"
+      - attack: "Enrage"
     alerts:
       - alert: ""
     mechanics:
@@ -171,4 +269,119 @@ dimensional wave
 
 Phase 04
 
-panel swap 03
+panel swap 03 - library phase
+
+8 "book tiles" that can be consumed by players if you stand in them. These provide specific vulnerability down debuffs and will be required during the phase to avoid mechanics - DONT STAND IN THEM UNTIL NECESSARY
+
+the queens waltz (library tiles)
+drops folio books down on all players - each book is the size of one tile - each player needs to be in a unique tile of the 8 blank tiles. high damage - healers will have to heal through this
+
+oink
+
+place token
+apanda add
+OT should pick this up and everyone should burn it down asap
+add casts magic hammer - massive circular aoes under ALL players - bait them together
+
+the queen's waltz
+this happens at the same time as magic hammer - diagram
+
+squelch
+gaze that turns players into a imp
+
+dimensional wave
+
+critical hit
+
+dimensional wave
+
+Spellblade holy
+2 holy blurs
+4 holy edges
+2 unmarked
+not enough players to handle everything - use the books.
+holy blur and unmarked players grab blue books
+holy edge players grab green books
+books provide magic/phys up but also stop actions for 8 seconds
+queens waltz is happening at the same time
+- green players hang out in their unique waltz tiles
+- blue and unmarker players have to stand in their own unique waltz tiles BUT have to be close enough together to be considered stacked
+BEWARE - healers will be out of actions for some time after the attacks go off - be careful
+
+dimensional wave
+
+
+
+Phase 05
+
+Panel Swap 04 - All tiles - diagram
+
+fight boss in center at all times so that you have the most advanced notice for queens waltz
+
+the playing field - 2 frogs, 2 imps, 2 pigs
+Ribbit - Oink - Squelch in random order
+1 player in each tile or wipe
+healers get hit first, tanks second, DPS third to maximize damage
+The game
+If executed properly, you get instant LB3!
+
+the queen's waltz - type depends on which tile she's standing on
+
+spellblade holy & pole shift
+
+critical hit
+
+mindjack & place dark token
+GRDFSHGFHSGHDGHDGH
+
+Queen's Waltz
+
+Dimensional Wave
+
+Haste
+
+Spellblade X
+
+Different Spellblade X
+
+Dimensional Wave
+
+Place Token
+1 Iron Giant & 6 Ninja Adds - MT gets the nins, OT gets the giant
+Iron Giant cleaves and can try to buff itself with Overheat - silence this
+kill adds ASAP with cooldowns and LBs
+
+haste III - longer haste buff
+
+dimensional wave x4
+
+Queen's waltz
+
+spellblade X
+
+Dimensional wave
+
+critical hit
+
+queen's waltz
+
+spellblade holy
+
+critical hit
+
+mindjack + place dark token
+FGDFGDFGDFGDF
+
+queens waltz
+
+dimensional wave
+
+haste
+
+spellblade X
+
+spellblade X
+
+dimensional wave
+
+Enrage

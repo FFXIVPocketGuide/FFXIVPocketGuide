@@ -19,6 +19,12 @@
 
 }
 
+.guide__script-list {
+    list-style: initial;
+    margin: 1rem 0 0 0;
+    padding: 0 0 0 1.2rem;
+}
+
 .guide__script-attack {
     color: $palette-red;
     font-family: $font-aktiv;
