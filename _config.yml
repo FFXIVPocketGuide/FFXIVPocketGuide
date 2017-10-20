@@ -39,10 +39,11 @@ exclude:
   - assets/bower_components
   - assets_old/node_modules
   - assets_old/bower_components
-  - _ffxiv_guides/in_progress
   - _ffxiv_guides/templates
   - temp_guides
 collections:
     ffxiv_guides:
         output: true
         permalink: /:title
+    in_progress:
+        output: false

@@ -4,8 +4,8 @@ title:  "[O3S] Omega: Deltascape V3.0"
 date:   2017-04-09 18:00:14 -0300
 description: "Read our Guide on the 8 man raid Omega: Deltascape V3.0 (Savage) where you'll face off against Halicarnassus."
 image:
-    - url: "/assets/img/dungeons/delta_03_s.jpg"
-    - urlSmall: "/assets/img/dungeons/small/delta_03_s.jpg"
+    - url: "/assets/img/raids/delta_03_s.jpg"
+    - urlSmall: "/assets/img/raids/small/delta_03_s.jpg"
 patchNumber: 4.0
 patchName: "Stormblood"
 difficulty: "Savage"
@@ -24,17 +24,254 @@ mtqvid: "https://youtu.be/binii62IQPw"
 bossName: "Halicarnassus"
 # Use "reg", "combo", "vari" to tab attack snippets in.
 attacks:
-  - title: "Attack Name"
+  - title: "Critical Hit"
     phases:
       - phase: 01
     roles:
-      - role: ""
-    dutyActions:
-      - action: ""
+      - role: "Tank"
+      - role: "Healer"
     tags:
-      - tag: ""
+      - tag: "Tankbuster"
+    notes:
+      - note: "This is an extremely high damage tankbuster - tankswap if you run out of cooldowns."
+  - title: "Spellblade Holy & Pole Shift"
+    phases:
+      - phase: 01
+    # These notes should be used to describe specific steps required to handle the combo as a whole.
+    notes:
+      - note: "2 Holy Edge players will be tethered together by Pole Shift."
+      - note: "The remaining Holy Edge player will be tethered to the Holy Blur player."
+      - note: "Pole Shift will cause tethered players to SWAP PLACES."
+      - note: "The 2 Holy Edge players should stand apart and away from the boss and main group."
+      - note: "The remaining Holy Edge player should stand directly on the boss, while the Holy Blur player should stand away from the group."
+      - note: "When Pole Shift goes off, the Holy Blur player will be moved onto the boss while the Holy Edge players will be kept away from the group."
+      - note: "Players who are free should stack on the boss to soak the Holy Blur damage."
+    combo:
+      - title: "Holy Edge"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Marker"
+          - tag: "Puddle AoE"
+        notes:
+          - note: "Marks 3 players with orange markers and eventually drops circular AoEs on the ground - do not allow these to overlap."
+      - title: "Holy Blur"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Stack"
+        notes:
+          - note: "Marks 1 player with a stack marker - players should aim to stack on the boss to prepare for Pole Shift."
+      - title: "Pole Shift"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+          - tag: "Tether"
+        notes:
+          - note: "Tethers 2 Holy Edge players together and 1 Holy Edge and 1 Holy Blur player together."
+          - note: "When the cast goes off, players tethered together swap places."
+  - title: "The Queen's Waltz"
+    phases:
+      - phase: 01
+    # These notes should be used to describe specific steps required to handle the combo as a whole.
+    notes:
+      - note: "During the last phase of the fight, the boss will leap to random tiles that will determine which variation of The Queen's Waltz will be executed. Pay close attention to the tile she's standing on to determine the correct course of action."
+    variation:
+      - title: "The Queen's Waltz (Swords)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+          - tag: "Cone AoE"
+        notes:
+          - note: "The default version (normal tiles) of The Queen's Waltz targets ALL players with thin cone AoEs at once."
+          - note: "Assign positions in a star around the boss to avoid overlap of this attack."
+          - note: "This version of the attack has no telegraph - players must know their position in advance."
+      - title: "The Queen's Waltz (Vines)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+          - tag: "Tether"
+        notes:
+          - note: "All players will be tethered to another player with vines - run away from your partner to break the tether."
+          - note: "During the 2nd phase of the fight, only a diagonal row of tiles are safe - be sure to run along these tiles to the corners of the arena."
+          - note: "When paired with Mindjack, be sure to point your debuff icon towards the corner you want to run towards."
+      - title: "The Queen's Waltz (Spikes)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+          - tag: "Area AoE"
+        notes:
+          - note: "COMING SOON"
+      - title: "The Queen's Waltz (Folios)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+          - tag: "Area AoE"
+        notes:
+          - note: "COMING SOON"
+  - title: "Haste"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Buff"
+    notes:
+      - note: "The boss will buff herself with haste for 6s and often follow up with a variation of Spellblade X."
+  - title: "Spellblade X"
+    phases:
+      - phase: 01
+    variation:
+      - title: "Spellblade Thunder III"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Column AoE"
+        notes:
+          - note: "Targets 1 player with a long column AoE that will cause Paralysis and Vulnerability Up debuffs."
+      - title: "Spellblade Fire III"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Donut AoE"
+        notes:
+          - note: "A large donut AoE that will cause Fire and Vulnerability Up debuffs."
+          - note: "Safe zones are at close melee range and max ranged distance."
+      - title: "Spellblade Blizzard III"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Point Blank AoE"
+        notes:
+          - note: "A point blank AoE with a short telegraph - causes Freezing and Vulnerability Up debuffs."
+  - title: "Dimensional Wave"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Healer"
+    tags:
+      - tag: "Raid Wide AoE"
+    notes:
+      - note: "This attack hits the whole group for high damage - healers beware."
+  - title: "The Playing Field"
+    phases:
+      - phase: 01
+    # These notes should be used to describe specific steps required to handle the combo as a whole.
     notes:
       - note: ""
+    variation:
+      - title: "The Playing Field (I)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "COMING SOON"
+      - title: "The Playing Field (II)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "COMING SOON"
+  - title: "Oink"
+    phases:
+      - phase: 01
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Marker"
+      - tag: "Stack"
+      - tag: "Debuff"
+    notes:
+      - note: "All players will be marked with red triangle markers - stack with at least 1 other player or you will be turned into a pig."
+  - title: "Panel Swap"
+    phases:
+      - phase: 02
+    # These notes should be used to describe specific steps required to handle the combo as a whole.
+    notes:
+      - note: "This attack transforms the arena and indicates the beginning of a new phase."
+      - note: "The current type of tiles on the floor affect which variation of The Queen's Waltz Halicarnassus will execute."
+    variation:
+      - title: "Panel Swap (Briar Tiles)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "COMING SOON"
+      - title: "Panel Swap (Cave Tiles)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "COMING SOON"
+      - title: "Panel Swap (Book Tiles)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "COMING SOON"
+      - title: "Panel Swap (All Tiles)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "COMING SOON"
+  - title: "Place Token"
+    phases:
+      - phase: 02
+    # These notes should be used to describe specific steps required to handle the combo as a whole.
+    notes:
+      - note: ""
+    variation:
+      - title: "Place Token (White Flame)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Spawn"
+        notes:
+          - note: "COMING SOON"
+      - title: "Place Token (Great Dragon)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Spawn"
+        notes:
+          - note: "COMING SOON"
+      - title: "Place Token (Apanda)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Spawn"
+        notes:
+          - note: "COMING SOON"
+      - title: "Place Token (Iron Giant & Ninjas)"
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Spawn"
+        notes:
+          - note: "COMING SOON"
+  - title: "Mindjack"
+    phases:
+      - phase: 02
+    roles:
+      - role: "Everyone"
+    tags:
+      - tag: "Mechanic"
+      - tag: "Debuff"
+    notes:
+      - note: "This attack gives all players a debuff that will force them to run in the direction indicated by their debuff icon based on the direction they are facing."
+      - note: "Often paired with other mechanics, the best way to handle this attack is to face your buff icon on the UI in the direction you want your character to move in."
 sequence:
   - phase: 01
     attacks:
@@ -44,7 +281,7 @@ sequence:
       - attack: "Haste"
       - attack: "Spellblade X"
       - attack: "Dimensional Wave"
-      - attack: "The Playing Field & Oink"
+      - attack: "The Playing Field (I) & Oink"
     alerts:
       - alert: ""
     mechanics:
@@ -112,7 +349,7 @@ sequence:
   - phase: 05
     attacks:
       - attack: "Panel Swap (All Tiles)"
-      - attack: "The Playing Field & Ribbit & Oink & Squelch"
+      - attack: "The Playing Field (II) & Ribbit & Oink & Squelch"
       - attack: "The Queen's Waltz (Random)"
       - attack: "Spellblade Holy & Poleshift"
       - attack: "Critical Hit"
