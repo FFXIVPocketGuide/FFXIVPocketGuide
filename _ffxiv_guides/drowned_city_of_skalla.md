@@ -142,7 +142,7 @@ bosses:
           - tag: "Mechanic"
           - tag: "Transformation"
         notes:
-          - note: "All players will be transformed into spriggans and can only exeecute a single move - this attack must be used to instantly kill Subservient adds before the boss finishes casting Order to Self-destruct."
+          - note: "All players will be transformed into spriggans and can only execute a single move - this attack must be used to instantly kill Subservient adds before the boss finishes casting Order to Self-destruct."
     sequence:
       - phase: 01
         attacks:
