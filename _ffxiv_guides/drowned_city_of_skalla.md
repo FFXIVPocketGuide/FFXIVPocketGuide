@@ -1,0 +1,255 @@
+---
+layout: guide_post
+title:  "The Drowned City of Skalla"
+date:   2017-04-09 18:00:14 -0300
+description: "Read our Guide on the dungeon The Drowned City of Skalla where you'll face off against Kelpie, The Old One, and Hrodric Poisontongue."
+image:
+    - url: "/assets/img/dungeons/drowned_city_of_skalla.jpg"
+    - urlSmall: "/assets/img/dungeons/small/drowned_city_of_skalla.jpg"
+patchNumber: 4.1
+patchName: "The Legend Returns"
+difficulty: "Normal"
+plvl: 70
+ilvl: 300
+# Order is a direct combination of plvl+ilvl (e.g. 23+000 = 23000, 70+310 = 70310).
+order: 70300
+instanceType: "dungeon"
+mtqvid: "https://youtu.be/hG1GYi2kk44"
+#
+# Paired Attack Tags: Marker
+# AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
+# Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
+# Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
+#
+bosses:
+  - title: "Kelpie"
+    # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
+    id: "boss01"
+    # Use "reg", "combo", "vari" to tab attack snippets in.
+    attacks:
+      - title: "Torpedo"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Tank"
+          - role: "Healer"
+        tags:
+          - tag: "Tankbuster"
+        notes:
+          - note: "This attack hits the tank for moderate damage."
+      - title: "Rising Seas"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Healer"
+        tags:
+          - tag: "Raid Wide AoE"
+        notes:
+          - note: "This attack hits for moderate group wide damage."
+      - title: "Hydro Pull"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+        notes:
+          - note: "The boss will leap to one side of the arena and begin to cast this attack - all players should run to the opposite side of the platform and prepare to be pulled towards the boss."
+      - title: "Hydro Push"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+          - tag: "Knockback"
+        notes:
+          - note: "The boss will leap to one side of the arena and begin to cast this attack - all players should run to the boss and stack in front of him to prepare to be knocked back across the platform."
+      - title: "Bloody Puddle"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Marker"
+          - tag: "Puddle AoE"
+          - tag: "Tether"
+        notes:
+          - note: "2 players will be marked with orange markers - these players will drop a large circular puddle AoE where they stand, so move away from others."
+          - note: "Marked players will then be tethered to a water orb that will follow the player around and fast cast a circular AoE, hitting players within range for damage and a Water Resist Down debuff."
+    sequence:
+      - phase: 01
+        attacks:
+          - attack: "[Torpedo"
+          - attack: "Rising Seas"
+          - attack: "Hydro Pull"
+          - attack: "Hydro Push"
+          - attack: "Blood Puddle]"
+          - attack: "[Repeat]"
+        alerts:
+          - alert: "The edges of the arena are danger zones during this fight and will apply Water Resist Down debuffs on players who enter them."
+          - alert: "When the boss leaps to one side of the arena, pay close attention to the attack he is casting to avoid being knocked into the edges."
+          - alert: "Players targeted with orange markers should avoid kiting their water orbs near other players."
+  - title: "The Old One"
+    # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
+    id: "boss02"
+    # Use "reg", "combo", "vari" to tab attack snippets in.
+    attacks:
+      - title: "Mystic Light"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Cone AoE"
+        notes:
+          - note: "This attack targets 1 player with a large frontal cone AoE."
+      - title: "Mystic Flame"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Circular AoE"
+        notes:
+          - note: "2 players will be targeted with a large circular AoEs."
+      - title: "Subservient & Order to Self-destruct"
+        phases:
+          - phase: 01
+        combo:
+          - title: "Subservient"
+            roles:
+              - role: "Everyone"
+            tags:
+              - tag: "Mechanic"
+              - tag: "Spawn"
+            notes:
+              - note: "The boss will spawn multiple Subservient adds that will slowly move around the arena."
+              - note: "Players should kill all of these adds before Order to Self-destruct casts."
+          - title: "Order to Self-destruct"
+            roles:
+              - role: "Everyone"
+            tags:
+              - tag: "Mechanic"
+            notes:
+              - note: "While players are killing the Subservient adds, the boss will begin to cast Order to Self-destruct - all adds must be killed before this cast finishes."
+      - title: "Shifting Light"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Mechanic"
+          - tag: "Transformation"
+        notes:
+          - note: "All players will be transformed into spriggans and can only exeecute a single move - this attack must be used to instantly kill Subservient adds before the boss finishes casting Order to Self-destruct."
+    sequence:
+      - phase: 01
+        attacks:
+          - attack: "[Mystic Light"
+          - attack: "Mystic Flame"
+          - attack: "Subservient & Order to Self-destruct"
+          - attack: "Shifting Light]"
+          - attack: "[Repeat]"
+        alerts:
+          - alert: "Players should be sure to kill all Subservient adds before the boss casts Order to Self-destruct."
+          - alert: "When transformed into spriggans, players must drop bombs in the paths of the Subservient adds to destroy them."
+  - title: "Hrodric Poisontongue"
+    # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
+    id: "boss03"
+    # Use "reg", "combo", "vari" to tab attack snippets in.
+    attacks:
+      - title: "Rusting Claw"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Tank"
+          - role: "Melee DPS"
+        tags:
+          - tag: "Cleave"
+        notes:
+          - note: "This attack has no telegraph - look for the boss to raise his right arm and move away from his front."
+      - title: "Tail Drive"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Tank"
+          - role: "Melee DPS"
+        tags:
+          - tag: "Cleave"
+        notes:
+          - note: "This attack has no telegraph - look for the boss to raise his tail into the air and move out from behind him."
+      - title: "The Spin"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Proximity AoE"
+        notes:
+          - note: "The boss will crouch down in place and telegraph the proximity AoE - run to the farthest from his position."
+      - title: "Ring of Chaos"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Marker"
+          - tag: "Donut AoE"
+        notes:
+          - note: "1 player will be targeted with a purple marker and drop a donut AoE where they stand - this player should stand still once marked to ensure that the rest of the group can get to safe zones."
+      - title: "Eye of the Fire"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Gaze"
+        notes:
+          - note: "This attack as a quick cast and will confuse all players who are looking at the boss when it goes off."
+      - title: "Cross of Chaos"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Marker"
+          - tag: "Column AoE"
+        notes:
+          - note: "1 player will be targeted with a purple marker and cross shaped telegraph - this player should stop moving to allow the rest of the group to move into safe zones."
+      - title: "Circle of Chaos"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Marker"
+          - tag: "Puddle AoE"
+        notes:
+          - note: "1 player will be targeted with a purple marker and will drop a puddle AoE where they stand - move away from others to avoid splashing damage."
+      - title: "Words of Woe"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Column AoE"
+        notes:
+          - note: "The boss will turn to 1 player and cast a long column AoE in their direction - move away from the boss' front to avoid being hit."
+    sequence:
+      - phase: 01
+        attacks:
+          - attack: "[Rusting Claw"
+          - attack: "Tall Drive"
+          - attack: "The Spin"
+          - attack: "Ring of Chaos"
+          - attack: "Eye of the Fire"
+          - attack: "Cross of Chaos"
+          - attack: "Circle of Chaos"
+          - attack: "Words of Woe]"
+          - attack: "[Repeat]"
+        alerts:
+          - alert: "The boss has 2 attacks that are only telegraphed through animations - pay attention to whether he is raising is arm or tail and dodge appropriately."
+          - alert: "All attacks from this boss give players stacking Vulnerability Up debuffs."
+          - alert: "Players should keep an eye out for the gaze attack icon as this attack has a fast cast time."
+---
