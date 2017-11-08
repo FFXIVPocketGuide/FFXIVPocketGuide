@@ -24,6 +24,30 @@
 
         {% endif %}
 
+        {% if guide.patchNumber >= 3.0 %}
+
+            {% if guide.patchNumber < 4.0 %}
+
+                {% assign counter = counter | plus: 1 %}
+
+                {% include index-temp.html %}
+
+            {% endif %}
+
+        {% endif %}
+
+        {% if guide.patchNumber >= 2.0 %}
+
+            {% if guide.patchNumber < 3.0 %}
+
+                {% assign counter = counter | plus: 1 %}
+
+                {% include index-temp.html %}
+
+            {% endif %}
+
+        {% endif %}
+
     {% endfor %}
 
 </div>
