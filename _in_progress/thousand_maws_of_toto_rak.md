@@ -57,3 +57,19 @@ bosses:
             notes:
               - note: ""
 ---
+magitek photocells
+
+web arches suck players in and then close off
+
+Fleshy pods - range these so that they don't explode on the group
+
+Coeurl O'Nine Tails
+
+AoE Poison Point Blanks
+
+Warden's Whip x2
+
+Graffius
+
+fleshy pods around the arena
+clear these with ranged attacks
