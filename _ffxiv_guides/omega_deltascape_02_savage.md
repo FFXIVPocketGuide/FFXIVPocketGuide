@@ -111,7 +111,7 @@ attacks:
       - tag: "Stack"
     notes:
       - note: "One Healer and one DPS will be targeted with stack markers that <strong>MUST</strong> have 4 players in them."
-      - note: "One of these players will be levitated into the air - have all remaining DPS levitate and stack, while Healers and Tanks stack with the player on the ground."
+      - note: "One of these players will be levitated into the air - have all remaining Healers and Tanks levitate and stack, while DPS stack with the player on the ground."
   - title: "Aetherial Rift"
     phases:
       - phase: 01
@@ -165,7 +165,7 @@ attacks:
     tags:
       - tag: "Gaze"
     notes:
-      - note: "Players should face away from the boss when they see the gaze indicator - being hit by this attack will give players Petrification and Vulnerability Up debuffs."
+      - note: "Players should face away from the boss when they see the gaze indicator - being hit by this attack will likely kill you and give players Petrification and Vulnerability Up debuffs."
   - title: "Epicenter/Main Quake"
     phases:
       - phase: 02
