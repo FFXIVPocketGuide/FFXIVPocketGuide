@@ -11,7 +11,7 @@ title: "Omega: Deltascape V1.0"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 8 man raid Omega: Deltascape V1.0 (Savage) where you'll face off against Alte Roite."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/raids/delta_01_s.jpg"
     - urlSmall: "/assets/img/raids/small/delta_01_s.jpg"

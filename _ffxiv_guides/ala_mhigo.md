@@ -11,7 +11,7 @@ title:  "Ala Mhigo"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Ala Mhigo where you'll face off against Magitek Scorpion, Aulus Mal Asina, and Zenos Yae Galvus."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/ala_mhigo.jpg"
     - urlSmall: "/assets/img/dungeons/small/ala_mhigo.jpg"

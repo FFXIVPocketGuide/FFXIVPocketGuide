@@ -11,7 +11,7 @@ title: "Shisui of the Violet Tides"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Shisui of the Violet Tides (Normal) where you'll face off against Amikiri, Ruby Princess, and Shisui Yohi."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/shisui.jpg"
     - urlSmall: "/assets/img/dungeons/small/shisui.jpg"

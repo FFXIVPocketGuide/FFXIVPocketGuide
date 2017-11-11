@@ -11,7 +11,7 @@ title:  "Haukke Manor"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Haukke Manor (Normal) where you'll face off against Manor Claviger, Manor Jester and Manor Steward, and Lady Amandine."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/haukke_manor.jpg"
     - urlSmall: "/assets/img/dungeons/small/haukke_manor.jpg"

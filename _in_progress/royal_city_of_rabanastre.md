@@ -11,7 +11,7 @@ title:  "The Royal City of Rabanastre"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 24 man raid The Royal City of Rabanastre (Normal) where you'll face off against Mateus the Corrupt, Hashmal, Bringer of Order, Rofocale, and Argath Thadalfus."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/raids/rabanastre.jpg"
     - urlSmall: "/assets/img/raids/small/rabanastre.jpg"

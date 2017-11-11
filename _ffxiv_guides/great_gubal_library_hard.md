@@ -11,7 +11,7 @@ title: "The Great Gubal Library"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon The Great Gubal Library (Hard) where you'll face off against Demon of the Tome, Living Flame, Apanda, and Strix."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/great_gubal_hard.jpg"
     - urlSmall: "/assets/img/dungeons/small/great_gubal_hard.jpg"

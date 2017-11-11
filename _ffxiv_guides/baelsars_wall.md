@@ -11,7 +11,7 @@ title: "Baelsar's Wall"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Baelsar's Wall (Normal) where you'll face off against Magitek Predator, Armored Weapon, and The Griffin."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/baelsars_wall.jpg"
     - urlSmall: "/assets/img/dungeons/small/baelsars_wall.jpg"

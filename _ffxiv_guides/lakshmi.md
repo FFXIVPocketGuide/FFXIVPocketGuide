@@ -11,7 +11,7 @@ title: "Emanation"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial Emanation (Hard) where you'll face off against Sri Lakshmi."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/trials/lakshmi.jpg"
     - urlSmall: "/assets/img/trials/small/lakshmi.jpg"

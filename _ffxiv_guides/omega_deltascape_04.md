@@ -11,7 +11,7 @@ title: "Omega: Deltascape V4.0"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 8 man raid Omega: Deltascape V4.0 (Normal) where you'll face off against Exdeath."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/raids/delta_04.jpg"
     - urlSmall: "/assets/img/raids/small/delta_04.jpg"

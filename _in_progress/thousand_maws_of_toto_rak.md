@@ -11,7 +11,7 @@ title:  "The Thousand Maws of Toto-Rak"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon The Thousand Maws of Toto-Rak (Normal) where you'll face off against Coeurl O'Nine Tails and Gaffius."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/thousand_maws.jpg"
     - urlSmall: "/assets/img/dungeons/small/thousand_maws.jpg"

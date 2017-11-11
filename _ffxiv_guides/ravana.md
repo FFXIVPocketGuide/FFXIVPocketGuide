@@ -11,7 +11,7 @@ title: "Thok ast Thok"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial Thok ast Thok (Hard) where you'll face off against Ravana."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/trials/thok_ast_thok.jpg"
     - urlSmall: "/assets/img/trials/small/thok_ast_thok.jpg"

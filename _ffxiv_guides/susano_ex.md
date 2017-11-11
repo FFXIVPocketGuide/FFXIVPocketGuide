@@ -11,7 +11,7 @@ title: "The Pool of Tribute"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial The Pool of Tribute (Extreme) where you'll face off against Susano."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/trials/susano_ex.jpg"
     - urlSmall: "/assets/img/trials/small/susano_ex.jpg"

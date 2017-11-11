@@ -11,7 +11,7 @@ title:  "The Howling Eye"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial The Howling Eye (Normal) where you'll face off against Garuda."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/trials/garuda.jpg"
     - urlSmall: "/assets/img/trials/small/garuda.jpg"

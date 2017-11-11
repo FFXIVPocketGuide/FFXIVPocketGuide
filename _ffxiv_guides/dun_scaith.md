@@ -11,7 +11,7 @@ title: "Dun Scaith"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 24 man raid Dun Scaith (Normal) where you'll face off against Death Gaze Hollow, Ferdiad Hollow, Shadowcourt Handmaiden, Proto Ultima, Scathach, and Diabolos."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/raids/dun_scaith.jpg"
     - urlSmall: "/assets/img/raids/small/dun_scaith.jpg"

@@ -11,7 +11,7 @@ title: "Temple of the Fist"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Temple of the Fist (Normal) where you'll face off against Sruti & Smriti, Arbuda, and Ivon Coeurlfist."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/temple_of_the_fist.jpg"
     - urlSmall: "/assets/img/dungeons/small/temple_of_the_fist.jpg"

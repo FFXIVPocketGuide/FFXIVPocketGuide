@@ -11,7 +11,7 @@ title:  "Alexander: The Soul of the Creator"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 8 man raid Alexander: The Soul of the Creator (Savage) where you'll face off against Alexander Prime."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/raids/alex_12_s.jpg"
     - urlSmall: "/assets/img/raids/small/alex_12_s.jpg"

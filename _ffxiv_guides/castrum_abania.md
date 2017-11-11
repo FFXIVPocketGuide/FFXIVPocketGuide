@@ -11,7 +11,7 @@ title: "Castrum Abania"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Castrum Abania (Normal) where you'll face off against Magna Roader, Number XXIV, and Inferno."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/castrum_abania.jpg"
     - urlSmall: "/assets/img/dungeons/small/castrum_abania.jpg"

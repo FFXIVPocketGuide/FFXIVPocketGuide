@@ -11,7 +11,7 @@ title: "Bardam's Mettle"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Bardam's Mettle (Normal) where you'll face off against Galura, Bardam, and Yol."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/bardams_mettle.jpg"
     - urlSmall: "/assets/img/dungeons/small/bardams_mettle.jpg"

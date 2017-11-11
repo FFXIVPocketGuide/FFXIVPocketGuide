@@ -11,7 +11,7 @@ title: "The Drowned City of Skalla"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon The Drowned City of Skalla (Normal) where you'll face off against Kelpie, The Old One, and Hrodric Poisontongue."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/drowned_city_of_skalla.jpg"
     - urlSmall: "/assets/img/dungeons/small/drowned_city_of_skalla.jpg"

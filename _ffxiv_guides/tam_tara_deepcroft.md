@@ -11,7 +11,7 @@ title: "The Tam-Tara Deepcroft"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon The Tam-Tara Deepcroft (Normal) where you'll face off against Void Soulcounters and Galvanth the Dominator."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/tam_tara.jpg"
     - urlSmall: "/assets/img/dungeons/small/tam_tara.jpg"

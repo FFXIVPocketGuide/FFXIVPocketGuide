@@ -11,7 +11,7 @@ title: "Copperbell Mines"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Copperbell Mines (Normal) where you'll face off against Kottos the Gigas, Ichorous Ire, and Gyges the Great."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/copperbell_mines.jpg"
     - urlSmall: "/assets/img/dungeons/small/copperbell_mines.jpg"

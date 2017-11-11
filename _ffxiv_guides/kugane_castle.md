@@ -11,7 +11,7 @@ title: "Kugane Castle"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Kugane Castle (Normal) where you'll face off against Zuiko-maru, Dojun-maru, and Yojimbo."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/kugane_castle.jpg"
     - urlSmall: "/assets/img/dungeons/small/kugane_castle.jpg"

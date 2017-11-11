@@ -11,7 +11,7 @@ title:  "The Minstrel's Ballad: Shinryu's Domain"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial The Minstrel's Ballad: Shinryu's Domain (Extreme) where you'll face off against Shinryu."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/trials/shinryu_ex.jpg"
     - urlSmall: "/assets/img/trials/small/shinryu_ex.jpg"

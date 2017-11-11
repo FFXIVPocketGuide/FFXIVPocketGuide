@@ -11,7 +11,7 @@ title: "Halatali"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon Halatali (Normal) where you'll face off against Firemane, Thunderclap Guivre, and Tangata."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/halatali.jpg"
     - urlSmall: "/assets/img/dungeons/small/halatali.jpg"

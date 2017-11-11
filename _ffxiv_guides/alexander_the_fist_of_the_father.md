@@ -11,7 +11,7 @@ title:  "Alexander: The Fist of the Father"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 8 man raid Alexander: The Fist of the Father (Normal) where you'll face off against Faust and Oppressor."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/raids/alex_1.jpg"
     - urlSmall: "/assets/img/raids/small/alex_1.jpg"

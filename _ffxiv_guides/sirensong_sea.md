@@ -11,7 +11,7 @@ title: "The Sirensong Sea"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon The Sirensong Sea (Normal) where you'll face off against Lugat, The Governor, and Lorelei."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/dungeons/sirensong_sea.jpg"
     - urlSmall: "/assets/img/dungeons/small/sirensong_sea.jpg"

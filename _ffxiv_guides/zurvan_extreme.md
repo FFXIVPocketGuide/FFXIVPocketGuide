@@ -11,7 +11,7 @@ title: "Containment Bay Z1T9"
 # Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial Containment Bay Z1T9 (Extreme) where you'll face off against Zurvan."
 #
-# Primary Image (1500px Wide) & Thumbnail (300px Wide)
+# Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
     - url: "/assets/img/trials/zurvan_ex.jpg"
     - urlSmall: "/assets/img/trials/small/zurvan_ex.jpg"
