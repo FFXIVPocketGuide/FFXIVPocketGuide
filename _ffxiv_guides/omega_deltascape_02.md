@@ -1,19 +1,55 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[O2] Omega: Deltascape V2.0"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the 8 man raid Omega: Deltascape V2.0 where you'll face off against Catastrophe."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Omega: Deltascape V2.0"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the 8 man raid Omega: Deltascape V2.0 (Normal) where you'll face off against Catastrophe."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/delta_02.jpg"
     - urlSmall: "/assets/img/raids/small/delta_02.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "O2"
+    - term: "V2"
+    - term: "Omega: Deltascape V2.0"
+    - term: "Version"
+    - term: "Catastrophe"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 70
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70006
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/dAGTYL_iSDw"
+#
 bossName: "Catastrophe"
 attacks:
   - title: "Tremblor"

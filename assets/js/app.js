@@ -65,7 +65,7 @@
 
                 $(this).find(".index-item").each(function(e) {
 
-                    var headingText  = $(this).find(".index-item__title").text().toLowerCase();
+                    var headingText  =  $(this).find(".index-item__title").data("terms").toLowerCase();
 
                     /*
                     This is currently setup for "OR" or "ANY" searching.

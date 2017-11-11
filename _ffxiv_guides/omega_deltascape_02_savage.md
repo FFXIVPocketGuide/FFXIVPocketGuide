@@ -1,19 +1,53 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[O2S] Omega: Deltascape V2.0"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Omega: Deltascape V2.0"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 8 man raid Omega: Deltascape V2.0 (Savage) where you'll face off against Catastrophe."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/delta_02_s.jpg"
     - urlSmall: "/assets/img/raids/small/delta_02_s.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "O2S"
+    - term: "V2S"
+    - term: "Omega: Deltascape V2.0"
+    - term: "Version"
+    - term: "Catastrophe"
+    - term: "Savage"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Savage"
+#
+# Player Level
 plvl: 70
+#
+# Item Level
 ilvl: 315
-# Order is a direct combination of plvl+ilvl (e.g. 23+000 = 23000, 70+310 = 70310).
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70315
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/X6--0cKBkVs"
 #
 # Paired Attack Tags: Marker

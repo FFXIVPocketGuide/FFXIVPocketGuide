@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Halatali"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Halatali where you'll face off against Firemane, Thunderclap Guivre, and Tangata."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Halatali"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Halatali (Normal) where you'll face off against Firemane, Thunderclap Guivre, and Tangata."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/halatali.jpg"
     - urlSmall: "/assets/img/dungeons/small/halatali.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Halatali"
+    - term: "Firemane"
+    - term: "Thunderclap Guivre"
+    - term: "Tangata"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 2.0
 patchName: "A Realm Reborn"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 20
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 20000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/Lukm-U8aaOw"
+#
 bosses:
   - title: "Firemane"
     sequence:

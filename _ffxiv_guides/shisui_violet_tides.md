@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Shisui of the Violet Tides"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Shisui of the Violet Tides where you'll face off against Amikiri, Ruby Princess, and Shisui Yohi."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Shisui of the Violet Tides"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Shisui of the Violet Tides (Normal) where you'll face off against Amikiri, Ruby Princess, and Shisui Yohi."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/shisui.jpg"
     - urlSmall: "/assets/img/dungeons/small/shisui.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Shisui of the Violet Tides"
+    - term: "Amikiri"
+    - term: "Ruby Princess"
+    - term: "Shisui Yohi"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 63
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 63000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/1JJdTI2nI80"
+#
 bosses:
   - title: "Amikiri"
     id: "boss01"

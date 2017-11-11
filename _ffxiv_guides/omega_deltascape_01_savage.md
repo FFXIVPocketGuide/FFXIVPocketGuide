@@ -1,19 +1,55 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[O1S] Omega: Deltascape V1.0"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Omega: Deltascape V1.0"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 8 man raid Omega: Deltascape V1.0 (Savage) where you'll face off against Alte Roite."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/delta_01_s.jpg"
     - urlSmall: "/assets/img/raids/small/delta_01_s.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "O1S"
+    - term: "V1S"
+    - term: "Omega: Deltascape V1.0"
+    - term: "Version"
+    - term: "Alte Roite"
+    - term: "Savage"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Savage"
+#
+# Player Level
 plvl: 70
+#
+# Item Level
 ilvl: 310
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70310
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/osm1NxHqAuA"
+#
 bossName: "Alte Roite"
 attacks:
   - title: "The Classical Elements (Breakdown)"

@@ -1,20 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "The Drowned City of Skalla"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon The Drowned City of Skalla where you'll face off against Kelpie, The Old One, and Hrodric Poisontongue."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "The Drowned City of Skalla"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon The Drowned City of Skalla (Normal) where you'll face off against Kelpie, The Old One, and Hrodric Poisontongue."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/drowned_city_of_skalla.jpg"
     - urlSmall: "/assets/img/dungeons/small/drowned_city_of_skalla.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "The Drowned City of Skalla"
+    - term: "Kelpie"
+    - term: "The Old One"
+    - term: "Hrodric Poisontongue"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.1
 patchName: "The Legend Returns"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 70
+#
+# Item Level
 ilvl: 300
-# Order is a direct combination of plvl+ilvl (e.g. 23+000 = 23000, 70+310 = 70310).
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70300
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/hG1GYi2kk44"
+#
 #
 # Paired Attack Tags: Marker
 # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE

@@ -1,19 +1,55 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "The Great Gubal Library"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "The Great Gubal Library"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the dungeon The Great Gubal Library (Hard) where you'll face off against Demon of the Tome, Living Flame, Apanda, and Strix."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/great_gubal_hard.jpg"
     - urlSmall: "/assets/img/dungeons/small/great_gubal_hard.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "The Great Gubal Library"
+    - term: "Demon of the Tome"
+    - term: "Living Flame"
+    - term: "Apanda"
+    - term: "Strix"
+    - term: "Hard"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.4
 patchName: "Soul Surrender"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Hard"
+#
+# Player Level
 plvl: 60
+#
+# Item Level
 ilvl: 210
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 60210
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/y2wp0wfMnXY"
+#
 bosses:
   - title: "Demon of the Tome"
     id: "boss01"

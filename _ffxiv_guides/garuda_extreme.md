@@ -1,19 +1,52 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[Garuda] The Howling Eye"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "The Howling Eye"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial The Howling Eye (Extreme) where you'll face off against Garuda."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/trials/garuda_ex.jpg"
     - urlSmall: "/assets/img/trials/small/garuda_ex.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Garuda"
+    - term: "The Howling Eye"
+    - term: "Extreme"
+#
+# Patch Information (Number & Name)
 patchNumber: 2.1
 patchName: "A Realm Awoken"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Extreme"
+#
+# Player Level
 plvl: 50
-ilvl: 65
+#
+# Item Level
+ilvl: 065
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 50065
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "trial"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/EXExe9zt-gI"
+#
 bossName: "Garuda"
 attacks:
   - title: "Downburst"

@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Doma Castle"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Doma Castle where you'll face off against Magitek Rearguard, Magitek Hexadrone, and Hypertuned Grynewaht."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Doma Castle"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Doma Castle (Normal) where you'll face off against Magitek Rearguard, Magitek Hexadrone, and Hypertuned Grynewaht."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/doma_castle.jpg"
     - urlSmall: "/assets/img/dungeons/small/doma_castle.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Doma Castle"
+    - term: "Magitek Rearguard"
+    - term: "Magitek Hexadrone"
+    - term: "Hypertuned Grynewaht"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 67
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 67000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/Z3rVn3UBy3w"
+#
 bosses:
   - title: "Magitek Rearguard"
     id: "boss01"

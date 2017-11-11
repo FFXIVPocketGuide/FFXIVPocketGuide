@@ -1,19 +1,50 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[Titan] The Navel"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the trial The Navel where you'll face off against Titan."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "The Navel"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the trial The Navel (Normal) where you'll face off against Titan."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/trials/titan.jpg"
     - urlSmall: "/assets/img/trials/small/titan.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Titan"
+    - term: "The Navel"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 2.0
 patchName: "A Realm Reborn"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 34
-ilvl: 0
-# Order is a direct combination of plvl+ilvl (e.g. 23+000 = 23000, 70+310 = 70310).
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 34000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "trial"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/IJ2o_ytMZuE"
 #
 # Paired Attack Tags: Marker

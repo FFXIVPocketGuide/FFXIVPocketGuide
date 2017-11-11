@@ -11,7 +11,7 @@
             </span>
         {% endif %}
 
-        <h3 class="index-item__title {% if guide.title.size < 30 %}h3{% else %}h4{% endif %}">{{ guide.title }}<span>{{ guide.difficulty }}</span></h3>
+        <h3 class="index-item__title {% if guide.title.size < 30 %}h3{% else %}h4{% endif %}" data-terms="{% for term in guide.terms %}{{ term.term }}&#32;{% endfor %}">{{ guide.title }}<span>{{ guide.difficulty }}</span></h3>
 
         {% if guide.ilvl == 0 %}
             <h5 class="index-item__subtitle">Player Level: {{ guide.plvl }}</h5>

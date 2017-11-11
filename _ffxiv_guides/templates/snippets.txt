@@ -3,58 +3,72 @@ Add the snippets below to your editor to allow for tab-addition of attacks.
 # Pocket Guide Attack Snippets
 '.source.gfm':
     'Regular Attack':
-        'prefix': 'reg'
+        'prefix': 'attk-reg'
         'body': """
+            # Regular Attack *********************************************************
             - title: "Regular Attack"
               phases:
                 - phase: 01
               roles:
                 - role: ""
-              # Only include dutyActions when applicable.
+              # Duty Action (Include When Necessary)
               dutyActions:
                 - action: ""
               tags:
                 - tag: ""
               notes:
                 - note: ""
+              images:
+                - url: "/assets/img/image-path.png"
+                  alt: "Image Description"
         """
     'Combo Attack':
-        'prefix': 'combo'
+        'prefix': 'attk-combo'
         'body': """
+            # Combination Attack *****************************************************
             - title: "Combo Attack"
               phases:
                 - phase: 01
-              # These notes should be used to describe specific steps required to handle the combo as a whole.
+              # Notes (Tactics For This Mechanic)
               notes:
                 - note: ""
               combo:
                 - title: ""
                   roles:
                     - role: ""
+                  # Duty Action (Include When Necessary)
                   dutyActions:
                     - action: ""
                   tags:
                     - tag: ""
                   notes:
                     - note: ""
+                  images:
+                    - url: "/assets/img/image-path.png"
+                      alt: "Image Description"
         """
     'Variation Attack':
-        'prefix': 'vari'
+        'prefix': 'attk-vari'
         'body': """
+            # Attack w/ Variations ***************************************************
             - title: "Attack with Variations"
               phases:
                 - phase: 01
-              # These notes should be used to describe specific steps required to handle the combo as a whole.
+              # Notes (Tactics For This Mechanic)
               notes:
                 - note: ""
               variation:
                 - title: ""
                   roles:
                     - role: ""
+                  # Duty Action (Include When Necessary)
                   dutyActions:
                     - action: ""
                   tags:
                     - tag: ""
                   notes:
                     - note: ""
+                  images:
+                    - url: "/assets/img/image-path.png"
+                      alt: "Image Description"
         """

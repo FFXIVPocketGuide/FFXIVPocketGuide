@@ -1,19 +1,52 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[Sri Lakshmi] Emanation"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Emanation"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial Emanation (Extreme) where you'll face off against Sri Lakshmi."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/trials/lakshmi_ex.jpg"
     - urlSmall: "/assets/img/trials/small/lakshmi_ex.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Sri Lakshmi"
+    - term: "Emanation"
+    - term: "Extreme"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Extreme"
+#
+# Player Level
 plvl: 70
+#
+# Item Level
 ilvl: 300
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70300
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "trial"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/ek_FAZTuHWU"
+#
 bossName: "Sri Lakshmi"
 attacks:
   - title: "Dreaming Kshatriya"

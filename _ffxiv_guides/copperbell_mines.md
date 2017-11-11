@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Copperbell Mines"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Copperbell Mines where you'll face off against Kottos the Gigas, Ichorous Ire, and Gyges the Great."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Copperbell Mines"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Copperbell Mines (Normal) where you'll face off against Kottos the Gigas, Ichorous Ire, and Gyges the Great."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/copperbell_mines.jpg"
     - urlSmall: "/assets/img/dungeons/small/copperbell_mines.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Copperbell Mines"
+    - term: "Kottos the Gigas"
+    - term: "Ichorous Ire"
+    - term: "Gyges the Great"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 2.0
 patchName: "A Realm Reborn"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 17
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 17000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/cNKaKd1CBnw"
+#
 bosses:
   - title: "Kottos the Gigas"
     id: "boss01"

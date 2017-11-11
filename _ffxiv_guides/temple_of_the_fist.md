@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Temple of the Fist"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Temple of the Fist where you'll face off against Sruti & Smriti, Arbuda, and Ivon Coeurlfist."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Temple of the Fist"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Temple of the Fist (Normal) where you'll face off against Sruti & Smriti, Arbuda, and Ivon Coeurlfist."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/temple_of_the_fist.jpg"
     - urlSmall: "/assets/img/dungeons/small/temple_of_the_fist.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Temple of the Fist"
+    - term: "Sruti & Smriti"
+    - term: "Arbuda"
+    - term: "Ivon Coeurlfist"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 70
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70004
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/qsvyVRhQ-pc"
+#
 bosses:
   - title: "Sruti & Smriti"
     id: "boss01"

@@ -1,19 +1,53 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[A12S] Alexander: The Soul of the Creator"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title:  "Alexander: The Soul of the Creator"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the 8 man raid Alexander: The Soul of the Creator (Savage) where you'll face off against Alexander Prime."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/alex_12_s.jpg"
     - urlSmall: "/assets/img/raids/small/alex_12_s.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "A12S"
+    - term: "Alexander: The Soul of the Creator"
+    - term: "Alexander Prime"
+    - term: "Savage"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.4
 patchName: "Soul Surrender"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Savage"
+#
+# Player Level
 plvl: 60
+#
+# Item Level
 ilvl: 245
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 60245
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/7R5LE8ZzBFw"
+#
 bossName: "Alexander Prime"
 attacks:
   - title: "Divine Spear"

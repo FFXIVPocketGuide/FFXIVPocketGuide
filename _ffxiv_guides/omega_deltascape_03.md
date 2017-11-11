@@ -1,19 +1,55 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[O3] Omega: Deltascape V3.0"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the 8 man raid Omega: Deltascape V3.0 where you'll face off against Halicarnassus."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Omega: Deltascape V3.0"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the 8 man raid Omega: Deltascape V3.0 (Normal) where you'll face off against Halicarnassus."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/delta_03.jpg"
     - urlSmall: "/assets/img/raids/small/delta_03.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "O3"
+    - term: "V3"
+    - term: "Omega: Deltascape V3.0"
+    - term: "Version"
+    - term: "Halicarnassus"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 70
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70007
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/eElgTVgIh5U"
+#
 bossName: "Halicarnassus"
 attacks:
   - title: "Ribbit"

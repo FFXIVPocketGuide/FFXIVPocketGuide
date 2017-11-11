@@ -1,19 +1,57 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Dun Scaith"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the 24 man raid Dun Scaith where you'll face off against Death Gaze Hollow, Ferdiad Hollow, Shadowcourt Handmaiden, Proto Ultima, Scathach, and Diabolos."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Dun Scaith"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the 24 man raid Dun Scaith (Normal) where you'll face off against Death Gaze Hollow, Ferdiad Hollow, Shadowcourt Handmaiden, Proto Ultima, Scathach, and Diabolos."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/dun_scaith.jpg"
     - urlSmall: "/assets/img/raids/small/dun_scaith.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Dun Scaith"
+    - term: "Death Gaze Hollow"
+    - term: "Ferdiad Hollow"
+    - term: "Shadowcourt Handmaiden"
+    - term: "Proto Ultima"
+    - term: "Scathach"
+    - term: "Diabolos"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 60
+#
+# Item Level
 ilvl: 235
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 60235
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/uNrzJdfTNLs"
+#
 bosses:
   - title: "Death Gaze Hollow"
     id: "boss01"

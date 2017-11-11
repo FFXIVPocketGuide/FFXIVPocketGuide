@@ -1,19 +1,53 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[Zurvan] Containment Bay Z1T9"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Containment Bay Z1T9"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial Containment Bay Z1T9 (Extreme) where you'll face off against Zurvan."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/trials/zurvan_ex.jpg"
     - urlSmall: "/assets/img/trials/small/zurvan_ex.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Zurvan"
+    - term: "Containment Bay Z1T9"
+    - term: "Warring Triad"
+    - term: "Extreme"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Extreme"
+#
+# Player Level
 plvl: 60
+#
+# Item Level
 ilvl: 250
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 60250
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "trial"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/WdtOPon2eQk"
+#
 bossName: "Zurvan"
 attacks:
   - title: "Flare Star"

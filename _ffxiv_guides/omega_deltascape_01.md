@@ -1,19 +1,55 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[O1] Omega: Deltascape V1.0"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the 8 man raid Omega: Deltascape V1.0 where you'll face off against Alte Roite."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Omega: Deltascape V1.0"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the 8 man raid Omega: Deltascape V1.0 (Normal) where you'll face off against Alte Roite."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/delta_01.jpg"
     - urlSmall: "/assets/img/raids/small/delta_01.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "O1"
+    - term: "V1"
+    - term: "Omega: Deltascape V1.0"
+    - term: "Version"
+    - term: "Alte Roite"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 70
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70005
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/lSuUWMpZSMM"
+#
 bossName: "Alte Roite"
 attacks:
   - title: "Wyrmtail"

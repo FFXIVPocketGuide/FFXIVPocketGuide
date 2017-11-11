@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Bardam's Mettle"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Bardam's Mettle where you'll face off against Galura, Bardam, and Yol."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Bardam's Mettle"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Bardam's Mettle (Normal) where you'll face off against Galura, Bardam, and Yol."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/bardams_mettle.jpg"
     - urlSmall: "/assets/img/dungeons/small/bardams_mettle.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Bardam's Mettle"
+    - term: "Galura"
+    - term: "Bardam"
+    - term: "Yol"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 65
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 65000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/yNgyWqajeHA"
+#
 bosses:
   - title: "Galura"
     id: "boss01"

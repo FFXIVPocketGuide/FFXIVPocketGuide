@@ -1,19 +1,52 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[Ravana] Thok ast Thok"
-date:   2017-04-09 18:00:14 -0300
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Thok ast Thok"
+#
+# Guide Description (Shows Up in Google Search)
 description: "Read our Guide on the trial Thok ast Thok (Hard) where you'll face off against Ravana."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/trials/thok_ast_thok.jpg"
     - urlSmall: "/assets/img/trials/small/thok_ast_thok.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Ravana"
+    - term: "Thok ast Thok"
+    - term: "Hard"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.0
 patchName: "Heavensward"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Hard"
+#
+# Player Level
 plvl: 53
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 53000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "trial"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/HQ7GAofEJBw"
+#
 bossName: "Ravana"
 attacks:
   - title: "Blinding Blade"

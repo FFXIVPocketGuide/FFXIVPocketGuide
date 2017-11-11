@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Xelphatol"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Xelphatol where you'll face off against Nuzal Hueloc, Dotoli Ciloc, and Tozol Huatotl."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Xelphatol"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Xelphatol (Normal) where you'll face off against Nuzal Hueloc, Dotoli Ciloc, and Tozol Huatotl."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/xelphatol.jpg"
     - urlSmall: "/assets/img/dungeons/small/xelphatol.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Xelphatol"
+    - term: "Nuzal Hueloc"
+    - term: "Dotoli Ciloc"
+    - term: "Tozol Huatotl"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.4
 patchName: "Soul Surrender"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 60
+#
+# Item Level
 ilvl: 210
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 60210
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/5WXk2BWz-gQ"
+#
 mechanics:
   - title: "Warballoons"
     steps:

@@ -142,6 +142,7 @@
         font-family: $font-aktiv;
         font-size: $font-scale-regular;
         font-weight: 400;
+        line-height: 1.5;
         outline: none;
         padding: $unit;
         transition: border-color .2s ease;

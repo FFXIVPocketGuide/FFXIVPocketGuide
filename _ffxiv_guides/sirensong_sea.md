@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "The Sirensong Sea"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon The Sirensong Sea where you'll face off against Lugat, The Governor, and Lorelei."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "The Sirensong Sea"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon The Sirensong Sea (Normal) where you'll face off against Lugat, The Governor, and Lorelei."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/sirensong_sea.jpg"
     - urlSmall: "/assets/img/dungeons/small/sirensong_sea.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "The Sirensong Sea"
+    - term: "Lugat"
+    - term: "The Governor"
+    - term: "Lorelei"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 61
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 61000
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/2ma65teviMM"
+#
 bosses:
   - title: "Lugat"
     id: "boss01"

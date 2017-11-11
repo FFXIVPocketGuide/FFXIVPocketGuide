@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Baelsar's Wall"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Baelsar's Wall where you'll face off against Magitek Predator, Armored Weapon, and The Griffin."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Baelsar's Wall"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Baelsar's Wall (Normal) where you'll face off against Magitek Predator, Armored Weapon, and The Griffin."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/baelsars_wall.jpg"
     - urlSmall: "/assets/img/dungeons/small/baelsars_wall.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Baelsar's Wall"
+    - term: "Magitek Predator"
+    - term: "Armored Weapon"
+    - term: "The Griffin"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.5
 patchName: "The Far Edge of Fate"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 60
+#
+# Item Level
 ilvl: 230
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 60230
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/CdS3lto8nVw"
+#
 bosses:
   - title: "Magitek Predator"
     id: "boss01"

@@ -1,20 +1,55 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
 title:  "The Royal City of Rabanastre"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Xelphatol where you'll face off against Nuzal Hueloc, Dotoli Ciloc, and Tozol Huatotl."
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the 24 man raid The Royal City of Rabanastre (Normal) where you'll face off against Mateus the Corrupt, Hashmal, Bringer of Order, Rofocale, and Argath Thadalfus."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/rabanastre.jpg"
     - urlSmall: "/assets/img/raids/small/rabanastre.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "The Royal City of Rabanastre"
+    - term: "Mateus the Corrupt"
+    - term: "Hashmal, Bringer of Order"
+    - term: "Rofocale"
+    - term: "Argath Thadalfus"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.1
 patchName: "The Legend Returns"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 70
+#
+# Item Level
 ilvl: 305
-# Order is a direct combination of plvl+ilvl (e.g. 23+000 = 23000, 70+310 = 70310).
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70305
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/Zi99W7ejtz8"
+#
 #
 # Paired Attack Tags: Marker
 # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE

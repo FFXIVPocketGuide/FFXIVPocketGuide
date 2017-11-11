@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "[A1] Alexander: The Fist of the Father"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the 8 man raid Alexander: The First of the Father where you'll face off against Faust and Oppressor."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title:  "Alexander: The Fist of the Father"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the 8 man raid Alexander: The Fist of the Father (Normal) where you'll face off against Faust and Oppressor."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/raids/alex_1.jpg"
     - urlSmall: "/assets/img/raids/small/alex_1.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "A1"
+    - term: "Alexander: The Fist of the Father"
+    - term: "Faust"
+    - term: "Oppressor"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 3.0
 patchName: "Heavensward"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 60
+#
+# Item Level
 ilvl: 170
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 60170
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "raid"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/JR2anBXKVes"
+#
 bosses:
   - title: "Faust"
     id: "boss01"

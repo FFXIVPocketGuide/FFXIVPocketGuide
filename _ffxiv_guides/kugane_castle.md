@@ -1,19 +1,54 @@
 ---
+#
+# Page Layout (Leave As Is)
 layout: guide_post
-title:  "Kugane Castle"
-date:   2017-04-09 18:00:14 -0300
-description: "Read our Guide on the dungeon Kugane Castle where you'll face off against Zuiko-maru, Dojun-maru, and Yojimbo."
+#
+# Duty Metadata ================================================================
+#
+# Guide Title
+title: "Kugane Castle"
+#
+# Guide Description (Shows Up in Google Search)
+description: "Read our Guide on the dungeon Kugane Castle (Normal) where you'll face off against Zuiko-maru, Dojun-maru, and Yojimbo."
+#
+# Primary Image (1500px Wide) & Thumbnail (300px Wide)
 image:
     - url: "/assets/img/dungeons/kugane_castle.jpg"
     - urlSmall: "/assets/img/dungeons/small/kugane_castle.jpg"
+#
+# Search Terms (Include Nicknames, Name, Bosses, Difficulty)
+terms:
+    - term: "Kugane Castle"
+    - term: "Zuiko-maru"
+    - term: "Dojun-maru"
+    - term: "Yojimbo"
+    - term: "Normal"
+#
+# Patch Information (Number & Name)
 patchNumber: 4.0
 patchName: "Stormblood"
+#
+# Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
+#
+# Player Level
 plvl: 70
-ilvl: 0
+#
+# Item Level
+ilvl: 000
+#
+# Order (Combine plvl & ilvl - 70310)
 order: 70003
+#
+# Orchestrion Roll
+orchestrion: "TBD"
+#
+# Instance Type
 instanceType: "dungeon"
+#
+# MTQ Capture Video Link
 mtqvid: "https://youtu.be/iW0d0r6R9pc"
+#
 bosses:
   - title: "Zuiko-maru"
     id: "boss01"
