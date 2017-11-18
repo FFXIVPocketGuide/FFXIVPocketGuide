@@ -50,6 +50,10 @@ instanceType: "raid"
 # MTQ Capture Video Link
 mtqvid: "https://youtu.be/Zi99W7ejtz8"
 #
+# Partner Links
+partners:
+    - partner-title: "Best in Slot"
+      partner-link: "https://www.bestinslot.co/ffxiv-the-royal-city-of-rabanastre-guide/"
 #
 # Paired Attack Tags: Marker
 # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
@@ -187,7 +191,7 @@ bosses:
           - title: ""
             notes:
               - note: ""
-  - title: "Rayman"
+  - title: "Argath Thadalfus"
     # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
     id: "boss04"
     # Use "reg", "combo", "vari" to tab attack snippets in.

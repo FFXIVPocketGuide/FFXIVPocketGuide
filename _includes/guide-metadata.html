@@ -20,7 +20,19 @@
         {% endif %}
 
         {% if page.patchNumber %}
-            <h5 class="guide-metadata__subtitle">Patch: <span>{{ page.patchNumber }} - {{ page.patchName }}</span></h5>
+            <h5 class="guide-metadata__subtitle">Patch {{ page.patchNumber }}:<span>{{ page.patchName }}</span></h5>
+        {% endif %}
+
+        {% if page.partners %}
+            <h5 class="guide-metadata__subtitle">Partners:
+            {% for partner in page.partners %}
+                <span><a href="{{ partner.partner-link }}" title="Go view {{ partner.partner-title }}'s Guide" target="_blank">{{ partner.partner-title }}</a></span>
+            {% endfor %}
+            </h5>
+        {% endif %}
+
+        {% if page.orchestrion %}
+            <h5 class="guide-metadata__subtitle">Orchestrion:<span>{{ page.orchestrion }}</span></h5>
         {% endif %}
 
     </div>

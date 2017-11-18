@@ -77,6 +77,15 @@
         display: block;
         font-weight: 400;
         margin: calc($unit / 2) 0 0 0;
+
+        a {
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+        }
+
     }
 
 }

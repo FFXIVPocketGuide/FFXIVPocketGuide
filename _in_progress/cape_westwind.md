@@ -6,42 +6,43 @@ layout: guide_post
 # Duty Metadata ================================================================
 #
 # Guide Title
-title: "Guide Name"
+title: "Cape Westwind"
 #
 # Guide Description (Shows Up in Google Search)
-description: "Read our Guide on the dungeon NAME (DIFFICULTY) where you'll face off against Boss 01, Boss 02, and Boss 03."
+description: "Read our Guide on the trial Cape Westwind (Normal) where you'll face off against Rihtahtyn sas Arvina."
 #
 # Primary Image (1500px Wide) & Thumbnail (500px Wide)
 image:
-    - url: "/assets/img/dungeons/asset.jpg"
-    - urlSmall: "/assets/img/dungeons/small/asset.jpg"
+    - url: "/assets/img/trials/cape_westwind.jpg"
+    - urlSmall: "/assets/img/trials/small/cape_westwind.jpg"
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
-    - term: "Search Term"
-    - term: "Search Term"
+    - term: "Cape Westwind"
+    - term: "Rihtahtyn sas Arvina"
+    - term: "Normal"
 #
 # Patch Information (Number & Name)
-patchNumber: 0.0
-patchName: "Sample Name"
+patchNumber: 2.0
+patchName: "A Realm Reborn"
 #
 # Difficulty (Normal, Hard, Extreme, Savage, Ultimate)
 difficulty: "Normal"
 #
 # Player Level
-plvl: 00
+plvl: 49
 #
 # Item Level
 ilvl: 000
 #
 # Order (Combine plvl & ilvl - 70310)
-order: 00000
+order: 49000
 #
 # Orchestrion Roll
 orchestrion: "TBD"
 #
 # Instance Type
-instanceType: "dungeon/trial/raid"
+instanceType: "trial"
 #
 # MTQ Capture Video Link
 mtqvid: "YouTube URL"
