@@ -39,7 +39,7 @@ ilvl: 000
 order: 53000
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "The Hand that Gives the Rose & Unbending Steel"
 #
 # Instance Type
 instanceType: "trial"

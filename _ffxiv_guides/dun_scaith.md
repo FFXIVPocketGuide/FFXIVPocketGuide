@@ -44,7 +44,7 @@ ilvl: 235
 order: 60235
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Promises & Shadow of the Body"
 #
 # Instance Type
 instanceType: "raid"

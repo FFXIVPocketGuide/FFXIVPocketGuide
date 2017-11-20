@@ -42,7 +42,7 @@ ilvl: 210
 order: 60210
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Bibliophobia"
 #
 # Instance Type
 instanceType: "dungeon"

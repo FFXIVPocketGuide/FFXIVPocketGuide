@@ -41,7 +41,7 @@ ilvl: 230
 order: 60230
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Another Brick"
 #
 # Instance Type
 instanceType: "dungeon"

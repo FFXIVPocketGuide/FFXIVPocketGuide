@@ -41,7 +41,7 @@ ilvl: 210
 order: 60210
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Grounded"
 #
 # Instance Type
 instanceType: "dungeon"

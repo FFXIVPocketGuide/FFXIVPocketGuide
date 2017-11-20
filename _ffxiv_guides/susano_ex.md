@@ -39,7 +39,7 @@ ilvl: 300
 order: 70300
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Revelation"
 #
 # Instance Type
 instanceType: "trial"

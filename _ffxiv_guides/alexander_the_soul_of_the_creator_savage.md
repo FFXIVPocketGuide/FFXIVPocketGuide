@@ -40,7 +40,7 @@ ilvl: 245
 order: 60245
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Moebius & Rise"
 #
 # Instance Type
 instanceType: "raid"

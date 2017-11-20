@@ -39,7 +39,7 @@ ilvl: 065
 order: 50065
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Fallen Angel"
 #
 # Instance Type
 instanceType: "trial"

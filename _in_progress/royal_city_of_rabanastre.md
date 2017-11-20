@@ -18,6 +18,9 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Return to Ivalice"
+    - term: "Final Fantasy Tactics"
+    - term: "War of the Lions"
     - term: "The Royal City of Rabanastre"
     - term: "Mateus the Corrupt"
     - term: "Hashmal, Bringer of Order"
@@ -55,72 +58,48 @@ partners:
     - partner-title: "Best in Slot"
       partner-link: "https://www.bestinslot.co/ffxiv-the-royal-city-of-rabanastre-guide/"
 #
-# Paired Attack Tags: Marker
-# AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
-# Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
-# Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
-#
-mechanics:
-  - title: ""
-    steps:
-      - step: 01
-        notes:
-          - note: ""
+# Multiple Bosses ==============================================================
 bosses:
+  # Boss Name ==================================================================
   - title: "Mateus the Corrupt"
-    # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
+    # Boss ID (Used in Sidebar Menu)
     id: "boss01"
-    # Use "reg", "combo", "vari" to tab attack snippets in.
-    attacks:
-      - title: "Ice Azers"
-        phases:
-          - phase: 01
-        roles:
-          - role: "Everyone"
-        tags:
-          - tag: "Spawn"
-          - tag: "Point Blank AoE"
-        notes:
-          - note: "These adds should be destroyed as soon as possible - melee DPS and tanks should be wary that they explode with a point blank AoE upon death."
-      - title: "Unbind & Rebind"
-        phases:
-          - phase: 01
-        # These notes should be used to describe specific steps required to handle the combo as a whole.
-        notes:
-          - note: ""
-        combo:
-          - title: ""
-            roles:
-              - role: ""
-            tags:
-              - tag: ""
-            notes:
-              - note: ""
+    # Fight Sequence
     sequence:
+      # Fight Phase
       - phase: 01
+        # Attack Script
         attacks:
           - attack: "Ice Azers"
           - attack: "Unbind & Rebind"
           - attack: "Dualcast & Blizzard IV"
+        # Alerts
         alerts:
           - alert: ""
+        # Phase Mechanics (Include Duty Gauges)
         mechanics:
           - title: ""
             notes:
               - note: ""
+      # Fight Phase
       - phase: 02
+        # Attack Script
         attacks:
           - attack: "Breathless"
           - attack: "Flume Toads"
           - attack: "Ice Shards"
           - attack: "Flume Toads"
+        # Alerts
         alerts:
           - alert: ""
+        # Phase Mechanics (Include Duty Gauges)
         mechanics:
           - title: ""
             notes:
               - note: ""
+      # Fight Phase
       - phase: 03
+        # Attack Script
         attacks:
           - attack: "Blizzard Spheres"
           - attack: "Azure Guards"
@@ -129,96 +108,197 @@ bosses:
           - attack: "Unbind & Rebind"
           - attack: "Dualcast & Blizzard IV"
           - attack: "Puddle AoEs"
+        # Alerts
         alerts:
           - alert: ""
+        # Phase Mechanics (Include Duty Gauges)
         mechanics:
           - title: ""
             notes:
               - note: ""
+    #
+    # Boss Attacks
+    #
+    # Paired Attack Tags: Marker
+    # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
+    # Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
+    # Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
+    #
+    # Use "attk-reg", "attk-combo", "attk-vari" to insert Attack Snippets.
+    attacks:
+      # Regular Attack *********************************************************
+      - title: "Ice Azer"
+        phases:
+          - phase: 01
+        roles:
+          - role: "Everyone"
+        tags:
+          - tag: "Spawn"
+          - tag: "Point Blank AoE"
+        notes:
+          - note: "These adds explode for a medium point blank AoE upon their death - kill them as soon as possible and dodge as necessary."
+      # Combination Attack *****************************************************
+      - title: "Bind & Unbind"
+        phases:
+          - phase: 01
+        # Notes (Tactics For This Mechanic)
+        notes:
+          - note: ""
+        combo:
+          - title: ""
+            roles:
+              - role: ""
+            # Duty Action (Include When Necessary)
+            dutyActions:
+              - action: ""
+            tags:
+              - tag: ""
+            notes:
+              - note: ""
+            images:
+              - url: "/assets/img/image-path.png"
+                alt: "Image Description"
+  # Boss Name ==================================================================
   - title: "Hashmal, Bringer of Order"
-    # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
+    # Boss ID (Used in Sidebar Menu)
     id: "boss02"
-    # Use "reg", "combo", "vari" to tab attack snippets in.
+    # Fight Sequence
+    sequence:
+      # Fight Phase
+      - phase: 01
+        # Attack Script
+        attacks:
+          - attack: ""
+            # Duty Action (Include When Necessary)
+            dutyActions:
+        # Alerts
+        alerts:
+          - alert: ""
+        # Phase Mechanics (Include Duty Gauges)
+        mechanics:
+          - title: ""
+            notes:
+              - note: ""
+    #
+    # Boss Attacks
+    #
+    # Paired Attack Tags: Marker
+    # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
+    # Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
+    # Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
+    #
+    # Use "attk-reg", "attk-combo", "attk-vari" to insert Attack Snippets.
     attacks:
+      # Regular Attack *********************************************************
       - title: "Attack Name"
         phases:
           - phase: 01
         roles:
           - role: ""
+        # Duty Action (Include When Necessary)
         dutyActions:
           - action: ""
         tags:
           - tag: ""
         notes:
           - note: ""
-    sequence:
-      - phase: 01
-        attacks:
-          - attack: ""
-            # Include dutyActions: true only if the attack requires the use of a Duty Action.
-            dutyActions: true
-        alerts:
-          - alert: ""
-        mechanics:
-          - title: ""
-            notes:
-              - note: ""
+        images:
+          - url: "/assets/img/image-path.png"
+            alt: "Image Description"
+  # Boss Name ==================================================================
   - title: "Rofocale"
-    # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
+    # Boss ID (Used in Sidebar Menu)
     id: "boss03"
-    # Use "reg", "combo", "vari" to tab attack snippets in.
+    # Fight Sequence
+    sequence:
+      # Fight Phase
+      - phase: 01
+        # Attack Script
+        attacks:
+          - attack: ""
+            # Duty Action (Include When Necessary)
+            dutyActions:
+        # Alerts
+        alerts:
+          - alert: ""
+        # Phase Mechanics (Include Duty Gauges)
+        mechanics:
+          - title: ""
+            notes:
+              - note: ""
+    #
+    # Boss Attacks
+    #
+    # Paired Attack Tags: Marker
+    # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
+    # Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
+    # Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
+    #
+    # Use "attk-reg", "attk-combo", "attk-vari" to insert Attack Snippets.
     attacks:
+      # Regular Attack *********************************************************
       - title: "Attack Name"
         phases:
           - phase: 01
         roles:
           - role: ""
+        # Duty Action (Include When Necessary)
         dutyActions:
           - action: ""
         tags:
           - tag: ""
         notes:
           - note: ""
-    sequence:
-      - phase: 01
-        attacks:
-          - attack: ""
-            # Include dutyActions: true only if the attack requires the use of a Duty Action.
-            dutyActions: true
-        alerts:
-          - alert: ""
-        mechanics:
-          - title: ""
-            notes:
-              - note: ""
+        images:
+          - url: "/assets/img/image-path.png"
+            alt: "Image Description"
+  # Boss Name ==================================================================
   - title: "Argath Thadalfus"
-    # Boss ID is required for sidebar menu linking purposes (e.g. boss01, boss02, boss03, etc.).
+    # Boss ID (Used in Sidebar Menu)
     id: "boss04"
-    # Use "reg", "combo", "vari" to tab attack snippets in.
+    # Fight Sequence
+    sequence:
+      # Fight Phase
+      - phase: 01
+        # Attack Script
+        attacks:
+          - attack: ""
+            # Duty Action (Include When Necessary)
+            dutyActions:
+        # Alerts
+        alerts:
+          - alert: ""
+        # Phase Mechanics (Include Duty Gauges)
+        mechanics:
+          - title: ""
+            notes:
+              - note: ""
+    #
+    # Boss Attacks
+    #
+    # Paired Attack Tags: Marker
+    # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
+    # Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
+    # Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
+    #
+    # Use "attk-reg", "attk-combo", "attk-vari" to insert Attack Snippets.
     attacks:
+      # Regular Attack *********************************************************
       - title: "Attack Name"
         phases:
           - phase: 01
         roles:
           - role: ""
+        # Duty Action (Include When Necessary)
         dutyActions:
           - action: ""
         tags:
           - tag: ""
         notes:
           - note: ""
-    sequence:
-      - phase: 01
-        attacks:
-          - attack: ""
-            # Include dutyActions: true only if the attack requires the use of a Duty Action.
-            dutyActions: true
-        alerts:
-          - alert: ""
-        mechanics:
-          - title: ""
-            notes:
-              - note: ""
+        images:
+          - url: "/assets/img/image-path.png"
+            alt: "Image Description"
 ---
 
 ***

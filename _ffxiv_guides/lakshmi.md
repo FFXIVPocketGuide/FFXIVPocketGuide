@@ -39,7 +39,7 @@ ilvl: 000
 order: 67000
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Beauty's Wicked Wiles"
 #
 # Instance Type
 instanceType: "trial"

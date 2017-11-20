@@ -39,7 +39,7 @@ ilvl: 000
 order: 20000
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Primal Judgement"
 #
 # Instance Type
 instanceType: "trial"

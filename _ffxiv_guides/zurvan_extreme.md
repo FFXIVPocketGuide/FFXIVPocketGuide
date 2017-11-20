@@ -40,7 +40,7 @@ ilvl: 250
 order: 60250
 #
 # Orchestrion Roll
-orchestrion: "TBD"
+orchestrion: "Infinity"
 #
 # Instance Type
 instanceType: "trial"
