@@ -81,7 +81,7 @@ bosses:
     # Boss Attacks
     #
     # Paired Attack Tags: Marker
-    # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
+    # AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE, Cross AoE, Figure 8 AoE
     # Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
     # Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
     #
@@ -130,7 +130,7 @@ sequence:
 # Boss Attacks
 #
 # Paired Attack Tags: Marker
-# AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE
+# AoE Attack Tags: Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE, Cross AoE, Figure 8 AoE
 # Other Attack Tags: Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun
 # Unique Attack Tags: Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver
 #
