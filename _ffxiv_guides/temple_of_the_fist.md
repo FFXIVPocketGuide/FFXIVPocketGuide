@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "Temple of the Fist"
     - term: "Sruti & Smriti"
     - term: "Arbuda"

@@ -18,8 +18,10 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "The Minstrel's Ballad: Shinryu's Domain"
     - term: "Minstral's"
+    - term: "Royal Menagerie"
     - term: "Extreme"
 #
 # Patch Information (Number & Name)

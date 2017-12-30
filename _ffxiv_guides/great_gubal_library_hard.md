@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Heavensward"
     - term: "The Great Gubal Library"
     - term: "Demon of the Tome"
     - term: "Living Flame"

@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "Susano"
     - term: "The Pool of Tribute"
     - term: "Extreme"

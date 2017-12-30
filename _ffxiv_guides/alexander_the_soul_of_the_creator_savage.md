@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Heavensward"
     - term: "A12S"
     - term: "Alexander: The Soul of the Creator"
     - term: "Alexander Prime"

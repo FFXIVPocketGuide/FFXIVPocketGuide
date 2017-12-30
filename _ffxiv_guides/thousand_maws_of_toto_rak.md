@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "A Realm Reborn"
     - term: "The Thousand Maws of Toto-Rak"
     - term: "Coeurl O'Nine Tails"
     - term: "Graffias"

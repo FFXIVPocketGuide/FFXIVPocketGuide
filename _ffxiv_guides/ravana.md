@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Heavensward"
     - term: "Ravana"
     - term: "Thok ast Thok"
     - term: "Hard"

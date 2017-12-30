@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "Kugane Castle"
     - term: "Zuiko-maru"
     - term: "Dojun-maru"

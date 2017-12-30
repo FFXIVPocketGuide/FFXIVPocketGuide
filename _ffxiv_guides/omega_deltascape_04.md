@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "O4"
     - term: "V4"
     - term: "Omega: Deltascape V4.0"

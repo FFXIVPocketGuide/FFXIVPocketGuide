@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "A Realm Reborn"
     - term: "The Tam-Tara Deepcroft"
     - term: "Void Soulcounters"
     - term: "Galvanth the Dominator"

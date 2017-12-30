@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Heavensward"
     - term: "Zurvan"
     - term: "Containment Bay Z1T9"
     - term: "Warring Triad"

@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "O3S"
     - term: "V3S"
     - term: "Omega: Deltascape V3.0"

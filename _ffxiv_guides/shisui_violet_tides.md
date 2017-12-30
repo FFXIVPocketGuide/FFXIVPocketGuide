@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "Shisui of the Violet Tides"
     - term: "Amikiri"
     - term: "Ruby Princess"

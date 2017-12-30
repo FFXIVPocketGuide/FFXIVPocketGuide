@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Heavensward"
     - term: "A1"
     - term: "Alexander: The Fist of the Father"
     - term: "Faust"

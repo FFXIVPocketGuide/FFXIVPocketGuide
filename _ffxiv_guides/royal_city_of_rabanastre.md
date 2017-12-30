@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "Return to Ivalice"
     - term: "Final Fantasy Tactics"
     - term: "War of the Lions"

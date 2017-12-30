@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Heavensward"
     - term: "Baelsar's Wall"
     - term: "Magitek Predator"
     - term: "Armored Weapon"

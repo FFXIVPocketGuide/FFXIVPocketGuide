@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "The Drowned City of Skalla"
     - term: "Kelpie"
     - term: "The Old One"

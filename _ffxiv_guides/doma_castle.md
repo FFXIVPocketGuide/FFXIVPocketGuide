@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Stormblood"
     - term: "Doma Castle"
     - term: "Magitek Rearguard"
     - term: "Magitek Hexadrone"

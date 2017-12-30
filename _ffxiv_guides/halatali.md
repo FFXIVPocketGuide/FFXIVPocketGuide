@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "A Realm Reborn"
     - term: "Halatali"
     - term: "Firemane"
     - term: "Thunderclap Guivre"

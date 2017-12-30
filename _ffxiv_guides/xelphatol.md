@@ -18,6 +18,7 @@ image:
 #
 # Search Terms (Include Nicknames, Name, Bosses, Difficulty)
 terms:
+    - term: "Heavensward"
     - term: "Xelphatol"
     - term: "Nuzal Hueloc"
     - term: "Dotoli Ciloc"
