@@ -31,7 +31,7 @@
 .error__content-wrapper {
     margin: 0 auto;
     max-width: 35rem;
-    padding: 8rem 0;
+    padding: 5rem 0;
     position: relative;
     text-align: center;
     width: 90%;
@@ -73,6 +73,24 @@
 
     &:last-of-type {
         margin-bottom: 0;
+    }
+
+    a {
+        color: white !important;
+        transition: color .2s ease;
+    }
+
+}
+
+.no-touchevents {
+
+    .error__notice-copy {
+
+        a:hover {
+            color: $palette-red !important;
+            transition: color .2s ease;
+        }
+
     }
 
 }
