@@ -8,7 +8,7 @@
 
 <div class="index-grid">
 
-    {% assign sorted = site.in_progress | sort:"order" %}
+    {% assign sorted = site.coming | sort:"order" %}
 
     {% for guide in sorted reversed %}
 
@@ -16,9 +16,43 @@
 
             {% if guide.patchNumber < 5.0 %}
 
-                {% assign counter = counter | plus: 1 %}
+                {% if page.pageClass == "home" %}
 
-                {% include index-temp.html %}
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-temp.html %}
+
+                {% elsif page.pageClass == "dungeons" %}
+
+                    {% if guide.instanceType == "dungeon" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% elsif page.pageClass == "trials" %}
+
+                    {% if guide.instanceType == "trial" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% elsif page.pageClass == "raids" %}
+
+                    {% if guide.instanceType == "raid" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% endif %}
 
             {% endif %}
 
@@ -28,9 +62,43 @@
 
             {% if guide.patchNumber < 4.0 %}
 
-                {% assign counter = counter | plus: 1 %}
+                {% if page.pageClass == "home" %}
 
-                {% include index-temp.html %}
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-temp.html %}
+
+                {% elsif page.pageClass == "dungeons" %}
+
+                    {% if guide.instanceType == "dungeon" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% elsif page.pageClass == "trials" %}
+
+                    {% if guide.instanceType == "trial" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% elsif page.pageClass == "raids" %}
+
+                    {% if guide.instanceType == "raid" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% endif %}
 
             {% endif %}
 
@@ -40,9 +108,43 @@
 
             {% if guide.patchNumber < 3.0 %}
 
-                {% assign counter = counter | plus: 1 %}
+                {% if page.pageClass == "home" %}
 
-                {% include index-temp.html %}
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-temp.html %}
+
+                {% elsif page.pageClass == "dungeons" %}
+
+                    {% if guide.instanceType == "dungeon" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% elsif page.pageClass == "trials" %}
+
+                    {% if guide.instanceType == "trial" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% elsif page.pageClass == "raids" %}
+
+                    {% if guide.instanceType == "raid" %}
+
+                        {% assign counter = counter | plus: 1 %}
+
+                        {% include index-temp.html %}
+
+                    {% endif %}
+
+                {% endif %}
 
             {% endif %}
 
@@ -54,14 +156,40 @@
 
 <!-- Stormblood Guide Index ================================================ -->
 
-<!-- Check to see if there are Stormblood Guides - if not, don't include the opening markup. -->
 {% assign counter = 0 %}
-{% for guide in site.ffxiv_guides %}
-    {% if guide.patchNumber >= 4.0 %}
-        {% if guide.patchNumber < 5.0 %}
+
+{% for guide in site.categories.sb %}
+
+    {% if page.pageClass == "home" %}
+
+        {% assign counter = counter | plus: 1 %}
+
+    {% elsif page.pageClass == "dungeons" %}
+
+        {% if guide.instanceType == "dungeon" %}
+
             {% assign counter = counter | plus: 1 %}
+
         {% endif %}
+
+    {% elsif page.pageClass == "trials" %}
+
+        {% if guide.instanceType == "trial" %}
+
+            {% assign counter = counter | plus: 1 %}
+
+        {% endif %}
+
+    {% elsif page.pageClass == "raids" %}
+
+        {% if guide.instanceType == "raid" %}
+
+            {% assign counter = counter | plus: 1 %}
+
+        {% endif %}
+
     {% endif %}
+
 {% endfor %}
 
 {% if counter > 0 %}
@@ -73,18 +201,42 @@
     </div>
 
     <div class="index-grid" data-expansion="sb">
+
 {% endif %}
 
-        <!-- Display Stormblood Guides -->
-        {% assign counter = 0 %}
-
-        {% assign sorted = site.ffxiv_guides | sort:"order" %}
+        {% assign sorted = site.categories.sb | sort:"order" %}
 
         {% for guide in sorted reversed %}
 
-            {% if guide.patchNumber >= 4.0 %}
+            {% if page.pageClass == "home" %}
 
-                {% if guide.patchNumber < 5.0 %}
+                {% assign counter = counter | plus: 1 %}
+
+                {% include index-item.html %}
+
+            {% elsif page.pageClass == "dungeons" %}
+
+                {% if guide.instanceType == "dungeon" %}
+
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-item.html %}
+
+                {% endif %}
+
+            {% elsif page.pageClass == "trials" %}
+
+                {% if guide.instanceType == "trial" %}
+
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-item.html %}
+
+                {% endif %}
+
+            {% elsif page.pageClass == "raids" %}
+
+                {% if guide.instanceType == "raid" %}
 
                     {% assign counter = counter | plus: 1 %}
 
@@ -96,30 +248,46 @@
 
         {% endfor %}
 
-<!-- Check to see if there are Stormblood Guides - if not, don't include the closing div. -->
-{% assign counter = 0 %}
-{% for guide in site.ffxiv_guides %}
-    {% if guide.patchNumber >= 4.0 %}
-        {% if guide.patchNumber < 5.0 %}
-            {% assign counter = counter | plus: 1 %}
-        {% endif %}
-    {% endif %}
-{% endfor %}
-
 {% if counter > 0 %}
     </div>
 {% endif %}
 
 <!-- Heavensward Guide Index =============================================== -->
 
-<!-- Check to see if there are A Realm Reborn Guides - if not, don't include the opening markup. -->
 {% assign counter = 0 %}
-{% for guide in site.ffxiv_guides %}
-    {% if guide.patchNumber >= 3.0 %}
-        {% if guide.patchNumber < 4.0 %}
+
+{% for guide in site.categories.hw %}
+
+    {% if page.pageClass == "home" %}
+
+        {% assign counter = counter | plus: 1 %}
+
+    {% elsif page.pageClass == "dungeons" %}
+
+        {% if guide.instanceType == "dungeon" %}
+
             {% assign counter = counter | plus: 1 %}
+
         {% endif %}
+
+    {% elsif page.pageClass == "trials" %}
+
+        {% if guide.instanceType == "trial" %}
+
+            {% assign counter = counter | plus: 1 %}
+
+        {% endif %}
+
+    {% elsif page.pageClass == "raids" %}
+
+        {% if guide.instanceType == "raid" %}
+
+            {% assign counter = counter | plus: 1 %}
+
+        {% endif %}
+
     {% endif %}
+
 {% endfor %}
 
 {% if counter > 0 %}
@@ -131,17 +299,42 @@
     </div>
 
     <div class="index-grid" data-expansion="hw">
+
 {% endif %}
 
-        {% assign counter = 0 %}
-
-        {% assign sorted = site.ffxiv_guides | sort:"order" %}
+        {% assign sorted = site.categories.hw | sort:"order" %}
 
         {% for guide in sorted reversed %}
 
-            {% if guide.patchNumber >= 3.0 %}
+            {% if page.pageClass == "home" %}
 
-                {% if guide.patchNumber < 4.0 %}
+                {% assign counter = counter | plus: 1 %}
+
+                {% include index-item.html %}
+
+            {% elsif page.pageClass == "dungeons" %}
+
+                {% if guide.instanceType == "dungeon" %}
+
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-item.html %}
+
+                {% endif %}
+
+            {% elsif page.pageClass == "trials" %}
+
+                {% if guide.instanceType == "trial" %}
+
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-item.html %}
+
+                {% endif %}
+
+            {% elsif page.pageClass == "raids" %}
+
+                {% if guide.instanceType == "raid" %}
 
                     {% assign counter = counter | plus: 1 %}
 
@@ -153,30 +346,46 @@
 
         {% endfor %}
 
-<!-- Check to see if there are Heavensward Guides - if not, don't include the closing div. -->
-{% assign counter = 0 %}
-{% for guide in site.ffxiv_guides %}
-    {% if guide.patchNumber >= 3.0 %}
-        {% if guide.patchNumber < 4.0 %}
-            {% assign counter = counter | plus: 1 %}
-        {% endif %}
-    {% endif %}
-{% endfor %}
-
 {% if counter > 0 %}
     </div>
 {% endif %}
 
 <!-- A Realm Reborn Guide Index ============================================ -->
 
-<!-- Check to see if there are A Realm Reborn Guides - if not, don't include the opening markup. -->
 {% assign counter = 0 %}
-{% for guide in site.ffxiv_guides %}
-    {% if guide.patchNumber >= 2.0 %}
-        {% if guide.patchNumber < 3.0 %}
+
+{% for guide in site.categories.arr %}
+
+    {% if page.pageClass == "home" %}
+
+        {% assign counter = counter | plus: 1 %}
+
+    {% elsif page.pageClass == "dungeons" %}
+
+        {% if guide.instanceType == "dungeon" %}
+
             {% assign counter = counter | plus: 1 %}
+
         {% endif %}
+
+    {% elsif page.pageClass == "trials" %}
+
+        {% if guide.instanceType == "trial" %}
+
+            {% assign counter = counter | plus: 1 %}
+
+        {% endif %}
+
+    {% elsif page.pageClass == "raids" %}
+
+        {% if guide.instanceType == "raid" %}
+
+            {% assign counter = counter | plus: 1 %}
+
+        {% endif %}
+
     {% endif %}
+
 {% endfor %}
 
 {% if counter > 0 %}
@@ -188,17 +397,42 @@
     </div>
 
     <div class="index-grid" data-expansion="arr">
+
 {% endif %}
 
-        {% assign counter = 0 %}
-
-        {% assign sorted = site.ffxiv_guides | sort:"order" %}
+        {% assign sorted = site.categories.arr | sort:"order" %}
 
         {% for guide in sorted reversed %}
 
-            {% if guide.patchNumber >= 2.0 %}
+            {% if page.pageClass == "home" %}
 
-                {% if guide.patchNumber < 3.0 %}
+                {% assign counter = counter | plus: 1 %}
+
+                {% include index-item.html %}
+
+            {% elsif page.pageClass == "dungeons" %}
+
+                {% if guide.instanceType == "dungeon" %}
+
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-item.html %}
+
+                {% endif %}
+
+            {% elsif page.pageClass == "trials" %}
+
+                {% if guide.instanceType == "trial" %}
+
+                    {% assign counter = counter | plus: 1 %}
+
+                    {% include index-item.html %}
+
+                {% endif %}
+
+            {% elsif page.pageClass == "raids" %}
+
+                {% if guide.instanceType == "raid" %}
 
                     {% assign counter = counter | plus: 1 %}
 
@@ -209,16 +443,6 @@
             {% endif %}
 
         {% endfor %}
-
-<!-- Check to see if there are A Realm Reborn Guides - if not, don't include the closing div. -->
-{% assign counter = 0 %}
-{% for guide in site.ffxiv_guides %}
-    {% if guide.patchNumber >= 2.0 %}
-        {% if guide.patchNumber < 3.0 %}
-            {% assign counter = counter | plus: 1 %}
-        {% endif %}
-    {% endif %}
-{% endfor %}
 
 {% if counter > 0 %}
     </div>

@@ -27,39 +27,24 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
-        <div class="site-grid">
+        <section class="section--error" style="background-image: url('{{ "/assets/img/guide_error.jpg" | prepend: site.baseurl }}');">
 
-            <button class="sidebar__trigger">
-                <span class="sidebar__trigger-inactive"><i class="material-icons">explore</i>Menu</span>
-                <span class="sidebar__trigger-active"><i class="material-icons">close</i>Close</span>
-            </button>
+            <div class="error__content-wrapper">
 
-            <div class="site-grid__sidebar-overlay"></div>
-
-            <div class="site-grid__sidebar" style="background-image: url('{{ "/assets/img/guide_index.jpg" | prepend: site.baseurl }}');">
-                {% include sidebar.html %}
-            </div>
-
-            <div class="site-grid__content-wrapper">
-
-                <!-- Include Site Header -->
-                {% include site-header.html %}
-
-                <!-- Include Guide Indecies -->
-                <div class="site-index">
-
-                    {% include guide-index.html %}
-
-                    <!-- Include Null State -->
-                    {% include guide-index-null-state.html %}
-                    
+                <h1 class="error__title heading--01">404</h1>
+                <h3 class="error__subtitle heading--03">Uh oh! The Sylphs stole the page you were looking for!</h3>
+                <div class="error__notice">
+                    <h5 class="error__notice-title heading--05">Please Note: permalinks for our guides have recently changed.</h5>
+                    <p class="error__notice-copy">If you arrived here through a bookmark, don't fear! Finding your guide on the homepage and updating your bookmark should resolve the issue.</p>
+                    <p class="error__notice-copy"><strong>We apologize for any inconvenience or confusion.</strong></p>
+                </div>
+                <div class="error__button-wrapper">
+                    <a href="/" title="Return to the Pocket Guide homepage." class="error__button button--small--white">Return Home</a>
                 </div>
 
-                {% include footer.html %}
-
             </div>
 
-        </div>
+        </section>
 
         {% include scripts.html %}
 

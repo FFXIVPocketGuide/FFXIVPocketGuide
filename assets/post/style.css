@@ -91,3 +91,6 @@
 
     /* Microsoft Support */
     @import "components/microsoft.css";
+
+    /* Microsoft Support */
+    @import "components/error.css";

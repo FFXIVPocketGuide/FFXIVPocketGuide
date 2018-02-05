@@ -32,6 +32,7 @@ gems:
   - jekyll-sitemap
 include:
   - _pages
+permalink: /:categories/:slug
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -39,11 +40,7 @@ exclude:
   - assets/bower_components
   - assets_old/node_modules
   - assets_old/bower_components
-  - _ffxiv_guides/templates
-  - temp_guides
+  - templates
 collections:
-    ffxiv_guides:
-        output: true
-        permalink: /:title
-    in_progress:
+    coming:
         output: false
