@@ -44,6 +44,31 @@
 
 }
 
+.index-grid--recent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: calc($unit * 1.5);
+    grid-row-gap: calc($unit * 1.5);
+    padding: 0 calc($unit * 1.5) calc($unit * 3) calc($unit * 1.5);
+
+    @media $(p-tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media $(media-navigation) {
+        padding: 0 calc($unit * 3) calc($unit * 3) calc($unit * 3);
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        padding: 0 calc($unit * 5) calc($unit * 5) calc($unit * 5);
+    }
+
+    @media screen and (min-width: 80em) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
 .index-item {
     border-radius: 5px;
     overflow: hidden;

@@ -35,6 +35,7 @@
         font-family: $font-aktiv;
         font-size: $font-scale-small;
         font-weight: 400;
+        line-height: 1.6;
         margin: 0;
 
         a {
