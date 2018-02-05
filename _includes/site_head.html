@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ page.title }} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
+    <title>{{ page.title }} {% if page.difficulty %}({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
     <meta name="description" content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <!-- Google Tag Manager -->
