@@ -100,6 +100,7 @@
     text-align: center;
 
     a {
+        border-bottom: 1px solid $palette-white;
         color: $palette-white;
         display: block;
         font-family: $font-aktiv;
@@ -123,10 +124,15 @@
 }
 
 .sidebar__form {
-    padding: 0 calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5);
+    /* padding: 0 calc($unit * 1.5) calc($unit * 1.5) calc($unit * 1.5); */
+    padding: calc($unit * 2.5) calc($unit * 1.5) 0 ;
+
+    @media $(l-tablet) {
+        padding: calc($unit * 2.5) 0 0 ;
+    }
 
     label {
-        color: $palette-red;
+        color: $palette-black;
         display: block;
         font-family: $font-aktiv;
         font-size: $font-scale-small;
@@ -145,12 +151,13 @@
         line-height: 1.5;
         outline: none;
         padding: $unit;
-        transition: border-color .2s ease;
+        transition: all .2s ease;
         width: 100%;
 
         &:focus {
             border: 1px solid $palette-red;
-            transition: border-color .2s ease;
+            /* padding: calc($unit - 2px); */
+            transition: all .2s ease;
         }
 
     }
@@ -174,17 +181,52 @@
             font-family: $font-aktiv;
             font-size: $font-scale-regular;
             font-weight: 400;
-            padding: calc($unit * 1.5);
+            padding: calc($unit * 1);
             text-align: center;
             text-decoration: none;
-            transition: background .2s ease;
+            transition: all .2s ease;
             width: 100%;
 
             &.active {
-                background: $palette-menu-active;
+                /* background: $palette-menu-active; */
+                color: $palette-red;
+                font-weight: 700;
+                text-decoration: underline;
             }
 
         }
+
+        hr {
+            margin: 0;
+        }
+
+        &:first-of-type {
+
+            a {
+                padding-top: calc($unit * 4);
+            }
+
+        }
+
+        &:last-of-type {
+
+            a {
+                padding-bottom: calc($unit * 4);
+            }
+
+        }
+
+        /* &:nth-child(2) {
+            border-top: 1px solid rgba(255, 255, 255, .3);
+        }
+
+        &:nth-child(3) {
+            border-top: 1px solid rgba(255, 255, 255, .3);
+        } */
+
+        /* &:nth-child(5) {
+            border-bottom: 1px solid rgba(255, 255, 255, .3);
+        } */
 
     }
 
@@ -197,8 +239,11 @@
         dd {
 
             a:hover {
-                background: $palette-menu-active;
-                transition: background .2s ease;
+                /* background: $palette-menu-active; */
+                color: $palette-red;
+                /* font-weight: 700; */
+                /* text-decoration: underline; */
+                /* transform: scale(1.05); */
             }
 
         }

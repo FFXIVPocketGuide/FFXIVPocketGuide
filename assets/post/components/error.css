@@ -31,7 +31,7 @@
 .error__content-wrapper {
     margin: 0 auto;
     max-width: 35rem;
-    padding: 5rem 0;
+    padding: calc($unit * 4) 0;
     position: relative;
     text-align: center;
     width: 90%;

@@ -3,102 +3,111 @@
 
 <div class="guide-metadata">
 
-    <div class="guide-metadata__wrapper">
+    <a href="{{ page.mtqvid }}" title="Visit the video guide for this duty." target="_blank" class="mtqLinkGuide guide-metadata__video-link">
+        MTQcapture's Video Guide
+        <!-- <div class="guide-metadata__new">New!</div> -->
+    </a>
 
-        {% if page.difficulty %}
-            <span class="guide-metadata__difficulty--{% if page.difficulty == 'Normal' %}normal{% elsif page.difficulty == 'Hard' or page.difficulty == 'Savage' %}hard{% elsif page.difficulty == 'Extreme' %}extreme{% endif %}">
-                {{ page.difficulty }}
-            </span>
-        {% endif %}
+    <div class="guide-metadata__grid">
 
-        <h5 class="guide-metadata__subtitle">Player Level: <span>{{ page.plvl }}</span></h5>
+        <div class="guide-metadata__wrapper">
 
-        {% if page.ilvl > 0 %}
-            <h5 class="guide-metadata__subtitle">Item Level: <span>{{ page.ilvl }}</span></h5>
-        {% else %}
-            <h5 class="guide-metadata__subtitle">Item Level: <span>N/A</span></h5>
-        {% endif %}
+            {% if page.difficulty %}
+                <span class="guide-metadata__difficulty--{% if page.difficulty == 'Normal' %}normal{% elsif page.difficulty == 'Hard' or page.difficulty == 'Savage' %}hard{% elsif page.difficulty == 'Extreme' %}extreme{% endif %}">
+                    {{ page.difficulty }}
+                </span>
+            {% endif %}
 
-        {% if page.patchNumber %}
-            <h5 class="guide-metadata__subtitle">Patch {{ page.patchNumber }}:<span>{{ page.patchName }}</span></h5>
-        {% endif %}
+            <h5 class="guide-metadata__subtitle">Player Level: <span>{{ page.plvl }}</span></h5>
 
-        {% if page.partners %}
-            <h5 class="guide-metadata__subtitle">Partners:
-            {% for partner in page.partners %}
-                <span><a href="{{ partner.partner-link }}" title="Go view {{ partner.partner-title }}'s Guide" target="_blank">{{ partner.partner-title }}</a></span>
-            {% endfor %}
-            </h5>
-        {% endif %}
+            {% if page.ilvl > 0 %}
+                <h5 class="guide-metadata__subtitle">Item Level: <span>{{ page.ilvl }}</span></h5>
+            {% else %}
+                <h5 class="guide-metadata__subtitle">Item Level: <span>N/A</span></h5>
+            {% endif %}
 
-        {% if page.orchestrion %}
-            <h5 class="guide-metadata__subtitle">Orchestrion Roll:<span>{{ page.orchestrion }}</span></h5>
-        {% endif %}
+            {% if page.patchNumber %}
+                <h5 class="guide-metadata__subtitle">Patch {{ page.patchNumber }}:<span>{{ page.patchName }}</span></h5>
+            {% endif %}
+
+            {% if page.partners %}
+                <h5 class="guide-metadata__subtitle">Partners:
+                {% for partner in page.partners %}
+                    <span><a href="{{ partner.partner-link }}" title="Go view {{ partner.partner-title }}'s Guide" target="_blank">{{ partner.partner-title }}</a></span>
+                {% endfor %}
+                </h5>
+            {% endif %}
+
+            {% if page.orchestrion %}
+                <h5 class="guide-metadata__subtitle">Orchestrion Roll:<span>{{ page.orchestrion }}</span></h5>
+            {% endif %}
+
+        </div>
+
+        <ul class="guide-metadata__menu">
+
+            <h5 class="guide-metadata__subtitle">In This Guide:</h5>
+
+            {% if page.mechanics %}
+
+                <li>
+                    <a href="#" data-id="guideNotes" title="Go to the Guide Notes" class="guide-metadata__menu-link">
+                        {% if page.instanceType == "dungeon" %}Dungeon Notes{% endif %}
+                        {% if page.instanceType == "raid" %}Raid Notes{% endif %}
+                    </a>
+                </li>
+
+            {% endif %}
+
+            {% if page.bosses %}
+
+                <li>
+
+                    <a href="#" data-id="guideBosses" title="Go to the Guide Bosses" class="guide-metadata__menu-link">
+                        {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
+                        {% if page.instanceType == "raid" %}Raid Bosses{% endif %}
+                    </a>
+
+                    <ul class="guide-metadata__submenu">
+
+                        {% for boss in page.bosses %}
+
+                            <li>
+                                <a href="#" data-id="{{ boss.id }}" title="Go to {{ boss.title }}" class="guide-metadata__menu-link">{{ boss.title }}</a>
+                            </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </li>
+
+            {% endif %}
+
+            {% if page.sequence %}
+
+                <li>
+
+                    <a href="#" data-id="guideSummary" title="Go to the Guide Summary" class="guide-metadata__menu-link">Fight Summary</a>
+
+                    <ul class="guide-metadata__submenu">
+
+                        {% for phase in page.sequence %}
+
+                            <li>
+                                <a href="#" data-id="phase{{ phase.phase }}" title="Go to {{ phase.phase }}" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
+                            </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </li>
+
+            {% endif %}
+
+        </ul>
 
     </div>
-
-    <ul class="guide-metadata__menu">
-
-        <h5 class="guide-metadata__subtitle">In This Guide:</h5>
-
-        {% if page.mechanics %}
-
-            <li>
-                <a href="#" data-id="guideNotes" title="Go to the Guide Notes" class="guide-metadata__menu-link">
-                    {% if page.instanceType == "dungeon" %}Dungeon Notes{% endif %}
-                    {% if page.instanceType == "raid" %}Raid Notes{% endif %}
-                </a>
-            </li>
-
-        {% endif %}
-
-        {% if page.bosses %}
-
-            <li>
-
-                <a href="#" data-id="guideBosses" title="Go to the Guide Bosses" class="guide-metadata__menu-link">
-                    {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
-                    {% if page.instanceType == "raid" %}Raid Bosses{% endif %}
-                </a>
-
-                <ul class="guide-metadata__submenu">
-
-                    {% for boss in page.bosses %}
-
-                        <li>
-                            <a href="#" data-id="{{ boss.id }}" title="Go to {{ boss.title }}" class="guide-metadata__menu-link">{{ boss.title }}</a>
-                        </li>
-
-                    {% endfor %}
-
-                </ul>
-
-            </li>
-
-        {% endif %}
-
-        {% if page.sequence %}
-
-            <li>
-
-                <a href="#" data-id="guideSummary" title="Go to the Guide Summary" class="guide-metadata__menu-link">Fight Summary</a>
-
-                <ul class="guide-metadata__submenu">
-
-                    {% for phase in page.sequence %}
-
-                        <li>
-                            <a href="#" data-id="phase{{ phase.phase }}" title="Go to {{ phase.phase }}" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
-                        </li>
-
-                    {% endfor %}
-
-                </ul>
-
-            </li>
-
-        {% endif %}
-
-    </ul>
 
 </div>

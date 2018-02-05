@@ -42,6 +42,7 @@
 
         </div>
 
+        {% comment %}
         <div class="site-header__item-b">
 
             {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
@@ -51,8 +52,18 @@
             {% endif %}
 
         </div>
+        {% endcomment %}
 
     </div>
+
+    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+        <form class="sidebar__form">
+            <label for="guideFilter">Search for a guide...</label>
+            <input id="guideFilter" type="text" placeholder="Stormblood, A12s, Lakshmi, etc...">
+        </form>
+    {% endif %}
+
+    {% comment %}
 
     {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
         <div class="expansion-menu">
@@ -61,5 +72,7 @@
             <a href="#a_realm_reborn" class="expansion-menu__button">A Realm Reborn</a>
         </div>
     {% endif %}
+
+    {% endcomment %}
 
 </div>

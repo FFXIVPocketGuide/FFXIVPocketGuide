@@ -59,7 +59,7 @@
     position: relative;
 
     @media $(p-tablet) {
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr; */
     }
 
     @media $(media-navigation) {
@@ -67,7 +67,7 @@
     }
 
     @media screen and (orientation: landscape) and (min-width: 70em) {
-        grid-template-columns: 60% 40%;
+        /* grid-template-columns: 60% 40%; */
     }
 
     &:before {
@@ -91,19 +91,19 @@
     z-index: 10;
 
     @media $(p-tablet) {
-        text-align: left;
+        /* text-align: left; */
     }
 
 }
 
 .site-header__item-b {
-    padding: 0 calc($unit * 3) calc($unit * 3) calc($unit * 3);
+    padding: 0 calc($unit * 3) calc($unit * 1.5) calc($unit * 3);
     position: relative;
     text-align: center;
     z-index: 10;
 
     @media $(p-tablet) {
-        padding: calc($unit * 3);
+        padding: calc($unit * 1.5) calc($unit * 3);
         text-align: right;
     }
 
