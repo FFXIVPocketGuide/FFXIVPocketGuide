@@ -42,37 +42,13 @@
 
         </div>
 
-        {% comment %}
-        <div class="site-header__item-b">
-
-            {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
-                <a href="https://www.youtube.com/user/MTQcapture" title="Go to MTQcapture's YouTube Channel" class="mtqLinkHome site-header__link">Video Guides by MTQcapture</a>
-            {% else %}
-                <a href="{{ page.mtqvid }}" title="Visit the video guide for this duty." target="_blank" class="mtqLinkGuide site-header__link">Watch MTQcapture's Video Guide</a>
-            {% endif %}
-
-        </div>
-        {% endcomment %}
-
     </div>
 
     {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
         <form class="sidebar__form">
             <label for="guideFilter">Search for a guide...</label>
-            <input id="guideFilter" type="text" placeholder="Stormblood, A12s, Lakshmi, etc...">
+            <input id="guideFilter" type="text" placeholder="Stormblood, A12s, Garuda, etc...">
         </form>
     {% endif %}
-
-    {% comment %}
-
-    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
-        <div class="expansion-menu">
-            <a href="#stormblood" class="expansion-menu__button">Stormblood</a>
-            <a href="#heavensward" class="expansion-menu__button">Heavensward</a>
-            <a href="#a_realm_reborn" class="expansion-menu__button">A Realm Reborn</a>
-        </div>
-    {% endif %}
-
-    {% endcomment %}
 
 </div>

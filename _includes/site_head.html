@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ page.title }} {% if page.difficulty %}({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
-    <meta name="description" content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="description" content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 300 }}{% else %}{{ site.description }}{% endif %}">
+
+    <!-- Open Graph & Twitter Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FF14PocketGuide" />
+    <meta name="twitter:creator" content="@joshdrink" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:title" content="{{ page.title }} {% if page.difficulty %}({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood" />
+    <meta property="og:description" content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 300 }}{% else %}{{ site.description }}{% endif %}" />
+    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}<meta property="og:image" content="{{ site.url }}/assets/img/guide_social.jpg" />
+    {% else %}<meta property="og:image" content="{{ site.url }}{% for image in page.image %}{{ image.url }}{% endfor %}" />
+    {% endif %}
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -41,6 +52,32 @@
         ga('send', 'pageview');
 
     </script>
+
+    <!-- Google Search Structured Pages -->
+    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "FFXIV Pocket Guide",
+      "url": "http://ffxiv.joshdrink.com",
+      "sameAs": [
+        "https://twitter.com/FF14PocketGuide"
+      ]
+    }
+    </script>
+    {% else %}
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{{ page.title }} {% if page.difficulty %}({{ page.difficulty }}){% endif %}",
+      "image": [
+        "{{ site.url }}{% for image in page.image %}{{ image.url }}{% endfor %}"
+      ]
+    }
+    </script>
+    {% endif %}
 
     <!-- Google Forms ====================================================== -->
     <script>
