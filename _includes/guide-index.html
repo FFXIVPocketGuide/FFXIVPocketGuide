@@ -2,53 +2,85 @@
 <!-- Guide Index =========================================================== -->
 
 <!-- Coming Soon Index ===================================================== -->
-<div class="index-divider">
-    <h2 class="index-divider__title">Coming Soon</h2>
-</div>
+{% assign counter = 0 %}
 
-<div class="index-grid">
+{% for guide in site.coming %}
 
-    {% assign sorted = site.coming | sort:"order" %}
+    {% if page.pageClass == "home" %}
 
-    {% for guide in sorted reversed %}
+        {% assign counter = counter | plus: 1 %}
 
-        {% if guide.patchNumber >= 4.0 %}
+    {% elsif page.pageClass == "dungeons" %}
 
-            {% if guide.patchNumber < 5.0 %}
+        {% if guide.instanceType == "dungeon" %}
 
-                {% if page.pageClass == "home" %}
+            {% assign counter = counter | plus: 1 %}
 
-                    {% assign counter = counter | plus: 1 %}
+        {% endif %}
 
-                    {% include index-temp.html %}
+    {% elsif page.pageClass == "trials" %}
 
-                {% elsif page.pageClass == "dungeons" %}
+        {% if guide.instanceType == "trial" %}
 
-                    {% if guide.instanceType == "dungeon" %}
+            {% assign counter = counter | plus: 1 %}
 
-                        {% assign counter = counter | plus: 1 %}
+        {% endif %}
+
+    {% elsif page.pageClass == "raids" %}
+
+        {% if guide.instanceType == "raid" %}
+
+            {% assign counter = counter | plus: 1 %}
+
+        {% endif %}
+
+    {% endif %}
+
+{% endfor %}
+
+{% if counter > 0 %}
+
+    <div class="index-divider">
+        <h2 class="index-divider__title">Coming Soon</h2>
+    </div>
+
+    <div class="index-grid">
+
+        {% assign sorted = site.coming | sort:"order" %}
+
+        {% for guide in sorted reversed %}
+
+            {% if guide.patchNumber >= 4.0 %}
+
+                {% if guide.patchNumber < 5.0 %}
+
+                    {% if page.pageClass == "home" %}
 
                         {% include index-temp.html %}
 
-                    {% endif %}
+                    {% elsif page.pageClass == "dungeons" %}
 
-                {% elsif page.pageClass == "trials" %}
+                        {% if guide.instanceType == "dungeon" %}
 
-                    {% if guide.instanceType == "trial" %}
+                            {% include index-temp.html %}
 
-                        {% assign counter = counter | plus: 1 %}
+                        {% endif %}
 
-                        {% include index-temp.html %}
+                    {% elsif page.pageClass == "trials" %}
 
-                    {% endif %}
+                        {% if guide.instanceType == "trial" %}
 
-                {% elsif page.pageClass == "raids" %}
+                            {% include index-temp.html %}
 
-                    {% if guide.instanceType == "raid" %}
+                        {% endif %}
 
-                        {% assign counter = counter | plus: 1 %}
+                    {% elsif page.pageClass == "raids" %}
 
-                        {% include index-temp.html %}
+                        {% if guide.instanceType == "raid" %}
+
+                            {% include index-temp.html %}
+
+                        {% endif %}
 
                     {% endif %}
 
@@ -56,45 +88,37 @@
 
             {% endif %}
 
-        {% endif %}
+            {% if guide.patchNumber >= 3.0 %}
 
-        {% if guide.patchNumber >= 3.0 %}
+                {% if guide.patchNumber < 4.0 %}
 
-            {% if guide.patchNumber < 4.0 %}
-
-                {% if page.pageClass == "home" %}
-
-                    {% assign counter = counter | plus: 1 %}
-
-                    {% include index-temp.html %}
-
-                {% elsif page.pageClass == "dungeons" %}
-
-                    {% if guide.instanceType == "dungeon" %}
-
-                        {% assign counter = counter | plus: 1 %}
+                    {% if page.pageClass == "home" %}
 
                         {% include index-temp.html %}
 
-                    {% endif %}
+                    {% elsif page.pageClass == "dungeons" %}
 
-                {% elsif page.pageClass == "trials" %}
+                        {% if guide.instanceType == "dungeon" %}
 
-                    {% if guide.instanceType == "trial" %}
+                            {% include index-temp.html %}
 
-                        {% assign counter = counter | plus: 1 %}
+                        {% endif %}
 
-                        {% include index-temp.html %}
+                    {% elsif page.pageClass == "trials" %}
 
-                    {% endif %}
+                        {% if guide.instanceType == "trial" %}
 
-                {% elsif page.pageClass == "raids" %}
+                            {% include index-temp.html %}
 
-                    {% if guide.instanceType == "raid" %}
+                        {% endif %}
 
-                        {% assign counter = counter | plus: 1 %}
+                    {% elsif page.pageClass == "raids" %}
 
-                        {% include index-temp.html %}
+                        {% if guide.instanceType == "raid" %}
+
+                            {% include index-temp.html %}
+
+                        {% endif %}
 
                     {% endif %}
 
@@ -102,45 +126,37 @@
 
             {% endif %}
 
-        {% endif %}
+            {% if guide.patchNumber >= 2.0 %}
 
-        {% if guide.patchNumber >= 2.0 %}
+                {% if guide.patchNumber < 3.0 %}
 
-            {% if guide.patchNumber < 3.0 %}
-
-                {% if page.pageClass == "home" %}
-
-                    {% assign counter = counter | plus: 1 %}
-
-                    {% include index-temp.html %}
-
-                {% elsif page.pageClass == "dungeons" %}
-
-                    {% if guide.instanceType == "dungeon" %}
-
-                        {% assign counter = counter | plus: 1 %}
+                    {% if page.pageClass == "home" %}
 
                         {% include index-temp.html %}
 
-                    {% endif %}
+                    {% elsif page.pageClass == "dungeons" %}
 
-                {% elsif page.pageClass == "trials" %}
+                        {% if guide.instanceType == "dungeon" %}
 
-                    {% if guide.instanceType == "trial" %}
+                            {% include index-temp.html %}
 
-                        {% assign counter = counter | plus: 1 %}
+                        {% endif %}
 
-                        {% include index-temp.html %}
+                    {% elsif page.pageClass == "trials" %}
 
-                    {% endif %}
+                        {% if guide.instanceType == "trial" %}
 
-                {% elsif page.pageClass == "raids" %}
+                            {% include index-temp.html %}
 
-                    {% if guide.instanceType == "raid" %}
+                        {% endif %}
 
-                        {% assign counter = counter | plus: 1 %}
+                    {% elsif page.pageClass == "raids" %}
 
-                        {% include index-temp.html %}
+                        {% if guide.instanceType == "raid" %}
+
+                            {% include index-temp.html %}
+
+                        {% endif %}
 
                     {% endif %}
 
@@ -148,11 +164,11 @@
 
             {% endif %}
 
-        {% endif %}
+        {% endfor %}
 
-    {% endfor %}
+    </div>
 
-</div>
+{% endif %}
 
 <!-- Stormblood Guide Index ================================================ -->
 
