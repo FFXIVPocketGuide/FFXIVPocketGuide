@@ -86,6 +86,10 @@
     text-align: center;
     text-decoration: none;
 
+    @media screen and (min-width: 80em) {
+        padding: calc($unit * 7) calc($unit * 3) calc($unit * 6.5) calc($unit * 3);
+    }
+
     &:before {
         background: $palette-overlay;
         content: " ";
@@ -107,7 +111,7 @@
     .index-item__link:hover {
 
         &:before {
-            opacity: .5;
+            opacity: .7;
             transition: opacity .2s ease;
         }
 
@@ -161,6 +165,16 @@
         display: none;
     }
 
+}
+
+.index-item__difficulty {
+    color: $palette-white;
+    font-family: $font-aktiv;
+    font-size: $font-scale-regular;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .index-item__subtitle {
