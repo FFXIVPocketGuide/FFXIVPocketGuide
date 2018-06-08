@@ -10,7 +10,7 @@
 
     <div class="guide-metadata__grid">
 
-        <div class="guide-metadata__wrapper">
+        <div class="guide-metadata__wrapper flex-grid">
 
             {% if page.difficulty %}
                 <span class="guide-metadata__difficulty--{% if page.difficulty == 'Normal' %}normal{% elsif page.difficulty == 'Hard' or page.difficulty == 'Savage' %}hard{% elsif page.difficulty == 'Extreme' %}extreme{% endif %}">
@@ -18,20 +18,20 @@
                 </span>
             {% endif %}
 
-            <h5 class="guide-metadata__subtitle">Player Level: <span>{{ page.plvl }}</span></h5>
+            <h5 class="guide-metadata__subtitle box small-1of2 med-full">Player Level: <span>{{ page.plvl }}</span></h5>
 
             {% if page.ilvl > 0 %}
-                <h5 class="guide-metadata__subtitle">Item Level: <span>{{ page.ilvl }}</span></h5>
+                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Item Level: <span>{{ page.ilvl }}</span></h5>
             {% else %}
-                <h5 class="guide-metadata__subtitle">Item Level: <span>N/A</span></h5>
+                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Item Level: <span>N/A</span></h5>
             {% endif %}
 
             {% if page.patchNumber %}
-                <h5 class="guide-metadata__subtitle">Patch {{ page.patchNumber }}:<span>{{ page.patchName }}</span></h5>
+                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Patch {{ page.patchNumber }}:<span>{{ page.patchName }}</span></h5>
             {% endif %}
 
             {% if page.partners %}
-                <h5 class="guide-metadata__subtitle">Partners:
+                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Partners:
                 {% for partner in page.partners %}
                     <span><a href="{{ partner.partner-link }}" title="Go view {{ partner.partner-title }}'s Guide" target="_blank">{{ partner.partner-title }}</a></span>
                 {% endfor %}
@@ -39,7 +39,7 @@
             {% endif %}
 
             {% if page.orchestrion %}
-                <h5 class="guide-metadata__subtitle">Orchestrion Roll:<span>{{ page.orchestrion }}</span></h5>
+                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Orchestrion Roll:<span>{{ page.orchestrion }}</span></h5>
             {% endif %}
 
         </div>

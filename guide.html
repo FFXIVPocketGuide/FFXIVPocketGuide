@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <title>FFXIV Pocket Guide - Generator</title>
+
+	    <!-- Google Fonts ====================================================== -->
+	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Cinzel|PT+Serif:400,400i,700,700i" rel="stylesheet">
+
+	    <!-- Material Icons ==================================================== -->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	    <!-- Favicons ========================================================== -->
+	    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	    <link rel="manifest" href="/manifest.json">
+	    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff575c">
+	    <meta name="theme-color" content="#ffffff">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="assets/vendor/modernizr.js"></script>
+
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="assets/vendor/ionicons.min.css" type="text/css" media="all" />
+
+        <!-- Normalize -->
+        <link rel="stylesheet" href="assets/vendor/normalize.css" type="text/css" media="all" />
+
+        <!-- Base Styles -->
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+
+        <!-- Generator Styles -->
+        <link rel="stylesheet" href="assets/css/generator.css" type="text/css" media="all" />
+
+    </head>
+
+    <body class="generator">
+
+        <!-- Guide Intro =================================================== -->
+
+        <!-- Guide Meta ==================================================== -->
+
+        <div class="guide-meta">
+
+            <div class="guide-container">
+
+                <!-- Meta Label -->
+                <div class="guide__title-wrapper">
+                    <h2>Guide Metadata</h2>
+                </div>
+
+                <div class="guide-group">
+
+                    <!-- Guide Title -->
+                    <div class="guide-meta__title-wrapper guide__input-wrapper">
+                        <label>Guide Title</label>
+                        <input type="text" class="guide-value__guide-title">
+                    </div>
+
+                    <!-- Category -->
+                    <div class="guide__input-wrapper">
+                        <label>Expansion</label>
+                        <select class="guide-value__category">
+                            <option>Stormblood</option>
+                            <option>Heavensward</option>
+                            <option>A Realm Reborn</option>
+                        </select>
+                    </div>
+
+                    <!-- Page Slug -->
+                    <div class="guide__input-wrapper">
+                        <label>Page Slug</label>
+                        <input type="text" placeholder="duty-name-difficulty" class="guide-value__page-slug">
+                    </div>
+
+                    <!-- Description -->
+                    <div class="guide__input-wrapper">
+                        <label>Search Description</label>
+                        <p><strong>Dungeons:</strong> Read our Guide on the dungeon Castrum Abania (Normal) where you'll face off against Magna Roader, Number XXIV, and Inferno.</p>
+                        <p><strong>Trials:</strong> Read our Guide on the trial Emanation (Hard) where you'll face off against Sri Lakshmi.</p>
+                        <p><strong>8-Man:</strong> Read our Guide on the 8 man raid Omega: Deltascape V3.0 (Normal) where you'll face off against Halicarnassus.</p>
+                        <p><strong>24-Man:</strong> Read our Guide on the 24 man raid The Royal City of Rabanastre (Normal) where you'll face off against Mateus the Corrupt, Hashmal, Bringer of Order, Rofocale, and Argath Thadalfus.</p>
+                        <textarea class="guide-value__description"></textarea>
+                    </div>
+
+                    <!-- Graphics -->
+
+                        <div class="grid__50-50">
+
+                            <!-- Large Image -->
+                            <div class="guide__input-wrapper">
+                                <label>Large Image (1500px) Filename</label>
+                                <input type="text" placeholder="asset.jpg" class="guide-value__image--large">
+                            </div>
+
+                            <!-- Small Image -->
+                            <div class="guide__input-wrapper">
+                                <label>Small Image (500px) Filename</label>
+                                <input type="text" placeholder="asset.jpg" class="guide-value__image--small">
+                            </div>
+
+                        </div>
+
+                    <!-- Search Terms -->
+
+                        <!-- Search Term Inputs -->
+                        <div class="guide__input-wrapper">
+
+                            <label>Search Terms</label>
+
+                            <p>Expansion, Expansion Abbreviation, Duty Name, Duty Nickname, Boss Names, Difficulty</p>
+
+                            <div class="guide-meta__search-term-group repeater__wrapper">
+                                <div class="guide-meta__search-term grid__90-10 repeater__template">
+                                    <input type="text">
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <div class="guide-meta__search-term grid__90-10 repeater__item">
+                                    <input type="text" placeholder="Expansion">
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <div class="guide-meta__search-term grid__90-10 repeater__item">
+                                    <input type="text" placeholder="Expansion Abbreviation">
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <div class="guide-meta__search-term grid__90-10 repeater__item">
+                                    <input type="text" placeholder="Duty Name">
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <div class="guide-meta__search-term grid__90-10 repeater__item">
+                                    <input type="text" placeholder="Duty Nickname">
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <div class="guide-meta__search-term grid__90-10 repeater__item">
+                                    <input type="text" placeholder="Boss Name">
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <div class="guide-meta__search-term grid__90-10 repeater__item">
+                                    <input type="text" placeholder="Difficulty">
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Add Term Button -->
+                            <div class="guide__input-wrapper">
+                                <button onclick="addRepeaterItem(this)" title="Add a term." class="repeater__add-button">Add a Term</button>
+                            </div>
+
+                        </div>
+
+                    <div class="grid__30-70">
+
+                        <!-- Patch Number -->
+                        <div class="guide__input-wrapper">
+                            <label>Patch Number</label>
+                            <input type="number" class="guide-value__patch-number">
+                        </div>
+
+                        <!-- Path Name -->
+                        <div class="guide__input-wrapper">
+                            <label>Patch Name</label>
+                            <input type="text" class="guide-value__patch-name">
+                        </div>
+
+                    </div>
+
+                    <!-- Difficulty -->
+                    <div class="guide__input-wrapper">
+                        <label>Difficulty</label>
+                        <select class="guide-value__difficulty">
+                            <option>Normal</option>
+                            <option>Hard</option>
+                            <option>Extreme</option>
+                            <option>Savage</option>
+                            <option>Ultimate</option>
+                        </select>
+                    </div>
+
+                    <div class="grid__50-50">
+
+                        <!-- Player Level -->
+                        <div class="guide__input-wrapper">
+                            <label>Player Level</label>
+                            <input type="number" class="guide-value__plvl">
+                        </div>
+
+                        <!-- Item Level -->
+                        <div class="guide__input-wrapper">
+                            <label>Item Level</label>
+                            <input type="number" class="guide-value__ilvl">
+                        </div>
+
+                    </div>
+
+                    <!-- Guide Order -->
+                    <div class="guide__input-wrapper">
+                        <label>Guide Order</label>
+                        <input type="number" class="guide-value__order">
+                    </div>
+
+                    <!-- Orchestrion -->
+                    <div class="guide__input-wrapper">
+                        <label>Orchestrion Role</label>
+                        <input type="text" value="TBD" class="guide-value__orchestrion">
+                    </div>
+
+                    <!-- Instance Type -->
+                    <div class="guide__input-wrapper">
+                        <label>Instance Type</label>
+                        <select class="guide-value__instance-type">
+                            <option>Dungeon</option>
+                            <option>Trial</option>
+                            <option>Raid</option>
+                        </select>
+                    </div>
+
+                    <!-- MTQ Link -->
+                    <div class="guide__input-wrapper">
+                        <label>MTQ Capture Link</label>
+                        <input type="text" class="guide-value__video-guide">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Duty Mechanics ================================================ -->
+
+        <div class="duty-mechanics">
+
+            <div class="guide-container">
+
+                <!-- Duty Mechanics Label -->
+                <div class="guide__title-wrapper">
+                    <h2>Duty Mechanics</h2>
+                </div>
+
+                <div class="repeater__wrapper">
+
+                    <div class="duty-mechanics__mechanic repeater__template">
+
+                        <div class="guide__input-wrapper grid__90-10">
+                            <h3>New Duty Mechanic</h3>
+                            <button onclick="deleteRepeaterItem(this)" title="Delete this duty mechanic." class="repeater__delete-button">
+                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                            </button>
+                        </div>
+
+                        <div class="guide__input-wrapper">
+                            <label>Mechanic Title</label>
+                            <input type="text" class="guide-value__duty-mechanic-title">
+                        </div>
+
+                        <h4>Mechanic Steps</h4>
+
+                        <div class="repeater__wrapper">
+
+                            <div class="duty-mechanics__mechanic-step-wrapper repeater__template">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <h5>New Step</h5>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this step." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+
+                                <div class="repeater__wrapper">
+
+                                    <div class="duty-mechanics__mechanic-step-note-wrapper grid__90-10 repeater__template">
+                                        <textarea class="guide-value__duty-mechanic-note" placeholder="Note"></textarea>
+                                        <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="duty-mechanics__mechanic-step-note-wrapper grid__90-10 repeater__item">
+                                        <textarea class="guide-value__duty-mechanic-note" placeholder="Note"></textarea>
+                                        <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <!-- Add Note Button -->
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addRepeaterItem(this)" title="Add a duty mechanic note." class="repeater__add-button">Add a Note</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Add Step Button -->
+                        <div class="guide__input-wrapper">
+                            <button onclick="addRepeaterItem(this)" title="Add a duty mechanic step." class="repeater__add-button">Add a Step</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="guide-group">
+
+                    <!-- Add Duty Mechanic Button -->
+                    <div class="guide__input-wrapper">
+                        <button onclick="addRepeaterItem(this)" title="Add a duty mechanic." class="repeater__add-button">Add a Duty Mechanic</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Boss List ===================================================== -->
+
+        <div class="bosses">
+
+            <!-- Templates -->
+
+                <!-- Script Attacks -->
+                <div class="template__script-attack repeater__template">
+
+                    <div class="guide__input-wrapper grid__90-10">
+                        <h5>New Script Attack</h5>
+                        <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                        </button>
+                    </div>
+
+                    <div class="grid__70-30">
+
+                        <div class="guide__input-wrapper">
+                            <label>Attack Name</label>
+                            <input type="text" class="guide-value__boss-phase-script-attack">
+                        </div>
+
+                        <div class="guide__input-wrapper">
+                            <label>
+                                Duty Action
+                                <input type="checkbox" class="guide-value__boss-phase-script-attack-duty-action">
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Alerts -->
+                <div class="template__alert repeater__template">
+
+                    <div class="guide__input-wrapper">
+                        <div class="guide__input-wrapper grid__90-10">
+                            <label>New Alert</label>
+                            <button onclick="deleteRepeaterItem(this)" title="Delete this alert." class="repeater__delete-button">
+                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                            </button>
+                        </div>
+                        <textarea class="guide-value__boss-phase-alert"></textarea>
+                    </div>
+
+                </div>
+
+                <!-- Mechanics -->
+                <div class="template__mechanic repeater__template">
+
+                    <div class="guide__input-wrapper grid__90-10">
+                        <h5>New Mechanic</h5>
+                        <button onclick="deleteRepeaterItem(this)" title="Delete this mechanic." class="repeater__delete-button">
+                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                        </button>
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <label>Mechanic Title</label>
+                        <input type="text" class="guide-value__phase-mechanic-title">
+                    </div>
+
+                    <div class="repeater__wrapper">
+
+                        <div class="repeater__template">
+
+                            <div class="guide__input-wrapper grid__90-10">
+                                <label>New Note</label>
+                                <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                </button>
+                            </div>
+                            <textarea class="guide-value__boss-phase-mechanic-note"></textarea>
+
+                        </div>
+
+                        <div class="repeater__item">
+
+                            <div class="guide__input-wrapper grid__90-10">
+                                <label>New Note</label>
+                                <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                </button>
+                            </div>
+                            <textarea class="guide-value__boss-phase-mechanic-note"></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <button onclick="addRepeaterItem(this)" title="Add a mechanic note." class="repeater__add-button">Add a Note</button>
+                    </div>
+
+                </div>
+
+                <!-- Regular Attacks -->
+                <div class="template__regular-attack repeater__template">
+
+                    <div class="guide__input-wrapper grid__90-10">
+                        <h5>New Regular Attack</h5>
+                        <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                        </button>
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <label>Attack Name</label>
+                        <input type="text" class="guide-value__boss-regular-attack-name">
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <label>Roles</label>
+                        <div class="boss-attack__role-wrapper grid__33-33-33"></div>
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <label>Duty Action (If Applicable)</label>
+                        <input type="text" class="guide-value__boss-regular-attack-duty-action">
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <label>Tags</label>
+                        <div class="boss-attack__tag-wrapper grid__33-33-33"></div>
+                    </div>
+
+                    <!-- Attack Notes -->
+                    <div class="boss-attack__note-wrapper">
+
+                        <div class="repeater__wrapper">
+
+                            <p>Notes</p>
+
+                            <div class="repeater__template">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <label>New Note</label>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <textarea class="guide-value__boss-regular-attack-note"></textarea>
+
+                            </div>
+
+                            <div class="repeater__item">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <label>New Note</label>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <textarea class="guide-value__boss-regular-attack-note"></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide__input-wrapper">
+                            <button onclick="addRepeaterItem(this)" title="Add an attack note." class="repeater__add-button">Add a Note</button>
+                        </div>
+
+                    </div>
+
+                    <!-- Attack Images -->
+                    <div class="boss-attack__image-wrapper">
+
+                        <div class="repeater__wrapper">
+
+                            <p>Images</p>
+
+                            <div class="repeater__template">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <label>New Image</label>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+
+                                <div class="grid__50-50">
+                                
+                                    <div class="guide__input-wrapper">
+                                        <label>Image Path</label>
+                                        <input type="text" class="guide-value__boss-regular-attack-name">
+                                    </div>
+
+                                    <div class="guide__input-wrapper">
+                                        <label>Image Alt Text</label>
+                                        <input type="text" class="guide-value__boss-regular-attack-name">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide__input-wrapper">
+                            <button onclick="addRepeaterItem(this)" title="Add an attack image." class="repeater__add-button">Add an Image</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Combo Attacks -->
+                <div class="template__combo-attack repeater__template">
+
+                    <div class="guide__input-wrapper grid__90-10">
+                        <h5>New Combo</h5>
+                        <button onclick="deleteRepeaterItem(this)" title="Delete this combo." class="repeater__delete-button">
+                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                        </button>
+                    </div>
+
+                    <!-- Overview Notes -->
+                    <div class="boss-attack__note-wrapper">
+
+                        <div class="repeater__wrapper">
+
+                            <p>Overview Notes</p>
+
+                            <div class="repeater__template">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <label>New Note</label>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <textarea class="guide-value__boss-combo-overview-note"></textarea>
+
+                            </div>
+
+                            <div class="repeater__item">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <label>New Note</label>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <textarea class="guide-value__boss-combo-overview-note"></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide__input-wrapper">
+                            <button onclick="addRepeaterItem(this)" title="Add an attack note." class="repeater__add-button">Add a Note</button>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="repeater__wrapper">
+
+                        <div class="repeater__template">
+
+                            <div class="guide__input-wrapper grid__90-10">
+                                <h5>New Combo Attack</h5>
+                                <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                                    <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                </button>
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Attack Name</label>
+                                <input type="text" class="guide-value__boss-regular-attack-name">
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Roles</label>
+                                <div class="boss-attack__role-wrapper grid__33-33-33"></div>
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Duty Action (If Applicable)</label>
+                                <input type="text" class="guide-value__boss-regular-attack-duty-action">
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Tags</label>
+                                <div class="boss-attack__tag-wrapper grid__33-33-33"></div>
+                            </div>
+
+                            <!-- Attack Notes -->
+                            <div class="boss-attack__note-wrapper">
+
+                                <div class="repeater__wrapper">
+
+                                    <p>Notes</p>
+
+                                    <div class="repeater__template">
+
+                                        <div class="guide__input-wrapper grid__90-10">
+                                            <label>New Note</label>
+                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                            </button>
+                                        </div>
+                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+
+                                    </div>
+
+                                    <div class="repeater__item">
+
+                                        <div class="guide__input-wrapper grid__90-10">
+                                            <label>New Note</label>
+                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                            </button>
+                                        </div>
+                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addRepeaterItem(this)" title="Add an attack note." class="repeater__add-button">Add a Note</button>
+                                </div>
+
+                            </div>
+
+                            <!-- Attack Images -->
+                            <div class="boss-attack__image-wrapper">
+
+                                <div class="repeater__wrapper">
+
+                                    <p>Images</p>
+
+                                    <div class="repeater__template">
+
+                                        <div class="guide__input-wrapper grid__90-10">
+                                            <label>New Image</label>
+                                            <button onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
+                                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                            </button>
+                                        </div>
+
+                                        <div class="grid__50-50">
+                                        
+                                            <div class="guide__input-wrapper">
+                                                <label>Image Path</label>
+                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                            </div>
+
+                                            <div class="guide__input-wrapper">
+                                                <label>Image Alt Text</label>
+                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addRepeaterItem(this)" title="Add an attack image." class="repeater__add-button">Add an Image</button>
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                        </div>
+
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <button onclick="addRepeaterItem(this)" title="Add an attack." class="repeater__add-button">Add an Attack</button>
+                    </div>
+
+                </div>
+
+                <!-- Variation Attacks -->
+                <div class="template__variation-attack repeater__template">
+
+                    <div class="guide__input-wrapper grid__90-10">
+                        <h5>New Attack with Variations</h5>
+                        <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                        </button>
+                    </div>
+
+                    <!-- Overview Notes -->
+                    <div class="boss-attack__note-wrapper">
+
+                        <div class="repeater__wrapper">
+
+                            <p>Overview Notes</p>
+
+                            <div class="repeater__template">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <label>New Note</label>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <textarea class="guide-value__boss-variation-overview-note"></textarea>
+
+                            </div>
+
+                            <div class="repeater__item">
+
+                                <div class="guide__input-wrapper grid__90-10">
+                                    <label>New Note</label>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+                                <textarea class="guide-value__boss-variation-overview-note"></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide__input-wrapper">
+                            <button onclick="addRepeaterItem(this)" title="Add an attack note." class="repeater__add-button">Add a Note</button>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="repeater__wrapper">
+
+                        <div class="repeater__template">
+
+                            <div class="guide__input-wrapper grid__90-10">
+                                <h5>New Variation</h5>
+                                <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                                    <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                </button>
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Variation Name</label>
+                                <input type="text" class="guide-value__boss-regular-attack-name">
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Roles</label>
+                                <div class="boss-attack__role-wrapper grid__33-33-33"></div>
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Duty Action (If Applicable)</label>
+                                <input type="text" class="guide-value__boss-regular-attack-duty-action">
+                            </div>
+
+                            <div class="guide__input-wrapper">
+                                <label>Tags</label>
+                                <div class="boss-attack__tag-wrapper grid__33-33-33"></div>
+                            </div>
+
+                            <!-- Attack Notes -->
+                            <div class="boss-attack__note-wrapper">
+
+                                <div class="repeater__wrapper">
+
+                                    <p>Notes</p>
+
+                                    <div class="repeater__template">
+
+                                        <div class="guide__input-wrapper grid__90-10">
+                                            <label>New Note</label>
+                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                            </button>
+                                        </div>
+                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+
+                                    </div>
+
+                                    <div class="repeater__item">
+
+                                        <div class="guide__input-wrapper grid__90-10">
+                                            <label>New Note</label>
+                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                            </button>
+                                        </div>
+                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addRepeaterItem(this)" title="Add an attack note." class="repeater__add-button">Add a Note</button>
+                                </div>
+
+                            </div>
+
+                            <!-- Attack Images -->
+                            <div class="boss-attack__image-wrapper">
+
+                                <div class="repeater__wrapper">
+
+                                    <p>Images</p>
+
+                                    <div class="repeater__template">
+
+                                        <div class="guide__input-wrapper grid__90-10">
+                                            <label>New Image</label>
+                                            <button onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
+                                                <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                            </button>
+                                        </div>
+
+                                        <div class="grid__50-50">
+                                        
+                                            <div class="guide__input-wrapper">
+                                                <label>Image Path</label>
+                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                            </div>
+
+                                            <div class="guide__input-wrapper">
+                                                <label>Image Alt Text</label>
+                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addRepeaterItem(this)" title="Add an attack image." class="repeater__add-button">Add an Image</button>
+                                </div>
+
+                            </div>
+
+                            <hr>
+
+                        </div>
+
+                    </div>
+
+                    <div class="guide__input-wrapper">
+                        <button onclick="addRepeaterItem(this)" title="Add an attack." class="repeater__add-button">Add a Variation</button>
+                    </div>
+
+                </div>
+
+            <!-- Bosses -->
+
+            <div class="bosses__wrapper repeater__wrapper">
+
+                <div class="boss guide-container repeater__template">
+
+                    <div class="guide__title-wrapper grid__90-10">
+                        <h2>New Boss</h2>
+                        <button onclick="deleteRepeaterItem(this)" title="Delete this step." class="repeater__delete-button">
+                            <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                        </button>
+                    </div>
+
+                    <div class="guide-group">
+
+                        <!-- Boss Name -->
+                        <div class="boss__name-wrapper guide__input-wrapper">
+                            <label>Boss Name</label>
+                            <input type="text" class="guide-value__boss-name">
+                        </div>
+
+                        <!-- Phases -->
+                        <div class="boss__phase-wrapper repeater__wrapper">
+
+                            <!-- Phase Template -->
+                            <div class="boss__phase repeater__template">
+
+                                <div class="boss__phase-title-wrapper guide__input-wrapper grid__90-10">
+                                    <h3>New Phase</h3>
+                                    <button onclick="deleteRepeaterItem(this)" title="Delete this phase." class="repeater__delete-button">
+                                        <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
+                                    </button>
+                                </div>
+
+                                <!-- Script -->
+                                <div class="boss__phase-script-wrapper">
+
+                                    <h4>Attack Script</h4>
+
+                                </div>
+
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addScriptItem(this)" title="Add a script attack." class="repeater__add-button">Add a Script Attack</button>
+                                </div> 
+
+                                <!-- Alerts -->
+                                <div class="boss__phase-alert-wrapper repeater__wrapper">
+
+                                    <h4>Alerts</h4>
+
+                                </div>
+
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addAlertItem(this)" title="Add an alert." class="repeater__add-button">Add an Alert</button>
+                                </div> 
+
+                                <!-- Mechanics -->
+                                <div class="boss__phase-mechanic-wrapper repeater__wrapper">
+
+                                    <h4>Phase Mechanics</h4>
+
+                                    <p>Include Duty Gauges in mechanics.</p>
+
+                                </div>
+
+                                <div class="guide__input-wrapper">
+                                    <button onclick="addMechanicItem(this)" title="Add a mechanic." class="repeater__add-button">Add a Mechanic</button>
+                                </div> 
+
+                                <!-- Attacks -->
+                                <div class="boss__phase-attack-wrapper repeater__wrapper">
+
+                                    <h4>Phase Attacks</h4>
+
+                                </div>
+
+                                <div class="grid__33-33-33">
+
+                                    <button onclick="addAttackItem(this)" title="Add a regular attack." data-attack-type="regular" class="repeater__add-button">Add a Regular Attack</button>
+                                    <button onclick="addAttackItem(this)" title="Add a combo attack." data-attack-type="combo" class="repeater__add-button">Add a Combo Attack</button>
+                                    <button onclick="addAttackItem(this)" title="Add an attack with variations." data-attack-type="variation" class="repeater__add-button">Add an Attack w/ Variations</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide__input-wrapper">
+                            <button onclick="addRepeaterItem(this)" title="Add a phase." class="repeater__add-button">Add a Phase</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Add Boss Button -->
+            <div class="bosses__add-boss-button-wrapper guide__input-wrapper">
+                <button onclick="addRepeaterItem(this)" title="Add a boss." class="repeater__add-button">Add a Boss</button>
+            </div>
+
+        </div>
+
+        <!-- Guide Generation ============================================== -->
+
+        <!-- Generate Button -->
+        <div class="generate__button-wrapper guide__input-wrapper">
+            <button onclick="generate(this)" title="Generate the guide JSON.">Generate JSON</button>
+        </div>
+
+        <!-- Data Output =================================================== -->
+        <div class="json-wrapper">
+            <pre>
+                <code>Code will appear here.</code>
+            </pre>
+        </div>
+
+        <!-- END =========================================================== -->
+
+        <!-- Match Media -->
+		<script type="text/javascript" src="assets/vendor/matchMedia.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="assets/js/core.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+        <script type="text/javascript" src="assets/js/generate.js"></script>
+
+    </body>
+
+</html>

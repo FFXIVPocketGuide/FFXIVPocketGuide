@@ -87,7 +87,7 @@
     text-decoration: none;
 
     @media screen and (min-width: 80em) {
-        padding: calc($unit * 7) calc($unit * 3) calc($unit * 6.5) calc($unit * 3);
+        padding: calc($unit * 7) calc($unit * 4) calc($unit * 6.5) calc($unit * 4);
     }
 
     &:before {

@@ -1,0 +1,827 @@
+/* New Code ================================================================= */
+
+	/* Core */
+	* {
+		box-sizing: border-box;
+	}
+
+	[src*=".svg"] {
+	     max-height: none; 
+	}
+
+	.guide-container {
+		background: rgba(255, 255, 255, 1);
+		border-radius: 3px;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+		margin: 0 auto 4rem auto;
+		max-width: 45rem;
+		overflow: hidden;
+		width: 90%;
+	}
+
+	.json-wrapper {
+		background: rgba(255, 255, 255, 1);
+		border-radius: 3px;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+		/*font-family: monospace !important;*/
+		margin: 0 auto 4rem auto;
+		max-width: 45rem;
+		padding: 2rem;
+		overflow: hidden;
+		width: 90%;
+	}
+
+		.json-wrapper pre {
+			margin: 0;
+			overflow: auto;
+			white-space: pre-wrap;
+		}
+
+	h1, h2, h3, h4, h5 {
+		align-self: center;
+		font-family: Open Sans,sans-serif;
+		margin: 0;
+	}
+
+	h1 {
+
+	}
+
+	h2 {
+		font-size: 28px;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 23px;
+		font-weight: 800;
+	}
+
+	h4 {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	h5 {
+		font-size: 16px;
+		font-weight: 800;
+	}
+
+	.guide-group {
+		padding: 2rem;
+	}
+
+	.guide__title-wrapper {
+		background: rgba(50, 50, 50, 1);
+		padding: 2rem;
+	}
+
+		.guide__title-wrapper h2 {
+			align-self: center;
+			color: white;
+			margin: 0;
+		}
+
+		.guide__title-wrapper button {
+			
+		}
+
+	.guide__input-wrapper {
+
+	}
+
+		/* Repeaters */
+		.repeater__wrapper {
+
+		}
+
+		.repeater__template {
+			display: none !important;
+			visibility: hidden !important;
+		}
+
+		.repeater__item {
+
+		}
+
+		.repeater__add-button {
+
+		}
+
+		.repeater__delete-button {
+			appearance: none;
+			background: none;
+			border: none;
+			cursor: pointer;
+			outline: none;
+		}
+
+		.repeater__delete-button img {
+			max-width: 1.5rem;
+		}
+
+	/* Grids */
+	.grid__50-50 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1rem;
+	}
+
+	.grid__80-20 {
+		display: grid;
+		grid-template-columns: 80% 1fr;
+		grid-column-gap: 1rem;
+	}
+
+	.grid__30-70 {
+		display: grid;
+		grid-template-columns: 30% 1fr;
+		grid-column-gap: 1rem;
+	}
+
+	.grid__70-30 {
+		display: grid;
+		grid-template-columns: 70% 1fr;
+		grid-column-gap: 1rem;
+	}
+
+	.grid__33-33-33 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 1rem;
+	}
+
+	.grid__90-10 {
+		display: grid;
+		grid-template-columns: 90% 1fr;
+		grid-column-gap: 1rem;
+	}
+
+	/* Guide Meta */
+	.guide-meta {
+
+	}
+
+		.guide-meta >.guide-container {
+			margin-top: 4rem;
+		}
+
+		.guide-meta__title-wrapper {
+
+		}
+
+			.guide-meta__title-wrapper label {
+				margin-top: 0 !important;
+			}
+
+	/* Duty Mechanics */
+	.duty-mechanics {
+
+	}
+
+	.duty-mechanics__mechanic {
+		background: rgba(245, 245, 245, 1);
+		border: 1px solid rgba(150, 150, 150, 1);
+		border-radius: 5px;
+		margin: 2rem 2rem 0 2rem;
+		padding: 2rem;
+	}
+
+		.duty-mechanics__mechanic-step-wrapper {
+			border-bottom: 1px solid black;
+			margin: 0 0 2rem 0;
+			padding: 0 0 2rem 0;
+		}
+
+	/* Bosses */
+	.boss__name-wrapper {
+		margin: 0 0 2rem 0;
+	}
+
+		.boss__name-wrapper label {
+			margin-top: 0 !important;
+		}
+
+		/* Phases */
+		.boss__phase {
+			background: rgba(245, 245, 245, 1);
+			border: 1px solid rgba(150, 150, 150, 1);
+			border-radius: 5px;
+			margin: 0 0 2rem 0;
+			padding: 2rem;
+		}
+
+		.boss__phase-title-wrapper {
+			margin: 0 0 2rem 0;
+		}
+
+		.boss__phase-script-attack,
+		.boss__phase-alert,
+		.boss__phase-mechanic {
+			background: rgba(245, 245, 245, 1);
+			border: 1px solid rgba(150, 150, 150, 1);
+			border-radius: 5px;
+			margin: 0 0 2rem 0;
+			padding: 2rem;
+		}
+
+			/* Attacks */
+			.boss__phase-attack--regular {
+				background: rgba(255, 87, 92, .2);
+				border: 1px solid rgba(255, 87, 92, 1);
+				border-radius: 5px;
+				margin: 0 0 2rem 0;
+				padding: 2rem;
+			}
+
+			.boss__phase-attack--combo {
+				background: rgba(254, 195, 78, .2);
+				border: 1px solid rgba(254, 195, 78, 1);
+				border-radius: 5px;
+				margin: 0 0 2rem 0;
+				padding: 2rem;
+			}
+
+				.boss__phase-attack--combo hr {
+					border: none;
+					border-top: 1px solid rgba(254, 195, 78, 1);
+					margin: 2rem 0;
+				}
+
+			.boss__phase-attack--variation {
+				background: rgba(82, 233, 108, .2);
+				border: 1px solid rgba(82, 233, 108, 1);
+				border-radius: 5px;
+				margin: 0 0 2rem 0;
+				padding: 2rem;
+			}
+
+				.boss__phase-attack--variation hr {
+					border: none;
+					border-top: 1px solid rgba(82, 233, 108, 1);
+					margin: 2rem 0;
+				}
+
+				.boss-attack__role-wrapper label,
+				.boss-attack__tag-wrapper label {
+					color: black !important;
+					display: inline !important;
+					font-size: .8rem;
+					margin: 0 0 .5rem 0 !important;
+					width: auto;
+				}
+
+				.boss-attack__role-wrapper label input,
+				.boss-attack__tag-wrapper label input {
+					display: inline;
+					width: auto;
+				}
+
+	.bosses__add-boss-button-wrapper {
+		margin: 0 auto 4rem auto;
+		max-width: 45rem;
+		width: 90%;
+	}
+
+	/* Generation */
+	.generate__button-wrapper {
+		margin: 0 auto 4rem auto;
+		max-width: 45rem;
+		width: 90%;
+	}
+
+
+/* END ====================================================================== */
+
+.generator {
+	background: rgba(245, 245, 245, 1);
+}
+
+.generator label {
+	color: blue;
+	display: block;
+	font-family: Open Sans,sans-serif;
+	font-weight: 600;
+	margin: 2rem 0 .5rem 0;
+}
+
+.generator input {
+	display: block;
+	padding: .5rem;
+	width: 100%;
+}
+
+.generator select {
+	display: block;
+	padding: .5rem;
+	width: 100%;
+}
+
+.generator textarea {
+	display: block;
+	min-height: 5rem;
+	max-width: 100%;
+	min-width: 100%;
+	padding: .5rem;
+	width: 100%;
+}
+
+.generator button {
+	display: block;
+	/*padding: .5rem;*/
+	width: 100%;
+}
+
+.generator p {
+	font-family: Open Sans,sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	margin: 0 0 .5rem 0;
+}
+
+.generator p:last-child {
+	margin: 0;
+}
+
+.meta {
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+	margin: 4rem auto;
+	max-width: 45rem;
+	overflow: hidden;
+	padding: 2rem;
+	width: 90%;
+}
+
+.meta .flex-grid {
+	margin: 0 -.5rem;
+}
+
+.meta .flex-grid >h1:first-child {
+	background: rgba(0, 0, 0, .8);
+	color: white;
+	font-family: Open Sans,sans-serif;
+	font-size: 3rem;
+	font-weight: 800;
+	line-height: 3rem;
+	margin-top: -2rem;
+	padding: 2rem .5rem;
+	position: relative;
+	width: 100%;
+}
+
+.meta .flex-grid >h1:first-child:before {
+	background: rgba(0, 0, 0, .8);
+	content: " ";
+	display: block;
+	height: 7rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-100%, 0);
+	width: 1.5rem;
+}
+
+.meta .flex-grid >h1:first-child:after {
+	background: rgba(0, 0, 0, .8);
+	content: " ";
+	display: block;
+	height: 7rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(100%, 0);
+	width: 1.5rem;
+}
+
+.meta .box {
+	padding: 0 .5rem;
+}
+
+.meta .box:first-of-type label {
+	margin-top: 0;
+}
+
+.meta__search-wrapper {
+
+}
+
+.meta__search-wrapper input {
+	margin: 0 0 1rem 0;
+}
+
+/* Duty Mechanics */
+
+.duty-mechanics {
+	/*background: white;*/
+	/*border-radius: 3px;*/
+	/*box-shadow: 0 3px 5px rgba(0, 0, 0, .5);*/
+	/*display: grid;*/
+	/*grid-template-columns: 1fr 1fr 1fr;*/
+	/*margin: 0 auto 4rem auto;*/
+	/*max-width: 45rem;*/
+	/*padding: 2rem;*/
+	/*width: 90%;*/
+}
+
+.mechanic-list {
+	/*grid-column-start: 1;
+	grid-column-end: 4;*/
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.mechanic-list >h1 {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	margin: 0;
+}
+
+.mechanic-list >button {
+	grid-column-start: 4;
+	grid-column-end: 7;
+}
+
+.duty-mechanic {
+	border-bottom: 1rem solid blue;
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 7;
+	grid-template-columns: 1fr 1fr;
+	/*padding: 0 0 2rem 0;*/
+	position: relative;
+	margin: 0 0 2rem 0;
+}
+
+.duty-mechanic:first-of-type {
+	margin-top: 2rem;
+}
+
+.duty-mechanic:before {
+	background: blue;
+	content: " ";
+	display: block;
+	height: 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translate(-100%, 100%);
+	width: 2rem;
+}
+
+.duty-mechanic:after {
+	background: blue;
+	content: " ";
+	display: block;
+	height: 1rem;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate(100%, 100%);
+	width: 2rem;
+}
+
+.duty-mechanic:last-of-type {
+	/*padding-bottom: 0;*/
+}
+
+.duty-mechanic >h2 {
+	margin: 0;
+}
+
+.mechanic__title-label {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.mechanic__title-input {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+	.duty-mechanic__step-wrapper {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		margin: 0 0 2rem 0;
+	}
+
+	.duty-mechanic__step {
+		background: rgba(245, 245, 245, 1);
+		border: 1px solid rgba(180, 180, 180, 1);
+		border-radius: 3px;
+		display: grid;
+		grid-column-gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+		margin: 2rem 0 0 0;
+		padding: 1rem;
+	}
+
+		.duty-mechanic__step h3 {
+			margin: 0;
+		}
+
+		.duty-mechanic__note-wrapper {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+			.duty-mechanic__note-wrapper textarea {
+				margin: 1rem 0;
+			}
+
+	.duty-mechanic__add-step-button {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		margin-bottom: 2rem;
+	}
+
+.mechanic-list__add-mechanic-button {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.mechanic-list__add-button {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.mechanic-list__delete-button {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+/* Bosses */
+
+.boss {
+	/*background: white;
+	border-radius: 3px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	margin: 0 auto 4rem auto;
+	max-width: 45rem;
+	padding: 2rem;
+	width: 90%;*/
+}
+
+.boss__label {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	margin: 0;
+}
+
+.boss__delete-button {
+	grid-column-start: 4;
+	grid-column-end: 7;
+}
+
+	.boss >label {
+		grid-column-start: 1;
+		grid-column-end: 7;
+	}
+
+	.boss >input {
+		grid-column-start: 1;
+		grid-column-end: 7;
+	}
+
+	.boss >button:last-child {
+		grid-column-start: 1;
+		grid-column-end: 7;
+	}
+
+	/* Phases */
+
+	.boss-phase__wrapper {
+		grid-column-start: 1;
+		grid-column-end: 7;
+	}
+
+	.boss-phase {
+		border-bottom: 1rem solid blue;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-column-gap: 1rem;
+		position: relative;
+		margin: 0 0 2rem;
+		padding: 0 0 2rem;
+	}
+
+	.boss-phase:before {
+		background: blue;
+		content: " ";
+		display: block;
+		height: 1rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translate(-100%, 100%);
+		width: 2rem;
+	}
+
+	.boss-phase:after {
+		background: blue;
+		content: " ";
+		display: block;
+		height: 1rem;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transform: translate(100%, 100%);
+		width: 2rem;
+	}
+
+		.boss-phase >h3 {
+			font-family: "Open Sans", sans-serif;
+			grid-column-start: 1;
+			grid-column-end: 4;
+			margin: 0 0 2rem;
+		}
+
+		.boss-phase button:nth-child(2) {
+			grid-column-start: 4;
+			grid-column-end: 7;
+		}
+
+		.boss-phase p {
+			grid-column-start: 1;
+			grid-column-end: 7;
+			margin: 0 0 2rem 0;
+		}
+
+	.boss-phase__script-content {
+		background: rgba(0, 128, 0, .5);
+		border-radius: 3px;
+		display: none;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1rem;
+		grid-column-start: 1;
+		grid-column-end: 7;
+		margin: 0 0 2rem 0;
+		padding: 2rem;
+	}
+
+		.boss-phase__script-content h4 {
+			font-family: "Open Sans", sans-serif;
+			margin: 0 0 2rem;
+		}
+
+		.boss-phase__script-wrapper {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+			.boss-phase__script-attack {
+				background: rgba(245, 245, 245, 1);
+				border: 1px solid rgba(180, 180, 180, 1);
+				border-radius: 3px;
+				margin: 0 0 2rem 0;
+				padding: 1rem;
+			}
+
+			.boss-phase__script-attack label:first-child {
+				margin-top: 0;
+			}
+
+			.boss-phase__script-attack >input {
+				margin-bottom: 1rem;
+			}
+
+			.boss-phase__script-attack label:last-child {
+				display: inline;
+				width: auto;
+			}
+
+			.boss-phase__script-attack label:last-child input {
+				display: inline;
+				width: auto;
+			}
+
+	.boss-phase__alert-content {
+		background: rgba(255, 0, 0, .5);
+		border-radius: 3px;
+		display: none;
+		grid-column-start: 1;
+		grid-column-end: 7;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1rem;
+		margin: 0 0 2rem 0;
+		padding: 2rem;
+	}
+
+		.boss-phase__alert-content h4 {
+			font-family: "Open Sans", sans-serif;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			margin: 0 0 2rem;
+		}
+
+		.boss-phase__alert-wrapper {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+			.boss-phase__alert-content label {
+				display: none;
+			}
+
+			.boss-phase__alert-content textarea {
+				margin: 0 0 1rem;
+			}
+
+	.boss-phase__mechanic-content {
+		background: rgba(255, 165, 0, .5);
+		border-radius: 3px;
+		display: none;
+		grid-column-start: 1;
+		grid-column-end: 7;
+		margin: 0 0 2rem;
+		padding: 2rem;
+	}
+
+		.boss-phase__mechanic-content h4 {
+			font-family: "Open Sans", sans-serif;
+			margin: 0 0 2rem;
+		}
+
+		.boss-phase__mechanic {
+			background: rgba(245, 245, 245, 1);
+			border: 1px solid rgba(180, 180, 180, 1);
+			border-radius: 3px;
+			margin: 0 0 2rem 0;
+			padding: 1rem;
+		}
+
+	.boss-phase__add-script-button,
+	.boss-phase__remove-script-button {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	.boss-phase__add-alerts-button,
+	.boss-phase__remove-alerts-button {
+		grid-column-start: 3;
+		grid-column-end: 5;
+	}
+
+	.boss-phase__add-mechanics-button,
+	.boss-phase__remove-mechanics-button {
+		grid-column-start: 5;
+		grid-column-end: 7;
+	}
+
+		/* Attacks */
+
+		.boss-attacks {
+			grid-column-start: 1;
+			grid-column-end: 7;
+		}
+
+		.boss-attacks__regular,
+		.boss-attacks__combo,
+		.boss-attacks__variation {
+			background: rgba(245, 245, 245, 1);
+			border: 1px solid rgba(180, 180, 180, 1);
+			border-radius: 3px;
+			padding: 2rem;
+			margin: 0 0 2rem;
+		}
+
+		.boss-attacks__role-wrapper,
+		.boss-attacks__tag-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		.boss-attacks__role-wrapper label,
+		.boss-attacks__tag-wrapper label {
+			display: inline;
+			font-size: .8rem;
+			font-weight: 400;
+			margin: 0;
+			width: auto;
+			vertical-align: middle;
+		}
+
+		.boss-attacks__role-wrapper input,
+		.boss-attacks__tag-wrapper input {
+			display: inline;
+			width: auto;
+			vertical-align: middle;
+		}
+
+		.boss-attacks__button-regular {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+		.boss-attacks__button-combo{
+			grid-column-start: 3;
+			grid-column-end: 5;
+		}
+
+		.boss-attacks__button-variation {
+			grid-column-start: 5;
+			grid-column-end: 7;
+		}

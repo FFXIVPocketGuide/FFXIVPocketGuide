@@ -98,7 +98,7 @@
 }
 
 .guide-metadata__wrapper {
-    border-bottom: 1px solid $palette-borders;
+    /*border-bottom: 1px solid $palette-borders;*/
     padding: calc($unit * 1.5);
 
     @media $(p-tablet) {
@@ -117,9 +117,14 @@
     font-family: $font-aktiv;
     font-size: $font-scale-regular;
     font-weight: 800;
+    margin: 0 0 1rem 0;
     padding: $unit;
     text-align: center;
     width: 100%;
+
+    @media $(p-tablet) {
+        margin: 0;
+    }
 
     &[class*="normal"] {
         background: $palette-green;
@@ -165,12 +170,14 @@
 }
 
 .guide-metadata__menu {
+    display: none;
     list-style: none;
     margin: 0;
     padding: calc($unit * 1.5);
 
     @media $(p-tablet) {
         border-left: 1px solid $palette-borders;
+        display: block;
     }
 
     @media screen and (orientation: landscape) and (min-width: 80em) {
