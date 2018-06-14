@@ -8,16 +8,16 @@
     },
     "license": "CC-BY-4.0",
     "devDependencies": {
+        "autoprefixer": "^8.6.2",
+        "cssnano": "latest",
+        "node-notifier": "latest",
         "npm-watch": "latest",
         "postcss-cli": "latest",
-        "node-notifier": "latest",
+        "postcss-color-function": "latest",
         "postcss-import": "latest",
         "postcss-mixins": "latest",
         "postcss-nested": "latest",
-        "autoprefixer": "latest",
-        "postcss-simple-vars": "latest",
-        "postcss-color-function": "latest",
-        "cssnano": "latest"
+        "postcss-simple-vars": "latest"
     },
     "watch": {
         "post": {

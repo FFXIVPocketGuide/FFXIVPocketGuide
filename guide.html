@@ -405,7 +405,7 @@
 
                     <div class="repeater__wrapper">
 
-                        <div class="repeater__template">
+                        <div class="boss__phase-mechanic-note-wrapper repeater__template">
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <label>New Note</label>
@@ -417,7 +417,7 @@
 
                         </div>
 
-                        <div class="repeater__item">
+                        <div class="boss__phase-mechanic-note-wrapper repeater__item">
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <label>New Note</label>
@@ -438,7 +438,7 @@
                 </div>
 
                 <!-- Regular Attacks -->
-                <div class="template__regular-attack repeater__template">
+                <div class="template__regular-attack repeater__template boss__attack">
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Regular Attack</h5>
@@ -449,7 +449,7 @@
 
                     <div class="guide__input-wrapper">
                         <label>Attack Name</label>
-                        <input type="text" class="guide-value__boss-regular-attack-name">
+                        <input type="text" class="guide-value__boss-attack-name">
                     </div>
 
                     <div class="guide__input-wrapper">
@@ -459,7 +459,7 @@
 
                     <div class="guide__input-wrapper">
                         <label>Duty Action (If Applicable)</label>
-                        <input type="text" class="guide-value__boss-regular-attack-duty-action">
+                        <input type="text" class="guide-value__boss-attack-duty-action">
                     </div>
 
                     <div class="guide__input-wrapper">
@@ -482,7 +482,7 @@
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
-                                <textarea class="guide-value__boss-regular-attack-note"></textarea>
+                                <textarea class="guide-value__boss-attack-note"></textarea>
 
                             </div>
 
@@ -494,7 +494,7 @@
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
-                                <textarea class="guide-value__boss-regular-attack-note"></textarea>
+                                <textarea class="guide-value__boss-attack-note"></textarea>
 
                             </div>
 
@@ -526,12 +526,12 @@
                                 
                                     <div class="guide__input-wrapper">
                                         <label>Image Path</label>
-                                        <input type="text" class="guide-value__boss-regular-attack-name">
+                                        <input type="text" class="guide-value__boss-attack-image-path">
                                     </div>
 
                                     <div class="guide__input-wrapper">
                                         <label>Image Alt Text</label>
-                                        <input type="text" class="guide-value__boss-regular-attack-name">
+                                        <input type="text" class="guide-value__boss-attack-image-alt">
                                     </div>
 
                                 </div>
@@ -549,7 +549,7 @@
                 </div>
 
                 <!-- Combo Attacks -->
-                <div class="template__combo-attack repeater__template">
+                <div class="template__combo-attack repeater__template boss__attack">
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Combo</h5>
@@ -558,8 +558,14 @@
                         </button>
                     </div>
 
+                    <!-- Attack Name -->
+                    <div class="guide__input-wrapper">
+                        <label>Attack Name</label>
+                        <input type="text" class="guide-value__boss-attack-name">
+                    </div>
+
                     <!-- Overview Notes -->
-                    <div class="boss-attack__note-wrapper">
+                    <div class="boss-attack__overview-note-wrapper">
 
                         <div class="repeater__wrapper">
 
@@ -585,7 +591,7 @@
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
-                                <textarea class="guide-value__boss-combo-overview-note"></textarea>
+                                <textarea class="guide-value__boss-overview-note"></textarea>
 
                             </div>
 
@@ -599,9 +605,9 @@
 
                     <hr>
 
-                    <div class="repeater__wrapper">
+                    <div class="boss-attack__subattack-wrapper repeater__wrapper">
 
-                        <div class="repeater__template">
+                        <div class="boss-attack__subattack repeater__template">
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <h5>New Combo Attack</h5>
@@ -612,7 +618,7 @@
 
                             <div class="guide__input-wrapper">
                                 <label>Attack Name</label>
-                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                <input type="text" class="guide-value__boss-subattack-name">
                             </div>
 
                             <div class="guide__input-wrapper">
@@ -622,7 +628,7 @@
 
                             <div class="guide__input-wrapper">
                                 <label>Duty Action (If Applicable)</label>
-                                <input type="text" class="guide-value__boss-regular-attack-duty-action">
+                                <input type="text" class="guide-value__boss-attack-duty-action">
                             </div>
 
                             <div class="guide__input-wrapper">
@@ -645,7 +651,7 @@
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
-                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+                                        <textarea class="guide-value__boss-attack-note"></textarea>
 
                                     </div>
 
@@ -657,7 +663,7 @@
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
-                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+                                        <textarea class="guide-value__boss-attack-note"></textarea>
 
                                     </div>
 
@@ -689,12 +695,12 @@
                                         
                                             <div class="guide__input-wrapper">
                                                 <label>Image Path</label>
-                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                                <input type="text" class="guide-value__boss-attack-image-path">
                                             </div>
 
                                             <div class="guide__input-wrapper">
                                                 <label>Image Alt Text</label>
-                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                                <input type="text" class="guide-value__boss-attack-image-alt">
                                             </div>
 
                                         </div>
@@ -722,7 +728,7 @@
                 </div>
 
                 <!-- Variation Attacks -->
-                <div class="template__variation-attack repeater__template">
+                <div class="template__variation-attack repeater__template boss__attack">
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Attack with Variations</h5>
@@ -731,8 +737,14 @@
                         </button>
                     </div>
 
+                    <!-- Attack Name -->
+                    <div class="guide__input-wrapper">
+                        <label>Attack Name</label>
+                        <input type="text" class="guide-value__boss-attack-name">
+                    </div>
+
                     <!-- Overview Notes -->
-                    <div class="boss-attack__note-wrapper">
+                    <div class="boss-attack__overview-note-wrapper">
 
                         <div class="repeater__wrapper">
 
@@ -746,7 +758,7 @@
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
-                                <textarea class="guide-value__boss-variation-overview-note"></textarea>
+                                <textarea class="guide-value__boss-overview-note"></textarea>
 
                             </div>
 
@@ -758,7 +770,7 @@
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
-                                <textarea class="guide-value__boss-variation-overview-note"></textarea>
+                                <textarea class="guide-value__boss-overview-note"></textarea>
 
                             </div>
 
@@ -772,9 +784,9 @@
 
                     <hr>
 
-                    <div class="repeater__wrapper">
+                    <div class="boss-attack__subattack-wrapper repeater__wrapper">
 
-                        <div class="repeater__template">
+                        <div class="boss-attack__subattack repeater__template">
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <h5>New Variation</h5>
@@ -785,7 +797,7 @@
 
                             <div class="guide__input-wrapper">
                                 <label>Variation Name</label>
-                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                <input type="text" class="guide-value__boss-subattack-name">
                             </div>
 
                             <div class="guide__input-wrapper">
@@ -795,7 +807,7 @@
 
                             <div class="guide__input-wrapper">
                                 <label>Duty Action (If Applicable)</label>
-                                <input type="text" class="guide-value__boss-regular-attack-duty-action">
+                                <input type="text" class="guide-value__boss-attack-duty-action">
                             </div>
 
                             <div class="guide__input-wrapper">
@@ -818,7 +830,7 @@
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
-                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+                                        <textarea class="guide-value__boss-attack-note"></textarea>
 
                                     </div>
 
@@ -830,7 +842,7 @@
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
-                                        <textarea class="guide-value__boss-regular-attack-note"></textarea>
+                                        <textarea class="guide-value__boss-attack-note"></textarea>
 
                                     </div>
 
@@ -862,12 +874,12 @@
                                         
                                             <div class="guide__input-wrapper">
                                                 <label>Image Path</label>
-                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                                <input type="text" class="guide-value__boss-attack-image-path">
                                             </div>
 
                                             <div class="guide__input-wrapper">
                                                 <label>Image Alt Text</label>
-                                                <input type="text" class="guide-value__boss-regular-attack-name">
+                                                <input type="text" class="guide-value__boss-attack-image-alt">
                                             </div>
 
                                         </div>
@@ -1017,6 +1029,9 @@
 
         <!-- Match Media -->
 		<script type="text/javascript" src="assets/vendor/matchMedia.js"></script>
+
+        <!-- JSON2YAML -->
+        <script type="text/javascript" src="assets/vendor/yaml.js"></script>
 
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="assets/js/core.js"></script>

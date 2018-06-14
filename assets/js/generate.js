@@ -406,35 +406,6 @@ function generate(button) {
     var metaMTQString = $(".guide-value__video-guide").val();
     var metaMTQ = encodeURIComponent(metaMTQString);
 
-    var metaObject = {
-        layout: metaLayout,
-        date: metaDate,
-        title: metaTitle,
-        categories: metaCategory,
-        slug: metaSlug,
-        description: metaDescription,
-        image: metaImageArray,
-        terms: metaSearchTermsArray,
-        patchNumber: metaPatchNumber,
-        patchName: metaPatchName,
-        difficulty: metaDifficulty,
-        plvl: metaPlayerLevel,
-        ilvl: metaItemLevel,
-        order: metaOrder,
-        orchestrion: metaOrchestrion,
-        instanceType: metaInstanceType,
-        mtqvid: metaMTQ
-    }
-
-    var metaArray = [];
-    metaArray.push(metaObject);
-
-    var metajson = JSON.stringify(metaObject);
-
-    console.log(metajson);
-
-    codeWrapper.append(metajson);
-
     // Duty Mechanics ==========================================================
 
     var dutyMechanicValue = 0;
@@ -494,53 +465,511 @@ function generate(button) {
 
     });
 
-    dutyMechanicsObject = {
-        mechanics: dutyMechanicArray
-    }
-
-    var dutyMechanicsArray = [];
-
-    dutyMechanicsArray.push(dutyMechanicsObject);
-
-    var dutyjson = JSON.stringify(dutyMechanicsObject);
-
-    console.log(dutyjson);
-
-    codeWrapper.append(dutyjson);
-
     // Bosses ==================================================================
 
     var bossValue = 0;
 
-    var bosses = [];
+    var bossArray = [];
 
     $(".boss:not(.repeater__template)").each(function(e) {
 
         bossValue = bossValue + 1;
 
-        bossName = $(".guide-value__boss-name").val();
+        if ($(".boss:not(.repeater__template)").length > 1) {
+            var bossTitle = $(this).find(".guide-value__boss-name").val();
+            if (bossValue < 10) {
+                var bossID = "boss" + "0" + bossValue;
+            }
+            else {
+                var bossID = "boss" + bossValue;
+            }
+        }
+        else {
+            var bossTitle = $(this).find(".guide-value__boss-name").val();
+        }
 
-        phaseValue = 0;
+        // Boss Phases
 
-        var bossPhases = [];
+        var phaseValue = 0;
+
+        var phaseArray = [];
+
+        var sequenceArray = [];
+
+        var attacksArray = [];
 
         $(this).find(".boss__phase:not(.repeater__template)").each(function(e) {
 
             phaseValue = phaseValue + 1;
 
             if (phaseValue < 10) {
-                phaseTitle = "0" + phaseValue;
+                phaseID = "0" + phaseValue;
             }
             else {
-                phaseTitle = phaseValue;
+                phaseID = phaseValue;
             }
 
-            var scriptAttacks = [];
+            // Attack Script
 
-            $(this).find(".boss__phase-script-attack").each
+            var scriptArray = [];
+
+            $(this).find(".boss__phase-script-attack:not(.repeater__template)").each(function(e) {
+
+                var scriptAttackName = $(this).find(".guide-value__boss-phase-script-attack").val();
+
+                if ($(this).find(".guide-value__boss-phase-script-attack-duty-action").is(":checked")) {
+
+                    var scriptObject = {
+                        attack: scriptAttackName,
+                        dutyActions: true
+                    }
+
+                    scriptArray.push(scriptObject);
+
+                }
+                else {
+
+                    var scriptObject = {
+                        attack: scriptAttackName
+                    }
+
+                    scriptArray.push(scriptObject);
+                
+                }
+
+            });
+
+            // Alerts
+
+            var alertArray = [];
+
+            $(this).find(".boss__phase-alert").each(function(e) {
+
+                var alertCopy = $(this).find("textarea").val();
+
+                var alertObject = {
+                    alert: alertCopy
+                }
+
+                alertArray.push(alertObject);
+
+            });
+
+            // Phase Mechanics
+
+            var phaseMechanicArray = [];
+
+            $(this).find(".boss__phase-mechanic:not(.repeater__template)").each(function(e) {
+
+                // Mechanic Title
+
+                var phaseMechanicTitle = $(this).find(".guide-value__phase-mechanic-title").val();
+
+                // Mechanic Notes
+
+                var phaseMechanicNoteArray = [];
+
+                $(this).find(".boss__phase-mechanic-note-wrapper:not(.repeater__template)").each(function(e) {
+
+                    var phaseMechanicNoteCopy = $(this).find("textarea").val();
+
+                    var phaseMechanicNoteObject = {
+                        note: phaseMechanicNoteCopy
+                    }
+
+                    phaseMechanicNoteArray.push(phaseMechanicNoteObject);
+
+                });
+
+                var phaseMechanicObect = {
+                    title: phaseMechanicTitle,
+                    notes: phaseMechanicNoteArray
+                }
+
+                phaseMechanicArray.push(phaseMechanicObect);
+
+            });
+
+            var sequenceObject = {
+                phase: phaseID,
+                attacks: scriptArray,
+                alerts: alertArray,
+                mechanics: phaseMechanicArray
+            }
+
+            sequenceArray.push(sequenceObject);
+
+            // Attacks
+
+            $(this).find(".boss__attack:not(.repeater__template)").each(function(e) {
+
+                // Title
+
+                var attackTitle = $(this).find(".guide-value__boss-attack-name").val();
+
+                // Phase
+
+                var attackPhaseArray = [];
+
+                var attackPhase = phaseID;
+
+                var attackPhaseObject = {
+                    phase: phaseID
+                }
+
+                attackPhaseArray.push(attackPhaseObject);
+
+                if ($(this).hasClass("boss__phase-attack--regular")) {
+
+                    // Roles
+
+                    var attackRoleArray = [];
+
+                    $(this).find(".boss-attack__attack-role").each(function(e) {
+
+                        var attackRoleLabel = $(this).attr("data-value");
+
+                        if ($(this).is(":checked")) {
+
+                            var attackRoleObject = {
+                                role: attackRoleLabel
+                            }
+
+                            attackRoleArray.push(attackRoleObject);
+
+                        }
+
+                    });
+
+                    // Duty Action
+
+                    if ($(this).find(".guide-value__boss-attack-duty-action").val() != "") {
+                        
+                        var attackDutyActionArray = [];
+
+                        var attackDutyAction = $(this).find(".guide-value__boss-attack-duty-action").val();
+
+                        var attackDutyActionObject = {
+                            action: attackDutyAction
+                        }
+
+                        attackDutyActionArray.push(attackDutyActionObject);
+
+                    }
+
+                    // Tags
+
+                    var attackTagArray = [];
+
+                    $(this).find(".boss-attacks__attack-tag").each(function(e) {
+
+                        var attackTagLabel = $(this).attr("data-value");
+
+                        if ($(this).is(":checked")) {
+
+                            var attackTagObject = {
+                                tag: attackTagLabel
+                            }
+
+                            attackTagArray.push(attackTagObject);
+
+                        }
+
+                    });
+
+                    // Notes
+
+                    var attackNoteArray = [];
+
+                    $(this).find(".boss-attack__note-wrapper").find(".repeater__item").each(function(e) {
+
+                        var attackNoteCopy = $(this).find("textarea").val();
+
+                        var attackNoteObject = {
+                            note: attackNoteCopy
+                        }
+
+                        attackNoteArray.push(attackNoteObject);
+
+                    });
+
+                    // Images
+
+                    var attackImageArray = [];
+
+                    $(this).find(".boss-attack__image-wrapper").find(".repeater__item").each(function(e) {
+
+                        var attackImagePathString = $(this).find(".guide-value__boss-attack-image-path").val();
+                        var attackImagePath = "/assets/img/" + metaInstanceType + "/" + attackImagePathString;
+
+                        var attackImageAlt = $(this).find(".guide-value__boss-attack-image-alt").val();
+
+                        var attackImageObject = {
+                            url: attackImagePath,
+                            alt: attackImageAlt
+                        }
+
+                        attackImageArray.push(attackImageObject);
+
+                    });
+
+                    var attackObject = {
+                        title: attackTitle,
+                        phases: attackPhaseArray,
+                        roles: attackRoleArray,
+                        dutyActions: attackDutyActionArray,
+                        tags: attackTagArray,
+                        notes: attackNoteArray
+                    }
+
+                    if (attackImageArray.length != 0) {
+                        attackObject.images = attackImageArray;
+                    }
+
+                    attacksArray.push(attackObject);
+
+                }
+                else {
+
+                    // Attack Notes
+
+                    var attackNoteArray = [];
+
+                    $(this).find(".boss-attack__overview-note-wrapper").find(".repeater__item").each(function(e) {
+
+                        var attackNoteCopy = $(this).find("textarea").val();
+
+                        var attackNoteObject = {
+                            note: attackNoteCopy
+                        }
+
+                        attackNoteArray.push(attackNoteObject);
+
+                    });
+
+                    // Subattacks
+
+                    var subattackArray = [];
+
+                    $(this).find(".boss-attack__subattack.repeater__item").each(function(e) {
+
+                        // Title
+
+                        var subattackTitle = $(this).find(".guide-value__boss-subattack-name").val();
+
+                        // Roles
+
+                        var attackRoleArray = [];
+
+                        $(this).find(".boss-attack__attack-role").each(function(e) {
+
+                            var attackRoleLabel = $(this).attr("data-value");
+
+                            if ($(this).is(":checked")) {
+
+                                var attackRoleObject = {
+                                    role: attackRoleLabel
+                                }
+
+                                attackRoleArray.push(attackRoleObject);
+
+                            }
+
+                        });
+
+                        // Duty Action
+
+                        if ($(this).find(".guide-value__boss-attack-duty-action").val() != "") {
+                            
+                            var attackDutyActionArray = [];
+
+                            var attackDutyAction = $(this).find(".guide-value__boss-attack-duty-action").val();
+
+                            var attackDutyActionObject = {
+                                action: attackDutyAction
+                            }
+
+                            attackDutyActionArray.push(attackDutyActionObject);
+
+                        }
+
+                        // Tags
+
+                        var attackTagArray = [];
+
+                        $(this).find(".boss-attacks__attack-tag").each(function(e) {
+
+                            var attackTagLabel = $(this).attr("data-value");
+
+                            if ($(this).is(":checked")) {
+
+                                var attackTagObject = {
+                                    tag: attackTagLabel
+                                }
+
+                                attackTagArray.push(attackTagObject);
+
+                            }
+
+                        });
+
+                        // Notes
+
+                        var subattackNoteArray = [];
+
+                        $(this).find(".boss-attack__note-wrapper").find(".repeater__item").each(function(e) {
+
+                            var subattackNoteCopy = $(this).find("textarea").val();
+
+                            var subattackNoteObject = {
+                                note: subattackNoteCopy
+                            }
+
+                            subattackNoteArray.push(subattackNoteObject);
+
+                        });
+
+                        // Images
+
+                        var attackImageArray = [];
+
+                        $(this).find(".boss-attack__image-wrapper").find(".repeater__item").each(function(e) {
+
+                            var attackImagePathString = $(this).find(".guide-value__boss-attack-image-path").val();
+                            var attackImagePath = "/assets/img/" + metaInstanceType + "/" + attackImagePathString;
+
+                            var attackImageAlt = $(this).find(".guide-value__boss-attack-image-alt").val();
+
+                            var attackImageObject = {
+                                url: attackImagePath,
+                                alt: attackImageAlt
+                            }
+
+                            attackImageArray.push(attackImageObject);
+
+                        });
+
+                        var subattackObject = {
+                            title: subattackTitle,
+                            roles: attackRoleArray,
+                            dutyActions: attackDutyActionArray,
+                            tags: attackTagArray,
+                            notes: subattackNoteArray
+                        }
+
+                        if (attackImageArray.length != 0) {
+                            subattackObject.images = attackImageArray;
+                        }
+
+                        subattackArray.push(subattackObject);
+
+                    });
+
+                    if ($(this).hasClass("boss__phase-attack--combo")) {
+
+                        var comboObject = {
+                            title: attackTitle,
+                            phases: attackPhaseArray,
+                            notes: attackNoteArray,
+                            combo: subattackArray
+                        }
+
+                        attacksArray.push(comboObject);
+
+                    }
+                    else if ($(this).hasClass("boss__phase-attack--variation")) {
+
+                        var variationObject = {
+                            title: attackTitle,
+                            phases: attackPhaseArray,
+                            notes: attackNoteArray,
+                            variation: subattackArray
+                        }
+
+                        attacksArray.push(variationObject);
+
+                    }
+
+                }
+
+            });
 
         });
 
+        // Build Boss Object
+
+        if ($(".boss:not(.repeater__template)").length > 1) {
+
+            var bossObject = {
+                title: bossTitle,
+                id: bossID,
+                sequence: sequenceArray,
+                attacks: attacksArray
+            }
+
+            bossArray.push(bossObject);
+
+        }
+        else {
+
+            var bossObject = {
+                bossName: bossTitle,
+                sequence: sequenceArray,
+                attacks: attacksArray
+            }
+
+            bossArray.push(bossObject);
+
+        }
+
     });
+
+    // Build the Guide =========================================================
+
+    var guideObject = {
+        layout: metaLayout,
+        date: metaDate,
+        title: metaTitle,
+        categories: metaCategory,
+        slug: metaSlug,
+        description: metaDescription,
+        image: metaImageArray,
+        terms: metaSearchTermsArray,
+        patchNumber: metaPatchNumber,
+        patchName: metaPatchName,
+        difficulty: metaDifficulty,
+        plvl: metaPlayerLevel,
+        ilvl: metaItemLevel,
+        order: metaOrder,
+        orchestrion: metaOrchestrion,
+        instanceType: metaInstanceType,
+        mtqvid: metaMTQ
+    }
+
+    if ($(".duty-mechanics__mechanic:not(.repeater__template)").length > 0) {
+        guideObject.mechanics = dutyMechanicArray;
+    }
+    else {
+        // Do Nothing
+    }
+
+    if ($(".boss:not(.repeater__template)").length > 1) {
+        guideObject.bosses = bossArray;
+    }
+    else if ($(".boss:not(.repeater__template)").length == 0) {
+        alert("You need at least 1 boss!");
+        return false;
+    }
+    else {
+        guideObject.bossName = bossArray[0].bossName;
+        guideObject.sequence = bossArray[0].sequence;
+        guideObject.attacks = bossArray[0].attacks;
+    }
+
+    var guidejson = JSON.stringify(guideObject);
+
+    console.log(guidejson);
+
+    codeWrapper.append(guidejson);
 
 }

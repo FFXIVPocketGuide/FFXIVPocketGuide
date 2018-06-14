@@ -37,6 +37,7 @@
 /* Footer */
 footer,
 section.footer {
+    background: white;
     border-top: 1px solid $palette-borders;
     padding: calc($unit * 3) 0 calc($unit * 7.5);
     text-align: center;
@@ -231,7 +232,7 @@ section.footer {
 }
 
 .footer__copy {
-    color: $palette-borders;
+    color: rgba(100, 100, 100, 1);
     font-family: $font-aktiv;
     font-size: $font-scale-small;
     font-weight: 500;

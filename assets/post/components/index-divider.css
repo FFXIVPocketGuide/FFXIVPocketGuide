@@ -7,7 +7,7 @@
 
 ============================================================================= */
 .index-divider {
-    padding: calc($unit * 3) 0;
+    padding: calc($unit * 4) 0;
     position: relative;
     text-align: center;
 
