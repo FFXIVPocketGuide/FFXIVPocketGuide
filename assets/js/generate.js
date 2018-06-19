@@ -84,6 +84,24 @@ tags.sort();
         // Append Clone to Wrapper
         $clone.appendTo($repeaterWrapper);
 
+
+        // Focus The Closest Input
+        if ($clone.find("input[type='text']").length) {
+            $clone.find("input[type='text']").first().focus();
+            // console.log($clone.find("input[type='text']").first());
+            return false;
+        }
+        else if ($clone.find("textarea").length) {
+            $clone.find("textarea").first().focus();
+            // console.log($clone.find("textarea").first());
+            return false;
+        }
+        else if ($clone.find("button:not(.repeater__delete-button)").length) {
+            $clone.find("button:not(.repeater__delete-button)").first().focus();
+            // console.log($clone.find("button:not(.repeater__delete-button)").first());
+            return false;
+        }
+
     }
 
     // Delete Repeater Item
@@ -131,6 +149,23 @@ tags.sort();
         // Append Clone to Wrapper
         $clone.appendTo($repeaterWrapper);
 
+        // Focus The Closest Input
+        if ($clone.find("input[type='text']").length) {
+            $clone.find("input[type='text']").first().focus();
+            // console.log($clone.find("input[type='text']").first());
+            return false;
+        }
+        else if ($clone.find("textarea").length) {
+            $clone.find("textarea").first().focus();
+            // console.log($clone.find("textarea").first());
+            return false;
+        }
+        else if ($clone.find("button:not(.repeater__delete-button)").length) {
+            $clone.find("button:not(.repeater__delete-button)").first().focus();
+            // console.log($clone.find("button:not(.repeater__delete-button)").first());
+            return false;
+        }
+
     }
 
     // Alerts
@@ -167,6 +202,23 @@ tags.sort();
         // Append Clone to Wrapper
         $clone.appendTo($repeaterWrapper);
 
+        // Focus The Closest Input
+        if ($clone.find("input[type='text']").length) {
+            $clone.find("input[type='text']").first().focus();
+            // console.log($clone.find("input[type='text']").first());
+            return false;
+        }
+        else if ($clone.find("textarea").length) {
+            $clone.find("textarea").first().focus();
+            // console.log($clone.find("textarea").first());
+            return false;
+        }
+        else if ($clone.find("button:not(.repeater__delete-button)").length) {
+            $clone.find("button:not(.repeater__delete-button)").first().focus();
+            // console.log($clone.find("button:not(.repeater__delete-button)").first());
+            return false;
+        }
+
     }
 
     // Mechanics
@@ -202,6 +254,23 @@ tags.sort();
 
         // Append Clone to Wrapper
         $clone.appendTo($repeaterWrapper);
+
+        // Focus The Closest Input
+        if ($clone.find("input[type='text']").length) {
+            $clone.find("input[type='text']").first().focus();
+            // console.log($clone.find("input[type='text']").first());
+            return false;
+        }
+        else if ($clone.find("textarea").length) {
+            $clone.find("textarea").first().focus();
+            // console.log($clone.find("textarea").first());
+            return false;
+        }
+        else if ($clone.find("button:not(.repeater__delete-button)").length) {
+            $clone.find("button:not(.repeater__delete-button)").first().focus();
+            // console.log($clone.find("button:not(.repeater__delete-button)").first());
+            return false;
+        }
 
     }
 
@@ -287,15 +356,27 @@ tags.sort();
         // Append Clone to Wrapper
         $clone.appendTo($repeaterWrapper);
 
+        // Focus The Closest Input
+        if ($clone.find("input[type='text']").length) {
+            $clone.find("input[type='text']").first().focus();
+            // console.log($clone.find("input[type='text']").first());
+            return false;
+        }
+        else if ($clone.find("textarea").length) {
+            $clone.find("textarea").first().focus();
+            // console.log($clone.find("textarea").first());
+            return false;
+        }
+        else if ($clone.find("button:not(.repeater__delete-button)").length) {
+            $clone.find("button:not(.repeater__delete-button)").first().focus();
+            // console.log($clone.find("button:not(.repeater__delete-button)").first());
+            return false;
+        }
+
     }
 
 // JSON Generation
 function generate(button) {
-
-    var jsonWrapper = $(".json-wrapper");
-    jsonWrapper.html("");
-    var codeWrapper = document.createElement("pre");
-    jsonWrapper.append(codeWrapper);
 
     // Guide Meta ==============================================================
 
@@ -335,7 +416,8 @@ function generate(button) {
 
     // Description
     var metaDescriptionString = $(".guide-value__description").val();
-    var metaDescription = encodeURIComponent(metaDescriptionString);
+    // var metaDescription = encodeURIComponent(metaDescriptionString);
+    var metaDescription = metaDescriptionString;
 
     // Instance Type (Necessary for Images)
     var metaInstanceType = $(".guide-value__instance-type").val().toLowerCase();
@@ -345,11 +427,11 @@ function generate(button) {
 
         // Large Image
         var metaLargeImageValue = $(".guide-value__image--large").val();
-        metaLargeImage = "/assets/img/" + metaInstanceType + "/" + metaLargeImageValue;
+        metaLargeImage = "/assets/img/" + metaInstanceType + "s" + "/" + metaLargeImageValue;
 
         // Small Image
         var metaSmallImageValue = $(".guide-value__image--small").val();
-        metaSmallImage = "/assets/img/" + metaInstanceType + "/small/" + metaSmallImageValue;
+        metaSmallImage = "/assets/img/" + metaInstanceType + "s" + "/small/" + metaSmallImageValue;
 
         var metaLargeImageObject = {
             url: metaLargeImage 
@@ -404,7 +486,8 @@ function generate(button) {
 
     // MTQ Video
     var metaMTQString = $(".guide-value__video-guide").val();
-    var metaMTQ = encodeURIComponent(metaMTQString);
+    // var metaMTQ = encodeURIComponent(metaMTQString);
+    var metaMTQ = metaMTQString
 
     // Duty Mechanics ==========================================================
 
@@ -426,12 +509,14 @@ function generate(button) {
 
             stepValue = stepValue + 1;
 
-            if (stepValue < 10) {
-                var stepTitle = "0" + stepValue;
-            }
-            else {
-                var stepTitle = stepValue;
-            }
+            // if (stepValue < 10) {
+            //     var stepTitle = "0" + stepValue;
+            // }
+            // else {
+            //     var stepTitle = stepValue;
+            // }
+
+            var stepTitle = stepValue;
 
             var noteArray = [];
 
@@ -502,12 +587,14 @@ function generate(button) {
 
             phaseValue = phaseValue + 1;
 
-            if (phaseValue < 10) {
-                phaseID = "0" + phaseValue;
-            }
-            else {
-                phaseID = phaseValue;
-            }
+            // if (phaseValue < 10) {
+            //     phaseID = "0" + phaseValue;
+            // }
+            // else {
+            //     phaseID = phaseValue;
+            // }
+
+            phaseID = phaseValue;
 
             // Attack Script
 
@@ -591,10 +678,19 @@ function generate(button) {
             });
 
             var sequenceObject = {
-                phase: phaseID,
-                attacks: scriptArray,
-                alerts: alertArray,
-                mechanics: phaseMechanicArray
+                phase: phaseID
+            }
+
+            if (scriptArray.length != 0) {
+                sequenceObject.attacks = scriptArray;
+            }
+
+            if (alertArray.length != 0) {
+                sequenceObject.alerts = alertArray;
+            }
+
+            if (phaseMechanicArray.length != 0) {
+                sequenceObject.mechanics = phaseMechanicArray;
             }
 
             sequenceArray.push(sequenceObject);
@@ -869,10 +965,14 @@ function generate(button) {
 
                         var comboObject = {
                             title: attackTitle,
-                            phases: attackPhaseArray,
-                            notes: attackNoteArray,
-                            combo: subattackArray
+                            phases: attackPhaseArray
                         }
+
+                        if (attackNoteArray.length != 0) {
+                            comboObject.notes = attackNoteArray;
+                        }
+
+                        comboObject.combo = subattackArray;
 
                         attacksArray.push(comboObject);
 
@@ -881,10 +981,14 @@ function generate(button) {
 
                         var variationObject = {
                             title: attackTitle,
-                            phases: attackPhaseArray,
-                            notes: attackNoteArray,
-                            variation: subattackArray
+                            phases: attackPhaseArray
                         }
+
+                        if (attackNoteArray.length != 0) {
+                            variationObject.notes = attackNoteArray;
+                        }
+
+                        variationObject.variation = subattackArray;
 
                         attacksArray.push(variationObject);
 
@@ -968,8 +1072,42 @@ function generate(button) {
 
     var guidejson = JSON.stringify(guideObject);
 
-    console.log(guidejson);
+    // console.log(guidejson);
 
-    codeWrapper.append(guidejson);
+    yamlString = YAML.stringify(guideObject, 10000000, 2);
+
+    var replaced = yamlString.replace(/(\s+\-)\s*\n\s+/g, '$1 ');
+
+    replaced = "---\n" + replaced + "---"
+
+    replaced = replaced + "\n" + guidejson;
+
+    var jsonWrapper = $(".json-wrapper");
+
+    jsonWrapper.html("");
+
+    var codeWrapper = document.createElement("pre");
+
+    jsonWrapper.append(codeWrapper);
+
+    codeWrapper.append(replaced);
+
+}
+
+// Copy Code Handler ===========================================================
+
+function copyYAML(button) {
+
+    var code = $(".json-wrapper").find("pre").text();
+
+    const el = document.createElement('textarea');
+    el.value = code;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
 
 }

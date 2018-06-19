@@ -12,8 +12,8 @@
 	.guide-container {
 		background: rgba(255, 255, 255, 1);
 		border-radius: 3px;
-		box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-		margin: 0 auto 4rem auto;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+		margin: 0 auto 4rem auto !important;
 		max-width: 45rem;
 		overflow: hidden;
 		width: 90%;
@@ -22,7 +22,7 @@
 	.json-wrapper {
 		background: rgba(255, 255, 255, 1);
 		border-radius: 3px;
-		box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+		box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
 		/*font-family: monospace !important;*/
 		margin: 0 auto 4rem auto;
 		max-width: 45rem;
@@ -60,6 +60,7 @@
 	h4 {
 		font-size: 18px;
 		font-weight: 600;
+        margin: 2rem 0 1rem;
 	}
 
 	h5 {
@@ -92,7 +93,7 @@
 
 		/* Repeaters */
 		.repeater__wrapper {
-
+			/*margin: 2rem 0;*/
 		}
 
 		.repeater__template {
@@ -101,7 +102,11 @@
 		}
 
 		.repeater__item {
+			margin: 0 0 1rem 0;
+		}
 
+		.repeater__item:last-child {
+			margin-bottom: 0;
 		}
 
 		.repeater__add-button {
@@ -119,6 +124,15 @@
 		.repeater__delete-button img {
 			max-width: 1.5rem;
 		}
+
+        .guide__input-context {
+            margin: 1rem 0 1.3rem;
+        }
+
+        .nested-button {
+            margin: 2rem 0 0 0;
+            padding: 1rem;
+        }
 
 	/* Grids */
 	.grid__50-50 {
@@ -283,12 +297,40 @@
 		width: 90%;
 	}
 
-	/* Generation */
-	.generate__button-wrapper {
+    .bosses__add-boss-button-wrapper button {
+        background: none;
+        border: 2px dashed rgba(200, 200, 200, 1);
+        font-family: Open Sans,sans-serif;
+        line-height: 1.2;
+        outline: none;
+        padding: 2rem;
+    }
+
+	.final-buttons__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 2rem;
 		margin: 0 auto 4rem auto;
 		max-width: 45rem;
 		width: 90%;
 	}
+
+	/* Generation */
+
+    	.generate__button-wrapper {
+
+    	}
+
+        .generate__button-wrapper button {
+            background: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+            font-family: Open Sans,sans-serif;
+            line-height: 1.2;
+            outline: none;
+            padding: 2rem;
+        }
 
 
 /* END ====================================================================== */
@@ -327,6 +369,7 @@
 }
 
 .generator button {
+    cursor: pointer;
 	display: block;
 	/*padding: .5rem;*/
 	width: 100%;
@@ -336,11 +379,11 @@
 	font-family: Open Sans,sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
-	margin: 0 0 .5rem 0;
+	/*margin: 0 0 .5rem 0;*/
 }
 
 .generator p:last-child {
-	margin: 0;
+	/*margin: 0;*/
 }
 
 .meta {

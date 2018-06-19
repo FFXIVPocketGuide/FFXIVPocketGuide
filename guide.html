@@ -118,48 +118,48 @@
 
                             <label>Search Terms</label>
 
-                            <p>Expansion, Expansion Abbreviation, Duty Name, Duty Nickname, Boss Names, Difficulty</p>
+                            <p class="guide__input-context">Expansion, Expansion Abbreviation, Duty Name, Duty Nickname, Boss Names, Difficulty</p>
 
                             <div class="guide-meta__search-term-group repeater__wrapper">
                                 <div class="guide-meta__search-term grid__90-10 repeater__template">
                                     <input type="text">
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
                                 <div class="guide-meta__search-term grid__90-10 repeater__item">
                                     <input type="text" placeholder="Expansion">
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
                                 <div class="guide-meta__search-term grid__90-10 repeater__item">
                                     <input type="text" placeholder="Expansion Abbreviation">
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
                                 <div class="guide-meta__search-term grid__90-10 repeater__item">
                                     <input type="text" placeholder="Duty Name">
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
                                 <div class="guide-meta__search-term grid__90-10 repeater__item">
                                     <input type="text" placeholder="Duty Nickname">
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
                                 <div class="guide-meta__search-term grid__90-10 repeater__item">
                                     <input type="text" placeholder="Boss Name">
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
                                 <div class="guide-meta__search-term grid__90-10 repeater__item">
                                     <input type="text" placeholder="Difficulty">
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this term." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -167,7 +167,7 @@
 
                             <!-- Add Term Button -->
                             <div class="guide__input-wrapper">
-                                <button onclick="addRepeaterItem(this)" title="Add a term." class="repeater__add-button">Add a Term</button>
+                                <button onclick="addRepeaterItem(this)" title="Add a term." class="repeater__add-button nested-button">Add a Term</button>
                             </div>
 
                         </div>
@@ -267,7 +267,7 @@
 
                         <div class="guide__input-wrapper grid__90-10">
                             <h3>New Duty Mechanic</h3>
-                            <button onclick="deleteRepeaterItem(this)" title="Delete this duty mechanic." class="repeater__delete-button">
+                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this duty mechanic." class="repeater__delete-button">
                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                             </button>
                         </div>
@@ -285,7 +285,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <h5>New Step</h5>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this step." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this step." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -310,7 +310,7 @@
 
                                 <!-- Add Note Button -->
                                 <div class="guide__input-wrapper">
-                                    <button onclick="addRepeaterItem(this)" title="Add a duty mechanic note." class="repeater__add-button">Add a Note</button>
+                                    <button onclick="addRepeaterItem(this)" title="Add a duty mechanic note." class="repeater__add-button nested-button">Add a Note</button>
                                 </div>
 
                             </div>
@@ -319,7 +319,7 @@
 
                         <!-- Add Step Button -->
                         <div class="guide__input-wrapper">
-                            <button onclick="addRepeaterItem(this)" title="Add a duty mechanic step." class="repeater__add-button">Add a Step</button>
+                            <button onclick="addRepeaterItem(this)" title="Add a duty mechanic step." class="repeater__add-button nested-button">Add a Step</button>
                         </div>
 
                     </div>
@@ -350,7 +350,7 @@
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Script Attack</h5>
-                        <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                        <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
                             <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                         </button>
                     </div>
@@ -379,7 +379,7 @@
                     <div class="guide__input-wrapper">
                         <div class="guide__input-wrapper grid__90-10">
                             <label>New Alert</label>
-                            <button onclick="deleteRepeaterItem(this)" title="Delete this alert." class="repeater__delete-button">
+                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this alert." class="repeater__delete-button">
                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                             </button>
                         </div>
@@ -393,7 +393,7 @@
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Mechanic</h5>
-                        <button onclick="deleteRepeaterItem(this)" title="Delete this mechanic." class="repeater__delete-button">
+                        <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this mechanic." class="repeater__delete-button">
                             <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                         </button>
                     </div>
@@ -409,7 +409,7 @@
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <label>New Note</label>
-                                <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                     <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                 </button>
                             </div>
@@ -421,7 +421,7 @@
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <label>New Note</label>
-                                <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                     <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                 </button>
                             </div>
@@ -432,7 +432,7 @@
                     </div>
 
                     <div class="guide__input-wrapper">
-                        <button onclick="addRepeaterItem(this)" title="Add a mechanic note." class="repeater__add-button">Add a Note</button>
+                        <button onclick="addRepeaterItem(this)" title="Add a mechanic note." class="repeater__add-button nested-button">Add a Note</button>
                     </div>
 
                 </div>
@@ -442,7 +442,7 @@
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Regular Attack</h5>
-                        <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                        <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
                             <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                         </button>
                     </div>
@@ -478,7 +478,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <label>New Note</label>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -490,7 +490,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <label>New Note</label>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -501,7 +501,7 @@
                         </div>
 
                         <div class="guide__input-wrapper">
-                            <button onclick="addRepeaterItem(this)" title="Add an attack note." class="repeater__add-button">Add a Note</button>
+                            <button onclick="addRepeaterItem(this)" title="Add an attack note." class="repeater__add-button nested-button">Add a Note</button>
                         </div>
 
                     </div>
@@ -517,7 +517,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <label>New Image</label>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -553,7 +553,7 @@
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Combo</h5>
-                        <button onclick="deleteRepeaterItem(this)" title="Delete this combo." class="repeater__delete-button">
+                        <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this combo." class="repeater__delete-button">
                             <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                         </button>
                     </div>
@@ -575,7 +575,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <label>New Note</label>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -587,7 +587,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <label>New Note</label>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -611,7 +611,7 @@
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <h5>New Combo Attack</h5>
-                                <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                                <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
                                     <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                 </button>
                             </div>
@@ -647,7 +647,7 @@
 
                                         <div class="guide__input-wrapper grid__90-10">
                                             <label>New Note</label>
-                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
@@ -659,7 +659,7 @@
 
                                         <div class="guide__input-wrapper grid__90-10">
                                             <label>New Note</label>
-                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
@@ -686,7 +686,7 @@
 
                                         <div class="guide__input-wrapper grid__90-10">
                                             <label>New Image</label>
-                                            <button onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
+                                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
@@ -732,7 +732,7 @@
 
                     <div class="guide__input-wrapper grid__90-10">
                         <h5>New Attack with Variations</h5>
-                        <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                        <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
                             <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                         </button>
                     </div>
@@ -754,7 +754,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <label>New Note</label>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -766,7 +766,7 @@
 
                                 <div class="guide__input-wrapper grid__90-10">
                                     <label>New Note</label>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
@@ -790,7 +790,7 @@
 
                             <div class="guide__input-wrapper grid__90-10">
                                 <h5>New Variation</h5>
-                                <button onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
+                                <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this attack." class="repeater__delete-button">
                                     <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                 </button>
                             </div>
@@ -826,7 +826,7 @@
 
                                         <div class="guide__input-wrapper grid__90-10">
                                             <label>New Note</label>
-                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
@@ -838,7 +838,7 @@
 
                                         <div class="guide__input-wrapper grid__90-10">
                                             <label>New Note</label>
-                                            <button onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
+                                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this note." class="repeater__delete-button">
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
@@ -865,7 +865,7 @@
 
                                         <div class="guide__input-wrapper grid__90-10">
                                             <label>New Image</label>
-                                            <button onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
+                                            <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this image." class="repeater__delete-button">
                                                 <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                             </button>
                                         </div>
@@ -914,7 +914,7 @@
 
                     <div class="guide__title-wrapper grid__90-10">
                         <h2>New Boss</h2>
-                        <button onclick="deleteRepeaterItem(this)" title="Delete this step." class="repeater__delete-button">
+                        <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this step." class="repeater__delete-button">
                             <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                         </button>
                     </div>
@@ -935,20 +935,20 @@
 
                                 <div class="boss__phase-title-wrapper guide__input-wrapper grid__90-10">
                                     <h3>New Phase</h3>
-                                    <button onclick="deleteRepeaterItem(this)" title="Delete this phase." class="repeater__delete-button">
+                                    <button tabindex="-1" onclick="deleteRepeaterItem(this)" title="Delete this phase." class="repeater__delete-button">
                                         <img src="assets/img/generator/icon-delete.svg" alt="Delete Icon">
                                     </button>
                                 </div>
 
                                 <!-- Script -->
-                                <div class="boss__phase-script-wrapper">
+                                <div class="boss__phase-script-wrapper repeater__wrapper">
 
                                     <h4>Attack Script</h4>
 
                                 </div>
 
                                 <div class="guide__input-wrapper">
-                                    <button onclick="addScriptItem(this)" title="Add a script attack." class="repeater__add-button">Add a Script Attack</button>
+                                    <button onclick="addScriptItem(this)" title="Add a script attack." class="repeater__add-button nested-button">Add a Script Attack</button>
                                 </div> 
 
                                 <!-- Alerts -->
@@ -959,7 +959,7 @@
                                 </div>
 
                                 <div class="guide__input-wrapper">
-                                    <button onclick="addAlertItem(this)" title="Add an alert." class="repeater__add-button">Add an Alert</button>
+                                    <button onclick="addAlertItem(this)" title="Add an alert." class="repeater__add-button nested-button">Add an Alert</button>
                                 </div> 
 
                                 <!-- Mechanics -->
@@ -967,12 +967,12 @@
 
                                     <h4>Phase Mechanics</h4>
 
-                                    <p>Include Duty Gauges in mechanics.</p>
+                                    <p class="guide__input-context">Include Duty Gauges in mechanics.</p>
 
                                 </div>
 
                                 <div class="guide__input-wrapper">
-                                    <button onclick="addMechanicItem(this)" title="Add a mechanic." class="repeater__add-button">Add a Mechanic</button>
+                                    <button onclick="addMechanicItem(this)" title="Add a mechanic." class="repeater__add-button nested-button">Add a Mechanic</button>
                                 </div> 
 
                                 <!-- Attacks -->
@@ -984,9 +984,9 @@
 
                                 <div class="grid__33-33-33">
 
-                                    <button onclick="addAttackItem(this)" title="Add a regular attack." data-attack-type="regular" class="repeater__add-button">Add a Regular Attack</button>
-                                    <button onclick="addAttackItem(this)" title="Add a combo attack." data-attack-type="combo" class="repeater__add-button">Add a Combo Attack</button>
-                                    <button onclick="addAttackItem(this)" title="Add an attack with variations." data-attack-type="variation" class="repeater__add-button">Add an Attack w/ Variations</button>
+                                    <button onclick="addAttackItem(this)" title="Add a regular attack." data-attack-type="regular" class="repeater__add-button nested-button">Add a Regular Attack</button>
+                                    <button onclick="addAttackItem(this)" title="Add a combo attack." data-attack-type="combo" class="repeater__add-button nested-button">Add a Combo Attack</button>
+                                    <button onclick="addAttackItem(this)" title="Add an attack with variations." data-attack-type="variation" class="repeater__add-button nested-button">Add an Attack w/ Variations</button>
 
                                 </div>
 
@@ -995,7 +995,7 @@
                         </div>
 
                         <div class="guide__input-wrapper">
-                            <button onclick="addRepeaterItem(this)" title="Add a phase." class="repeater__add-button">Add a Phase</button>
+                            <button onclick="addRepeaterItem(this)" title="Add a phase." class="repeater__add-button nested-button">Add a Phase</button>
                         </div>
 
                     </div>
@@ -1013,16 +1013,22 @@
 
         <!-- Guide Generation ============================================== -->
 
-        <!-- Generate Button -->
-        <div class="generate__button-wrapper guide__input-wrapper">
-            <button onclick="generate(this)" title="Generate the guide JSON.">Generate JSON</button>
+        <!-- Generate Buttons -->
+        <div class="final-buttons__wrapper">
+
+            <div class="generate__button-wrapper guide__input-wrapper">
+                <button onclick="generate(this)" title="Generate the guide YAML.">Generate YAML</button>
+            </div>
+
+            <div class="generate__button-wrapper guide__input-wrapper">
+                <button onclick="copyYAML(this)" title="Copy the Guide Content.">Copy Output</button>
+            </div>
+
         </div>
 
         <!-- Data Output =================================================== -->
         <div class="json-wrapper">
-            <pre>
-                <code>Code will appear here.</code>
-            </pre>
+            <pre>Code will appear here.</pre>
         </div>
 
         <!-- END =========================================================== -->
