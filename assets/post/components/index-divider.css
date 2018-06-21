@@ -20,10 +20,10 @@
     }
 
     &:before {
-        background: $palette-red;
+        background: rgba(149, 152, 154, 1);
         content: " ";
         display: block;
-        height: 3px;
+        height: 1px;
         position: absolute;
         top: 50%;
         left: 0;

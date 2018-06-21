@@ -100,15 +100,24 @@
     text-align: center;
 
     a {
-        border-bottom: 1px solid $palette-white;
+        /*border-bottom: 1px solid $palette-white;*/
         color: $palette-white;
         display: block;
         font-family: $font-aktiv;
-        font-size: $font-scale-h1;
+        font-size: $font-scale-h2;
         font-weight: 800;
-        padding: calc($unit * 4) calc($unit * 1.5);
+        padding: calc($unit * 5) calc($unit * 1.5) calc($unit * 4) calc($unit * 1.5);
         text-decoration: none;
         width: 100%;
+
+        img {
+            width: 35%;
+
+            @media $(l-tablet) {
+                width: 50%;
+            }
+
+        }
 
         br {
             display: none;
@@ -143,6 +152,7 @@
 
     input {
         border: 1px solid $palette-black;
+        border-radius: 3px;
         color: $font-black;
         display: block;
         font-family: $font-aktiv;
@@ -203,7 +213,7 @@
         &:first-of-type {
 
             a {
-                padding-top: calc($unit * 4);
+                /*padding-top: calc($unit * 4);*/
             }
 
         }
@@ -211,7 +221,7 @@
         &:last-of-type {
 
             a {
-                padding-bottom: calc($unit * 4);
+                /*padding-bottom: calc($unit * 4);*/
             }
 
         }
