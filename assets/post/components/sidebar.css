@@ -10,15 +10,16 @@
     appearance: none;
     background: $palette-red;
     border: 3px solid $palette-red;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 5px 0 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
     max-height: 100vh;
-    max-width: 8rem;
+    max-width: 10rem;
     outline: none;
-    padding: $unit;
+    padding: calc($unit * 1.5) $unit;
     position: fixed;
-    right: 0;
-    bottom: calc($unit * 2);
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
     width: 50vw;
     z-index: 110;
 
