@@ -112,7 +112,7 @@
         width: 100%;
 
         img {
-            width: 35%;
+            width: 20%;
 
             @media $(l-tablet) {
                 width: 40%;

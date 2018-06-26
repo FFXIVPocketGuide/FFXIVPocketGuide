@@ -27,9 +27,18 @@
 
         // Menu Trigger ========================================================
         $(".sidebar__trigger").on("click", function(e) {
+            
+            if ($(".site-grid__sidebar").hasClass("active")) {
+                $("body").css("overflow-y", "visible");
+            }
+            else {
+                $("body").css("overflow-y", "hidden");
+            }
+
             $(this).toggleClass("active");
             $(".site-grid__sidebar-overlay").toggleClass("active");
             $(".site-grid__sidebar").toggleClass("active");
+
         });
 
         $(".site-grid__sidebar-overlay").on("click", function(e) {
@@ -37,6 +46,7 @@
                 $(".sidebar__trigger").removeClass("active");
                 $(this).removeClass("active");
                 $(".site-grid__sidebar").removeClass("active");
+                $("body").css("overflow-y", "visible");
             }
         });
 
