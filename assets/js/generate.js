@@ -31,6 +31,7 @@ var tags = [
     "Cleave",
     "Buff",
     "Debuff",
+    "Line of Sight",
     "Tankbuster",
     "Stack",
     "Spread",

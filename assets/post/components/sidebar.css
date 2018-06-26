@@ -114,7 +114,7 @@
             width: 35%;
 
             @media $(l-tablet) {
-                width: 50%;
+                width: 40%;
             }
 
         }

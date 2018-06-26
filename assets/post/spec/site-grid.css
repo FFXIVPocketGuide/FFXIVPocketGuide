@@ -46,9 +46,9 @@ $media-navigation: screen and (orientation: landscape) and (min-width: 64em);
         width: 20vw;
     }
 
-    @media screen and (orientation: landscape) and (min-width: 100em) {
+    /*@media screen and (orientation: landscape) and (min-width: 100em) {
         width: 15vw;
-    }
+    }*/
 
     &.active {
         box-shadow: 2px 0 5px rgba(0, 0, 0, .5);
@@ -87,10 +87,10 @@ $media-navigation: screen and (orientation: landscape) and (min-width: 64em);
         width: 80vw;
     }
 
-    @media screen and (orientation: landscape) and (min-width: 100em) {
+    /*@media screen and (orientation: landscape) and (min-width: 100em) {
         margin-left: 15vw;
         max-width: 85%;
         width: 85vw;
-    }
+    }*/
 
 }
