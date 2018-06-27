@@ -69,3 +69,15 @@ fields:
     label: Term
     config:
       required: true
+- type: number
+  name: patchNumber
+  label: Patch Number
+  config:
+    min: '2.0'
+    required: true
+  default: '4.0'
+- type: text
+  name: patchName
+  label: Patch Name
+  config:
+    required: true
