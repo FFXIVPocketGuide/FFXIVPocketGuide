@@ -1,11 +1,11 @@
 ---
 title: Sample Post
-layout: guide_post
+layout: guide_post_new
 categories: A Realm Reborn
 image:
 - url: "/assets/img/dungeons/asset.jpg"
   urlSmall: "/assets/img/dungeons/small/asset.jpg"
-patchNumber: 4.0
+patchNumber: 4
 date: 2018-06-27 00:00:00 +0000
 slug: duty-name-difficulty
 description: Read our Guide on the dungeon/trial/8-man raid/24-man raid NAME (DIFFICULTY)
@@ -37,4 +37,39 @@ bosses:
       notes:
       - note: Sample Note 02
       - note: Sample Note
+    attacks:
+    - template: regular-attack
+      roles:
+      - Tank
+      title: Regular Attack
+      tags:
+      - Tankbuster
+      - AoE - Area
+      notes:
+      - note: Sample Note
+    - template: combo-attack
+      combo_title: Combo Attack Title
+      notes:
+      - note: Combo Note
+      combo:
+      - title: Combo Attack 01
+        roles:
+        - Healer
+        tags:
+        - Animation
+        dutyAction: Duty Action
+        notes:
+        - note: Sample Note
+    - template: attack-w-variations
+      variations:
+      - title: Sample Variation Attack
+        roles:
+        - Everyone
+        tags:
+        - Animation
+        notes:
+        - note: Vari Note
+      title: Attack w/ Variations
+      notes:
+      - note: Variation Note
 ---
