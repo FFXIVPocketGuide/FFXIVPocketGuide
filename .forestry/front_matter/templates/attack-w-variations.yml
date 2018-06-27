@@ -1,0 +1,18 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  name: title
+  label: Variation Title
+  config:
+    required: true
+- type: field_group_list
+  name: notes
+  label: Variation Notes
+  fields:
+  - type: textarea
+    name: note
+    label: Note
+    config:
+      required: true
