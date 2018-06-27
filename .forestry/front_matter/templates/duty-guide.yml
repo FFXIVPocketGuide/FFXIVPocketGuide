@@ -53,11 +53,13 @@ fields:
     label: Large Image
     config:
       required: true
+    default: "/assets/img/dungeons/asset.jpg"
   - type: text
     name: urlSmall
     label: Small Image
     config:
       required: true
+    default: "/assets/img/dungeons/small/asset.jpg"
 - type: field_group_list
   name: terms
   label: Search Terms
