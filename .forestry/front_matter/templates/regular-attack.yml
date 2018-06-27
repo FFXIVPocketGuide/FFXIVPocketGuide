@@ -1,0 +1,34 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  name: title
+  label: Attack Name
+  config:
+    required: true
+- type: list
+  config:
+    use_select: true
+    source:
+      type: simple
+    options:
+    - Everyone
+    - Tank
+    - Healer
+    - Melee DPS
+    - Ranged DPS
+  label: Roles
+  name: roles
+  default: []
+- type: text
+  name: dutyAction
+  label: Duty Action
+- type: list
+  name: tags
+  label: Tags
+  config:
+    use_select: true
+    source:
+      type: datafiles
+    options: []
