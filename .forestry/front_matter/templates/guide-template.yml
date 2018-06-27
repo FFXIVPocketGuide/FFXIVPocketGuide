@@ -30,7 +30,7 @@ fields:
     - Heavensward
     - Stormblood
   label: Category
-  default: arr
+  default: A Realm Reborn
 - type: text
   name: slug
   label: Page Slug
@@ -92,6 +92,7 @@ fields:
     - Extreme
     - Ultimate
   label: Difficulty
+  default: Normal
 - type: number
   name: plvl
   label: Player Level
@@ -125,6 +126,7 @@ fields:
     - Trial
     - Raid
   label: Instance Type
+  default: Dungeon
 - type: text
   name: mtqvid
   label: MTQ Video Link
