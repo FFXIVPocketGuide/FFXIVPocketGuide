@@ -81,3 +81,5 @@ fields:
   label: Patch Name
   config:
     required: true
+pages:
+- _posts/hw/sample-post.md
