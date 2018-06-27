@@ -30,6 +30,7 @@ fields:
     - hw
     - sb
   label: Category
+  default: arr
 - type: text
   name: slug
   label: Page Slug
