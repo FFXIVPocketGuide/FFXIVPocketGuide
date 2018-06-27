@@ -1,9 +1,9 @@
 ---
 title: Sample Post
 layout: guide_post
-categories: arr
+categories: A Realm Reborn
 image:
-  url: "/assets/img/dungeons/asset.jpg"
+- url: "/assets/img/dungeons/asset.jpg"
   urlSmall: "/assets/img/dungeons/small/asset.jpg"
 patchNumber: 4.0
 date: 2018-06-27 00:00:00 +0000
@@ -14,4 +14,20 @@ terms:
 - term: Term
 - term: Term
 patchName: Sample Patch
+difficulty: Normal
+plvl: 70
+ilvl: 345
+order: 70345
+orchestrion: TBD
+instanceType: Dungeon
+mtqvid: http://google.com
+bosses:
+- title: Tsukuyomi
+  id: 1
+  phases:
+  - phase: 1
+    script:
+    - attack: Sample Attack Name
+      dutyAction: true
+    - attack: Sample Attack Name 02
 ---
