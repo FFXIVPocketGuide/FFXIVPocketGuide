@@ -16,3 +16,11 @@ fields:
     label: Note
     config:
       required: true
+- type: field_group_list
+  label: Variation Attacks
+  name: variations
+  fields:
+  - type: include
+    name: attack
+    label: Attack
+    template: regular-attack
