@@ -37,6 +37,7 @@ bosses:
     attacks:
     - template: regular-attack
       roles:
+      - Healer
       - Everyone
       title: Regular Attack Name
       tags:
