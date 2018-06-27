@@ -195,5 +195,8 @@ fields:
           label: Note
           config:
             required: true
+    - type: blocks
+      name: attacks
+      label: Attacks
 pages:
 - _posts/hw/sample-post.md
