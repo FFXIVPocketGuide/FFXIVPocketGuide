@@ -34,3 +34,27 @@ fields:
       file: _data-tags-json
       path: tags
     options: []
+- type: field_group_list
+  name: notes
+  label: Attack Notes
+  fields:
+  - type: textarea
+    name: note
+    label: Note
+    config:
+      required: true
+- type: field_group_list
+  name: images
+  label: Attack Images
+  fields:
+  - type: text
+    name: url
+    label: Image URL
+    default: "/assets/img/dungeon/asset.png"
+    config:
+      required: true
+  - type: text
+    name: alt
+    label: Image Alt Text
+    config:
+      required: true
