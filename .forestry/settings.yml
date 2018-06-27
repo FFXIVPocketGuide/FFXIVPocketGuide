@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: forestry
 webhook_url: 
 collections: 
 upload_dir: uploads
