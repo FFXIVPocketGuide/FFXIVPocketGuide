@@ -44,3 +44,26 @@ fields:
     required: true
   description: Read our Guide on the dungeon/trial/8-man raid/24-man raid NAME (DIFFICULTY)
     where you'll face off against Boss 01, Boss 02, and Boss 03.
+- type: field_group
+  label: Site Images
+  name: image
+  fields:
+  - type: text
+    name: url
+    label: Large Image
+    config:
+      required: true
+  - type: text
+    name: urlSmall
+    label: Small Image
+    config:
+      required: true
+- type: field_group_list
+  name: terms
+  label: Search Terms
+  fields:
+  - type: text
+    name: term
+    label: Term
+    config:
+      required: true
