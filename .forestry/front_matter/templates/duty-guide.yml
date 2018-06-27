@@ -67,3 +67,5 @@ fields:
     label: Term
     config:
       required: true
+pages:
+- _coming/sample-post.md
