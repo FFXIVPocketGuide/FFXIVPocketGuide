@@ -1,0 +1,45 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: layout
+  label: Guide Layout
+  default: guide_post
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Last Updated
+  config:
+    date_format: YYYY-MM-DD
+    required: true
+- type: text
+  name: title
+  label: Guide Title
+  config:
+    required: true
+- type: select
+  name: categories
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - arr
+    - hw
+    - sb
+  label: Category
+- type: text
+  name: slug
+  label: Page Slug
+  config:
+    required: true
+  description: '"duty-name-difficulty" - difficulty required for anything above normal.'
+- type: textarea
+  name: description
+  label: Description
+  config:
+    required: true
+  description: Read our Guide on the dungeon/trial/8-man raid/24-man raid NAME (DIFFICULTY)
+    where you'll face off against Boss 01, Boss 02, and Boss 03.
