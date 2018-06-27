@@ -31,4 +31,6 @@ fields:
     use_select: true
     source:
       type: datafiles
+      file: _data-tags-yml
+      path: tags
     options: []
