@@ -1,36 +1,36 @@
 ---
 tags:
-  Active Time Maneuver
-  AoE - Cone
-  AoE - Circular
-  AoE - Puddle
-  AoE - Donut
-  AoE - Column
-  AoE - Area
-  AoE - Point Blank
-  Marker (Orange)
-  Marker (Green)
-  Marker (Blue)
-  Marker (Red)
-  Marker (Purple)
-  Marker (Icon)
-  Raid Wide Damage
-  Proximity
-  AoE - Cross
-  AoE - Figure 8
-  Knockback
-  Cleave
-  Buff
-  Debuff
-  Line of Sight
-  Tankbuster
-  Stack
-  Spread
-  Tether
-  Stun
-  Gaze
-  Mechanic
-  Animation
-  Spawn
-  Ultimate"
+- tag: "Active Time Maneuver"
+- tag: "AoE - Cone"
+- tag: "AoE - Circular"
+- tag: "AoE - Puddle"
+- tag: "AoE - Donut"
+- tag: "AoE - Column"
+- tag: "AoE - Area"
+- tag: "AoE - Point Blank"
+- tag: "Marker (Orange)"
+- tag: "Marker (Green)"
+- tag: "Marker (Blue)"
+- tag: "Marker (Red)"
+- tag: "Marker (Purple)"
+- tag: "Marker (Icon)"
+- tag: "Raid Wide Damage"
+- tag: "Proximity"
+- tag: "AoE - Cross"
+- tag: "AoE - Figure 8"
+- tag: "Knockback"
+- tag: "Cleave"
+- tag: "Buff"
+- tag: "Debuff"
+- tag: "Line of Sight"
+- tag: "Tankbuster"
+- tag: "Stack"
+- tag: "Spread"
+- tag: "Tether"
+- tag: "Stun"
+- tag: "Gaze"
+- tag: "Mechanic"
+- tag: "Animation"
+- tag: "Spawn"
+- tag: "Ultimate"
 ---
