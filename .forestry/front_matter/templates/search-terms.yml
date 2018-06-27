@@ -13,3 +13,5 @@ fields:
     label: Term
     config:
       required: false
+pages:
+- _posts/arr/sample-post.md
