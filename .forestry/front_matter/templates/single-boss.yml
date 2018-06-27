@@ -79,5 +79,40 @@ fields:
   label: Patch Name
   config:
     required: true
+- type: select
+  name: difficulty
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - Normal
+    - Hard
+    - Savage
+    - Extreme
+    - Ultimate
+  label: Difficulty
+- type: number
+  name: plvl
+  label: Player Level
+  config:
+    required: true
+- type: number
+  name: ilvl
+  label: Item Level
+  config:
+    required: true
+- type: number
+  name: order
+  label: Order
+  description: Combine Player and Item Level
+  config:
+    required: true
+- type: text
+  label: Orchestrion Roll
+  name: orchestrion
+  config:
+    required: true
+  default: TBD
 pages:
 - _posts/hw/sample-post.md
