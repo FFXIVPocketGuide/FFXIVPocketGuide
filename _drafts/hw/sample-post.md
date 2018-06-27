@@ -30,4 +30,11 @@ bosses:
     - attack: Sample Attack Name
       dutyAction: true
     - attack: Sample Attack Name 02
+    alerts:
+    - alert: Sample Alert
+    mechanics:
+    - title: Mechanic Title
+      notes:
+      - note: Sample Note 02
+      - note: Sample Note
 ---
