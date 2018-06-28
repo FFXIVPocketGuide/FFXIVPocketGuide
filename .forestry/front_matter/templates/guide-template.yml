@@ -1,0 +1,208 @@
+---
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: layout
+  label: Guide Layout
+  default: guide_post_new
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Last Updated
+  config:
+    date_format: YYYY-MM-DD
+    required: true
+- type: text
+  name: title
+  label: Guide Title
+  config:
+    required: true
+- type: select
+  name: categories
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - A Realm Reborn
+    - Heavensward
+    - Stormblood
+  label: Category
+  default: A Realm Reborn
+- type: text
+  name: slug
+  label: Page Slug
+  config:
+    required: true
+  description: '"duty-name-difficulty" - difficulty required for anything above normal.'
+- type: textarea
+  name: description
+  label: Description
+  config:
+    required: true
+  description: Read our Guide on the dungeon/trial/8-man raid/24-man raid NAME (DIFFICULTY)
+    where you'll face off against Boss 01, Boss 02, and Boss 03.
+- type: field_group_list
+  name: image
+  label: Site Images
+  fields:
+  - type: text
+    name: url
+    label: Large Image
+    config:
+      required: true
+    default: "/assets/img/dungeons/asset.jpg"
+  - type: text
+    label: Small Image
+    name: urlSmall
+    config:
+      required: true
+    default: "/assets/img/dungeons/small/asset.jpg"
+- type: field_group_list
+  name: terms
+  label: Search Terms
+  fields:
+  - type: text
+    name: term
+    label: Term
+    config:
+      required: true
+- type: number
+  name: patchNumber
+  label: Patch Number
+  config:
+    min: '2.0'
+    required: true
+  default: '4.0'
+- type: text
+  name: patchName
+  label: Patch Name
+  config:
+    required: true
+- type: select
+  name: difficulty
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - Normal
+    - Hard
+    - Savage
+    - Extreme
+    - Ultimate
+  label: Difficulty
+  default: Normal
+- type: number
+  name: plvl
+  label: Player Level
+  config:
+    required: true
+- type: number
+  name: ilvl
+  label: Item Level
+  config:
+    required: true
+- type: number
+  name: order
+  label: Order
+  description: Combine Player and Item Level
+  config:
+    required: true
+- type: text
+  label: Orchestrion Roll
+  name: orchestrion
+  config:
+    required: true
+  default: TBD
+- type: select
+  name: instanceType
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - Dungeon
+    - Trial
+    - Raid
+  label: Instance Type
+  default: Dungeon
+- type: text
+  name: mtqvid
+  label: MTQ Video Link
+  config:
+    required: true
+- type: field_group_list
+  name: bosses
+  label: Bosses
+  fields:
+  - type: text
+    name: title
+    label: Boss Name
+    config:
+      required: true
+  - type: number
+    label: Boss ID
+    name: id
+    config:
+      step: '1'
+      required: true
+    default: '1'
+  - type: field_group_list
+    name: phases
+    label: Fight Phases
+    fields:
+    - type: number
+      name: phase
+      label: Phase ID
+      config:
+        required: true
+        step: '1'
+    - type: field_group_list
+      name: script
+      label: Script
+      fields:
+      - type: text
+        label: Attack Name
+        name: attack
+        config:
+          required: true
+      - type: boolean
+        name: dutyAction
+        label: Duty Action
+    - type: field_group_list
+      label: Alerts
+      name: alerts
+      fields:
+      - type: textarea
+        name: alert
+        label: Alert
+        config:
+          required: true
+    - type: field_group_list
+      name: mechanics
+      label: Mechanics
+      fields:
+      - type: text
+        name: title
+        label: Mechanic Title
+        config:
+          required: true
+      - type: field_group_list
+        name: notes
+        label: Mechanic Notes
+        fields:
+        - type: textarea
+          name: note
+          label: Note
+          config:
+            required: true
+    - type: blocks
+      name: attacks
+      label: Attacks
+      template_types:
+      - regular-attack
+      - combo-attack
+      - attack-w-variations

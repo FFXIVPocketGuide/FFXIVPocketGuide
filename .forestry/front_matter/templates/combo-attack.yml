@@ -1,0 +1,26 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  name: title
+  label: Combo Title
+  config:
+    required: true
+- type: field_group_list
+  name: notes
+  label: Combo Notes
+  fields:
+  - type: textarea
+    name: note
+    label: Note
+    config:
+      required: true
+- type: field_group_list
+  name: combo
+  label: Combo Attacks
+  fields:
+  - type: include
+    label: Attack
+    name: attack
+    template: regular-attack
