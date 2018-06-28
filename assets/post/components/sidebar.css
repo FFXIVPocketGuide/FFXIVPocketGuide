@@ -198,6 +198,12 @@
             transition: all .2s ease;
             width: 100%;
 
+            i {
+                color: $palette-red;
+                margin: -.15rem calc($unit / 2) 0 0 !important;
+                vertical-align: middle;
+            }
+
             &.active {
                 /* background: $palette-menu-active; */
                 color: $palette-red;
@@ -208,7 +214,10 @@
         }
 
         hr {
-            margin: 0;
+            border-color: $palette-red;
+            color: $palette-red;
+            margin: 1rem auto;
+            width: 75%;
         }
 
         &:first-of-type {

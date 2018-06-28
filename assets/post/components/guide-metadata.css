@@ -98,15 +98,28 @@
 }
 
 .guide-metadata__wrapper {
-    /*border-bottom: 1px solid $palette-borders;*/
+    border-bottom: 1px solid $palette-borders;
     padding: calc($unit * 1.5);
 
     @media $(p-tablet) {
-        border-bottom: none;
+        /*border-bottom: none;*/
     }
 
     @media screen and (orientation: landscape) and (min-width: 80em) {
-        border-bottom: 1px solid $palette-borders;
+        /*border-bottom: 1px solid $palette-borders;*/
+    }
+
+    &:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .guide-metadata__subtitle:first-child {
+
+        @media $(p-tablet) {
+            margin-top: 0;
+        }
+        
     }
 
 }
@@ -176,12 +189,13 @@
     padding: calc($unit * 1.5);
 
     @media $(p-tablet) {
-        border-left: 1px solid $palette-borders;
+        border-right: 1px solid $palette-borders;
         display: block;
     }
 
     @media screen and (orientation: landscape) and (min-width: 80em) {
-        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $palette-borders;
     }
 
     .guide-metadata__subtitle {

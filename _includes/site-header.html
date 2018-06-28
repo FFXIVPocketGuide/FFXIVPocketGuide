@@ -41,12 +41,33 @@
                     Raid Guides
                 </h1>
             {% else %}
-                <h1 class="site-header__title">
+                <h1 class="site-header__guide-title">
                     {{ page.title }}
                 </h1>
             {% endif %}
 
         </div>
+
+        {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+
+            <ul class="site-header__links">
+
+                <li>
+                    <a href="https://twitter.com/FF14PocketGuide" title="Follow along on Twitter for guide updates!" target="_blank" class="twitterLink"><i class="ionicons ion-social-twitter"></i>Twitter</a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/joshdrink/FFXIVPocketGuide/projects/1?fullscreen=true" title="Find out what's next on the Pocket Guide Development Roadmap!" target="_blank"><i class="ionicons ion-social-github"></i>Roadmap</a>
+                </li>
+
+                <li>
+                    <!-- <a href="https://github.com/joshdrink/FFXIVPocketGuide/issues/new" title="Submit feedback about a guide or bug on Github!" target="_blank"><i class="ionicons ion-social-google"></i>Feedback</a> -->
+                    <a href="https://www.youtube.com/user/MTQcapture" title="Go to MTQcapture's YouTube Channel" class="mtqLinkHome" target="_blank"><i class="ionicons ion-social-youtube"></i>MTQcapture</a>
+                </li>
+
+            </ul>
+
+        {% endif %}
 
     </div>
 

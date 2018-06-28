@@ -10,12 +10,7 @@ var roles = [
 ];
 
 var tags = [
-    "Marker (Orange)",
-    "Marker (Green)",
-    "Marker (Blue)",
-    "Marker (Red)",
-    "Marker (Purple)",
-    "Marker (Icon)",
+    "Active Time Maneuver",
     "AoE - Cone",
     "AoE - Circular",
     "AoE - Puddle",
@@ -23,6 +18,12 @@ var tags = [
     "AoE - Column",
     "AoE - Area",
     "AoE - Point Blank",
+    "Marker (Orange)",
+    "Marker (Green)",
+    "Marker (Blue)",
+    "Marker (Red)",
+    "Marker (Purple)",
+    "Marker (Icon)",
     "Raid Wide Damage",
     "Proximity",
     "AoE - Cross",
@@ -41,8 +42,7 @@ var tags = [
     "Mechanic",
     "Animation",
     "Spawn",
-    "Ultimate",
-    "Active Time Maneuver"
+    "Ultimate"
 ];
 
 tags.sort();
