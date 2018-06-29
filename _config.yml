@@ -41,6 +41,9 @@ exclude:
   - assets_old/node_modules
   - assets_old/bower_components
   - templates
+  - _data
+  - assets/post
+  - forestry
 collections:
     coming:
         output: false
