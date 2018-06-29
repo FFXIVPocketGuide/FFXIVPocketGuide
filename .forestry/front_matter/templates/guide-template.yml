@@ -3,24 +3,24 @@ hide_body: true
 is_partial: false
 fields:
 - type: text
-  name: layout
+  name: meta_layout
   label: Guide Layout
   default: guide_post_new
   config:
     required: true
 - type: datetime
-  name: date
+  name: meta_date
   label: Last Updated
   config:
     date_format: YYYY-MM-DD
     required: true
 - type: text
-  name: title
+  name: meta_title
   label: Guide Title
   config:
     required: true
 - type: select
-  name: categories
+  name: meta_category
   config:
     source:
       type: simple
@@ -32,57 +32,57 @@ fields:
   label: Category
   default: A Realm Reborn
 - type: text
-  name: slug
+  name: meta_slug
   label: Page Slug
   config:
     required: true
   description: '"duty-name-difficulty" - difficulty required for anything above normal.'
 - type: textarea
-  name: description
+  name: meta_description
   label: Description
   config:
     required: true
   description: Read our Guide on the dungeon/trial/8-man raid/24-man raid NAME (DIFFICULTY)
     where you'll face off against Boss 01, Boss 02, and Boss 03.
 - type: field_group_list
-  name: image
+  name: meta_images
   label: Site Images
   fields:
   - type: text
-    name: url
+    name: image_url_large
     label: Large Image
     config:
       required: true
     default: "/assets/img/dungeons/asset.jpg"
   - type: text
     label: Small Image
-    name: urlSmall
+    name: image_url_small
     config:
       required: true
     default: "/assets/img/dungeons/small/asset.jpg"
 - type: field_group_list
-  name: terms
+  name: meta_terms
   label: Search Terms
   fields:
   - type: text
-    name: term
+    name: meta_term
     label: Term
     config:
       required: true
 - type: number
-  name: patchNumber
+  name: meta_patch_number
   label: Patch Number
   config:
     min: '2.0'
     required: true
   default: '4.0'
 - type: text
-  name: patchName
+  name: meta_patch_name
   label: Patch Name
   config:
     required: true
 - type: select
-  name: difficulty
+  name: meta_difficulty
   config:
     source:
       type: simple
@@ -96,29 +96,29 @@ fields:
   label: Difficulty
   default: Normal
 - type: number
-  name: plvl
+  name: meta_plvl
   label: Player Level
   config:
     required: true
 - type: number
-  name: ilvl
+  name: meta_ilvl
   label: Item Level
   config:
     required: true
 - type: number
-  name: order
+  name: meta_order
   label: Order
   description: Combine Player and Item Level
   config:
     required: true
 - type: text
   label: Orchestrion Roll
-  name: orchestrion
+  name: meta_orchestrion
   config:
     required: true
   default: TBD
 - type: select
-  name: instanceType
+  name: meta_instance_type
   config:
     source:
       type: simple
@@ -130,36 +130,33 @@ fields:
   label: Instance Type
   default: Dungeon
 - type: text
-  name: mtqvid
+  name: meta_mtq_vid
   label: MTQ Video Link
   config:
     required: true
 - type: field_group_list
-  name: mechanics
+  name: duty_mechanics
   label: Duty Mechanics
   fields:
   - type: text
-    name: title
+    name: duty_mechanics_title
     label: Mechanic Title
     config:
       required: true
   - type: field_group_list
-    name: steps
+    name: duty_mechanics_steps
     label: Steps
     fields:
-    - type: number
-      name: step
-      label: Step ID
-      config:
-        min: '1'
-        step: '1'
-        required: true
+    - type: text
+      name: duty_mechanics_step_title
+      label: Step Title
+      default: Step 01
     - type: field_group_list
-      name: notes
+      name: duty_mechanics_step_notes
       label: Notes
       fields:
       - type: textarea
-        name: note
+        name: duty_mechanics_step_note
         label: Note
         config:
           required: true
