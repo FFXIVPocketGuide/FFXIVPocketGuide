@@ -135,6 +135,35 @@ fields:
   config:
     required: true
 - type: field_group_list
+  name: mechanics
+  label: Duty Mechanics
+  fields:
+  - type: text
+    name: title
+    label: Mechanic Title
+    config:
+      required: true
+  - type: field_group_list
+    name: steps
+    label: Steps
+    fields:
+    - type: number
+      name: step
+      label: Step ID
+      config:
+        min: '1'
+        step: '1'
+        required: true
+    - type: field_group_list
+      name: notes
+      label: Notes
+      fields:
+      - type: textarea
+        name: note
+        label: Note
+        config:
+          required: true
+- type: field_group_list
   name: bosses
   label: Bosses
   fields:
