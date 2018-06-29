@@ -3,7 +3,7 @@ hide_body: false
 is_partial: true
 fields:
 - type: text
-  name: title
+  name: attack_name
   label: Attack Name
   config:
     required: true
@@ -19,13 +19,13 @@ fields:
     - Melee DPS
     - Ranged DPS
   label: Roles
-  name: roles
+  name: attack_roles
   default: []
 - type: text
-  name: dutyAction
+  name: attack_duty_action
   label: Duty Action
 - type: list
-  name: tags
+  name: attack_tags
   label: Tags
   config:
     use_select: true
@@ -35,26 +35,26 @@ fields:
       path: tags
     options: []
 - type: field_group_list
-  name: notes
+  name: attack_notes
   label: Attack Notes
   fields:
   - type: textarea
-    name: note
+    name: attack_note
     label: Note
     config:
       required: true
 - type: field_group_list
-  name: images
+  name: attack_images
   label: Attack Images
   fields:
   - type: text
-    name: url
+    name: attack_image_url
     label: Image URL
     default: "/assets/img/dungeon/asset.png"
     config:
       required: true
   - type: text
-    name: alt
+    name: attack_image_alt
     label: Image Alt Text
     config:
       required: true
