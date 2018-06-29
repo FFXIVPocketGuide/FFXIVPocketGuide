@@ -176,49 +176,49 @@ fields:
     fields:
     - type: text
       label: Phase Title
-      name: phase_title
+      name: boss_phase_title
       default: Phase 01
     - type: field_group_list
-      name: script
+      name: boss_phase_script
       label: Script
       fields:
       - type: text
         label: Attack Name
-        name: attack
+        name: boss_phase_script_attack_name
         config:
           required: true
       - type: boolean
-        name: dutyAction
+        name: boss_phase_script_attack_duty_action
         label: Duty Action
     - type: field_group_list
       label: Alerts
-      name: alerts
+      name: boss_phase_alerts
       fields:
       - type: textarea
-        name: alert
+        name: boss_phase_alert
         label: Alert
         config:
           required: true
     - type: field_group_list
-      name: mechanics
+      name: boss_phase_mechanics
       label: Mechanics
       fields:
       - type: text
-        name: title
+        name: boss_phase_mechanic_title
         label: Mechanic Title
         config:
           required: true
       - type: field_group_list
-        name: notes
+        name: boss_phase_mechanic_notes
         label: Mechanic Notes
         fields:
         - type: textarea
-          name: note
+          name: boss_phase_mechanic_note
           label: Note
           config:
             required: true
     - type: blocks
-      name: attacks
+      name: boss_phase_attacks
       label: Attacks
       template_types:
       - regular-attack
