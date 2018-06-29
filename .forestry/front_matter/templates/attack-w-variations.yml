@@ -4,7 +4,7 @@ is_partial: true
 fields:
 - type: text
   name: variation_name
-  label: Variation Title
+  label: Variation Name
   config:
     required: true
 - type: field_group_list
