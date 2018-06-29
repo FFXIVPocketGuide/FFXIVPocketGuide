@@ -8,6 +8,7 @@ fields:
   default: guide_post_new
   config:
     required: true
+  hidden: true
 - type: datetime
   name: meta_date
   label: Last Updated
@@ -139,24 +140,24 @@ fields:
   label: Duty Mechanics
   fields:
   - type: text
-    name: duty_mechanics_title
+    name: duty_mechanic_title
     label: Mechanic Title
     config:
       required: true
   - type: field_group_list
-    name: duty_mechanics_steps
+    name: duty_mechanic_steps
     label: Steps
     fields:
     - type: text
-      name: duty_mechanics_step_title
+      name: duty_mechanic_step_title
       label: Step Title
       default: Step 01
     - type: field_group_list
-      name: duty_mechanics_step_notes
+      name: duty_mechanic_step_notes
       label: Notes
       fields:
       - type: textarea
-        name: duty_mechanics_step_note
+        name: duty_mechanic_step_note
         label: Note
         config:
           required: true
@@ -165,27 +166,18 @@ fields:
   label: Bosses
   fields:
   - type: text
-    name: title
+    name: boss_name
     label: Boss Name
     config:
       required: true
-  - type: number
-    label: Boss ID
-    name: id
-    config:
-      step: '1'
-      required: true
-    default: '1'
   - type: field_group_list
-    name: phases
+    name: boss_phases
     label: Fight Phases
     fields:
-    - type: number
-      name: phase
-      label: Phase ID
-      config:
-        required: true
-        step: '1'
+    - type: text
+      label: Phase Title
+      name: phase_title
+      default: Phase 01
     - type: field_group_list
       name: script
       label: Script
