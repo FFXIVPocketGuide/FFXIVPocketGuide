@@ -50,14 +50,14 @@ fields:
   label: Site Images
   fields:
   - type: text
-    name: image_url_large
+    name: meta_images_large_url
     label: Large Image
     config:
       required: true
     default: "/assets/img/dungeons/asset.jpg"
   - type: text
     label: Small Image
-    name: image_url_small
+    name: meta_images_small_url
     config:
       required: true
     default: "/assets/img/dungeons/small/asset.jpg"
