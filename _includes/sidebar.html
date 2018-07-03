@@ -1,61 +1,62 @@
-
 <!-- Sidebar =============================================================== -->
+<div 
+    class="sidebar__wrapper">
 
-<div class="sidebar__wrapper">
-
-    <h1 class="sidebar__title">
-        <a href="/" title="Return to the Pocket Guide Home Page.">
-            <!-- FFXIV<br>
-            Pocket<br>
-            Guide -->
-            <img src="/assets/img/icon.svg" alt="FFXIV Icon">
+    <h1 
+        class="sidebar__title">
+        <a 
+            href="/" 
+            title="Return to the Pocket Guide Home Page.">
+            <img
+                alt="FFXIV Icon"
+                src="/assets/img/icon.svg">
         </a>
     </h1>
 
-    {% comment %}
+    <dl 
+        class="sidebar__menu">
 
-    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
-        <form class="sidebar__form">
-            <label for="guideFilter">Search for a guide...</label>
-            <input id="guideFilter" type="text" placeholder="Stormblood, A12s, etc...">
-        </form>
-    {% endif %}
-
-    {% endcomment %}
-
-    <dl class="sidebar__menu">
         <dt></dt>
-        {% comment %}
-        {% if page.pageClass != "home" and page.pageClass != "dungeons" and page.pageClass != "trials" and page.pageClass != "raids" %}
-            <dd>
-                <a href="/" title="Return to the Pocket Guide Home Page.">Go Home</a>
-            </dd>
-        {% endif %}
-        {% endcomment %}
-        <!-- <dd>
-            <hr>
-        </dd> -->
+
         <dd>
-            <a href="/" title="View All Guides." {% if page.pageClass == "home" %}class="active"{% endif %}>All Guides</a>
+            <a 
+                {% if page.pageClass == "home" %}class="active"{% endif %}
+                href="/" 
+                title="View All Guides.">
+                All Guides
+            </a>
         </dd>
+
         <dd>
-            <a href="/dungeons" title="View Dungeon Guides." {% if page.pageClass == "dungeons" %}class="active"{% endif %} {% if page.instanceType == "dungeon" %}class="active"{% endif %}>Dungeons</a>
+            <a 
+                {% if page.pageClass == "dungeons" %}class="active"{% endif %} 
+                {% if page.instanceType == "dungeon" %}class="active"{% endif %} 
+                href="/dungeons" 
+                title="View Dungeon Guides.">
+                Dungeons
+            </a>
         </dd>
+
         <dd>
-            <a href="/trials" title="View Trial Guides." {% if page.pageClass == "trials" %}class="active"{% endif %} {% if page.instanceType == "trial" %}class="active"{% endif %}>Trials</a>
+            <a 
+                {% if page.pageClass == "trials" %}class="active"{% endif %} 
+                {% if page.instanceType == "trial" %}class="active"{% endif %} 
+                href="/trials" 
+                title="View Trial Guides.">
+                Trials
+            </a>
         </dd>
+
         <dd>
-            <a href="/raids" title="View Raid Guides." {% if page.pageClass == "raids" %}class="active"{% endif %} {% if page.instanceType == "raid" %}class="active"{% endif %}>Raids</a>
+            <a 
+                {% if page.pageClass == "raids" %}class="active"{% endif %}
+                {% if page.instanceType == "raid" %}class="active"{% endif %}
+                href="/raids" 
+                title="View Raid Guides.">
+                Raids
+            </a>
         </dd>
-        <!-- <dd>
-            <hr>
-        </dd> -->
-        <!-- <dd>
-            <a href="https://twitter.com/FF14PocketGuide" title="Follow along on Twitter for guide updates!" target="_blank" class="twitterLink"><i class="ionicons ion-social-twitter"></i>Updates</a></h5>
-        </dd> -->
-        <!-- <dd>
-            <a href="https://www.youtube.com/user/MTQcapture" title="Go to MTQcapture's YouTube Channel" class="mtqLinkHome" target="_blank"><i class="ionicons ion-social-youtube"></i>MTQcapture</a>
-        </dd> -->
+
     </dl>
 
 </div>
