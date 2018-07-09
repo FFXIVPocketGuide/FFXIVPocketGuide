@@ -45,19 +45,19 @@
     /* These files are for your website"s unique section elements. */
 
     /* Sidebar */
-    @import "components/sidebar.css";
+    /*@import "components/sidebar.css";*/
 
     /* Site Header */
-    @import "components/site-header.css";
+    /*@import "components/site-header.css";*/
 
     /* Index Divider */
-    @import "components/index-divider.css";
+    /*@import "components/index-divider.css";*/
 
     /* Index Grid */
-    @import "components/index-grid.css";
+    /*@import "components/index-grid.css";*/
 
     /* Index Null State */
-    @import "components/index-null-state.css";
+    /*@import "components/index-null-state.css";*/
 
     /* Guide Layout */
     @import "components/guide-layout.css";
@@ -87,7 +87,7 @@
     @import "components/combo-tags.css";
 
     /* Footer */
-    @import "components/footer.css";
+    /*@import "components/footer.css";*/
 
     /* Microsoft Support */
     @import "components/microsoft.css";

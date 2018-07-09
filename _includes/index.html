@@ -1,0 +1,102 @@
+{% comment %} ==================================================================
+
+    // Index
+
+=============================================================== {% endcomment %}
+
+<div class="index">
+
+    <!-- Stormblood Guide Index ============================================ -->
+
+    {% assign counter = 0 %}
+
+    {% for guide in site.categories.sb %}
+
+        {% include _components/index-counter.html %}
+
+    {% endfor %}
+
+    {% if counter > 0 %}
+
+        <a id="stormblood"></a>
+
+        <div class="index-divider" data-expansion="sb">
+            <h2 class="index-divider__title">Stormblood</h2>
+        </div>
+
+        <div class="index__list" data-expansion="sb">
+
+    {% endif %}
+
+    {% assign sorted = site.categories.sb | sort:"order" %}
+
+    {% include _components/index-list.html %}
+
+    {% if counter > 0 %}
+        </div>
+    {% endif %}
+
+    <!-- Heavensward Guide Index =========================================== -->
+
+    {% assign counter = 0 %}
+
+    {% for guide in site.categories.hw %}
+
+        {% include _components/index-counter.html %}
+
+    {% endfor %}
+
+    {% if counter > 0 %}
+
+        <a id="heavensward"></a>
+
+        <div class="index-divider" data-expansion="hw">
+            <h2 class="index-divider__title">Heavensward</h2>
+        </div>
+
+        <div class="index__list" data-expansion="hw">
+
+    {% endif %}
+
+    {% assign sorted = site.categories.hw | sort:"order" %}
+
+    {% include _components/index-list.html %}
+
+    {% if counter > 0 %}
+        </div>
+    {% endif %}
+
+    <!-- A Realm Reborn Guide Index ======================================== -->
+
+    {% assign counter = 0 %}
+
+    {% for guide in site.categories.arr %}
+
+        {% include _components/index-counter.html %}
+
+    {% endfor %}
+
+    {% if counter > 0 %}
+
+        <a id="a_realm_reborn"></a>
+
+        <div class="index-divider" data-expansion="arr">
+            <h2 class="index-divider__title">A Realm Reborn</h2>
+        </div>
+
+        <div class="index__list" data-expansion="arr">
+
+    {% endif %}
+
+    {% assign sorted = site.categories.arr | sort:"order" %}
+
+    {% include _components/index-list.html %}
+
+    {% if counter > 0 %}
+        </div>
+    {% endif %}
+
+    <!-- Include Null State -->
+    {% include guide-index-null-state.html %}
+
+</div>

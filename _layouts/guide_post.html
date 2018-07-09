@@ -1,54 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
-    {% include site_head.html %}
+    <head>
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="{{ "/assets/vendor/jquery.min.js" | prepend: site.baseurl }}"></script>
-
-        <!-- Modernizr -->
-        <script type="text/javascript" src="{{ "/assets/vendor/modernizr.js" | prepend: site.baseurl }}"></script>
-
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="{{ "/assets/vendor/ionicons.min.css" | prepend: site.baseurl }}" type="text/css" media="all" />
-
-        <!-- Normalize -->
-        <link rel="stylesheet" href="{{ "/assets/vendor/normalize.css" | prepend: site.baseurl }}" type="text/css" media="all" />
-
-        <!-- Custom Stylesheet -->
-        <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+        {% include head.html %}
 
     </head>
 
-    <body class="{{ page.pageClass }}">
+    <body class="{{ page.page_type }} {{ page.page_category }}">
 
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MRL2GS"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        <div class="layout">
 
-        <div class="site-grid">
+            <!-- Include Sidebar -->
+            {% include sidebar.html %}
 
-            <button class="sidebar__trigger">
-                <span class="sidebar__trigger-inactive"><i class="material-icons">explore</i>Menu</span>
-                <span class="sidebar__trigger-active"><i class="material-icons">close</i>Close</span>
-            </button>
+            <div class="layout__wrapper">
 
-            <div class="site-grid__sidebar-overlay"></div>
+                <!-- Include Header -->
+                {% include header.html %}
 
-            <div class="site-grid__sidebar" style="background-image: url('{{ "/assets/img/guide_index.jpg" | prepend: site.baseurl }}');">
-                {% include sidebar.html %}
-            </div>
-
-            <div class="site-grid__content-wrapper">
-
-                <!-- Include Site Header -->
-                {% include site-header.html %}
-
+                <!-- Include Guide Layout -->
                 {% include guide-layout.html %}
 
-                {% include recent-guides.html %}
-
+                <!-- Include Footer -->
                 {% include footer.html %}
 
             </div>

@@ -460,7 +460,7 @@ h5.guide__accordion-trigger-title {
             padding: calc($unit * 1.5);
 
             @media $(media-navigation) {
-                padding: $unit $unit $unit calc($unit * 11);
+                padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 11);
             }
 
         }

@@ -1,0 +1,56 @@
+{% comment %} ==================================================================
+
+    // Guide Duty Mechanics
+
+=============================================================== {% endcomment %}
+
+<div class="guide__accordion">
+
+    <div class="guide__accordion-trigger--01" data-menu-target="guideNotes">
+        <i class="material-icons">expand_more</i>
+        <h2 class="guide__accordion-trigger-title">
+            {% if page.instance_type == "Dungeon" %}Dungeon Mechanics{% endif %}
+            {% if page.instance_type == "Trial" %}Trial Mechanics{% endif %}
+            {% if page.instance_type == "Raid" %}Raid Mechanics{% endif %}
+        </h2>
+    </div>
+
+    <!-- Guide Event Accordion Content -->
+    <div class="guide__accordion-content--01">
+
+        <!-- Opens the Notes Loop -->
+        {% for mechanic in page.duty_mechanics %}
+
+            <div class="guide__accordion-copy-wrapper">
+
+                <!-- Event Title -->
+                <h3 class="guide__accordion-title">{{ mechanic.duty_mechanic_title }}</h3>
+
+                <!-- Opens the Step Loop -->
+                {% if mechanic.duty_mechanic_steps %}
+                    <div class="guide__mechanics-wrapper">
+
+                        {% for step in mechanic.duty_mechanic_steps %}
+
+                            <!-- Mechanics Group Title -->
+                            <h4 class="guide__mechanics-title">Step {{ step.duty_mechanic_step_title }}</h4>
+
+                            <!-- Stance Notes -->
+                            <ul class="guide__mechanics-list">
+                                {% for note in step.duty_mechanic_step_notes %}
+                                    <li class="guide__mechanics-item">{{ note.duty_mechanic_step_note }}</li>
+                                {% endfor %}
+                            </ul>
+
+                        {% endfor %}
+
+                    </div>
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>

@@ -1,0 +1,29 @@
+// =============================================================================
+
+    // Media Queries
+
+// =============================================================================
+
+.layout {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.layout__wrapper {
+    background: darken($palette--white, 5%);
+    overflow: auto;
+    position: relative;
+
+    @media #{$navigation} {
+        margin-left: 23vw;
+        max-width: 77%;
+        width: 77vw;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 70em) {
+        margin-left: 20vw;
+        max-width: 80%;
+        width: 80vw;
+    }
+
+}

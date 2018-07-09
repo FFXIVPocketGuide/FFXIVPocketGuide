@@ -1,0 +1,73 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+// Media Queries ===============================================================
+
+    @import "spec/media";
+
+// Spec Imports ================================================================
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+    }
+
+    $unit: 1rem;
+
+    @import "spec/palette";
+    @import "spec/typography";
+
+// Core CSS ====================================================================
+
+    @import "components/layout";
+    @import "components/sidebar";
+
+// Component Imports ===========================================================
+
+    @import "components/header";
+    @import "components/search";
+    @import "components/index";
+    @import "components/null";
+    @import "components/footer";
+
+    // Guides
+    @import "components/guide";
+
+// Helper Classes ==============================================================
+
+    $space: calc($unit * 4);
+
+    .padded-top {
+        padding-top: $space;
+    }
+
+    .padded-right {
+        padding-right: $space;
+    }
+
+    .padded-bottom {
+        padding-bottom: $space;
+    }
+
+    .padded-left {
+        padding-left: $space;
+    }
+
+    .margin-top {
+        margin-top: $space;
+    }
+
+    .margin-bottom {
+        margin-bottom: $space;
+    }
+
+    .margin-stacked {
+        margin-top: $space;
+        margin-bottom: $space;
+    }

@@ -1,0 +1,68 @@
+
+<!-- Attack Template ======================================================= -->
+
+<div 
+    class="guide__accordion-trigger--03{% if attack.attack_duty_action %}--dutyAction{% elsif attack.template == 'combo-attack' %}--combo{% elsif attack.template == 'attack-w-variations' %}--variation{% else %}--attack{% endif %}">
+    <i class="material-icons">expand_more</i>
+    <h4 
+        class="guide__accordion-trigger-title">
+        {% if attack.template == "regular-attack" %}
+            {{ attack.attack_name }}
+        {% elsif attack.template == "combo-attack" %}
+            {{ attack.combo_name }}
+        {% elsif attack.template == "attack-w-variations" %}
+            {{ attack.variation_name }}
+        {% endif %}
+        {% include _components/_guides/guide-attack-tags.html %}
+    </h4>
+</div>
+
+<div 
+    class="guide__accordion-content--03{% if attack.attack_duty_action %}--dutyAction{% elsif attack.template == 'combo-attack' %}--combo{% elsif attack.template == 'attack-w-variations' %}--variation{% else %}--attack{% endif %}">
+
+    <div 
+        class="guide__accordion-copy-wrapper">
+
+        <!-- Standard Attacks -->
+        {% if attack.template == "combo-attack" %}
+            {% if attack.combo_notes %}
+                <h5 class="guide__attack-notes-title">Important Notes:</h5>
+                <ul class="guide__attack-notes-list">
+                    {% for note in attack.combo_notes %}
+                        <li class="guide__attack-notes-item">{{ note.combo_note }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% elsif attack.template == "attack-w-variations" %}
+            {% if attack.variation_notes %}
+                <h5 class="guide__attack-notes-title">Important Notes:</h5>
+                <ul class="guide__attack-notes-list">
+                    {% for note in attack.variation_notes %}
+                        <li class="guide__attack-notes-item">{{ note.variation_note }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% else %}
+            {% include _components/_guides/guide-attack-notes.html %}
+        {% endif %}
+
+        <!-- Combo Attacks -->
+        {% for attack in attack.combo_attacks %}
+            {% include _components/_guides/guide-subattack-tags.html %}
+            {% include _components/_guides/guide-attack-notes.html %}
+            {% include _components/_guides/guide-attack-images.html %}
+        {% endfor %}
+
+        <!-- Variation Attacks -->
+        {% for attack in attack.variation_attacks %}
+            {% include _components/_guides/guide-subattack-tags.html %}
+            {% include _components/_guides/guide-attack-notes.html %}
+            {% include _components/_guides/guide-attack-images.html %}
+        {% endfor %}
+
+        <!-- Attack Images -->
+        {% include _components/_guides/guide-attack-images.html %}
+
+    </div>
+
+</div>

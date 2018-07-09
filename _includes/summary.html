@@ -1,0 +1,32 @@
+{% comment %} ==================================================================
+
+    // Guide Summary
+
+=============================================================== {% endcomment %}
+
+<div class="summary">
+
+    <a 
+        class="index-item__link"
+        href="{{ guide.url }}"
+        title="Go to the {{ guide.title}} Guide">
+
+        <div
+            class="index-item__background"
+            {% if guide.images %}
+                style="background-image: url('{% for image in guide.images %}{{ image.images_small_url }}{% endfor %}')" 
+            {% elsif guide.image %}
+                style="background-image: url('{% for image in guide.image %}{{ image.urlSmall }}{% endfor %}')" 
+            {% endif %}>
+        </div>
+
+
+        <h3 
+            class="index-item__title" 
+            data-terms="{% for term in guide.terms %}{{ term.term }}&#32;{% endfor %}">
+            {{ guide.title }}<span> ({{ guide.difficulty }})</span>
+        </h3>
+
+    </a>
+
+</div>

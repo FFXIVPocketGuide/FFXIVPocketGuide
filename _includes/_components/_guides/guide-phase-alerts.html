@@ -1,0 +1,10 @@
+<div class="guide__alerts-wrapper">
+
+    <!-- Alert List -->
+    <ul class="guide__alerts-list">
+        {% for alert in phase.boss_phase_alerts %}
+            <li class="guide__alerts-item">{{ alert.boss_phase_alert }}</li>
+        {% endfor %}
+    </ul>
+
+</div>

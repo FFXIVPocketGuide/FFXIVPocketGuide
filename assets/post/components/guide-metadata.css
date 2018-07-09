@@ -98,7 +98,7 @@
 }
 
 .guide-metadata__wrapper {
-    border-bottom: 1px solid $palette-borders;
+    /*border-bottom: 1px solid $palette-borders;*/
     padding: calc($unit * 1.5);
 
     @media $(p-tablet) {
@@ -224,7 +224,8 @@
 
 }
 
-.guide-metadata__menu-link {
+.guide-metadata__menu-link,
+.guide-metadata__menu-link--new {
     color: $palette-red;
     font-family: $font-aktiv;
     font-size: $font-scale-regular;

@@ -21,14 +21,14 @@
         });
 
         // Input Focus =========================================================
-        if($(".sidebar__form").length) {
+        if($(".search").length) {
             $("#guideFilter").focus();
         }
 
         // Menu Trigger ========================================================
         $(".sidebar__trigger").on("click", function(e) {
             
-            if ($(".site-grid__sidebar").hasClass("active")) {
+            if ($(".sidebar").hasClass("active")) {
                 $("body").css("overflow-y", "visible");
             }
             else {
@@ -37,15 +37,15 @@
 
             $(this).toggleClass("active");
             $(".site-grid__sidebar-overlay").toggleClass("active");
-            $(".site-grid__sidebar").toggleClass("active");
+            $(".sidebar").toggleClass("active");
 
         });
 
         $(".site-grid__sidebar-overlay").on("click", function(e) {
-            if ($(".site-grid__sidebar").hasClass("active")) {
+            if ($(".sidebar").hasClass("active")) {
                 $(".sidebar__trigger").removeClass("active");
                 $(this).removeClass("active");
-                $(".site-grid__sidebar").removeClass("active");
+                $(".sidebar").removeClass("active");
                 $("body").css("overflow-y", "visible");
             }
         });
@@ -71,9 +71,9 @@
             var input = this.value.toLowerCase().trim()
             var terms = input.split(" ");
 
-            $(".site-index .index-grid").each(function(e) {
+            $(".index .index__list").each(function(e) {
 
-                $(this).find(".index-item").each(function(e) {
+                $(this).find(".summary").each(function(e) {
 
                     var headingText  =  $(this).find(".index-item__title").data("terms").toLowerCase();
 
@@ -106,7 +106,7 @@
 
                 });
 
-                if($(this).find(".index-item.show").length) {
+                if($(this).find(".summary.show").length) {
                     var expansion = $(this).attr("data-expansion");
                     $(this).show();
                     $(".index-divider").each(function(e) {
@@ -127,7 +127,7 @@
 
             });
 
-            if($(".index-item.show").length) {
+            if($(".summary.show").length) {
                 $(".index-null-state").hide();
             }
             else {
@@ -185,6 +185,32 @@
 
         });
 
+        // FFXIV Guide Menu Temp ===============================================
+        $('.guide-metadata__menu-link--new').on("click", function(e) {
+
+            e.preventDefault();
+
+            var dataTrigger = $(this).attr("data-menu-trigger");
+            var dataObject = $("[data-menu-target='"+dataTrigger+"']");
+            var container = $('html,body');
+
+            $("[class*='guide__accordion-trigger']").removeClass("active");
+            $("[class*='guide__accordion-content']").removeClass("active");
+
+            $(dataObject).parents("[class*='guide__accordion-content']").prev("[class*='guide__accordion-trigger']").addClass("active");
+            $(dataObject).parents("[class*='guide__accordion-content']").addClass("active");
+            $(dataObject).addClass("active");
+            $(dataObject).next("[class*='guide__accordion-content']").addClass("active");
+
+            var offSet = dataObject.offset().top;
+
+            container.animate({
+                scrollTop : offSet
+            }, 'slow');
+
+        });
+
+
         // FFXIV Guide Accordions ==============================================
         $("[class*='guide__accordion-trigger']").on("click", function(e) {
             $(this).toggleClass("active");
@@ -202,10 +228,6 @@
             }
         });
 
-    });
-
-    $('#gform').on('submit', function(e) {
-        $('#gform').addClass("submitted");
     });
 
 })(jQuery);

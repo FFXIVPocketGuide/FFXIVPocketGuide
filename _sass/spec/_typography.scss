@@ -1,0 +1,134 @@
+// =============================================================================
+
+    // Typography Styles
+
+// =============================================================================
+
+// Fonts
+
+    $font--sans: "Open Sans", sans-serif;
+    $font--serif: "PT Serif", serif;
+    $font--ffxiv: "Cinzel", serif;
+
+// Font Scale
+
+    html,
+    body {
+        font-size: 80%;
+
+        @media screen and (min-width: 412px) {
+            font-size: 90%;
+        }
+
+        @media #{$p-tablet} {
+            font-size: 100%;
+        }
+
+        @media #{$cinema} {
+            font-size: 110%;
+        }
+
+    }
+
+    $font-scale: 1.250;
+
+    $font-scale--regular: $unit;
+
+    $font-scale--h1: calc(#{$unit}*(#{$font-scale}*(#{$font-scale}*(#{$font-scale}*(#{$font-scale})))));
+    $font-scale--h2: calc(#{$unit}*(#{$font-scale}*(#{$font-scale}*(#{$font-scale}))));
+    $font-scale--h3: calc(#{$unit}*(#{$font-scale}*(#{$font-scale})));
+    $font-scale--h4: calc(#{$unit}*(#{$font-scale}));
+    $font-scale--h5: $unit;
+    $font-scale--small: calc(#{$unit}*(#{$font-scale}/2));
+
+// Sitewide Typography
+
+    ::selection {
+        background: $palette--black;
+        color: $palette--white;
+    }
+
+    [class*="heading--"] {
+        color: $font-black;
+        font-family: $font--sans;
+        font-weight: 800;
+        line-height: 1.2;
+        margin: 0;
+
+        i {
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+    }
+
+    .heading--01 {
+        font-size: $font-scale--h1;
+    }
+
+    .heading--02 {
+        font-size: $font-scale--h2;
+    }
+
+    .heading--03 {
+        font-size: $font-scale--h3;
+    }
+
+    .heading--04 {
+        font-size: $font-scale--h4;
+    }
+
+    .heading--05 {
+        font-size: $font-scale--h5;
+    }
+
+// Buttons =====================================================================
+[class*="button--"] {
+    appearance: none;
+    border: .3rem solid $palette--white;
+    box-shadow: none;
+    color: $font-black;
+    display: inline-block;
+    font-family: $font--sans;
+    font-weight: 300;
+    outline: none;
+    padding: 2rem 2.5rem;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.no-touchevents {
+
+    [class*="button--"]:hover {
+        border: .3rem solid $palette--red;
+        transition: all .2s ease;
+    }
+
+    [class*="button--"][class*="red"]:hover {
+        background: $palette--red;
+        color: $font-white;
+        transition: all .2s ease;
+    }
+
+}
+
+[class*="button--"][class*="small"] {
+    font-size: $font-scale--small;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+}
+
+[class*="button--"][class*="white"] {
+    border-color: $palette--white;
+    color: $palette--white;
+}
+
+[class*="button--"][class*="red"] {
+    border-color: $palette--red;
+}
+
+// Legacy Variables ============================================================
+
+    $font-aktiv: $font--sans;
+    $font-cinzel: $font--ffxiv;
+    $font-pt: $font--serif;

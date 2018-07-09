@@ -1,0 +1,31 @@
+// =============================================================================
+
+    // Media Queries
+
+// =============================================================================
+
+// Orientation
+
+    $portrait: "screen and (orientation: portrait)";
+
+    $landscape: "screen and (orientation: landscape)";
+
+// Devices
+
+    $p-phone: "screen and (min-width: 320px)";
+
+    $l-phone: "screen and (min-width: 480px)";
+
+    $p-tablet: "screen and (min-width: 48em)";
+
+    $l-tablet: "screen and (min-width: 64em)";
+
+    $desktop: "screen and (min-width: 64.01em)";
+
+    $cinema: "screen and (min-width: 100em)";
+
+    $cinema-xl: "screen and (min-width: 110em)";
+
+// Specific
+
+    $navigation: "screen and (orientation: landscape) and (min-width: 64em)";

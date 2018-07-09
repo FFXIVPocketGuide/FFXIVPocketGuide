@@ -1,0 +1,131 @@
+{% comment %} ==================================================================
+
+    // Header
+
+=============================================================== {% endcomment %}
+
+<header>
+
+    {% comment %}
+
+        // Seasonal Banners
+
+            // Alerts
+            <div 
+                class="site-header__alert">
+
+                <p>Please Note: permalinks for our guides have recently changed. If your bookmark returns an error, don't fear! Finding your guide on the homepage and updating your bookmark should resolve the issue. <strong>We apologize for any inconvenience or confusion.</strong></p>
+
+            </div>
+
+            // Pride Month
+            <div 
+                class="site-header__pride">
+
+                <p>🏳️‍🌈 Happy Pride Month 🏳️‍🌈</p>
+
+            </div>
+
+    {% endcomment %}
+
+    <div class="site-header__grid"
+        {% if page.page_type == "index" %}
+            style="background-image: url('{{ "/assets/img/4-3.jpg" | prepend: site.baseurl }}')"
+        {% elsif page.image %}
+            style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')"
+        {% else %}
+            style="background-image: url('{% for image in page.images %}{{ image.images_large_url }}{% endfor %}')"
+        {% endif %}>
+
+        <div class="site-header__item-a">
+
+            <h1
+                class="{% if page.page_type == 'index' or page.page_type == 'guide' %}site-header__title{% else %}site-header__guide-title{% endif %}">
+
+                {% if page.page_category == "all" %}
+                    FFXIV Pocket Guide
+                {% elsif page.page_category == "dungeons" %}
+                    Dungeon Guides
+                {% elsif page.page_category == "trials" %}
+                    Trial Guides
+                {% elsif page.page_category == "raids" %}
+                    Raid Guides
+                {% else %}
+                    {{ page.title }} ({{ page.difficulty }})
+                {% endif %}
+
+            </h1>
+
+        </div>
+
+        {% if page.page_type == "index" %}
+
+            <ul 
+                class="site-header__links">
+
+                <li>
+                    <a 
+                        href="https://twitter.com/FF14PocketGuide"  
+                        target="_blank"
+                        title="Follow along on Twitter for guide updates!">
+                        <i class="ionicons ion-social-twitter"></i>
+                        Twitter
+                    </a>
+                </li>
+
+                <li>
+                    <a 
+                        href="https://github.com/joshdrink/FFXIVPocketGuide/projects/1?fullscreen=true" 
+                        target="_blank" 
+                        title="Find out what's next on the Pocket Guide Development Roadmap!">
+                        <i class="ionicons ion-social-github"></i>
+                        Roadmap
+                    </a>
+                </li>
+
+                <li>
+                    <a 
+                        href="https://www.youtube.com/user/MTQcapture" 
+                        target="_blank" 
+                        title="Go to MTQcapture's YouTube Channel.">
+                        <i class="ionicons ion-social-youtube"></i>
+                        MTQcapture
+                    </a>
+                </li>
+
+            </ul>
+
+        {% endif %}
+
+        {% if page.page_type == "guide" %}
+
+            <ul 
+                class="site-header__links">
+
+                <li>
+                    <a 
+                        href="https://twitter.com/intent/tweet?via=ff14pocketguide&url={{ site.url }}{{ page.url | url_encode }}&text=I%20want%20to%20submit%20feedback%20on%20{{ page.title | url_encode }}%2E&related=ff14pocketguide,joshdrink"  
+                        target="_blank"
+                        title="Submit feedback for {{ page.title }}.">
+                        <i class="ionicons ion-social-twitter"></i>
+                        Provide Feedback
+                    </a>
+                </li>
+
+                <li>
+                    <a 
+                        href="{{ page.mtq_vid }}" 
+                        target="_blank" 
+                        title="Visit the video guide for this duty.">
+                        <i class="ionicons ion-social-youtube"></i>
+                        Video Guide
+                    </a>
+                </li>
+
+            </ul>
+
+        {% endif %}
+
+    </div>
+
+</header>

@@ -20,6 +20,7 @@
 }
 
 .guide__alerts-list {
+    margin-bottom: 0;
     padding: 0 0 0 calc($unit * 1.2);
 }
 

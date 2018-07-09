@@ -1,0 +1,34 @@
+// =============================================================================
+
+    // Palette Styles
+
+// =============================================================================
+
+// Greyscale
+
+    $palette--white: #FFFFFF;
+    $palette--black: #1E1E1E;
+
+    $palette--night: #000000;
+
+// Font Colours
+
+    $font-white: rgba($palette--white, .85);
+    $font-black: rgba($palette--black, .85);
+
+// Brand Colours
+
+    $palette--red: #FF575C;
+    $palette--green: #52E96C;
+    $palette--yellow: #FEC34E;
+    $palette--blue: #36B8EA;
+    $palette--purple: #9B40BF;
+
+// Component Colours
+
+    $palette--shadow: rgba($palette--night, .5);
+    $palette--overlay: rgba($palette--night, .8);
+    $palette--border: #95989A;
+    $palette--accordion-1: $palette--black;
+    $palette--accordion-2: #282828;
+    $palette--accordion-3: #323232;

@@ -18,7 +18,7 @@ email: imjoshdrink@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A collection of mobile friendly guides to help players navigate group content in Final Fantasy XIV. Guide content has been compiled from video guides produced by MTQCapture.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ffxiv.joshdrink.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ffxiv.joshdrink.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 repository: joshdrink/joshdrink.github.io
 
@@ -27,7 +27,7 @@ github_username:  joshdrink
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 include:
@@ -44,6 +44,9 @@ exclude:
   - _data
   - assets/post
   - forestry
+  - .sass-cache
+sass:
+    style: compressed
 collections:
     coming:
         output: false

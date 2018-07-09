@@ -1,0 +1,26 @@
+<div class="guide__attack-notes-wrapper">
+
+    {% if attack.combo_attacks  %}
+        {% if combo.attack_notes %}
+            <!-- Do Nothing -->
+        {% else %}
+            &nbsp;
+        {% endif %}
+    {% elsif attack.variation_attacks %}
+        {% if variation.attack_notes %}
+            <!-- Do Nothing -->
+        {% else %}
+            &nbsp;
+        {% endif %}
+    {% else %}
+        {% if attack.template == "regular-attack"  %}
+            <h5 class="guide__attack-notes-title">Important Notes:</h5>
+        {% endif %}
+        <ul class="guide__attack-notes-list">
+            {% for note in attack.attack_notes %}
+                <li class="guide__attack-notes-item">{{ note.attack_note }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</div>

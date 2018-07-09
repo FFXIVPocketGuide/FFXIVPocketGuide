@@ -1,0 +1,198 @@
+// =============================================================================
+
+    // Sidebar Styles
+
+// =============================================================================
+
+
+// Sidebar
+
+    .sidebar {
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        max-width: 35rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(0, 100%);
+        transition: transform .3s ease;
+        width: 100%;
+        z-index: 105;
+
+        @media #{$navigation} {
+            box-shadow: none !important;
+            max-height: 100vh;
+            max-width: none;
+            position: fixed !important;
+            transform: translate(0, 0) !important;
+            width: 23vw;
+        }
+
+        @media screen and (orientation: landscape) and (min-width: 70em) {
+            width: 20vw;
+        }
+
+        &.active {
+            box-shadow: 2px 0 5px $palette--shadow;
+            transform: translate(0, 0);
+            transition: transform .3s ease;
+        }
+
+        &::before {
+            background: $palette--overlay;
+            content: " ";
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 5;
+        }
+
+    }
+
+    .sidebar__wrapper {
+        height: 100%;
+        overflow: auto;
+        position: relative;
+        width: 100%;
+        z-index: 105;
+    }
+
+    .sidebar__title {
+        margin: 0;
+        text-align: center;
+
+        a {
+            display: block;
+            padding: calc(#{$unit} * 5) calc(#{$unit} * 1.5) calc(#{$unit} * 4) calc(#{$unit} * 1.5);
+            width: 100%;
+
+            img {
+                width: 20%;
+
+                @media #{$l-tablet} {
+                    width: 40%;
+                }
+
+            }
+
+        }
+
+    }
+
+    .sidebar__menu {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 calc(#{$unit} * 4) 0;
+
+        li {
+            margin: 0;
+
+            a {
+                color: $palette--white;
+                display: block;
+                font-family: $font-aktiv;
+                font-size: $font-scale--regular;
+                font-weight: 400;
+                padding: calc(#{$unit} * 1);
+                text-align: center;
+                text-decoration: none;
+                transition: all .2s ease;
+                width: 100%;
+
+                i {
+                    color: $palette--red;
+                    margin: -.15rem calc(#{$unit} / 2) 0 0 !important;
+                    vertical-align: middle;
+                }
+
+                &.active {
+                    color: $palette--red;
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+
+            }
+
+        }
+
+    }
+
+    .no-touchevents {
+
+        .sidebar__menu {
+
+            li {
+
+                a:hover {
+                    color: $palette--red;
+                }
+
+            }
+
+        }
+
+    }
+
+// Mobile Trigger
+
+    .sidebar__trigger {
+        appearance: none;
+        background: $palette--red;
+        border: 3px solid $palette--red;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 2px 5px $palette--shadow;
+        max-height: 100vh;
+        max-width: 10rem;
+        outline: none;
+        padding: calc(#{$unit} * 1.5) $unit;
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+        width: 50vw;
+        z-index: 110;
+
+        @media #{$navigation} {
+            display: none;
+        }
+
+        span i {
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0 calc(#{$unit} / 2) 0 calc((#{$unit} / 2) * -1);
+            vertical-align: bottom;
+        }
+
+        .sidebar__trigger-inactive {
+            color: $palette--white;
+            display: block;
+            font-family: $font-aktiv;
+            font-size: $font-scale--regular;
+            font-weight: 400;
+        }
+
+        .sidebar__trigger-active {
+            color: $palette--white;
+            display: none;
+            font-family: $font-aktiv;
+            font-size: $font-scale--regular;
+            font-weight: 400;
+        }
+
+        &.active {
+
+            .sidebar__trigger-inactive {
+                display: none;
+            }
+
+            .sidebar__trigger-active {
+                display: block;
+            }
+
+        }
+
+    }

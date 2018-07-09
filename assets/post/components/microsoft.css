@@ -16,32 +16,6 @@ body[id*="Trident"] {
         height: 100vh;
     }
 
-    /* Site Header ========================================================== */
-    .site-header__grid {
-        display: block;
-
-        @media $(p-tablet) {
-            display: -ms-grid;
-        }
-
-    }
-
-    .site-header__item-a {
-
-        @media $(p-tablet) {
-            -ms-grid-column: 1 !important;
-        }
-
-    }
-
-    .site-header__item-b {
-
-        @media $(p-tablet) {
-            -ms-grid-column: 2 !important;
-        }
-
-    }
-
     /* Guide Index ========================================================== */
     .index-grid {
         display: block;

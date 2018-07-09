@@ -1,62 +1,98 @@
-<!-- Sidebar =============================================================== -->
-<div 
-    class="sidebar__wrapper">
+{% comment %} ==================================================================
 
-    <h1 
-        class="sidebar__title">
-        <a 
-            href="/" 
-            title="Return to the Pocket Guide Home Page.">
-            <img
-                alt="FFXIV Icon"
-                src="/assets/img/icon.svg">
-        </a>
-    </h1>
+    // Sidebar
 
-    <dl 
-        class="sidebar__menu">
+=============================================================== {% endcomment %}
 
-        <dt></dt>
+<!-- Mobile Menu Trigger -->
 
-        <dd>
-            <a 
-                {% if page.pageClass == "home" %}class="active"{% endif %}
-                href="/" 
-                title="View All Guides.">
-                All Guides
-            </a>
-        </dd>
+    <button 
+        class="sidebar__trigger">
 
-        <dd>
-            <a 
-                {% if page.pageClass == "dungeons" %}class="active"{% endif %} 
-                {% if page.instanceType == "dungeon" %}class="active"{% endif %} 
-                href="/dungeons" 
-                title="View Dungeon Guides.">
-                Dungeons
-            </a>
-        </dd>
+        <span 
+            class="sidebar__trigger-inactive">
+            <i class="material-icons">explore</i>
+            Menu
+        </span>
 
-        <dd>
-            <a 
-                {% if page.pageClass == "trials" %}class="active"{% endif %} 
-                {% if page.instanceType == "trial" %}class="active"{% endif %} 
-                href="/trials" 
-                title="View Trial Guides.">
-                Trials
-            </a>
-        </dd>
+        <span 
+            class="sidebar__trigger-active">
+            <i class="material-icons">close</i>
+            Close
+        </span>
 
-        <dd>
-            <a 
-                {% if page.pageClass == "raids" %}class="active"{% endif %}
-                {% if page.instanceType == "raid" %}class="active"{% endif %}
-                href="/raids" 
-                title="View Raid Guides.">
-                Raids
-            </a>
-        </dd>
+    </button>
 
-    </dl>
+<!-- Mobile Overlay -->
 
-</div>
+    <div 
+        class="site-grid__sidebar-overlay">        
+    </div>
+
+<!-- Menu -->
+
+    <div 
+        class="sidebar" 
+        style="background-image: url('{{ "/assets/img/guide_index.jpg" | prepend: site.baseurl }}');">
+
+        <div 
+            class="sidebar__wrapper">
+
+            <h1 
+                class="sidebar__title">
+                <a 
+                    href="/" 
+                    title="Return to the Pocket Guide Home Page.">
+                    <img
+                        alt="FFXIV Icon"
+                        src="/assets/img/icon.svg">
+                </a>
+            </h1>
+
+            <ul 
+                class="sidebar__menu">
+
+                <li>
+                    <a 
+                        {% if page.page_category == "all" %}class="active"{% endif %}
+                        href="/" 
+                        title="View All Guides.">
+                        All Guides
+                    </a>
+                </li>
+
+                <li>
+                    <a 
+                        {% if page.page_category == "dungeons" %}class="active"{% endif %} 
+                        {% if page.instanceType == "dungeon" or page.instance_type == "Dungeon" %}class="active"{% endif %} 
+                        href="/dungeons" 
+                        title="View Dungeon Guides.">
+                        Dungeons
+                    </a>
+                </li>
+
+                <li>
+                    <a 
+                        {% if page.page_category == "trials" %}class="active"{% endif %} 
+                        {% if page.instanceType == "trial" or page.instance_type == "Trial" %}class="active"{% endif %} 
+                        href="/trials" 
+                        title="View Trial Guides.">
+                        Trials
+                    </a>
+                </li>
+
+                <li>
+                    <a 
+                        {% if page.page_category == "raids" %}class="active"{% endif %}
+                        {% if page.instanceType == "raid" or page.instance_type == "Raid" %}class="active"{% endif %}
+                        href="/raids" 
+                        title="View Raid Guides.">
+                        Raids
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>

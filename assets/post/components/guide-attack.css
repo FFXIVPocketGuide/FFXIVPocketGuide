@@ -115,6 +115,10 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    +.guide__combo-tag-wrapper {
+        margin-top: 2rem;
+    }
+
 }
 
 .guide__attack-image-item {

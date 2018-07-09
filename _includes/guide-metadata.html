@@ -10,16 +10,6 @@
 
     <div class="guide-metadata__grid">
 
-        <div class="guide-metadata__wrapper flex-grid">
-
-            {% if page.difficulty %}
-                <span class="guide-metadata__difficulty--{% if page.difficulty == 'Normal' %}normal{% elsif page.difficulty == 'Hard' or page.difficulty == 'Savage' %}hard{% elsif page.difficulty == 'Extreme' %}extreme{% endif %}">
-                    {{ page.difficulty }}
-                </span>
-            {% endif %}
-
-        </div>
-
         <ul class="guide-metadata__menu">
 
             <h5 class="guide-metadata__subtitle">In This Guide:</h5>
