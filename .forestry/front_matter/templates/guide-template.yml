@@ -1,4 +1,5 @@
 ---
+label: guide-template
 hide_body: true
 is_partial: false
 fields:
@@ -233,4 +234,3 @@ fields:
       - attack-w-variations
 pages:
 - _posts/arr/sample-guide.md
-- _posts/hw/sample-guide.md
