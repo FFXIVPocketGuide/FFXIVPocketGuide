@@ -135,7 +135,7 @@
             }
 
             // Prevents the user from submitting the form with the enter key.
-            $('.sidebar__form').on('keyup keypress', function(e) {
+            $('#guideFilter').on('keyup keypress', function(e) {
                 var keyCode = e.keyCode || e.which;
                 if (keyCode === 13) {
 
