@@ -20,12 +20,12 @@ div.index {
 .index__list {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: calc(#{$unit} * .5);
+    grid-row-gap: calc(#{$unit} * .3);
     padding: 0 calc(#{$unit} * 1.5);
 
     @media #{$l-tablet} {
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: calc(#{$unit} * .5);
+        grid-column-gap: calc(#{$unit} * .3);
     }
 
     @media #{$navigation} {

@@ -24,7 +24,17 @@
         <h3 
             class="index-item__title" 
             data-terms="{% for term in guide.terms %}{{ term.term }}&#32;{% endfor %}">
-            {{ guide.title }}<span> ({{ guide.difficulty }})</span>
+            {{ guide.title }}
+            <span
+                {% if guide.difficulty == "Hard" %}
+                    class="hard"
+                {% elsif guide.difficulty == "Extreme" %}
+                    class="extreme"
+                {% elsif guide.difficulty == "Savage" %}
+                    class="savage"
+                {% elsif guide.difficulty == "Ultimate" %}
+                    class="ultimate"
+                {% endif %}> ({{ guide.difficulty }})</span>
         </h3>
 
     </a>

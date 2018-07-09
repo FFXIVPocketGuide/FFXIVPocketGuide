@@ -127,6 +127,25 @@ header {
     font-weight: 800;
     margin: 0;
     padding: calc(#{$unit} * 4) calc(#{$unit} * 2) calc(#{$unit} * 2) calc(#{$unit} * 2);
+
+    span {
+        font-weight: 400; 
+
+        &.hard {
+            color: $palette--yellow;
+        }
+
+        &.savage,
+        &.extreme {
+            color: $palette--red;
+        }
+
+        &.ultimate {
+            color: $palette--purple;
+        }
+
+    }
+
 }
 
 .site-header__guide-title {
@@ -137,6 +156,25 @@ header {
     font-weight: 800;
     margin: 0;
     padding: calc(#{$unit} * 4) calc(#{$unit} * 2);
+
+    span {
+        font-weight: 400; 
+        
+        &.hard {
+            color: $palette--yellow;
+        }
+
+        &.savage,
+        &.extreme {
+            color: $palette--red;
+        }
+
+        &.ultimate {
+            color: $palette--purple;
+        }
+
+    }
+
 }
 
 .site-header__links {

@@ -51,7 +51,16 @@
                 {% elsif page.page_category == "raids" %}
                     Raid Guides
                 {% else %}
-                    {{ page.title }} ({{ page.difficulty }})
+                    {{ page.title }}<span
+                        {% if page.difficulty == "Hard" %}
+                            class="hard"
+                        {% elsif page.difficulty == "Extreme" %}
+                            class="extreme"
+                        {% elsif page.difficulty == "Savage" %}
+                            class="savage"
+                        {% elsif page.difficulty == "Ultimate" %}
+                            class="ultimate"
+                        {% endif %}> ({{ page.difficulty }})</span>
                 {% endif %}
 
             </h1>
