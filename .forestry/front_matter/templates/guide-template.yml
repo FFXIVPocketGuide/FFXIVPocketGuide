@@ -78,6 +78,8 @@ fields:
     label: Term
     config:
       required: true
+  description: Expansion, Expansion Abbreviation, Duty Name, Nickname, Difficulty,
+    Boss Names
 - type: number
   name: patch_number
   label: Patch Number
