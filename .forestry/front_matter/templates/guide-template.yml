@@ -5,23 +5,30 @@ fields:
 - type: text
   name: meta_layout
   label: Guide Layout
-  default: guide_post_new
+  default: guide
   config:
     required: true
   hidden: true
+- type: text
+  label: Page Type
+  name: page_type
+  hidden: true
+  config:
+    required: true
+  default: guide
 - type: datetime
-  name: meta_date
+  name: date
   label: Last Updated
   config:
     date_format: YYYY-MM-DD
     required: true
 - type: text
-  name: meta_title
+  name: title
   label: Guide Title
   config:
     required: true
 - type: select
-  name: meta_category
+  name: categories
   config:
     source:
       type: simple
@@ -33,57 +40,57 @@ fields:
   label: Category
   default: A Realm Reborn
 - type: text
-  name: meta_slug
+  name: slug
   label: Page Slug
   config:
     required: true
   description: '"duty-name-difficulty" - difficulty required for anything above normal.'
 - type: textarea
-  name: meta_description
+  name: description
   label: Description
   config:
     required: true
   description: Read our Guide on the dungeon/trial/8-man raid/24-man raid NAME (DIFFICULTY)
     where you'll face off against Boss 01, Boss 02, and Boss 03.
 - type: field_group_list
-  name: meta_images
+  name: images
   label: Site Images
   fields:
   - type: text
-    name: meta_images_large_url
+    name: images_large_url
     label: Large Image
     config:
       required: true
     default: "/assets/img/dungeons/asset.jpg"
   - type: text
     label: Small Image
-    name: meta_images_small_url
+    name: images_small_url
     config:
       required: true
     default: "/assets/img/dungeons/small/asset.jpg"
 - type: field_group_list
-  name: meta_terms
+  name: terms
   label: Search Terms
   fields:
   - type: text
-    name: meta_term
+    name: term
     label: Term
     config:
       required: true
 - type: number
-  name: meta_patch_number
+  name: patch_number
   label: Patch Number
   config:
     min: '2.0'
     required: true
   default: '4.0'
 - type: text
-  name: meta_patch_name
+  name: patch_name
   label: Patch Name
   config:
     required: true
 - type: select
-  name: meta_difficulty
+  name: difficulty
   config:
     source:
       type: simple
@@ -97,29 +104,29 @@ fields:
   label: Difficulty
   default: Normal
 - type: number
-  name: meta_plvl
+  name: plvl
   label: Player Level
   config:
     required: true
 - type: number
-  name: meta_ilvl
+  name: ilvl
   label: Item Level
   config:
     required: true
 - type: number
-  name: meta_order
+  name: order
   label: Order
   description: Combine Player and Item Level
   config:
     required: true
 - type: text
   label: Orchestrion Roll
-  name: meta_orchestrion
+  name: orchestrion
   config:
     required: true
   default: TBD
 - type: select
-  name: meta_instance_type
+  name: instance_type
   config:
     source:
       type: simple
@@ -131,7 +138,7 @@ fields:
   label: Instance Type
   default: Dungeon
 - type: text
-  name: meta_mtq_vid
+  name: mtq_vid
   label: MTQ Video Link
   config:
     required: true
@@ -225,4 +232,5 @@ fields:
       - combo-attack
       - attack-w-variations
 pages:
+- _posts/arr/sample-guide.md
 - _posts/hw/sample-guide.md
