@@ -189,6 +189,15 @@ fields:
       name: boss_phase_title
       default: Phase 01
     - type: field_group_list
+      label: Summary
+      name: boss_phase_summary
+      fields:
+      - type: textarea
+        name: boss_phase_item
+        label: Summary Item
+        config:
+          required: true
+    - type: field_group_list
       name: boss_phase_script
       label: Script
       fields:
@@ -200,15 +209,6 @@ fields:
       - type: boolean
         name: boss_phase_script_attack_duty_action
         label: Duty Action
-    - type: field_group_list
-      label: Alerts
-      name: boss_phase_alerts
-      fields:
-      - type: textarea
-        name: boss_phase_alert
-        label: Alert
-        config:
-          required: true
     - type: field_group_list
       name: boss_phase_mechanics
       label: Mechanics
