@@ -32,6 +32,11 @@ bosses:
 - boss_name: Raskovnik
   boss_phases:
   - boss_phase_title: Phase 01
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Acid Rain
 - boss_name: Myath
 - boss_name: Tioman
 
