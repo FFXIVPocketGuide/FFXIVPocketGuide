@@ -198,18 +198,6 @@ fields:
         config:
           required: true
     - type: field_group_list
-      name: boss_phase_script
-      label: Script
-      fields:
-      - type: text
-        label: Attack Name
-        name: boss_phase_script_attack_name
-        config:
-          required: true
-      - type: boolean
-        name: boss_phase_script_attack_duty_action
-        label: Duty Action
-    - type: field_group_list
       name: boss_phase_mechanics
       label: Mechanics
       fields:
@@ -227,6 +215,18 @@ fields:
           label: Note
           config:
             required: true
+    - type: field_group_list
+      name: boss_phase_script
+      label: Script
+      fields:
+      - type: text
+        label: Attack Name
+        name: boss_phase_script_attack_name
+        config:
+          required: true
+      - type: boolean
+        name: boss_phase_script_attack_duty_action
+        label: Duty Action
     - type: blocks
       name: boss_phase_attacks
       label: Attacks
