@@ -30,6 +30,9 @@ mtq_vid: https://youtu.be/Gl4meQb86lc
 duty_mechanics: []
 bosses:
 - boss_name: Raskovnik
+  boss_phases:
+  - boss_phase_title: Phase 01
 - boss_name: Myath
 - boss_name: Tioman
+
 ---
