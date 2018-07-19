@@ -4,7 +4,7 @@ hide_body: true
 is_partial: false
 fields:
 - type: text
-  name: meta_layout
+  name: layout
   label: Guide Layout
   default: guide
   config:
