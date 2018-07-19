@@ -239,6 +239,6 @@ bosses:
   - boss_phase_title: Phase 03
     boss_phase_summary:
     - boss_phase_item: Tioman's attacks will repeat until she is defeated.
-layout: ''
+layout: guide
 
 ---
