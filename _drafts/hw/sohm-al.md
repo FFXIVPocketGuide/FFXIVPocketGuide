@@ -1,6 +1,6 @@
 ---
 title: Sohm Al
-meta_layout: guide
+layout: guide
 page_type: guide
 categories: hw
 patch_number: 3.0
