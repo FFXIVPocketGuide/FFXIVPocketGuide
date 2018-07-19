@@ -236,4 +236,5 @@ fields:
       - combo-attack
       - attack-w-variations
 pages:
+- _posts/arr/sastasha.md
 - _posts/hw/sohm-al.md
