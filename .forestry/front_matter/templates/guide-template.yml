@@ -35,9 +35,9 @@ fields:
       type: simple
     required: true
     options:
-    - A Realm Reborn
-    - Heavensward
-    - Stormblood
+    - arr
+    - hw
+    - sb
   label: Category
   default: A Realm Reborn
 - type: text
