@@ -3,25 +3,47 @@ title: Sastasha
 layout: guide
 page_type: guide
 categories: arr
-patch_number: 2.0
+patch_number: 2.4
 difficulty: Hard
 orchestrion: TBD
 instance_type: Dungeon
-date: 2018-07-18 00:00:00 +0000
+date: 2018-07-19 20:00:00 -0400
 slug: sastasha-hard
-description: Read our Guide on the dungeon/trial/8-man raid/24-man raid NAME (DIFFICULTY)
-  where you'll face off against Boss 01, Boss 02, and Boss 03.
+description: Read our Guide on the dungeon Sastasha (Hard) where you'll face off against
+  Karlaboss, Captain Madison, and Kraken.
 images:
-- images_large_url: "/assets/img/dungeons/asset.jpg"
-  images_small_url: "/assets/img/dungeons/small/asset.jpg"
+- images_large_url: "/assets/img/dungeons/sastasha-hard.jpg"
+  images_small_url: "/assets/img/dungeons/small/sastasha-hard.jpg"
 terms:
-- term: Term
-patch_name: A Realm Reborn
+- term: A Realm Reborn
+- term: arr
+- term: Sastasha
+- term: Hard
+- term: Karlabos
+- term: Captain Madison
+- term: Kraken
+patch_name: Dreams of Ice
 plvl: 50
-ilvl: 150
-order: 50146
-mtq_vid: google.com
+ilvl: 80
+order: 50080
+mtq_vid: https://youtu.be/2el23biaqR4
 duty_mechanics: []
-bosses: []
+bosses:
+- boss_name: Karlabos
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      - Tank
+      attack_name: Impale
+      attack_tags:
+      - Tankbuster
+      attack_notes:
+      - attack_note: This attack hits the primary threat target for moderate damage
+          - shield and heal as necessary.
+- boss_name: Captain Madison
+- boss_name: Kraken
 
 ---
