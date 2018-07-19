@@ -9,11 +9,11 @@ fields:
   default: guide
   config:
     required: true
-  hidden: true
+  hidden: false
 - type: text
   label: Page Type
   name: page_type
-  hidden: true
+  hidden: false
   config:
     required: true
   default: guide
@@ -39,7 +39,7 @@ fields:
     - hw
     - sb
   label: Category
-  default: A Realm Reborn
+  default: arr
 - type: text
   name: slug
   label: Page Slug
