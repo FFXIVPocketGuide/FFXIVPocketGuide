@@ -3,11 +3,11 @@ title: Sohm Al
 layout: guide
 page_type: guide
 categories: hw
-patch_number: 3.0
+patch_number: 3
 difficulty: Normal
 orchestrion: TBD
 instance_type: Dungeon
-date: 2018-07-18 22:05:00 -0400
+date: 2018-07-19 02:05:00 +0000
 slug: sohm-al
 description: Read our Guide on the dungeon Sohm Al (Normal) where you'll face off
   against Raskovnik, Myath, and Tioman.
@@ -239,6 +239,5 @@ bosses:
   - boss_phase_title: Phase 03
     boss_phase_summary:
     - boss_phase_item: Tioman's attacks will repeat until she is defeated.
-layout: guide
 
 ---
