@@ -3,7 +3,7 @@ title: Sohm Al
 layout: guide
 page_type: guide
 categories: hw
-patch_number: 3
+patch_number: 3.0
 difficulty: Normal
 orchestrion: TBD
 instance_type: Dungeon
