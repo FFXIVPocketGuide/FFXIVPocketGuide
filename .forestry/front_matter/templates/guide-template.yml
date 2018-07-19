@@ -10,6 +10,7 @@ fields:
   config:
     required: true
   hidden: false
+  description: This is the page template loaded by Jekyll.
 - type: text
   label: Page Type
   name: page_type
