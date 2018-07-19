@@ -7,7 +7,7 @@ patch_number: 3.0
 difficulty: Normal
 orchestrion: TBD
 instance_type: Dungeon
-date: 2018-07-18 22:59:50 +0000
+date: 2018-07-18 22:00:00 -0400
 slug: sohm-al
 description: Read our Guide on the dungeon Sohm Al (Normal) where you'll face off
   against Raskovnik, Myath, and Tioman.
