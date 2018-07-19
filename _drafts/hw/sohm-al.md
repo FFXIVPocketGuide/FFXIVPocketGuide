@@ -7,7 +7,7 @@ patch_number: 3.0
 difficulty: Normal
 orchestrion: TBD
 instance_type: Dungeon
-date: 2018-07-09 00:00:00 +0000
+date: 2018-07-18 18:59:50 -0400
 slug: sohm-al
 description: Read our Guide on the dungeon Sohm Al (Normal) where you'll face off
   against Raskovnik, Myath, and Tioman.
@@ -30,6 +30,14 @@ mtq_vid: https://youtu.be/Gl4meQb86lc
 duty_mechanics: []
 bosses:
 - boss_name: Raskovnik
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Acid Rain
 - boss_name: Myath
 - boss_name: Tioman
+
 ---

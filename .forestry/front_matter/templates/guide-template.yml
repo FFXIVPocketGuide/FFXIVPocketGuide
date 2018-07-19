@@ -189,24 +189,12 @@ fields:
       name: boss_phase_title
       default: Phase 01
     - type: field_group_list
-      name: boss_phase_script
-      label: Script
-      fields:
-      - type: text
-        label: Attack Name
-        name: boss_phase_script_attack_name
-        config:
-          required: true
-      - type: boolean
-        name: boss_phase_script_attack_duty_action
-        label: Duty Action
-    - type: field_group_list
-      label: Alerts
-      name: boss_phase_alerts
+      label: Summary
+      name: boss_phase_summary
       fields:
       - type: textarea
-        name: boss_phase_alert
-        label: Alert
+        name: boss_phase_item
+        label: Summary Item
         config:
           required: true
     - type: field_group_list
@@ -227,6 +215,18 @@ fields:
           label: Note
           config:
             required: true
+    - type: field_group_list
+      name: boss_phase_script
+      label: Script
+      fields:
+      - type: text
+        label: Attack Name
+        name: boss_phase_script_attack_name
+        config:
+          required: true
+      - type: boolean
+        name: boss_phase_script_attack_duty_action
+        label: Duty Action
     - type: blocks
       name: boss_phase_attacks
       label: Attacks

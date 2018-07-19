@@ -33,7 +33,7 @@ fields:
     source:
       type: datafiles
       file: _data-tags-json
-      path: tags
+      path: Tags
     options: []
 - type: field_group_list
   name: attack_notes
