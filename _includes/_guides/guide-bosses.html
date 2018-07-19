@@ -38,12 +38,12 @@
                     <div class="guide__accordion-copy-wrapper">
 
                         <!-- Event Title -->
-                        <h4 class="guide__accordion-title">{{ phase.boss_phase_title }} Alerts</h4>
+                        <h4 class="guide__accordion-title">{{ phase.boss_phase_title }} Summary</h4>
 
                         <!-- Phase Alerts -->
-                        {% if phase.boss_phase_alerts %}
-                            <!-- Include Guide Alerts -->
-                            {% include _components/_guides/guide-phase-alerts.html %}
+                        {% if phase.boss_phase_summary %}
+                            <!-- Include Guide Summary -->
+                            {% include _components/_guides/guide-phase-summary.html %}
                         {% endif %}
 
                         <!-- Phase Mechanics -->
