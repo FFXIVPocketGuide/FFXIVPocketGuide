@@ -2,8 +2,8 @@
 title: Sohm Al
 meta_layout: guide
 page_type: guide
-categories: Heavensward
-patch_number: 3
+categories: hw
+patch_number: 3.0
 difficulty: Normal
 orchestrion: TBD
 instance_type: Dungeon
@@ -239,5 +239,6 @@ bosses:
   - boss_phase_title: Phase 03
     boss_phase_summary:
     - boss_phase_item: Tioman's attacks will repeat until she is defeated.
+layout: ''
 
 ---
