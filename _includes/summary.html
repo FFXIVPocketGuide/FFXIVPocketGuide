@@ -13,8 +13,8 @@
 
         <div
             class="index-item__background"
-            {% if guide.images %}
-                style="background-image: url('{% for image in guide.images %}{{ image.images_small_url }}{% endfor %}')" 
+            {% if guide.cover %}
+                style="background-image: url('{{ guide.cover }}')" 
             {% elsif guide.image %}
                 style="background-image: url('{% for image in guide.image %}{{ image.urlSmall }}{% endfor %}')" 
             {% endif %}>

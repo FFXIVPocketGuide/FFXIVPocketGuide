@@ -31,8 +31,8 @@
     <div class="site-header__grid"
         {% if page.page_type == "index" %}
             style="background-image: url('{{ "/assets/img/4-3.jpg" | prepend: site.baseurl }}')"
-        {% elsif page.image %}
-            style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')"
+        {% elsif page.cover %}
+            style="background-image: url('{{ page.cover }}')"
         {% else %}
             style="background-image: url('{% for image in page.images %}{{ image.images_large_url }}{% endfor %}')"
         {% endif %}>
