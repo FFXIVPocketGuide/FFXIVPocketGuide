@@ -43,5 +43,6 @@ bosses:
           - shield and heal as necessary.
 - boss_name: Captain Madison
 - boss_name: Kraken
+cover: "/uploads/sastasha.jpg"
 
 ---
