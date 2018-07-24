@@ -13,6 +13,7 @@ description: Read our Guide on the dungeon Sastasha (Hard) where you'll face off
   Karlaboss, Captain Madison, and Kraken.
 images:
 - "/uploads/sastasha.jpg"
+- "/uploads/ala_mhigo.jpg"
 terms:
 - term: A Realm Reborn
 - term: arr
