@@ -44,18 +44,6 @@ fields:
     label: Note
     config:
       required: true
-- type: field_group_list
+- type: image_gallery
   name: attack_images
   label: Attack Images
-  fields:
-  - type: text
-    name: attack_image_url
-    label: Image URL
-    default: "/assets/img/dungeon/asset.png"
-    config:
-      required: true
-  - type: text
-    name: attack_image_alt
-    label: Image Alt Text
-    config:
-      required: true
