@@ -68,13 +68,12 @@ fields:
       required: true
   description: Expansion, Expansion Abbreviation, Duty Name, Nickname, Difficulty,
     Boss Names
-- type: number
+- type: text
   name: patch_number
   label: Patch Number
+  default: ''
   config:
-    min: '2.0'
     required: true
-  default: '4.0'
 - type: text
   name: patch_name
   label: Patch Name
