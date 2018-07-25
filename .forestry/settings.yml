@@ -5,14 +5,12 @@ admin_path: forestry
 webhook_url: 
 collections:
 - path: _posts
-  label: Posts
-  create: all
-- path: _coming
-  label: Coming
+  label: Guides
   create: all
 - path: ''
   label: Pages
   create: all
+  hidden: true
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
