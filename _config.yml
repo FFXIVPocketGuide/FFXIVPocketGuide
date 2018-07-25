@@ -47,6 +47,3 @@ exclude:
   - .sass-cache
 sass:
     style: compressed
-collections:
-    coming:
-        output: false
