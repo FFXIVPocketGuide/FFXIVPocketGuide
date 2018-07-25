@@ -7,7 +7,7 @@ patch_number: 2.4
 difficulty: Hard
 orchestrion: TBD
 instance_type: Dungeon
-date: 2018-07-19 20:00:00 -0400
+date: 2018-07-20 00:00:00 +0000
 slug: sastasha-hard
 description: Read our Guide on the dungeon Sastasha (Hard) where you'll face off against
   Karlaboss, Captain Madison, and Kraken.
@@ -40,6 +40,9 @@ bosses:
       attack_notes:
       - attack_note: This attack hits the primary threat target for moderate damage
           - shield and heal as necessary.
+      attack_images:
+      - "/uploads/ala_mhigo.jpg"
+      - "/uploads/sastasha.jpg"
 - boss_name: Captain Madison
 - boss_name: Kraken
 cover: "/uploads/sastasha.jpg"
