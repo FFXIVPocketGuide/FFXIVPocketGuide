@@ -23,7 +23,15 @@
 
 <!-- Page Title -->
 
-    <title>{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
+    {% if page.page_category == "all" %}
+
+        <title>FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
+
+    {% else %}
+
+        <title>{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
+
+    {% endif %}
 
 <!-- Page Description -->
 
