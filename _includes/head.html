@@ -23,7 +23,7 @@
 
 <!-- Page Title -->
 
-    <title>{{ page.title }} {% if page.meta_difficulty %}({{ page.meta_difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
+    <title>{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
 
 <!-- Page Description -->
 
@@ -51,20 +51,20 @@
 
     <meta 
         property="og:title" 
-        content="{{ page.title }} {% if page.meta_difficulty %}({{ page.meta_difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood" />
+        content="{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood" />
 
     <meta 
         property="og:description" 
         content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 300 }}{% else %}{{ site.description }}{% endif %}" />
 
-    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+    {% if page.page_category == "all" or page.page_category == "dungeons" or page.page_category == "trials" or page.page_category == "raids" %}
         <meta 
             property="og:image" 
             content="{{ site.url }}/assets/img/guide_social.jpg" />
     {% else %}
         <meta 
             property="og:image" 
-            content="{{ site.url }}{% for image in page.meta_images %}{{ image.meta_images_large_url }}{% endfor %}" />
+            content="{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}" />
     {% endif %}
 
 <!-- Google Fonts -->
@@ -125,13 +125,13 @@
 
 <!-- Google Search Structured Pages -->
 
-    {% if page.pageClass == "home" or page.pageClass == "dungeons" or page.pageClass == "trials" or page.pageClass == "raids" %}
+    {% if page.page_category == "all" or page.page_category == "dungeons" or page.page_category == "trials" or page.page_category == "raids" %}
         <script type="application/ld+json">
             {
               "@context": "http://schema.org",
               "@type": "Organization",
               "name": "FFXIV Pocket Guide",
-              "url": "http://ffxiv.joshdrink.com",
+              "url": "https://ffxiv.joshdrink.com",
               "sameAs": [
                 "https://twitter.com/FF14PocketGuide"
               ]
@@ -142,9 +142,9 @@
             {
               "@context": "http://schema.org",
               "@type": "NewsArticle",
-              "headline": "{{ page.title }} {% if page.meta_difficulty %}({{ page.meta_difficulty }}){% endif %}",
+              "headline": "{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %}",
               "image": [
-                "{{ site.url }}{% for image in page.meta_images %}{{ image.meta_images_large_url }}{% endfor %}"
+                "{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}"
               ]
             }
         </script>
