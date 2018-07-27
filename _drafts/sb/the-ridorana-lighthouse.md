@@ -11,7 +11,7 @@ slug: the-ridorana-lighthouse
 description: Read our Guide on the 24-man raid The Ridorana Lighthouse (Normal) where
   you'll face off against Famfrit the Darkening Cloud, Belias the Gigas, Construct
   7, and Yiazmat.
-cover: ''
+cover: "/uploads/ridorana.jpg"
 terms:
 - term: Yiazmat
 - term: Construct 7
