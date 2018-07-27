@@ -10,7 +10,7 @@ date: 2018-07-27 00:00:00 +0000
 slug: the-keeper-of-the-lake
 description: Read our Guide on the dungeon The Keeper of the Lake (Normal) where you'll
   face off against Einhander, Magitek Gunship, and Midgardsormr.
-cover: "/uploads/keeper_lake_normal.jpg"
+cover: ''
 terms:
 - term: Midgardsormr
 - term: Magitek Gunship
