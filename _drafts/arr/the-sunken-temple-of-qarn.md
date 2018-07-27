@@ -11,7 +11,7 @@ slug: the-sunken-temple-of-qarn-hard
 description: Read our Guide on the dungeon The Sunken Temple of Qarn (Hard) where
   you'll face off against Damaged Adjudicator, Sabotender Emperatriz, and Vicegerent
   to the Warden.
-cover: ''
+cover: "/uploads/sunken_tempe_qarn_hard.jpg"
 terms:
 - term: Vicegerent to the Warden
 - term: Sabotender Emperatriz
