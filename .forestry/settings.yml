@@ -3,11 +3,11 @@ new_page_extension: md
 auto_deploy: false
 admin_path: forestry
 webhook_url: 
-collections:
-- path: _posts
+sections:
+- type: jekyll-posts
   label: Guides
   create: all
-- path: ''
+- type: jekyll-pages
   label: Pages
   create: all
   hidden: true
