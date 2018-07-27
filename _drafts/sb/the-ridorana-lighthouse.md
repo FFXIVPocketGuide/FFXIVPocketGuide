@@ -30,6 +30,10 @@ ilvl: 335
 order: 70335
 mtq_vid: https://youtu.be/yQk1HYmdN5U
 duty_mechanics: []
-bosses: []
+bosses:
+- boss_name: Famfrit, the Darkening Cloud
+- boss_name: Belias, the Gigas
+- boss_name: Construct 7
+- boss_name: Yiazmat
 
 ---
