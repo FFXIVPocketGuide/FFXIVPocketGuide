@@ -153,6 +153,10 @@ bosses:
         add during Darkening Rainfall.
     - boss_phase_item: Stack with another player when you are marked with a red triangle.
 - boss_name: Belias, the Gigas
+  boss_phases:
+  - boss_phase_title: Phase 01
+  - boss_phase_title: Phase 02
+  - boss_phase_title: Phase 03
 - boss_name: Construct 7
 - boss_name: Yiazmat
 
