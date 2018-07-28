@@ -487,6 +487,9 @@ bosses:
           to dodge missiles, and alliance C receives a buff that requires them to
           stop ALL action when the dice markers reach 1-0)
     - boss_phase_mechanic_title: Annihilation Mode
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: This mode alters the boss's previous attacks (e.g.
+          Compress hits for 4 columns instead of 1, Dispose lasts longer, etc.).
     boss_phase_summary:
     - boss_phase_item: During Ignite be sure to be aware of where the boss is at all
         times so that you can appropriately avoid his divebomb.
