@@ -119,6 +119,39 @@ bosses:
       - variation_note: This attack spawns 3 hurricanes on the arena - pay attention
           to their layout when they spawn to determine if they will move in a circular
           motion or across the arena in a line.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Darkening Rainfall
+      attack_tags:
+      - Debuff
+      - Spawn
+      - AoE - Puddle
+      attack_notes:
+      - attack_note: This attack begins by placing 3-4 blue puddle AoEs on the arena
+          - these add difficulty to Tsunami's knockback.
+      - attack_note: 3 "Dark Rain" adds will spawn - each alliance should take one
+          and burn it down before its cast goes off, or the whole raid will suffer
+          high damage and Magic Vulnerability Up debuffs.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Dark Cannonade
+      attack_tags:
+      - Stack
+      - Marker (Red)
+      attack_notes:
+      - attack_note: Players will be marked with red triangle markers indicating that
+          they should stack with at least one other player to avoid high damage and
+          being knocked into the sky.
+    boss_phase_mechanics: []
+    boss_phase_summary:
+    - boss_phase_item: Pay attention to the direction the boss is pointing his jug
+        during Tsunami as it will indicate the direction the following column/area
+        AoE will land.
+    - boss_phase_item: Each alliance should preparing to focus down a "Dark Rain"
+        add during Darkening Rainfall.
+    - boss_phase_item: Stack with another player when you are marked with a red triangle.
 - boss_name: Belias, the Gigas
 - boss_name: Construct 7
 - boss_name: Yiazmat
