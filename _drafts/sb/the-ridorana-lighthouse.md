@@ -182,6 +182,36 @@ bosses:
       attack_tags:
       - AoE - Area
       - Mechanic
+      attack_notes:
+      - attack_note: The arena is divided into a grid - each square will receive a
+          clock-face during this attack and will either spin fast or slow.
+      - attack_note: If the square's clock is spinning fast, it will detonate first,
+          if the square is spinning slowly, it will detonate second.
+      - attack_note: Players should stand in the slow moving clocks until the fast
+          ones detonate and then move into the newly freed space to avoid the slow
+          clocks.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Crimson Cyclone
+      attack_tags:
+      - AoE - Column
+      - Mechanic
+      attack_notes:
+      - attack_note: The boss will disappear and summon 2 clones that will dash across
+          the arena.
+      - attack_note: These clones will eventually run into giant arrows on the arena
+          and will change direction based on the direction the arrow is pointing.
+      - attack_note: Determine both clones' paths and move into a safe zone.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Hand of Time
+      attack_tags:
+      - Stun
+      - Mechanic
+      - Debuff
+      - Tether
   - boss_phase_title: Phase 02
   - boss_phase_title: Phase 03
 - boss_name: Construct 7
