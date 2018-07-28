@@ -372,7 +372,124 @@ bosses:
       attack_notes:
       - attack_note: This is an extremely large donut AoE with the only safe zone
           being the boss's hitbox.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Magnetic Lysis
+      attack_tags:
+      - Debuff
+      - Mechanic
+      attack_notes:
+      - attack_note: This attack gives players either a positive (+) or negative (-)
+          debuff and then divides the arena into two sections.
+      - attack_note: Players who stand on the side that MATCHES their debuff will
+          float in the air, exposing them to death during Cyclone.
+      - attack_note: Players should do their best to always stand on the side of the
+          arena OPPOSITE to their debuff to ensure they're always on the ground.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Summon
+      attack_tags:
+      - AoE - Column
+      - Tether
+      - Spawn
+      attack_notes:
+      - attack_note: This attack summons 3 Wind Azer adds that will tether to a random
+          player and attack them with a long column AoE - kill these adds as soon
+          as possible.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Deathstroke
+      attack_tags:
+      - Stack
+      attack_notes:
+      - attack_note: A player will be marked with a stack marker - all players should
+          stack on their location to soak damage.
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      attack_name: Cyclone
+      attack_tags:
+      - Mechanic
+      - Raid Wide Damage
+      attack_notes:
+      - attack_note: This attack hits the whole raid for heavy damage and throws players
+          into the air - any players levitating during Magnetic Lysis will be instantly
+          killed by this attack - be sure to be on the ground when this cast goes
+          off.
+    boss_phase_summary:
+    - boss_phase_item: Tanks and Healers should pay close attention to which version
+        of Rake the boss is about to use (indicated by the absence or presence of
+        an orange arrow).
+    - boss_phase_item: If the boss stands up, all players should run behind him.
+    - boss_phase_item: The only safe zone during White Breath is the boss' hitbox
+        - stick as close to him as you can.
+    boss_phase_mechanics:
+    - boss_phase_mechanic_title: Magnetic Lysis
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: This attack provides players with a positive (+)
+          or negative (-) debuff that correlates with areas on the floor of the arena
+          - standing in the matching side will force you to levitate, while standing
+          in the opposite side will keep you stuck to the ground.
+      - boss_phase_mechanic_note: During Cyclone, all players who are levitating will
+          be instantly killed - be sure to stick to the correct side to avoid death!
   - boss_phase_title: Phase 02
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Archaeodemon
+      attack_tags:
+      - Spawn
+      attack_notes:
+      - attack_note: This phase begins by the boss summoning 3 Archaeodemons - each
+          one should be taken by an alliance and burned down - the faster they die,
+          the less the boss's Mana Duty Gauge will fill.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Heart of the Dragon
+      attack_tags:
+      - Spawn
+      attack_notes:
+      - attack_note: When the 3 Archaeodemons are killed the boss's heart will become
+          targetable - burn this down as fast as possible to mitigate damage from
+          the boss's Ultimate that follows.
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      - Tank
+      attack_name: Solar Storm
+      attack_tags:
+      - Ultimate
+      attack_notes:
+      - attack_note: This attack will hit the raid for damage based on how full the
+          boss's Mana Duty Gauge is - kill the adds during this phase as quickly as
+          possible to mitigate damage.
+    boss_phase_mechanics:
+    - boss_phase_mechanic_title: 'Duty Gauge: Mana'
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: Players must kill the 3 Archaeodemons and the Heart
+          of the Dragon adds as fast as possible to mitigate damage from Solar Storm
+          - it's damage is directly tied to how full the Duty Gauge is.
+    boss_phase_summary:
+    - boss_phase_item: Each alliance should take 1 Archaeodemon and burn it down as
+        fast as possible before switching to the Heart of the Dragon add.
   - boss_phase_title: Phase 03
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Growing Threat
+      attack_tags:
+      - Buff
+      attack_notes:
+      - attack_note: This attack provides the boss with a buff to its damage - kill
+          it as quickly as possible!
+    boss_phase_summary:
+    - boss_phase_item: The boss' mechanics will repeat until it is killed - be wary
+        of Growing Threat, as it will buff the boss' damage during this phase.
 
 ---
