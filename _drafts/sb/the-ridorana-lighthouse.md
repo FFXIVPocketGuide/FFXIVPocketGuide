@@ -399,6 +399,100 @@ bosses:
       attack_name: Computation Mode
       attack_tags:
       - Mechanic
+      attack_notes:
+      - attack_note: This mechanic requires a bit of basic on-the-fly math and occurs
+          twice in a row each time it is cast.
+      - attack_note: The boss will reduce all players health down to 1 digit between
+          1 and 8.
+      - attack_note: 4 AoE circles will appear, each with 1, 2, 3, and 4 icons in
+          their markers. By standing in these circles, the player can add the number
+          of icons to their health pool (e.g. 1HP + 4 icons = 5HP).
+      - attack_note: The boss will then use a text cue to indicate what the player
+          has to do by saying "Calibrate vitals to..." and then say either "a multiple
+          of X" or "a prime number."
+      - attack_note: In order to pass the mechanic, each player must force their health
+          to meet the requirements - for example, if the boss says "Calibrate vitals
+          to a multiple of 3" and I have 2HP, I need to stand in the AoE that has
+          1 icon or 4 icons (3HP or 6HP respectively).
+      - attack_note: Note that 1 is not a prime number - also note that players can
+          remain outside the AoE circles if their HP already meets the criteria.
+    - template: attack-w-variations
+      variation_name: Tartarus Mode
+      variation_notes:
+      - variation_note: Each alliance will be teleported to an arena and face a "Construct
+          7.1" add with a unique mechanic - destroy the add to proceed in the fight.
+      variation_attacks:
+      - attack_name: Alliance A - Polarity
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - Mechanic
+        - Tether
+        attack_notes:
+        - attack_note: Players in alliance A will be marked with either positive (+)
+            or negative (-) markers and then be tethered to another player.
+        - attack_note: If the player that you are tethered to matches your marker,
+            stack with them.
+        - attack_note: If the player you're tethered to has the opposite marker, move
+            as far away from them as possible.
+      - attack_name: Alliance B - Missiles
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - AoE - Area
+        attack_notes:
+        - attack_note: Players in alliance B will have to watch out for missiles that
+            will traverse the arena during the fight - avoid these or they will explode
+            for extra damage.
+      - attack_name: Alliance C - Acceleration Bombs
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - Debuff
+        - Mechanic
+        attack_notes:
+        - attack_note: Players in alliance C will be afflicted with a debuff that
+            requires you to stop ALL actions when the dice markers count down to 1
+            and the cast goes off.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Annihilation Mode
+      attack_tags:
+      - Buff
+      - Mechanic
+      attack_notes:
+      - attack_note: This mode enhances the boss's phase 01 attacks.
+      - attack_note: Compress now hits with 4 columns in a cross shape compared to
+          the single column.
+      - attack_note: Dispose now lasts longer - stick behind the boss's back until
+          the whole attack is complete.
+    boss_phase_mechanics:
+    - boss_phase_mechanic_title: Computation Mode
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: This mechanic requires some on-the-fly math - the
+          boss will reduce HP down to a single digit between 1 and 8.
+      - boss_phase_mechanic_note: This is followed by 4 AoE circles that will add
+          1, 2, 3, and 4 points of HP to your health if you stand in them.
+      - boss_phase_mechanic_note: The boss will use text cues to tell players to alter
+          their HP to meet certain criteria (a multiple of a number, or a prime number)
+          - stand in the relevant AoEs to ensure your health is the right value.
+      - boss_phase_mechanic_note: Standing outside the AoEs keeps your HP the same
+          (if it already meets the requirements).
+    - boss_phase_mechanic_title: Tartarus Mode
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: Each alliance faces an add with a different mechanic.
+      - boss_phase_mechanic_note: Alliance A receives polarity tethers (stack with
+          your partner if you match, spread if you are opposites), alliance B needs
+          to dodge missiles, and alliance C receives a buff that requires them to
+          stop ALL action when the dice markers reach 1-0)
+    - boss_phase_mechanic_title: Annihilation Mode
+    boss_phase_summary:
+    - boss_phase_item: During Ignite be sure to be aware of where the boss is at all
+        times so that you can appropriately avoid his divebomb.
+    - boss_phase_item: Be sure to remain behind the boss for the entire time Dispose's
+        consecutive cone AoEs are being used - the length of this attack can be misleading
+        and changes towards the end of the fight.
 - boss_name: Yiazmat
   boss_phases:
   - boss_phase_title: Phase 01
