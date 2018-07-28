@@ -212,8 +212,92 @@ bosses:
       - Mechanic
       - Debuff
       - Tether
+      attack_notes:
+      - attack_note: 3 nails will spawn and tether to a player, giving them a stacking
+          debuff and Slow.
+      - attack_note: Tethered players should run as far away from their nail as possible,
+          ensuring that their stacking debuff reaches 1, until the attack is finished.
+      - attack_note: Players who aren't tethered will be stunned for a long time if
+          they run into a tether - avoid these at all costs.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Eruption
+      attack_tags:
+      - AoE - Puddle
+      attack_notes:
+      - attack_note: This attack targets random players and drops consecutive AoEs
+          on their location as they move - be sure to avoid dropping these on other
+          players.
+    boss_phase_summary:
+    - boss_phase_item: When clocks appear on the ground, stand in the slow moving
+        ones until the fast ones explode, then immediately move into the free space
+        to allow the slow ones to explode.
+    - boss_phase_item: When the boss's clones begin to dash, be sure to take into
+        account the arrows on the ground, as they will change direction when they
+        hit them.
+    - boss_phase_item: If you're tethered to a nail, run as far away from it as possible
+        so that your stacking debuff is down to 1 - if you aren't tethered, avoid
+        running into a tether or you will be stunned.
   - boss_phase_title: Phase 02
+    boss_phase_mechanics:
+    - boss_phase_mechanic_title: 'Duty Gauge: Mana'
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: This phase centers around he boss filling his Mana
+          Gauge, thus making his Ultimate attack stronger.
+      - boss_phase_mechanic_note: Kill the Gigas adds as fast as possible to mitigate
+          damage done.
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Gigas
+      attack_tags:
+      - Spawn
+      attack_notes:
+      - attack_note: The boss will spawn 3 Gigas adds - each alliance should split
+          up and destroy their respective add before the boss' Duty Gauge fills.
+      - attack_note: If the adds are two close together they will tether to each other,
+          buffing their stats - separate them as far apart as possible.
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      - Tank
+      attack_name: Hellfire
+      attack_tags:
+      - Ultimate
+      attack_notes:
+      - attack_note: This attack will hit the group for damage based on how full the
+          boss's Duty Gauge is - shield and heal as necessary.
+    boss_phase_summary:
+    - boss_phase_item: Each alliance should take 1 Gigas add and separate them as
+        far away as possible - kill these as fast as possible to void the boss's Duty
+        Gauge from filling.
   - boss_phase_title: Phase 03
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Time Bomb
+      attack_tags:
+      - AoE - Area
+      - Mechanic
+      attack_notes:
+      - attack_note: This attack spawns 4 clocks towards the center of the arena that
+          will each drop an AoE.
+      - attack_note: The location of each clock's attack is determined by the clock's
+          hands - they will be pointing to the square that the attack will fall in.
+      - attack_note: Players can stand in the clock to change the hands, thus changing
+          the location of the attack when the cast goes off - use this mechanic to
+          place the attack in a square that will be occupied by another AoE attack
+          to free up safe space.
+    boss_phase_summary:
+    - boss_phase_item: The boss's Phase 01 attacks will occur with more overlap.
+    - boss_phase_item: When 4 clocks spawn on the arena, pay attention to the clock's
+        hands as they indicate which squares Time Bomb's attacks will hit.
+    - boss_phase_item: Players can walk into these clock spaces to move the hand,
+        therefore changing the location of the attack - use this to move the attack
+        and free up safe space if needed.
 - boss_name: Construct 7
 - boss_name: Yiazmat
 
