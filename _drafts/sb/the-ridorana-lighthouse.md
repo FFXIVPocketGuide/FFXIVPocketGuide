@@ -155,6 +155,33 @@ bosses:
 - boss_name: Belias, the Gigas
   boss_phases:
   - boss_phase_title: Phase 01
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      - Tank
+      attack_name: Fire
+      attack_tags:
+      - Tankbuster
+      attack_notes:
+      - attack_note: This attack hits the primary threat target for high damage -
+          shield and heal as necessary.
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      attack_name: Fire IV
+      attack_tags:
+      - Raid Wide Damage
+      attack_notes:
+      - attack_note: This attack hits the raid for moderate damage - shield and heal
+          as necessary.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Time Eruption
+      attack_tags:
+      - AoE - Area
+      - Mechanic
   - boss_phase_title: Phase 02
   - boss_phase_title: Phase 03
 - boss_name: Construct 7
