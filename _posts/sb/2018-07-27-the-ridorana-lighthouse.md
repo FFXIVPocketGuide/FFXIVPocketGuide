@@ -144,7 +144,6 @@ bosses:
       - attack_note: Players will be marked with red triangle markers indicating that
           they should stack with at least one other player to avoid high damage and
           being knocked into the sky.
-    boss_phase_mechanics: []
     boss_phase_summary:
     - boss_phase_item: Pay attention to the direction the boss is pointing his jug
         during Tsunami as it will indicate the direction the following column/area
