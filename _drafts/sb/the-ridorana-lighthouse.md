@@ -299,6 +299,69 @@ bosses:
         therefore changing the location of the attack - use this to move the attack
         and free up safe space if needed.
 - boss_name: Construct 7
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      - Tank
+      attack_name: Destroy
+      attack_tags:
+      - Tankbuster
+      attack_notes:
+      - attack_note: This attack hits the primary threat target for high damage -
+          shield and heal as necessary.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Accelerate
+      attack_tags:
+      - Marker (Orange)
+      - AoE - Circular
+      - Stack
+      attack_notes:
+      - attack_note: 1 player will be marked with a stack marker, while random other
+          players will be marked with orange markers, indicating that they will drop
+          an AoE on their location.
+      - attack_note: All players who aren't marked should stack on the appropriate
+          player while orange marked players should spread out and avoid dropping
+          their AoE on others.
+    - template: combo-attack
+      combo_name: Pulverize & Compress
+      combo_attacks:
+      - attack_name: Pulverize
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - AoE - Point Blank
+        attack_notes:
+        - attack_note: This attack has no telegraph and hits in a circle immediately
+            around the boss - stay out of melee range.
+      - attack_name: Compress
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - AoE - Column
+        attack_notes:
+        - attack_note: This attack immediately follows Pulverize and places a long
+            column AoE - avoid as necessary.
+      combo_notes:
+      - combo_note: The boss will attack with a point blank AoE and then follow up
+          with a column AoE - avoid as necessary.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Cogs
+      attack_tags:
+      - AoE - Puddle
+      attack_notes:
+      - attack_note: This attack places 6 large puddle AoEs on the arena that complicated
+          further mechanics.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Ignite
 - boss_name: Yiazmat
   boss_phases:
   - boss_phase_title: Phase 01
