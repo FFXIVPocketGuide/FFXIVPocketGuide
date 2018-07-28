@@ -362,6 +362,43 @@ bosses:
       attack_roles:
       - Everyone
       attack_name: Ignite
+      attack_tags:
+      - AoE - Circular
+      - Marker (Orange)
+      - Divebomb
+      attack_notes:
+      - attack_note: The boss will appear along the edge of the arena and divebomb
+          in the direction he is facing.
+      - attack_note: During the divebomb random players will be marked with orange
+          markers and circular AoEs will drop on their location - be sure to spread
+          out so that you don't drop these on other players.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Lithobrake
+      attack_tags:
+      - Proximity
+      attack_notes:
+      - attack_note: This attack drops a proximity AoE at the center of the arena
+          - run as far away as possible (don't forget to dodge the cog AoEs).
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Dispose
+      attack_tags:
+      - Mechanic
+      - AoE - Cone
+      attack_notes:
+      - attack_note: The boss uses this attack multiple times in succession while
+          rotating his position - all players should stand behind him while he attacks
+          and move accordingly as he turns to attack again.
+      - attack_note: Be sure to stay behind the boss until the attack is totally finished.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Computation Mode
+      attack_tags:
+      - Mechanic
 - boss_name: Yiazmat
   boss_phases:
   - boss_phase_title: Phase 01
