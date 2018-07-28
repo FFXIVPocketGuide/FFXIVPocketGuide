@@ -300,5 +300,79 @@ bosses:
         and free up safe space if needed.
 - boss_name: Construct 7
 - boss_name: Yiazmat
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_attacks:
+    - template: attack-w-variations
+      variation_name: Rake
+      variation_attacks:
+      - attack_name: Tankbuster
+        attack_roles:
+        - Healer
+        - Tank
+        attack_tags:
+        - Tankbuster
+        attack_notes:
+        - attack_note: This version of the attack hits the primary threat target for
+            high damage - shield and heal as necessary.
+      - attack_name: Circular AoEs
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - AoE - Circular
+        attack_notes:
+        - attack_note: This version of the attack is telegraphed by arrows on the
+            boss's body - the first arrow will indicate his starting direction, while
+            subsequent arrows will indicate which direction he's about to turn.
+        - attack_note: The boss will travel around the arena stomping large circular
+            AoEs into the ground - avoid as necessary.
+      variation_notes:
+      - variation_note: This attack has 2 variations - the tankbuster version has
+          no obvious telegraph, but the second version is indicated by a large orange
+          arrow on the boss.
+      - variation_note: If the arrow version occurs, pay attention to the arrows that
+          appear during the attack as well, as they'll indicate which way the boss
+          will turn.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Dark Gale
+      attack_tags:
+      - AoE - Circular
+      attack_notes:
+      - attack_note: This attack places consecutive circular AoEs under random players
+          as they move - be sure to avoid dropping these on other players.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Stone Breath
+      attack_tags:
+      - Debuff
+      - AoE - Area
+      attack_notes:
+      - attack_note: The boss will target a random player and stand on its hind legs.
+      - attack_note: It will then attack with an extremely large AoE directly in front
+          of it, causing high damage and a Petrifaction debuff.
+      - attack_note: The only safe zone for this attack is behind the boss.
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      attack_name: Dust Storm
+      attack_tags:
+      - Raid Wide Damage
+      attack_notes:
+      - attack_note: This attack hits the whole raid for moderate damage - shield
+          and heal as necessary.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: White Breath
+      attack_tags:
+      - AoE - Donut
+      attack_notes:
+      - attack_note: This is an extremely large donut AoE with the only safe zone
+          being the boss's hitbox.
+  - boss_phase_title: Phase 02
+  - boss_phase_title: Phase 03
 
 ---
