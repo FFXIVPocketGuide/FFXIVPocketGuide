@@ -55,6 +55,13 @@ bosses:
       - attack_name: Staff
         attack_roles:
         - Everyone
+        attack_tags:
+        - Pull
+        attack_notes:
+        - attack_note: If the boss is carrying a staff, it will pull all players AND
+            small ceruleum tanks to its location - all players should move out as
+            quickly as possible to avoid exploding tanks.
+      variation_notes: []
 - boss_name: Magitek Gunship
 - boss_name: Midgardsormr
 
