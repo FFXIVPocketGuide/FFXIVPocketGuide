@@ -8,9 +8,7 @@
         <!-- <div class="guide-metadata__new">New!</div> -->
     </a>
 
-    <div class="guide-metadata__grid">
-
-        <ul class="guide-metadata__menu">
+    <ul class="guide-metadata__menu">
 
             <h5 class="guide-metadata__subtitle">In This Guide:</h5>
 
@@ -72,35 +70,34 @@
 
             {% endif %}
 
-        </ul>
+    </ul>
 
-        <div class="guide-metadata__wrapper flex-grid">
+    <div
+        class="guide-metadata__wrapper">
 
-            <h5 class="guide-metadata__subtitle box small-1of2 med-full">Player Level: <span>{{ page.plvl }}</span></h5>
+        <h5 class="guide-metadata__subtitle box small-1of2 med-full">Player Level: <span>{{ page.plvl }}</span></h5>
 
-            {% if page.ilvl > 0 %}
-                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Item Level: <span>{{ page.ilvl }}</span></h5>
-            {% else %}
-                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Item Level: <span>N/A</span></h5>
-            {% endif %}
+        {% if page.ilvl > 0 %}
+            <h5 class="guide-metadata__subtitle box small-1of2 med-full">Item Level: <span>{{ page.ilvl }}</span></h5>
+        {% else %}
+            <h5 class="guide-metadata__subtitle box small-1of2 med-full">Item Level: <span>N/A</span></h5>
+        {% endif %}
 
-            {% if page.patchNumber %}
-                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Patch {{ page.patchNumber }}:<span>{{ page.patchName }}</span></h5>
-            {% endif %}
+        {% if page.patchNumber %}
+            <h5 class="guide-metadata__subtitle box small-1of2 med-full">Patch {{ page.patchNumber }}:<span>{{ page.patchName }}</span></h5>
+        {% endif %}
 
-            {% if page.partners %}
-                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Partners:
-                {% for partner in page.partners %}
-                    <span><a href="{{ partner.partner-link }}" title="Go view {{ partner.partner-title }}'s Guide" target="_blank">{{ partner.partner-title }}</a></span>
-                {% endfor %}
-                </h5>
-            {% endif %}
+        {% if page.partners %}
+            <h5 class="guide-metadata__subtitle box small-1of2 med-full">Partners:
+            {% for partner in page.partners %}
+                <span><a href="{{ partner.partner-link }}" title="Go view {{ partner.partner-title }}'s Guide" target="_blank">{{ partner.partner-title }}</a></span>
+            {% endfor %}
+            </h5>
+        {% endif %}
 
-            {% if page.orchestrion %}
-                <h5 class="guide-metadata__subtitle box small-1of2 med-full">Orchestrion Roll:<span>{{ page.orchestrion }}</span></h5>
-            {% endif %}
-
-        </div>
+        {% if page.orchestrion %}
+            <h5 class="guide-metadata__subtitle box small-1of2 med-full">Orchestrion Roll:<span>{{ page.orchestrion }}</span></h5>
+        {% endif %}
 
     </div>
 
