@@ -28,6 +28,33 @@ mtq_vid: https://youtu.be/F7rbsXNqRtY
 duty_mechanics: []
 bosses:
 - boss_name: Einhander
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_mechanics:
+    - boss_phase_mechanic_title: Ceruleum Tanks
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: Auxiliary (small) and Main (big) ceruleum tanks
+          will drop around the arena.
+      - boss_phase_mechanic_note: Small tanks can be attacked to knock them across
+          the arena - do this to move all tanks away from the boss.
+      - boss_phase_mechanic_note: Tanks will eventually begin to glow, indicating
+          that they are about to explode - at this point they can no longer be moved
+          and players should avoid them.
+    boss_phase_attacks:
+    - template: attack-w-variations
+      variation_name: Weapons
+      variation_attacks:
+      - attack_name: Gun
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - AoE - Column
+        attack_notes:
+        - attack_note: When the boss is carrying a gun it will attack random players
+            with a column AoE that should be avoided.
+      - attack_name: Staff
+        attack_roles:
+        - Everyone
 - boss_name: Magitek Gunship
 - boss_name: Midgardsormr
 
