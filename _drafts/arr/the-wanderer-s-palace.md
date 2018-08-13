@@ -87,5 +87,41 @@ bosses:
       - attack_note: Players should always prioritize the blue minion, as it will
           heal the boss if left alive.
 - boss_name: Tonberry King
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_attacks:
+    - template: attack-w-variations
+      variation_name: Slash
+      variation_attacks:
+      - attack_name: Lateral Slash
+        attack_roles:
+        - Healer
+        - Tank
+        attack_tags:
+        - Tankbuster
+        attack_notes:
+        - attack_note: This attack hits the primary threat target for low damage -
+            shield and heal as necessary.
+      - attack_name: Sharpened Knife
+        attack_roles:
+        - Healer
+        - Tank
+        attack_tags:
+        - Buff
+        - Tankbuster
+        attack_notes:
+        - attack_note: This attack buffs the boss Lateral Slash, causing higher damage
+            to the primary threat target - shield and heal as necessary.
+      variation_notes:
+      - variation_note: Pay attention the boss's cast bar to determine whether it
+          will hit with the lower or higher damage variation.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Scourge of Nym
+      attack_tags:
+      - Debuff
+      attack_notes:
+      - attack_note: This attack hits a random player and gives them the Heavy debuff.
 
 ---
