@@ -25,7 +25,17 @@ plvl: 50
 ilvl: 0
 order: 50000
 mtq_vid: https://youtu.be/xlKKLpQSzZs
-duty_mechanics: []
+duty_mechanics:
+- duty_mechanic_title: Tonberries
+  duty_mechanic_steps:
+  - duty_mechanic_step_title: Small Tonberries
+    duty_mechanic_step_notes:
+    - duty_mechanic_step_note: Killing these adds drops oil which can be used to open
+        doors and progress through the dungeon.
+  - duty_mechanic_step_title: Large Tonberries
+    duty_mechanic_step_notes:
+    - duty_mechanic_step_note: These adds wander the halls slowly - if they catch
+        up to one of your party members they will instantly kill them.
 bosses:
 - boss_name: Keeper of Halidom
 - boss_name: Giant Bavarois
