@@ -38,6 +38,30 @@ duty_mechanics:
         up to one of your party members they will instantly kill them.
 bosses:
 - boss_name: Keeper of Halidom
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_summary:
+    - boss_phase_item: This boss is relatively straight forward - move out of AoEs.
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Inhale
+      attack_tags:
+      - Pull
+      - AoE - Cone
+      attack_notes:
+      - attack_note: The boss will turn and face a random player, attacking them with
+          a cone AoE - players caught in the AoE will be pulled to the boss.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Moldy Phlegm
+      attack_tags:
+      - AoE - Circular
+      attack_notes:
+      - attack_note: The boss will target a random player with a circular AoE - move
+          out of the telegraph to avoid damage.
 - boss_name: Giant Bavarois
 - boss_name: Tonberry King
 
