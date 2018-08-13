@@ -63,6 +63,29 @@ bosses:
       - attack_note: The boss will target a random player with a circular AoE - move
           out of the telegraph to avoid damage.
 - boss_name: Giant Bavarois
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_summary:
+    - boss_phase_item: Kill all spawns as they arrive, prioritizing the blue one,
+        as it will heal the boss.
+    boss_phase_mechanics:
+    - boss_phase_mechanic_title: Enmity
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: Occasionally the boss will ignore enmity and chase
+          down a random player - this player should constantly run away until the
+          boss returns to the tank.
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Bavarois Army
+      attack_tags:
+      - Spawn
+      attack_notes:
+      - attack_note: The boss will spawn randomly coloured minions that should be
+          gathered up and burned down.
+      - attack_note: Players should always prioritize the blue minion, as it will
+          heal the boss if left alive.
 - boss_name: Tonberry King
 
 ---
