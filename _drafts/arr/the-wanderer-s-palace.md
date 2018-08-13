@@ -26,6 +26,9 @@ ilvl: 0
 order: 50000
 mtq_vid: https://youtu.be/xlKKLpQSzZs
 duty_mechanics: []
-bosses: []
+bosses:
+- boss_name: Keeper of Halidom
+- boss_name: Giant Bavarois
+- boss_name: Tonberry King
 
 ---
