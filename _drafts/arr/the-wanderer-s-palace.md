@@ -171,5 +171,20 @@ bosses:
       - attack_note: These adds will instantly kill players who get too close to them
           - players who are kiting smaller Tonberries during the fight should be especially
           wary.
+    boss_phase_summary:
+    - boss_phase_item: Tanks and healers should pay attention the boss's cast bar
+        to determine which of the Tankbusters will be used (Lateral is weak, Sharpened
+        is high).
+    - boss_phase_item: Players should stay away from the Tonberry Slasher adds that
+        spawn around the edge, as they will instantly kill you if you get too close.
+    boss_phase_mechanics:
+    - boss_phase_mechanic_title: Rancor Buff
+      boss_phase_mechanic_notes:
+      - boss_phase_mechanic_note: Tonberries will spawn and move towards the boss
+          - killing these adds will give the boss stacks of Rancor that will increase
+          the power of his raid wide attack Everybody's Grudge.
+      - boss_phase_mechanic_note: Players should kill 3-4 Tonberries at a time and
+          then kite the remaining adds until the boss attacks, which will reset his
+          stacks.
 
 ---
