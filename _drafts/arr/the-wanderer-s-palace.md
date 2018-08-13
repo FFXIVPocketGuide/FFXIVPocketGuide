@@ -123,5 +123,53 @@ bosses:
       - Debuff
       attack_notes:
       - attack_note: This attack hits a random player and gives them the Heavy debuff.
+    - template: combo-attack
+      combo_name: Tonberries & Everybody's Grudge
+      combo_attacks:
+      - attack_name: Tonberries
+        attack_roles:
+        - Everyone
+        attack_tags:
+        - Buff
+        - Spawn
+        attack_notes:
+        - attack_note: Tonberry adds will spawn around the arena and walk towards
+            the boss, ignoring enmity until they reach his hitbox.
+        - attack_note: Killing these adds gives the boss stacks of the Rancor buff,
+            which increases damage from Everybody's Grudge.
+        - attack_note: Players should only ever kill 3-4 of these adds before the
+            boss uses Everybody's Grudge - the remaining adds should be kited around
+            the arena until the boss uses the attack.
+      - attack_name: Everybody's Grudge
+        attack_roles:
+        - Healer
+        attack_tags:
+        - Mechanic
+        - Raid Wide Damage
+        attack_notes:
+        - attack_note: This attack hits the group for raid wide damage based on how
+            many stacks of Rancor the boss has accumulated - healers be ready.
+        - attack_note: Once this attack is used, the boss's stacks with reset, allowing
+            players to kill more Tonberry adds.
+      combo_notes:
+      - combo_note: Tonberry adds should be killed in groups of 3-4 while the remaining
+          adds are kited around the arena until the boss attacks with Everybody's
+          Grudge.
+      - combo_note: The damage dealt by Everybody's Grudge is tied to how many Tonberries
+          are killed via the stacking Rancor buff on the boss - this should not exceed
+          4 or healers will have a tough time keeping up.
+    - template: regular-attack
+      attack_roles:
+      - Everyone
+      attack_name: Tonberry Slasher
+      attack_tags:
+      - Spawn
+      attack_notes:
+      - attack_note: During the later half of the fight, Tonberry Slasher adds will
+          spawn around the edge of the arena and begin to slowly move towards the
+          center.
+      - attack_note: These adds will instantly kill players who get too close to them
+          - players who are kiting smaller Tonberries during the fight should be especially
+          wary.
 
 ---
