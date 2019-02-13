@@ -39,7 +39,7 @@ div.index {
 }
 
 .index__announcement {
-    padding: 0;
+    padding: 0 calc(#{$unit} * 1.5);
 
     @media #{$navigation} {
         padding: 0 calc(#{$unit} * 3);
