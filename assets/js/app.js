@@ -27,7 +27,7 @@
 
         // Menu Trigger ========================================================
         $(".sidebar__trigger").on("click", function(e) {
-            
+
             if ($(".sidebar").hasClass("active")) {
                 $("body").css("overflow-y", "visible");
             }
@@ -126,6 +126,15 @@
                 }
 
             });
+
+            if(terms == "") {
+                $("#shadowbringersTitle").show();
+                $("#shadowbringersContent").show();
+            }
+            else {
+                $("#shadowbringersTitle").hide();
+                $("#shadowbringersContent").hide();
+            }
 
             if($(".summary.show").length) {
                 $(".index-null-state").hide();

@@ -6,16 +6,16 @@
 
 <!-- Mobile Menu Trigger -->
 
-    <button 
+    <button
         class="sidebar__trigger">
 
-        <span 
+        <span
             class="sidebar__trigger-inactive">
             <i class="material-icons">explore</i>
             Menu
         </span>
 
-        <span 
+        <span
             class="sidebar__trigger-active">
             <i class="material-icons">close</i>
             Close
@@ -25,23 +25,23 @@
 
 <!-- Mobile Overlay -->
 
-    <div 
-        class="site-grid__sidebar-overlay">        
+    <div
+        class="site-grid__sidebar-overlay">
     </div>
 
 <!-- Menu -->
 
-    <div 
-        class="sidebar" 
-        style="background-image: url('{{ "/assets/img/guide_index.jpg" | prepend: site.baseurl }}');">
+    <div
+        class="sidebar"
+        style="background-image: url('{{ "/assets/img/guide_index_default.jpg" | prepend: site.baseurl }}');">
 
-        <div 
+        <div
             class="sidebar__wrapper">
 
-            <h1 
+            <h1
                 class="sidebar__title">
-                <a 
-                    href="/" 
+                <a
+                    href="/"
                     title="Return to the Pocket Guide Home Page.">
                     <img
                         alt="FFXIV Icon"
@@ -49,43 +49,43 @@
                 </a>
             </h1>
 
-            <ul 
+            <ul
                 class="sidebar__menu">
 
                 <li>
-                    <a 
+                    <a
                         {% if page.page_category == "all" %}class="active"{% endif %}
-                        href="/" 
+                        href="/"
                         title="View All Guides.">
                         All Guides
                     </a>
                 </li>
 
                 <li>
-                    <a 
-                        {% if page.page_category == "dungeons" %}class="active"{% endif %} 
-                        {% if page.instanceType == "dungeon" or page.instance_type == "Dungeon" %}class="active"{% endif %} 
-                        href="/dungeons" 
+                    <a
+                        {% if page.page_category == "dungeons" %}class="active"{% endif %}
+                        {% if page.instanceType == "dungeon" or page.instance_type == "Dungeon" %}class="active"{% endif %}
+                        href="/dungeons"
                         title="View Dungeon Guides.">
                         Dungeons
                     </a>
                 </li>
 
                 <li>
-                    <a 
-                        {% if page.page_category == "trials" %}class="active"{% endif %} 
-                        {% if page.instanceType == "trial" or page.instance_type == "Trial" %}class="active"{% endif %} 
-                        href="/trials" 
+                    <a
+                        {% if page.page_category == "trials" %}class="active"{% endif %}
+                        {% if page.instanceType == "trial" or page.instance_type == "Trial" %}class="active"{% endif %}
+                        href="/trials"
                         title="View Trial Guides.">
                         Trials
                     </a>
                 </li>
 
                 <li>
-                    <a 
+                    <a
                         {% if page.page_category == "raids" %}class="active"{% endif %}
                         {% if page.instanceType == "raid" or page.instance_type == "Raid" %}class="active"{% endif %}
-                        href="/raids" 
+                        href="/raids"
                         title="View Raid Guides.">
                         Raids
                     </a>
