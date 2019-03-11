@@ -1,7 +1,6 @@
 ---
 label: guide-template
 hide_body: true
-is_partial: false
 fields:
 - type: text
   name: layout
