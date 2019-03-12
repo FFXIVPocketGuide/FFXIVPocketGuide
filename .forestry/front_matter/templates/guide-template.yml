@@ -221,6 +221,7 @@ fields:
       - combo-attack
       - attack-w-variations
 pages:
+- _posts/sb/omega-alphascape-v1-0.md
 - _posts/sb/the-orbonne-monastery.md
 - _posts/hw/2018-07-19-sohm-al.md
 - _posts/arr/2018-07-24-sastasha.md
