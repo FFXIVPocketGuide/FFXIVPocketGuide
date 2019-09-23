@@ -21,6 +21,23 @@ ilvl: 410
 order: 80410
 mtq_vid: https://youtu.be/I3GrCd_jNlA
 duty_mechanics: []
-bosses: []
+bosses:
+- boss_name: Cladoselache & Doliodus
+  boss_phases:
+  - boss_phase_title: Phase 01
+    boss_phase_summary: []
+    boss_phase_mechanics: []
+    boss_phase_script: []
+    boss_phase_attacks:
+    - template: regular-attack
+      attack_roles:
+      - Healer
+      - Tank
+      attack_name: Protolithic Puncture
+      attack_notes:
+      - attack_note: Deals high damage on primary target -- cooldown and heal as necessary.
+      attack_duty_action: ''
+      attack_tags: []
+      attack_images: []
 
 ---
