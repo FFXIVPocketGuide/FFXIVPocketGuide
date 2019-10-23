@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: FFXIVPocketGuide/DevFFXIVPocketGuide
+  branch: master
+  base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
+  auth_endpoint: /ffxiv-pg-oauth/auth
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/img"
+
+fields_template: &common_fields
+  - {label: "Name", name: "title", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Type", name: "instanceType", widget: "select", options: ["dungeon", "Extreme", "raid", "trial"]}
+  - {label: "Expansion", name: "categories", widget: "select", options: ["arr", "hw", "sb", "shb"]}
+  - {label: "Date", name: "date", widget: "date"}
+  - {label: "Player Level", name: "plvl", valueType: "int", widget: "number"}
+  - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number"}
+  - {label: "Difficulty", name: "order", valueType: "int", widget: "number"}
+  - {label: "Patch", name: "patchNumber", valueType: "float", widget: "number"}
+  - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string"}
+  - {label: "Minion(s)", name: "minion", required: false, widget: "string"}
+  - label: "Boss"
+    name: "bosses"
+    widget: "list"
+    fields:
+      - {label: "Boss", name: "boss_name", widget: "string"}
+      - label: "Phase"
+        name: "boss_phase_title"
+        widget: "list"
+        fields:
+          - {label: "Summary", name: "boss_summary", widget: "text"}
+          - label: "Attack"
+            name: "boss_attacks"
+            widget: "list"
+            fields:
+              - {label: "Attack", name: "attack_name", widget: "string"}
+              - {label: "Roles", name: "attack_roles", widget: "select", multiple: true, options: ["Tank", "Healer", "Dps"]}
+              - {label: "Type", name: "attack_type", widget: "select", multiple: true, options: ["Tankbuster", "AoE", "Puddle AoE", "Column AoE", "Stack", "Donut AoE", "Proximity AoE", "Circular AoE"]}
+              - {label: "Note", name: "attack_note", widget: "text"}
+
+collections:
+  - name: "shb"
+    label: "Shadowbringers"
+    delete: false
+    label_singular: "Guide"
+    description: >
+    folder: "_posts/shb"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    fields:
+      *common_fields
+
+  - name: "sb"
+    label: "Stormblood"
+    delete: false
+    label_singular: "Guide"
+    description: >
+    folder: "_posts/sb"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    fields:
+      *common_fields
+
+  - name: "hw"
+    label: "Heavensward"
+    delete: false
+    label_singular: "Guide"
+    description: >
+    folder: "_posts/hw"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    fields: 
+      *common_fields
+
+  - name: "arr"
+    label: "A Realm Reborn"
+    delete: false
+    label_singular: "Guide"
+    description: >
+    folder: "_posts/arr"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    fields: 
+      *common_fields
