@@ -6,3 +6,4 @@ bower_components
 node_modules
 desktop.ini
 vendor
+.vscode
