@@ -89,7 +89,12 @@ difficulty | `select`
 
 The difficulty of the duty.
 
-Ex. *Normal, Hard, Extreme, Savage, Ultimate*
+Options:
+* Normal
+* Hard
+* Extreme
+* Savage
+* Ultimate
 
 ## Player Level
 
@@ -117,7 +122,7 @@ Ex. *61435*
 
 ## Orchestrion
 
-orchestrion | `list` `string`
+orchestrion | `list` `string` | `optional`
 
 The name of the orchestrion roll(s) that drop from the duty.
 
@@ -125,7 +130,7 @@ Ex. *Primal Judgement*
 
 ## Minion
 
-minion | `list` `string`
+minion | `list` `string` | `optional`
 
 The name of the minion(s) that drop from the duty.
 
@@ -133,7 +138,7 @@ Ex. *Forgiven Hate*
 
 ## Triple Triad Card
 
-card | `list` `string`
+card | `list` `string` | `optional`
 
 The name of the card(s) that drop from the duty.
 
