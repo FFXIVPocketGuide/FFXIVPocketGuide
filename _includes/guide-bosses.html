@@ -6,8 +6,12 @@
     <div class="guide__accordion-trigger--01 active" id="guideBosses">
         <i class="material-icons">expand_more</i>
         <h2 class="guide__accordion-trigger-title">
-            {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
-            {% if page.instanceType == "raid" %}Raid Bosses{% endif %}
+            {% if page.bosses.size > 1 %}
+                {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
+                {% if page.instanceType == "raid" %}Raid Bosses{% endif %}
+            {% else %}
+                {{ page.bosses[0].title }}
+            {% endif %}
         </h2>
     </div>
 
@@ -16,20 +20,22 @@
 
         <!-- Opens the Boss Loop -->
         {% for boss in page.bosses %}
+            {% if page.bosses.size > 1 %}                
+                <div class="guide__accordion-trigger--02" id="{{ boss.id }}">
+                    <i class="material-icons">expand_more</i>
+                    <h3 class="guide__accordion-trigger-title">
+                        {{ boss.title }}
+                    </h3>
+                </div>
 
-            <div class="guide__accordion-trigger--02" id="{{ boss.id }}">
-                <i class="material-icons">expand_more</i>
-                <h3 class="guide__accordion-trigger-title">
-                    {{ boss.title }}
-                </h3>
-            </div>
+                <div class="guide__accordion-content--02">
+            {% endif %}
 
-            <div class="guide__accordion-content--02">
 
                 <!-- Opens the Sequence Loop -->
                 {% for phase in boss.sequence %}
 
-                    <div class="guide__accordion-copy-wrapper">
+                    <div class="guide__accordion-copy-wrapper" id="phase{{ phase.phase }}">
 
                         <!-- Event Title -->
                         <h4 class="guide__accordion-title">Phase {{ phase.phase }} Alerts</h4>
@@ -77,7 +83,7 @@
 
                 {% endfor %}
 
-            </div>
+            {% if page.bosses.size > 1 %}</div>{% endif %}
 
         {% endfor %}
 
