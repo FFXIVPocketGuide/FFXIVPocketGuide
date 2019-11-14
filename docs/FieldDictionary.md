@@ -208,24 +208,25 @@ Notes of specific attacks or mechanics.
 
 Ex. *Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary.*
 
-## Attack
+## Attack Script
 
 attack | `string` `list`
 
 Sequence of attacks that boss uses.
 
-Ex. *Dreaming Kshatriya
-     Stotram
-     Hand of Grace
-     The Pull of Light
-     Stotram
-     The Pull of Light
-     The Path of Light
-     Alluring Arm
-     The Pull of Light
-     Stotram
-     The Pall of Light
-     The Pull of Light*
+Ex.
+* Dreaming Kshatriya
+* Stotram
+* Hand of Grace
+* The Pull of Light
+* Stotram
+* The Pull of Light
+* The Path of Light
+* Alluring Arm
+* The Pull of Light
+* Stotram
+* The Pall of Light
+* The Pull of Light
 
 ## Attacks
 
@@ -237,15 +238,20 @@ Ex. *100-tonze Swing*
 
 ## Roles
 
-roles | `select` `required`
+roles | `select`
 
 Which role the attack is directed to.
 
-Ex. *Tank, Healer, Melee DPS, Ranged DPS, Everyone*
+Options:
+* Tank
+* Healer
+* Melee DPS
+* Ranged DPS
+* Everyone
 
 ## Tags
 
-tags | `select` `required`
+tags | `select`
 
 Which kind/type of attack is being used.
 
