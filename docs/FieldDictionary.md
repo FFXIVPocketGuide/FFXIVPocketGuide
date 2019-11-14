@@ -162,6 +162,93 @@ Ex. *https://youtu.be/tT3-1Yb787w*
 
 ## Bosses
 
-bosses | `string`
+bosses | `string` `list`
 
-## 
+Name of Boss(s).
+
+Ex. *Otake-maru*
+
+## Sequence
+
+sequence | `string` `list`
+
+Organization between phases.
+
+Ex. *Phase #*
+
+## Phases
+
+phase | `list`
+
+The phase name.
+
+Ex. *Phase 1*
+
+## Alert
+
+alert | `text` `list`
+
+Notes of the different phases.
+
+Ex. *If the boss raises his arm, run out of melee range.*
+
+## Mechanics
+
+mechanics | `string` `list`
+
+Main mechanics during the duty.
+
+Ex. *Early in the dungeon, players will encounter wall type enemies - allow the tank some time to grab these as they must be picked up individually.*
+
+## Notes
+
+note | `text` `list`
+
+Notes of specific attacks or mechanics.
+
+Ex. *Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary.*
+
+## Attack
+
+attack | `string` `list`
+
+Sequence of attacks that boss uses.
+
+Ex. *Dreaming Kshatriya
+     Stotram
+     Hand of Grace
+     The Pull of Light
+     Stotram
+     The Pull of Light
+     The Path of Light
+     Alluring Arm
+     The Pull of Light
+     Stotram
+     The Pall of Light
+     The Pull of Light*
+
+## Attacks
+
+attacks | `string` `list`
+
+Name of the different attacks the bosses do.
+
+Ex. *100-tonze Swing*
+
+## Roles
+
+roles | `select` `required`
+
+Which role the attack is directed to.
+
+Ex. *Tank, Healer, Melee DPS, Ranged DPS, Everyone*
+
+## Tags
+
+tags | `select` `required`
+
+Which kind/type of attack is being used.
+
+Ex. *Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE, Cross AoE, Figure 8 AoE, Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun, Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver, Marker.*
+
+
