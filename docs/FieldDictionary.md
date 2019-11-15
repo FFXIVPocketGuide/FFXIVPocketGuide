@@ -56,8 +56,10 @@ image | `image / file`
 
 Primary image (1500px Wide) and Thumbnail (500px Wide).
 
-Ex. url */assets/img/raids/delta_02.jpg*
-    urlSmall */assets/img/raids/small/delta_02.jpg*
+Ex. 
+   * url */assets/img/raids/delta_02.jpg*
+   * urlSmall */assets/img/raids/small/delta_02.jpg*
+
 
 ## Terms
 
@@ -114,7 +116,7 @@ Ex. *435*
 
 ## Order
 
-order | `number`
+order | `number` `hidden`
 
 The combination of the player level and item level of the duty.
 
@@ -160,7 +162,7 @@ Link connected to the MTQ youtube guide of duty.
 
 Ex. *https://youtu.be/tT3-1Yb787w*
 
-## Bosses
+## Boss Name
 
 bosses | `string` `list`
 
@@ -168,15 +170,15 @@ Name of Boss(s).
 
 Ex. *Otake-maru*
 
-## Sequence
+## Phases
 
-sequence | `string` `list`
+sequence | `list` 
 
 Organization between phases.
 
 Ex. *Phase #*
 
-## Phases
+## Phase
 
 phase | `list`
 
@@ -208,7 +210,7 @@ Notes of specific attacks or mechanics.
 
 Ex. *Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary.*
 
-## Attack Script
+## Attack Sequence
 
 attack | `string` `list`
 
@@ -255,6 +257,9 @@ tags | `select`
 
 Which kind/type of attack is being used.
 
+<details>
+<summary>Options</summary>
+
 Ex. *Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE, Cross AoE, Figure 8 AoE, Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun, Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver, Marker.*
 
-
+</details>
