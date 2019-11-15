@@ -260,11 +260,6 @@ Which kind/type of attack is being used.
 <details>
 <summary>Options</summary>
 
-<<<<<<< HEAD
-Ex. *Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point Blank AoE, Raid Wide AoE, Proximity AoE, Cross AoE, Figure 8 AoE, Knockback, Cleave, Buff, Debuff, Tankbuster, Stack, Spread, Tether, Stun, Mechanic, Animation, Spawn, Ultimate, Active Time Maneuver, Marker.*
-
-</details>
-=======
 * Cone AoE
 * Circular AoE
 * Puddle AoE
@@ -293,4 +288,3 @@ Ex. *Cone AoE, Circular AoE, Puddle AoE, Donut AoE, Column AoE, Area AoE, Point 
 * Marker
 
 </details>
->>>>>>> 1bc706fa4fabb7fc67299109073bb94749a8dd52
