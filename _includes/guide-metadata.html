@@ -23,7 +23,7 @@
 
             {% endif %}
 
-            {% if page.bosses %}
+            {% if page.bosses.size > 1 %}
 
                 <li>
 
@@ -46,27 +46,35 @@
 
                 </li>
 
-            {% endif %}
+            {% else %}
+                {% if page.sequence %}
+                    {% assign phases = page.sequence %}
+                {% elsif page.bosses[0].sequence %}
+                    {% assign phases = page.bosses[0].sequence %}
+                {% endif %}
 
-            {% if page.sequence %}
+                {% if phases %}
+                    
+                    <li>
 
-                <li>
+                        <a href="#" data-id="guideSummary" title="Go to the Guide Summary" class="guide-metadata__menu-link">Fight Summary</a>
 
-                    <a href="#" data-id="guideSummary" title="Go to the Guide Summary" class="guide-metadata__menu-link">Fight Summary</a>
+                        <ul class="guide-metadata__submenu">
 
-                    <ul class="guide-metadata__submenu">
+                            {% for phase in phases %}
 
-                        {% for phase in page.sequence %}
+                                <li>
+                                    <a href="#" data-id="phase{{ phase.phase }}" title="Go to Phase {{ phase.phase }}" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
+                                </li>
 
-                            <li>
-                                <a href="#" data-id="phase{{ phase.phase }}" title="Go to {{ phase.phase }}" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
-                            </li>
+                            {% endfor %}
 
-                        {% endfor %}
+                        </ul>
 
-                    </ul>
+                    </li>
 
-                </li>
+                {% endif %}
+                
 
             {% endif %}
 
