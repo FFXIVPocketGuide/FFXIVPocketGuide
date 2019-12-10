@@ -1,6 +1,10 @@
 # Field Dictionary
+This page provides reference for the fields used to create a Guide on the site.
 
-## Title
+## Summary Information
+The following fields provide basic information about the duty.
+
+### Title
 
 title | `string`
 
@@ -8,39 +12,33 @@ The name of the Duty. Should match what's in Duty Finder.
 
 Ex. *Brayflox's Longstop*
 
-## Slug
+### Slug
 
 slug | `string`
 
-The name of the Duty simplified. Spaces as dases and lower case.
+Simplified name of the duty for use in the URL and file name. Use hyphens for spaces and lower case, only characters.
 
 Ex. *brayfloxs-longstop*
 
-## Layout
-
-layout | `hidden` `string`
-
-.
-
-Ex. 
-
-## Date
-
-date | `date` `hidden`
-
-Date of when guide was created. Year-Month-Day
-
-Ex. *2018-02-05*
-
-## Categories
+### Expansion
 
 categories | `select`
 
-The expansion of the duty is from. Lowercase simplified.
+The expansion to which the duty belongs. Used by front-end for categorizing the Guide.
 
-Ex. *arr, hw, shb, sb*
+<details>
+<summary>Options</summary>
 
-## Descritpion
+* Shadowbringers (`shb`)
+* Stormblood (`sb`)
+* Heavensward (`hw`)
+* A Realm Reborn (`arr`)
+
+(Values to store in data indicated in parentheses.)
+
+</details>
+
+### Description
 
 description | `text`
 
@@ -48,20 +46,17 @@ Guide's description with name of duty and names of bosses within.
 
 Ex. *Read our Guide on the 8 man raid Omega: Deltascape V2.0 (Normal) where you'll face off against Catastrophe.*
 
-## Image
+### Image
 
-image | `image / file`
-    url 
-    urlSmall
+image | `image`
 
-Primary image (1500px Wide) and Thumbnail (500px Wide).
+Upload an image representing the duty. Provide two images, a Primary image (1500px Wide) and Thumbnail (500px Wide).
 
-Ex. 
+Ex. of File Path
    * url */assets/img/raids/delta_02.jpg*
    * urlSmall */assets/img/raids/small/delta_02.jpg*
 
-
-## Terms
+### Terms
 
 terms | `list` `string`
 
@@ -69,7 +64,7 @@ Search Terms (Include Nicknames, Name, Bosses, and Difficulty)
 
 Ex. *Stormblood, SB, The Sirensong Sea, Lugat, The Governor, Lorelei, Normal*
 
-## PatchNumber
+### PatchNumber
 
 patchNumber | `number`
 
@@ -77,7 +72,7 @@ Patch number.
 
 Ex. *4.0*
 
-## PatchName
+### PatchName
 
 patchName | `string`
 
@@ -85,20 +80,24 @@ The name of the patch that it's from.
 
 Ex. *Stormblood, Dreams of Ice*
 
-## Difficulty
+### Difficulty
 
 difficulty | `select`
 
 The difficulty of the duty.
 
-Options:
+<details>
+<summary>Options</summary>
+
 * Normal
 * Hard
 * Extreme
 * Savage
 * Ultimate
 
-## Player Level
+</details>
+
+### Player Level
 
 plvl | `number`
 
@@ -106,23 +105,15 @@ Player level of the duty.
 
 Ex. *61*
 
-## Item Level
+### Item Level
 
 ilvl | `number`
 
-Item level of the duty.
+Minimum item level of the duty.
 
 Ex. *435*
 
-## Order
-
-order | `number` `hidden`
-
-The combination of the player level and item level of the duty.
-
-Ex. *61435*
-
-## Orchestrion
+### Orchestrion
 
 orchestrion | `list` `string` | `optional`
 
@@ -130,7 +121,7 @@ The name of the orchestrion roll(s) that drop from the duty.
 
 Ex. *Primal Judgement*
 
-## Minion
+### Minion
 
 minion | `list` `string` | `optional`
 
@@ -138,7 +129,7 @@ The name of the minion(s) that drop from the duty.
 
 Ex. *Forgiven Hate*
 
-## Triple Triad Card
+### Triple Triad Card
 
 card | `list` `string` | `optional`
 
@@ -146,7 +137,7 @@ The name of the card(s) that drop from the duty.
 
 Ex. *Seeker of Solitude Card*
 
-## Instance Type
+### Instance Type
 
 instanceType | `select`
 
@@ -154,7 +145,7 @@ The type of duty.
 
 Ex. *trial, dungeon, raid*
 
-## MTQ Capture Video
+### MTQ Capture Video
 
 mtqvid | `string` `custom`
 
@@ -162,57 +153,104 @@ Link connected to the MTQ youtube guide of duty.
 
 Ex. *https://youtu.be/tT3-1Yb787w*
 
-## Boss Name
+<details>
+<summary>Hidden Fields (Site Administration Only)</summary>
 
-bosses | `string` `list`
+### Date
+
+date | `date` `hidden`
+
+Date of when guide was created. 
+
+Supported Value: `Year-Month-Day`
+
+Ex. *2018-02-05*
+
+### Order
+
+order | `number` `hidden`
+
+The combination of the player level and item level of the duty.
+
+Supported Value: `{{plvl}}{{ilvl}}`
+
+Ex. *61435*
+
+### Layout
+
+layout | `hidden` `string`
+
+Supported Value:  `guide_post`
+
+Controls which front-end template is used to render the Guide content.
+
+</details>
+
+## Bosses & Related Fields
+Each Boss added to a Guide uses the following fields. Sections allowing multiple items within a list, which have their own set of fields are separated by dividers.
+
+bosses | `list` of `object`
+
+
+### Boss Name
+
+title | `string`
 
 Name of Boss(s).
 
 Ex. *Otake-maru*
 
-## Phases
+***
 
-sequence | `list` 
+### Phases
 
-Organization between phases.
+sequence | `list` of `object` 
+
+List of Phases within the boss. For bosses without phases, add all information under "Phase 1".
 
 Ex. *Phase #*
 
-## Phase
+### Phase Number
 
-phase | `list`
+phase | `number`
 
-The phase name.
+The number of the phase.
 
-Ex. *Phase 1*
+Ex. *01*
 
-## Alert
+### Alert
 
-alert | `text` `list`
+alerts | `list` of `string`
 
-Notes of the different phases.
+Notes about the phase.
 
 Ex. *If the boss raises his arm, run out of melee range.*
 
-## Mechanics
+### Mechanics
 
-mechanics | `string` `list`
+mechanics | `list` of `text`
 
-Main mechanics during the duty.
+Main mechanics during that phase.
 
-Ex. *Early in the dungeon, players will encounter wall type enemies - allow the tank some time to grab these as they must be picked up individually.*
+### Mechanic Title
 
-## Notes
+mechanics | `string`
 
-note | `text` `list`
+Title of the mechanic.
+
+Ex. *Duty Gauge: Mateus' Aether*
+
+### Notes
+
+notes | `list` of `text`
 
 Notes of specific attacks or mechanics.
 
 Ex. *Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary.*
 
-## Attack Sequence
+### Attack Sequence
 
-attack | `string` `list`
+attacks | `list` of `string`
 
 Sequence of attacks that boss uses.
 
@@ -230,30 +268,49 @@ Ex.
 * The Pall of Light
 * The Pull of Light
 
-## Attacks
+***
 
-attacks | `string` `list`
+## Boss Attacks
+Each boss's attack will use the following fields.
 
-Name of the different attacks the bosses do.
+attacks | `list` of `object` (Will be at the same hierarchy of Phases, not to be confused with the Attack Sequence defined within each phase.)
+
+### Attack Name
+
+title | `string`
+
+Name of the attack.
 
 Ex. *100-tonze Swing*
 
-## Roles
+### Related Phases
 
-roles | `select`
+phases | `list` of `number`
+
+The first Phase the attack appears in.
+
+Ex. *02*
+
+### Roles
+
+roles | `select` `multiple`
 
 Which role the attack is directed to.
 
-Options:
+<details>
+<summary>Options</summary>
+
 * Tank
 * Healer
 * Melee DPS
 * Ranged DPS
 * Everyone
 
-## Tags
+</details>
 
-tags | `select`
+### Tags
+
+tags | `select` `multiple`
 
 Which kind/type of attack is being used.
 
@@ -288,3 +345,17 @@ Which kind/type of attack is being used.
 * Marker
 
 </details>
+
+### Duty Actions
+
+dutyActions | `list` of `string`
+
+Ex. *Vril*
+
+### Notes
+
+notes | `list` of `text`
+
+Notes about the attack.
+
+Ex. *Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary.*
