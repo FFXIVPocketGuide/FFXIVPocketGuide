@@ -10,17 +10,25 @@ publish_mode: editorial_workflow
 media_folder: "assets/img"
 
 fields_template: &common_fields
-  - {label: "Name", name: "title", widget: "string"}
-  - {label: "Slug", name: "slug", widget: "string"}
-  - {label: "Type", name: "instanceType", widget: "select", options: ["dungeon", "Extreme", "raid", "trial"]}
-  - {label: "Expansion", name: "categories", widget: "select", options: ["arr", "hw", "sb", "shb"]}
+  - {label: "Layout", name: "layout", widget: "hidden", default: "guide_post"}
   - {label: "Date", name: "date", widget: "date"}
+  - {label: "Title", name: "title", widget: "string"}
+  - {label: "Expansion", name: "categories", widget: "select", options: ["arr", "hw", "sb", "shb"]}
+  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Description", name: "description", widget: "text"}
+  - {label: "Thumb Image", name: "image", widget: "image", default: "/assets/img/raids"}
+  - {label: "Banner Image", name: ""}
+  - {label: "Terms", name: "term", widget: "list", field: {label: Terms, name: terms, widget: string}}
+  - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number"}
+  - {label: "Patch Name", name: "patchName", widget: "string"}
+  - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
   - {label: "Player Level", name: "plvl", valueType: "int", widget: "number"}
   - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number"}
-  - {label: "Difficulty", name: "order", valueType: "int", widget: "number"}
-  - {label: "Patch", name: "patchNumber", valueType: "float", widget: "number"}
+  - {label: "Order", name: "order", valueType: "int", widget: "number"}
   - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string"}
   - {label: "Minion(s)", name: "minion", required: false, widget: "string"}
+  - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"]}
+  - {label: "MTQ"}
   - label: "Boss"
     name: "bosses"
     widget: "list"
@@ -39,6 +47,9 @@ fields_template: &common_fields
               - {label: "Roles", name: "attack_roles", widget: "select", multiple: true, options: ["Tank", "Healer", "Dps"]}
               - {label: "Type", name: "attack_type", widget: "select", multiple: true, options: ["Tankbuster", "AoE", "Puddle AoE", "Column AoE", "Stack", "Donut AoE", "Proximity AoE", "Circular AoE"]}
               - {label: "Note", name: "attack_note", widget: "text"}
+
+
+  - {label: "Type", name: "instanceType", widget: "select", options: ["dungeon", "Extreme", "raid", "trial"]}
 
 collections:
   - name: "shb"
