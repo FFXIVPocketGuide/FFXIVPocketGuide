@@ -220,7 +220,7 @@ Ex. *01*
 
 ### Alert
 
-alerts | `list` of `string`
+alerts | `list` of `text`
 
 Notes about the phase.
 
@@ -228,13 +228,13 @@ Ex. *If the boss raises his arm, run out of melee range.*
 
 ### Mechanics
 
-mechanics | `list` of `text`
+mechanics | `list` of *Mechanic Title* & *Notes*
 
 Main mechanics during that phase.
 
 ### Mechanic Title
 
-mechanics | `string`
+title | `string`
 
 Title of the mechanic.
 
@@ -250,9 +250,11 @@ Ex. *Throughout the fight, circular AoEs will appear at random, dropping boulder
 
 ### Attack Sequence
 
-attacks | `list` of `string`
+attacks | `list` of `string` and `boolean` fields
 
 Sequence of attacks that boss uses.
+
+Duty Action toggle will indicate the attack as a duty action (in purple) on the Attack Sequence list.
 
 Ex.
 * Dreaming Kshatriya
