@@ -21,7 +21,7 @@
         <!-- Opens the Boss Loop -->
         {% for boss in page.bosses %}
             {% if page.bosses.size > 1 %}                
-                <div class="guide__accordion-trigger--02" id="{{ boss.id }}">
+                <div class="guide__accordion-trigger--02" id="{{ boss.title | slugify }}">
                     <i class="material-icons">expand_more</i>
                     <h3 class="guide__accordion-trigger-title">
                         {{ boss.title }}

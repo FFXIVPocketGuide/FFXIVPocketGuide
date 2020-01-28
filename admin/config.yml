@@ -1,7 +1,8 @@
 backend:
   name: github
   repo: FFXIVPocketGuide/DevFFXIVPocketGuide
-  branch: master
+  # TODO: Change branch to master before pull request for integration into dev
+  branch: feature/166-netlify-field-configuration
   base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
   auth_endpoint: /ffxiv-pg-oauth/auth
 
@@ -9,56 +10,84 @@ publish_mode: editorial_workflow
 
 media_folder: "assets/img"
 
-attack_fields_template: &common_attack_fields
-  - {label: "Attack Name", name: "title", widget: "string"}
-  - label: "Roles"
-    name: "roles"
-    widget: "select"
-    multiple: true
-    options: ["Tank", "Healer", "Melee DPS", "Ranged DPS", "Everyone"]
-  - label: "Tags"
-    name: "tags"
-    widget: "select"
-    multiple: true
-    options: ["Cone AoE", "Circular AoE", "Puddle AoE", "Donut AoE", "Column AoE", "Area AoE", "Point Blank AoE", "Raid Wide AoE", "Proximity AoE", "Cross AoE", "Figure 8 AoE", "Knockback", "Cleave", "Buff", "Debuff", "Tankbuster", "Stack", "Spread", "Tether", "Stun", "Mechanic", "Animation", "Spawn", "Ultimate", "Active Time Maneuver", "Marker"]
-  - label: "Duty Actions"
-    name: "dutyActions"
-    widget: "list"
-    field: {label: "Duty Action Name", name: "action", widget: "string"}
-  - label: "Notes"
-    name: "notes"
-    widget: "list"
-    field: {label: "Note Text", name: "note", widget: "text"}
+# COMMON ATTACK FIELDS
+field_attack_name: &field_attack_name
+  label: "Attack Name"
+  name: "title"
+  widget: "string"
 
-related_phases_field: &related_phases_field
+field_roles: &field_roles
+  label: "Roles"
+  name: "roles"
+  widget: "select"
+  multiple: true
+  options: ["Tank", "Healer", "Melee DPS", "Ranged DPS", "Everyone"]
+
+field_tags: &field_tags
+  label: "Tags"
+  name: "tags"
+  widget: "select"
+  multiple: true
+  options: ["Cone AoE", "Circular AoE", "Puddle AoE", "Donut AoE", "Column AoE", "Area AoE", "Point Blank AoE", "Raid Wide AoE", "Proximity AoE", "Cross AoE", "Figure 8 AoE", "Knockback", "Cleave", "Buff", "Debuff", "Tankbuster", "Stack", "Spread", "Tether", "Stun", "Mechanic", "Animation", "Spawn", "Ultimate", "Active Time Maneuver", "Marker"]
+
+field_dutyActions: &field_dutyActions
+  label: "Duty Actions"
+  name: "dutyActions"
+  widget: "list"
+  field: {label: "Duty Action Name", name: "action", widget: "string"}
+
+field_notes: &field_notes
+  label: "Notes"
+  name: "notes"
+  widget: "list"
+  field: {label: "Note Text", name: "note", widget: "text"}
+
+field_related_phases: &field_related_phases
   label: "Related Phases"
   name: "phases"
   widget: "list"
   field: {name: "phase", widget: "number", valueType: "int"}
 
+common_attack_fields: &common_attack_fields
+  - *field_attack_name
+  - *field_roles
+  - *field_tags
+  - *field_dutyActions
+  - *field_notes
+
 fields_template: &common_fields
-  - {label: "Layout", name: "layout", widget: "hidden", default: "guide_post"}
-  - {label: "Date", name: "date", widget: "date"}
+  - label: "Expansion"
+    name: "categories"
+    widget: "select"
+    options: 
+      - {label: "Shadowbringers", value: "shb"}
+      - {label: "Stormblood", value: "sb"}
+      - {label: "Heavensward", value: "hw"}
+      - {label: "A Realm Reborn", value: "arr"}
   - {label: "Title", name: "title", widget: "string"}
-  - {label: "Expansion", name: "categories", widget: "select", options: ["arr", "hw", "sb", "shb"]}
   - {label: "Slug", name: "slug", widget: "string"}
   - {label: "Description", name: "description", widget: "text"}
-  - {label: "Thumb Image", name: "image", widget: "image", default: "/assets/img/raids"}
-  - {label: "Banner Image", name: ""}
-  - {label: "Terms", name: "terms", widget: "list", field: {label: Terms, name: term, widget: string}}
+  - label: "Images"
+    name: "image"
+    widget: "object"
+    fields:
+      - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false}
+      - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false}
+  - {label: "Terms", name: "terms", widget: "list", field: {label: Term, name: term, widget: string}}
   - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number"}
   - {label: "Patch Name", name: "patchName", widget: "string"}
   - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
   - {label: "Player Level", name: "plvl", valueType: "int", widget: "number"}
   - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number"}
-  - {label: "Order", name: "order", valueType: "int", widget: "number"}
   - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string"}
   - {label: "Minion(s)", name: "minion", required: false, widget: "string"}
+  - {label: "Triple Triad Cards", name: "triple-triad", required: false, widget: "list", field: {label: "Card Name", name: "card-name", widget: "string"}}
   - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"]}
   - {label: "MTQ Capture Video", name: "mtqvid", widget: "string"}
   - label: "Beginning Duty Mechanic"
     name: "mechanics"
-    widget: "object"
+    required: false
+    widget: "list"
     fields:
       - {label: "Name", name: "title", widget: "string"}
       - label: "Mechanics"
@@ -70,13 +99,11 @@ fields_template: &common_fields
             name: "notes"
             widget: "list"
             field: {label: "Mechanic Note", name: "note", widget: "text"}
-  - label: "Boss"
   - label: "Bosses"
     name: "bosses"
     widget: "list"
     fields:
-      - {label: "Boss Name", name: "boss_name", widget: "string"}
-// boss id
+      - {label: "Boss Name", name: "title", widget: "string"}
       - label: "Phases"
         name: "sequence"
         widget: "list"
@@ -109,32 +136,18 @@ fields_template: &common_fields
             name: "regular"
             widget: object
             fields:
-                - {label: "Attack Name", name: "title", widget: "string"}
-                - label: "Roles"
-                  name: "roles"
-                  widget: "select"
-                  multiple: true
-                  options: ["Tank", "Healer", "Melee DPS", "Ranged DPS", "Everyone"]
-                - label: "Tags"
-                  name: "tags"
-                  widget: "select"
-                  multiple: true
-                  options: ["Cone AoE", "Circular AoE", "Puddle AoE", "Donut AoE", "Column AoE", "Area AoE", "Point Blank AoE", "Raid Wide AoE", "Proximity AoE", "Cross AoE", "Figure 8 AoE", "Knockback", "Cleave", "Buff", "Debuff", "Tankbuster", "Stack", "Spread", "Tether", "Stun", "Mechanic", "Animation", "Spawn", "Ultimate", "Active Time Maneuver", "Marker"]
-                - label: "Duty Actions"
-                  name: "dutyActions"
-                  widget: "list"
-                  field: {label: "Duty Action Name", name: "action", widget: "string"}
-                - label: "Notes"
-                  name: "notes"
-                  widget: "list"
-                  field: {label: "Note Text", name: "note", widget: "text"}
-                - *related_phases_field
+              - *field_attack_name
+              - *field_roles
+              - *field_tags
+              - *field_dutyActions
+              - *field_notes
+              - *field_related_phases
           - label: "Combo Attack"
             name: "combo"
             widget: object
             fields:
               - {label: "Attack Name", name: "title", widget: "string"}
-              - *related_phases_field
+              - *field_related_phases
               - label: "Sub-Attacks"
                 name: "combo"
                 widget: list
@@ -145,19 +158,22 @@ fields_template: &common_fields
             widget: object
             fields:
               - {label: "Attack Name", name: "title", widget: "string"}
-              - *related_phases_field
+              - *field_related_phases
               - label: "Sub-Attacks"
                 name: "variation"
                 widget: list
                 fields:
                   *common_attack_fields
+  # Hidden fields
+  - {label: "Layout", name: "layout", widget: "hidden", default: "guide_post"}
+  - {label: "Date", name: "date", widget: "hidden", default: "{{year}}-{{month}}-{{day}}"}
+  - {label: "Order", name: "order", widget: "hidden", default: "{{plvl}}{{ilvl}}"}
 
 collections:
   - name: "shb"
     label: "Shadowbringers"
     delete: false
     label_singular: "Guide"
-    description: >
     folder: "_posts/shb"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
@@ -169,7 +185,6 @@ collections:
     label: "Stormblood"
     delete: false
     label_singular: "Guide"
-    description: >
     folder: "_posts/sb"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
@@ -181,7 +196,6 @@ collections:
     label: "Heavensward"
     delete: false
     label_singular: "Guide"
-    description: >
     folder: "_posts/hw"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
@@ -193,7 +207,6 @@ collections:
     label: "A Realm Reborn"
     delete: false
     label_singular: "Guide"
-    description: >
     folder: "_posts/arr"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"

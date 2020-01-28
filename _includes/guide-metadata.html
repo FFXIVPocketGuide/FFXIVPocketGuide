@@ -37,7 +37,7 @@
                         {% for boss in page.bosses %}
 
                             <li>
-                                <a href="#" data-id="{{ boss.id }}" title="Go to {{ boss.title }}" class="guide-metadata__menu-link">{{ boss.title }}</a>
+                                <a href="#" data-id="{{ boss.title | slugify }}" title="Go to {{ boss.title }}" class="guide-metadata__menu-link">{{ boss.title }}</a>
                             </li>
 
                         {% endfor %}
