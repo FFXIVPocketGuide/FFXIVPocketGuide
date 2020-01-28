@@ -126,7 +126,7 @@ fields_template: &common_fields
             widget: "list"
             fields: 
               - {label: "Attack Name", name: "attack", widget: "string"}
-              - {label: "Duty Action", name: "dutyActions", widget: "boolean"}
+              - {label: "Duty Action", name: "dutyActions", required: false, widget: "boolean"}
       - label: "Boss Attacks"
         name: "attacks"
         widget: "list"
