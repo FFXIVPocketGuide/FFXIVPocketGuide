@@ -18,7 +18,7 @@ fields_template: &common_fields
   - {label: "Description", name: "description", widget: "text"}
   - {label: "Thumb Image", name: "image", widget: "image", default: "/assets/img/raids"}
   - {label: "Banner Image", name: ""}
-  - {label: "Terms", name: "term", widget: "list", field: {label: Terms, name: terms, widget: string}}
+  - {label: "Terms", name: "terms", widget: "list", field: {label: Terms, name: term, widget: string}}
   - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number"}
   - {label: "Patch Name", name: "patchName", widget: "string"}
   - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
@@ -28,7 +28,15 @@ fields_template: &common_fields
   - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string"}
   - {label: "Minion(s)", name: "minion", required: false, widget: "string"}
   - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"]}
-  - {label: "MTQ"}
+  - {label: "MTQ Capture Video", name: "mtqvid", widget: "custom"}
+  - label: "Main Beginning Duty Mechanic"
+    name: "mechanics"
+    widget: "object"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: ""}
+
+
   - label: "Boss"
     name: "bosses"
     widget: "list"
