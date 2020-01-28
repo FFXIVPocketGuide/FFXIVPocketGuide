@@ -9,6 +9,33 @@ publish_mode: editorial_workflow
 
 media_folder: "assets/img"
 
+attack_fields_template: &common_attack_fields
+  - {label: "Attack Name", name: "title", widget: "string"}
+  - label: "Roles"
+    name: "roles"
+    widget: "select"
+    multiple: true
+    options: ["Tank", "Healer", "Melee DPS", "Ranged DPS", "Everyone"]
+  - label: "Tags"
+    name: "tags"
+    widget: "select"
+    multiple: true
+    options: ["Cone AoE", "Circular AoE", "Puddle AoE", "Donut AoE", "Column AoE", "Area AoE", "Point Blank AoE", "Raid Wide AoE", "Proximity AoE", "Cross AoE", "Figure 8 AoE", "Knockback", "Cleave", "Buff", "Debuff", "Tankbuster", "Stack", "Spread", "Tether", "Stun", "Mechanic", "Animation", "Spawn", "Ultimate", "Active Time Maneuver", "Marker"]
+  - label: "Duty Actions"
+    name: "dutyActions"
+    widget: "list"
+    field: {label: "Duty Action Name", name: "action", widget: "string"}
+  - label: "Notes"
+    name: "notes"
+    widget: "list"
+    field: {label: "Note Text", name: "note", widget: "text"}
+
+related_phases_field: &related_phases_field
+  label: "Related Phases"
+  name: "phases"
+  widget: "list"
+  field: {name: "phase", widget: "number", valueType: "int"}
+
 fields_template: &common_fields
   - {label: "Layout", name: "layout", widget: "hidden", default: "guide_post"}
   - {label: "Date", name: "date", widget: "date"}
@@ -28,36 +55,102 @@ fields_template: &common_fields
   - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string"}
   - {label: "Minion(s)", name: "minion", required: false, widget: "string"}
   - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"]}
-  - {label: "MTQ Capture Video", name: "mtqvid", widget: "custom"}
-  - label: "Main Beginning Duty Mechanic"
+  - {label: "MTQ Capture Video", name: "mtqvid", widget: "string"}
+  - label: "Beginning Duty Mechanic"
     name: "mechanics"
     widget: "object"
     fields:
       - {label: "Name", name: "title", widget: "string"}
-      - {label: ""}
-
-
+      - label: "Mechanics"
+        name: "steps"
+        widget: "list"
+        fields:
+          - {label: "Note Number", name: "step", widget: "number", valueType: "int"}
+          - label: "Mechanic Notes"
+            name: "notes"
+            widget: "list"
+            field: {label: "Mechanic Note", name: "note", widget: "text"}
   - label: "Boss"
+  - label: "Bosses"
     name: "bosses"
     widget: "list"
     fields:
-      - {label: "Boss", name: "boss_name", widget: "string"}
-      - label: "Phase"
-        name: "boss_phase_title"
+      - {label: "Boss Name", name: "boss_name", widget: "string"}
+// boss id
+      - label: "Phases"
+        name: "sequence"
         widget: "list"
         fields:
-          - {label: "Summary", name: "boss_summary", widget: "text"}
-          - label: "Attack"
-            name: "boss_attacks"
+          - {label: "Phase Number", name: "phase", widget: "number", valueType: "int"}
+          - label: "Alert"
+            name: "alerts"
             widget: "list"
+            field: {label: "Alert Text", name: "alert", widget: "text"}
+          - label: "Mechanics"
+            name: "mechanics"
+            widget: "list"
+            fields: 
+              - {label: "Mechanic Title", name: "title", widget: "string"}
+              - label: "Mechanic Notes"
+                name: "notes"
+                widget: "list"
+                field: {label: "Mechanic Note", name: "note", widget: "text"}
+          - label: "Attack Sequence"
+            name: "attacks"
+            widget: "list"
+            fields: 
+              - {label: "Attack Name", name: "attack", widget: "string"}
+              - {label: "Duty Action", name: "dutyActions", widget: "boolean"}
+      - label: "Boss Attacks"
+        name: "attacks"
+        widget: "list"
+        types:
+          - label: "Regular Attack"
+            name: "regular"
+            widget: object
             fields:
-              - {label: "Attack", name: "attack_name", widget: "string"}
-              - {label: "Roles", name: "attack_roles", widget: "select", multiple: true, options: ["Tank", "Healer", "Dps"]}
-              - {label: "Type", name: "attack_type", widget: "select", multiple: true, options: ["Tankbuster", "AoE", "Puddle AoE", "Column AoE", "Stack", "Donut AoE", "Proximity AoE", "Circular AoE"]}
-              - {label: "Note", name: "attack_note", widget: "text"}
-
-
-  - {label: "Type", name: "instanceType", widget: "select", options: ["dungeon", "Extreme", "raid", "trial"]}
+                - {label: "Attack Name", name: "title", widget: "string"}
+                - label: "Roles"
+                  name: "roles"
+                  widget: "select"
+                  multiple: true
+                  options: ["Tank", "Healer", "Melee DPS", "Ranged DPS", "Everyone"]
+                - label: "Tags"
+                  name: "tags"
+                  widget: "select"
+                  multiple: true
+                  options: ["Cone AoE", "Circular AoE", "Puddle AoE", "Donut AoE", "Column AoE", "Area AoE", "Point Blank AoE", "Raid Wide AoE", "Proximity AoE", "Cross AoE", "Figure 8 AoE", "Knockback", "Cleave", "Buff", "Debuff", "Tankbuster", "Stack", "Spread", "Tether", "Stun", "Mechanic", "Animation", "Spawn", "Ultimate", "Active Time Maneuver", "Marker"]
+                - label: "Duty Actions"
+                  name: "dutyActions"
+                  widget: "list"
+                  field: {label: "Duty Action Name", name: "action", widget: "string"}
+                - label: "Notes"
+                  name: "notes"
+                  widget: "list"
+                  field: {label: "Note Text", name: "note", widget: "text"}
+                - *related_phases_field
+          - label: "Combo Attack"
+            name: "combo"
+            widget: object
+            fields:
+              - {label: "Attack Name", name: "title", widget: "string"}
+              - *related_phases_field
+              - label: "Sub-Attacks"
+                name: "combo"
+                widget: list
+                fields:
+                  *common_attack_fields
+          - label: "Variation Attack"
+            name: "variation"
+            widget: object
+            fields:
+              - {label: "Attack Name", name: "title", widget: "string"}
+              - *related_phases_field
+              - label: "Sub-Attacks"
+                name: "variation"
+                widget: list
+                fields:
+                  *common_attack_fields
 
 collections:
   - name: "shb"
