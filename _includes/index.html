@@ -7,24 +7,44 @@
 <div class="index">
 
     <!-- Shadowbringers Guide Index ======================================== -->
+    
+    {% assign counter = 0 %}
 
-    <a id="shadowbringers"></a>
+    {% for guide in site.categories.shb %}
 
-    <div class="index-divider" data-expansion="sw" id="shadowbringersTitle">
-        <h2 class="index-divider__title">Shadowbringers?</h2>
-    </div>
+        {% include _components/index-counter.html %}
 
-    <div class="index__announcement" id="shadowbringersContent">
-        <div class="wrapper">
-            <p><strong>Dear Pocket Guide Fans,</strong></p>
-            <p>I'm sure it's obvious now that I've stopped playing FFXIV. While I've been following the community on-and-off since then, I don't think I'm going to make it back into the game. This is a result of heavy burn out and a lack of time to invest in generating content for the site.</p>
-            <p>That being said, the Pocket Guide will continue to stay online, and I'm happy to continue updating it with bug fixes and interface improvements if they're suggested to me.</p>
-            <p><strong>This has been an incredibly fun project for me, and I'd like to see it continued.</strong></p>
-            <p>If any of you would like to see the site updated with new content and are willing to format guides yourselves, I'm more than happy to explain the template and process. Once you've submitted the content to me I'd be happy to publish it here.</p>
-            <p><a href="mailto:ffxiv@joshbeveridge.ca" title="Email Josh about helping maintain the Pocket Guide.">Feel free to reach out if this interests you!</a></p>
-            <p>Cheers, Josh</p>
+    {% endfor %}
+
+    {% if counter > 0 %}
+
+        <a id="shadowbringers"></a>
+
+        <div class="index-divider" data-expansion="shb">
+            <h2 class="index-divider__title">Shadowbringers</h2>
         </div>
-    </div>
+
+        <div class="index__announcement" id="shadowbringersContent">
+            <div class="wrapper">
+                <p><strong>Good News!</strong></p>
+                <p>With the wonderful support of the original creator, Josh, a group of fans have banded together to revive the Pocket Guides site and breathe new life into it.</p>
+                <p>We're updating some infrastructure to allow content creation to be much easier, which will hopefully provide a good way to open up content creation to anyone who'd like to contribute!</p>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="index__list" data-expansion="shb">
+
+    {% endif %}
+
+    {% assign sorted = site.categories.shb | sort:"order" %}
+
+    {% include _components/index-list.html %}
+
+    {% if counter > 0 %}
+        </div>
+    {% endif %}
 
     <!-- Stormblood Guide Index ============================================ -->
 
