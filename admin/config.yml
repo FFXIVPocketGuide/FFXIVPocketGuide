@@ -1,8 +1,7 @@
 backend:
   name: github
   repo: FFXIVPocketGuide/DevFFXIVPocketGuide
-  # TODO: Change branch to master before pull request for integration into dev
-  branch: feature/166-netlify-field-configuration
+  branch: master
   base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
   auth_endpoint: /ffxiv-pg-oauth/auth
 
