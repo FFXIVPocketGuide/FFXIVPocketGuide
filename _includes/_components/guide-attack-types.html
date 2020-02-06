@@ -1,35 +1,23 @@
 <div class="guide__accordion-tag-wrapper">
-
     {% if attack.combo %}
-
         {% for action in attack.dutyActions %}
             <span class="guide__accordion-tag--duty-action">Duty Action</span>
         {% endfor %}
-
         <span class="guide__accordion-tag--combo">Combo</span>
-
     {% elsif attack.variation %}
-
         {% for action in attack.dutyActions %}
             <span class="guide__accordion-tag--duty-action">Duty Action</span>
         {% endfor %}
-
         <span class="guide__accordion-tag--variation">Variation</span>
-
     {% else %}
-
         {% for role in attack.roles %}
             <span class="guide__accordion-tag--role">{{ role.role }}</span>
         {% endfor %}
-
         {% for action in attack.dutyActions %}
             <span class="guide__accordion-tag--duty-action">Duty Action</span>
         {% endfor %}
-
         {% for tag in attack.tags %}
             <span class="guide__accordion-tag--attack">{{ tag.tag }}</span>
         {% endfor %}
-
     {% endif %}
-
 </div>

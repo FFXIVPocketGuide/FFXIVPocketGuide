@@ -1,29 +1,17 @@
 {% comment %} ==================================================================
-
     // Guide Summary
-
 =============================================================== {% endcomment %}
-
 <div class="summary">
-
-    <a 
-        class="index-item__link"
-        href="{{ guide.url }}"
-        title="Go to the {{ guide.title}} Guide">
-
+    <a class="index-item__link" href="{{ guide.url }}" title="Go to the {{ guide.title}} Guide">
         <div
             class="index-item__background"
             {% if guide.cover %}
-                style="background-image: url('{{ guide.cover }}')" 
+                style="background-image: url('{{ guide.cover }}')"
             {% elsif guide.image %}
-                style="background-image: url('{% for image in guide.image %}{{ image.urlSmall }}{% endfor %}')" 
+                style="background-image: url('{% for image in guide.image %}{{ image.urlSmall }}{% endfor %}')"
             {% endif %}>
         </div>
-
-
-        <h3 
-            class="index-item__title" 
-            data-terms="{% for term in guide.terms %}{{ term.term }}&#32;{% endfor %}">
+        <h3 class="index-item__title" data-terms="{% for term in guide.terms %}{{ term.term }}&#32;{% endfor %}">
             {{ guide.title }}
             <span
                 {% if guide.difficulty == "Hard" %}
@@ -36,7 +24,5 @@
                     class="ultimate"
                 {% endif %}> ({{ guide.difficulty }})</span>
         </h3>
-
     </a>
-
 </div>

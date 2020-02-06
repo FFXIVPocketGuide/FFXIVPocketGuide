@@ -1,138 +1,63 @@
 {% comment %} ==================================================================
-
     // Head
-
 =============================================================== {% endcomment %}
+    <!-- Charset -->
+    <meta charset="utf-8" />
 
-<!-- Charset -->
+    <!-- Compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta 
-        charset="utf-8" />
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Compatibility -->
-
-    <meta 
-        http-equiv="X-UA-Compatible" 
-        content="IE=edge" />
-
-<!-- Viewport -->
-
-    <meta 
-        name="viewport" 
-        content="width=device-width, initial-scale=1" />
-
-<!-- Page Title -->
-
+    <!-- Page Title -->
     {% if page.page_category == "all" %}
-
         <title>FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
-
     {% else %}
-
         <title>{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood</title>
-
     {% endif %}
 
-<!-- Page Description -->
+    <!-- Page Description -->
+    <meta name="description" content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 300 }}{% else %}{{ site.description }}{% endif %}" />
 
-    <meta 
-        name="description" 
-        content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 300 }}{% else %}{{ site.description }}{% endif %}" />
-
-<!-- Open Graph & Twitter Tags -->
-
-    <meta 
-        name="twitter:card" 
-        content="summary" />
-
-    <meta 
-        name="twitter:site" 
-        content="@FF14PocketGuide" />
-
-    <meta 
-        name="twitter:creator" 
-        content="@joshdrink" />
-
-    <meta 
-        property="og:url" 
-        content="{{ site.url }}{{ page.url }}" />
-
-    <meta 
-        property="og:title" 
-        content="{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood" />
-
-    <meta 
-        property="og:description" 
-        content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 300 }}{% else %}{{ site.description }}{% endif %}" />
-
+    <!-- Open Graph & Twitter Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FF14PocketGuide" />
+    <meta name="twitter:creator" content="@joshdrink" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:title" content="{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %} | FFXIV Pocket Guide - Final Fantasy XIV - Stormblood" />
+    <meta property="og:description" content="Dungeon, Trial, and Raid guides for Final Fantasy XIV. {% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 300 }}{% else %}{{ site.description }}{% endif %}" />
     {% if page.page_category == "all" or page.page_category == "dungeons" or page.page_category == "trials" or page.page_category == "raids" %}
-        <meta 
-            property="og:image" 
-            content="{{ site.url }}/assets/img/guide_social.jpg" />
+        <meta property="og:image" content="{{ site.url }}/assets/img/guide_social.jpg" />
     {% else %}
-        <meta 
-            property="og:image" 
-            content="{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}" />
+        <meta property="og:image" content="{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}" />
     {% endif %}
 
-<!-- Google Fonts -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Cinzel|PT+Serif:400,400i,700,700i" rel="stylesheet" />
 
-    <link 
-        href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Cinzel|PT+Serif:400,400i,700,700i" 
-        rel="stylesheet" />
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-<!-- Material Icons -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff575c" />
+    <meta name="theme-color" content="#ffffff" />
 
-    <link 
-        href="https://fonts.googleapis.com/icon?family=Material+Icons" 
-        rel="stylesheet" />
-
-<!-- Favicons -->
-
-    <link 
-        rel="apple-touch-icon" 
-        sizes="180x180" 
-        href="/apple-touch-icon.png">
-
-    <link 
-        rel="icon" 
-        type="image/png" 
-        sizes="32x32" 
-        href="/favicon-32x32.png">
-
-    <link 
-        rel="icon" 
-        type="image/png" 
-        sizes="16x16" 
-        href="/favicon-16x16.png">
-
-    <link 
-        rel="manifest" 
-        href="/manifest.json">
-
-    <link 
-        rel="mask-icon" 
-        href="/safari-pinned-tab.svg" 
-        color="#ff575c">
-
-    <meta 
-        name="theme-color" 
-        content="#ffffff">
-
-<!-- Google Analytics -->
-
+    <!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
         ga('create', 'UA-97077222-2', 'auto');
         ga('send', 'pageview');
     </script>
 
-<!-- Google Search Structured Pages -->
-
+    <!-- Google Search Structured Pages -->
     {% if page.page_category == "all" or page.page_category == "dungeons" or page.page_category == "trials" or page.page_category == "raids" %}
         <script type="application/ld+json">
             {
@@ -158,50 +83,21 @@
         </script>
     {% endif %}
 
-<!-- Twitter Intents -->
+    <!-- Twitter Intents -->
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
 
-    <script 
-        type="text/javascript" 
-        async 
-        src="https://platform.twitter.com/widgets.js">
-    </script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="{{ "/assets/vendor/jquery.min.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
 
-<!-- jQuery -->
+    <!-- Modernizr -->
+    <script type="text/javascript" src="{{ "/assets/vendor/modernizr.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
 
-    <script 
-        type="text/javascript" 
-        src="{{ "/assets/vendor/jquery.min.js" | prepend: site.baseurl }}">
-    </script>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{ "/assets/vendor/ionicons.min.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" type="text/css" media="all" />
 
-<!-- Modernizr -->
+    <!-- Normalize -->
+    <link rel="stylesheet" href="{{ "/assets/vendor/normalize.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" type="text/css" media="all" />
 
-    <script 
-        type="text/javascript" 
-        src="{{ "/assets/vendor/modernizr.js" | prepend: site.baseurl }}">
-    </script>
-
-<!-- Ionicons -->
-
-    <link 
-        rel="stylesheet" 
-        href="{{ "/assets/vendor/ionicons.min.css" | prepend: site.baseurl }}" 
-        type="text/css" 
-        media="all" />
-
-<!-- Normalize -->
-
-    <link 
-        rel="stylesheet" 
-        href="{{ "/assets/vendor/normalize.css" | prepend: site.baseurl }}" 
-        type="text/css" 
-        media="all" />
-
-<!-- Custom Stylesheet -->
-
-    <link 
-        rel="stylesheet" 
-        href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" />
-
-    <link 
-        rel="stylesheet" 
-        href="{{ "/css/core.css" | prepend: site.baseurl }}" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" />
+    <link rel="stylesheet" href="{{ "/css/core.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" />

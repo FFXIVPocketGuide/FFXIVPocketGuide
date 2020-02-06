@@ -1,6 +1,4 @@
-
 <!-- Attack Template ======================================================= -->
-
 <div class="guide__accordion-trigger--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% elsif attack.variation %}--variation{% else %}--attack{% endif %}">
     <i class="material-icons">expand_more</i>
     <h4 class="guide__accordion-trigger-title">
@@ -8,11 +6,8 @@
         {% include _components/guide-attack-types.html %}
     </h4>
 </div>
-
 <div class="guide__accordion-content--{% if page.sequence %}02{% else %}03{% endif %}{% if attack.dutyActions %}--dutyAction{% elsif attack.combo %}--combo{% elsif attack.variation %}--variation{% else %}--attack{% endif %}">
-
     <div class="guide__accordion-copy-wrapper">
-
         <!-- Standard Attacks -->
         {% if attack.combo %}
             {% if attack.notes %}
@@ -35,7 +30,6 @@
         {% else %}
             {% include _components/guide-attack-notes.html %}
         {% endif %}
-
         <!-- Combo Attacks -->
         {% for combo in attack.combo %}
             {% include _components/guide-combo-tags.html %}
@@ -51,7 +45,6 @@
                 </div>
             {% endif %}
         {% endfor %}
-
         <!-- Variation Attacks -->
         {% for variation in attack.variation %}
             {% include _components/guide-combo-tags.html %}
@@ -67,20 +60,15 @@
                 </div>
             {% endif %}
         {% endfor %}
-
         <!-- Attack Images -->
         {% if attack.images %}
             <div class="guide__attack-image-list">
-
                 {% for image in attack.images %}
                     <div class="guide__attack-image-item">
                         <img src="{{ image.url }}" alt="{{ image.alt }}">
                     </div>
                 {% endfor %}
-
             </div>
         {% endif %}
-
     </div>
-
 </div>

@@ -1,61 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
     <head>
-
         {% include head.html %}
-
     </head>
-
     <body class="{{ page.page_type }} {{ page.page_category }}">
-
         <div class="layout">
-
             <!-- Include Sidebar -->
             {% include sidebar.html %}
-
             <div class="layout__wrapper">
-
                 <!-- Include Header -->
                 {% include header.html %}
-
                 <!-- Search Bar -->
                 {% if page.page_type == "index" %}
-
                     <div class="search">
-
-                        <form 
-                            class="search__form">
-
-                            <label 
-                                for="guideFilter">
-                                Search for a guide...
-                            </label>
-
-                            <input 
-                                id="guideFilter" 
-                                placeholder="Stormblood, A12s, Garuda, etc..."
-                                type="text">
-                                
+                        <form class="search__form">
+                            <label for="guideFilter">Search for a guide...</label>
+                            <input id="guideFilter" placeholder="Shadowbringers, E4S, Hades, etc..." type="text"/>
                         </form>
-
                     </div>
-
                 {% endif %}
-
                 <!-- Include Guide Index -->
                 {% include index.html %}
-
                 <!-- Include Footer -->
                 {% include footer.html %}
-
             </div>
-
         </div>
-
         {% include scripts.html %}
-
     </body>
-
 </html>

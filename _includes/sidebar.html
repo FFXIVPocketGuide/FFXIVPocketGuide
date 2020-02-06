@@ -1,43 +1,30 @@
 {% comment %} ==================================================================
-
     // Sidebar
-
 =============================================================== {% endcomment %}
-
 <!-- Mobile Menu Trigger -->
-
     <button
         class="sidebar__trigger">
-
         <span
             class="sidebar__trigger-inactive">
             <i class="material-icons">explore</i>
             Menu
         </span>
-
         <span
             class="sidebar__trigger-active">
             <i class="material-icons">close</i>
             Close
         </span>
-
     </button>
-
 <!-- Mobile Overlay -->
-
     <div
         class="site-grid__sidebar-overlay">
     </div>
-
 <!-- Menu -->
-
     <div
         class="sidebar"
         style="background-image: url('{{ "/assets/img/guide_index_default.jpg" | prepend: site.baseurl }}');">
-
         <div
             class="sidebar__wrapper">
-
             <h1
                 class="sidebar__title">
                 <a
@@ -48,10 +35,8 @@
                         src="/assets/img/icon.svg">
                 </a>
             </h1>
-
             <ul
                 class="sidebar__menu">
-
                 <li>
                     <a
                         {% if page.page_category == "all" %}class="active"{% endif %}
@@ -60,7 +45,6 @@
                         All Guides
                     </a>
                 </li>
-
                 <li>
                     <a
                         {% if page.page_category == "dungeons" %}class="active"{% endif %}
@@ -70,17 +54,24 @@
                         Dungeons
                     </a>
                 </li>
-
                 <li>
                     <a
                         {% if page.page_category == "trials" %}class="active"{% endif %}
                         {% if page.instanceType == "trial" or page.instance_type == "Trial" %}class="active"{% endif %}
                         href="/trials"
                         title="View Trial Guides.">
-                        Trials
+                        Trial
                     </a>
                 </li>
-
+                <li>
+                    <a
+                        {% if page.page_category == "allianzraid" %}class="active"{% endif %}
+                        {% if page.instanceType == "allianzraid" or page.instance_type == "AllianzRaid" %}class="active"{% endif %}
+                        href="/allianzraid"
+                        title="View Allianz Raid Guides.">
+                        Allianz Raids
+                    </a>
+                </li>
                 <li>
                     <a
                         {% if page.page_category == "raids" %}class="active"{% endif %}
@@ -90,9 +81,51 @@
                         Raids
                     </a>
                 </li>
-
+                <li>
+                    <a
+                        {% if page.page_category == "potd" %}class="active"{% endif %}
+                        {% if page.instanceType == "potd" or page.instance_type == "potd" %}class="active"{% endif %}
+                        href="/potd"
+                        title="View Deep Dungeon Guides.">
+                        Deep Dungeon
+                    </a>
+                </li>
+                <li>
+                    <a
+                        {% if page.page_category == "pvp" %}class="active"{% endif %}
+                        {% if page.instanceType == "pvp" or page.instance_type == "pvp" %}class="active"{% endif %}
+                        href="/pvp"
+                        title="View PvP Guides.">
+                        PVP
+                    </a>
+                </li>
+                <li>
+                    <a
+                        {% if page.page_category == "eureka" %}class="active"{% endif %}
+                        {% if page.instanceType == "eureka" or page.instance_type == "eureka" %}class="active"{% endif %}
+                        href="/eureka"
+                        title="View Eureka Guides.">
+                        Eureka
+                    </a>
+                </li>
+                <li>
+                    <a
+                        {% if page.page_category == "guildhest" %}class="active"{% endif %}
+                        {% if page.instanceType == "guildhest" or page.instance_type == "guildhest" %}class="active"{% endif %}
+                        href="/guildhest"
+                        title="View Guildheast Guides.">
+                        Guildheast
+                    </a>
+                </li>
+                <li>
+                    <a
+                        {% if page.page_category == "bluemage" %}class="active"{% endif %}
+                        {% if page.instanceType == "bluemage" or page.instance_type == "bluemage" %}class="active"{% endif %}
+                        href="/bluemage"
+                        title="View Blue Mage Guides.">
+                        Blue Mage
+                    </a>
+                </li>
             </ul>
-
         </div>
-
     </div>

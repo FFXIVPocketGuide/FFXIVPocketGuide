@@ -1,17 +1,12 @@
 <div class="guide__mechanics-wrapper">
-
     {% for mechanic in phase.boss_phase_mechanics %}
-
         <!-- Mechanic Title -->
         <h5 class="guide__mechanics-title">{{ mechanic.boss_phase_mechanic_title }}</h5>
-
         <!-- Mechanics List -->
         <ul class="guide__mechanics-list">
             {% for note in mechanic.boss_phase_mechanic_notes %}
                 <li class="guide__mechanics-item">{{ note.boss_phase_mechanic_note }}</li>
             {% endfor %}
         </ul>
-
     {% endfor %}
-
 </div>

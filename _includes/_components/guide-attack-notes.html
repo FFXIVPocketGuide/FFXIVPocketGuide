@@ -1,7 +1,5 @@
 <!-- Standard Attack Notes -->
-
 <div class="guide__attack-notes-wrapper">
-
     {% if attack.combo  %}
         {% if combo.notes %}
             <!-- Do Nothing -->
@@ -22,7 +20,6 @@
             {% endfor %}
         </ul>
     {% endif %}
-
     <!-- Combo Attack Notes -->
     {% if combo.notes %}
         <ul class="guide__attack-notes-list">
@@ -31,7 +28,6 @@
             {% endfor %}
         </ul>
     {% endif %}
-
     <!-- Variation Attack Notes -->
     {% if variation.notes %}
         <ul class="guide__attack-notes-list">
@@ -40,5 +36,4 @@
             {% endfor %}
         </ul>
     {% endif %}
-
 </div>

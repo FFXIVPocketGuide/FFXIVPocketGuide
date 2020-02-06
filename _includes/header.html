@@ -1,64 +1,51 @@
 {% comment %} ==================================================================
-
     // Header
-
 =============================================================== {% endcomment %}
-
 <header>
-
-    <div
-        class="site-header__alert">
-
-        <!-- <p>The Pocket Guide is on indefinite hiatus (thanks to a pesky case of burn-out). Think you'd like to help add new content? <a href="/#shadowbringers" title="Visit the homepage to learn more about what's next for the Pocket Guide.">Learn more about what's next.</a></p> -->
+    <div class="site-header__alert">
         <p>Just a head's up that we're moving to a new URL! Please be patient while we transition.</p>
     </div>
-
     {% comment %}
-
         // Seasonal Banners
-
             // Pride Month
-            <div
-                class="site-header__pride">
-
+            <div class="site-header__pride">
                 <p>🏳️‍🌈 Happy Pride Month 🏳️‍🌈</p>
-
             </div>
-
     {% endcomment %}
-
     <div class="site-header__grid"
         {% if page.page_type == "index" %}
-            style="background-image: url('{{ "/assets/img/4-5.jpg" | prepend: site.baseurl }}')"
+            style="background-image: url('{{ "/assets/img/5-1.jpg" | prepend: site.baseurl }}')"
         {% elsif page.image %}
             style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')"
         {% else %}
             style="background-image: url('{{ page.cover }}')"
         {% endif %}>
-
         <div class="site-header__item-a">
-
             <h1
                 class="{% if page.page_type == 'index' or page.page_type == 'guide' %}site-header__title{% else %}site-header__guide-title{% endif %}">
-
                 {% if page.page_category == "all" %}
                     The FFXIV Pocket Guide
-                    <br>
-                    <br>
                 {% elsif page.page_category == "dungeons" %}
                     Dungeon Guides
-                    <br>
-                    <br>
                 {% elsif page.page_category == "trials" %}
                     Trial Guides
-                    <br>
-                    <br>
                 {% elsif page.page_category == "raids" %}
                     Raid Guides
-                    <br>
-                    <br>
+                {% elsif page.page_category == "allianzraid" %}
+                    Allianz Raid Guides
+                {% elsif page.page_category == "pvp" %}
+                    PVP Guides
+                {% elsif page.page_category == "potd" %}
+                    Deep Dungeon Guides
+                {% elsif page.page_category == "eureka" %}
+                    Eureka Guides
+                {% elsif page.page_category == "guildhest" %}
+                    Guildhest Guides
+                {% elsif page.page_category == "bluemage" %}
+                    Blue Mage Guides
                 {% else %}
-                    {{ page.title }}<span
+                    {{ page.title }}
+                    <span
                         {% if page.difficulty == "Hard" %}
                             class="hard"
                         {% elsif page.difficulty == "Extreme" %}
@@ -67,85 +54,58 @@
                             class="savage"
                         {% elsif page.difficulty == "Ultimate" %}
                             class="ultimate"
-                        {% endif %}> ({{ page.difficulty }})</span>
+                        {% endif %}> ({{ page.difficulty }})
+                    </span>
                 {% endif %}
-
             </h1>
-
         </div>
-
-        {% comment %}
-
         {% if page.page_type == "index" %}
-
             <ul
                 class="site-header__links">
-
                 <li>
-                    <a
-                        href="https://twitter.com/FF14PocketGuide"
-                        target="_blank"
-                        title="Follow along on Twitter for guide updates!">
+                    <a href="https://twitter.com/FF14PocketGuide" target="_blank" title="Follow along on Twitter for guide updates!">
                         <i class="ionicons ion-social-twitter"></i>
                         Twitter
                     </a>
                 </li>
-
                 <li>
-                    <a
-                        href="https://github.com/joshdrink/FFXIVPocketGuide/projects/1?fullscreen=true"
-                        target="_blank"
-                        title="Find out what's next on the Pocket Guide Development Roadmap!">
+                    <a href="https://github.com/joshdrink/FFXIVPocketGuide/projects/1?fullscreen=true" target="_blank" title="Find out what's next on the Pocket Guide Development Roadmap!">
                         <i class="ionicons ion-social-github"></i>
                         Roadmap
                     </a>
                 </li>
-
                 <li>
-                    <a
-                        href="https://www.youtube.com/user/MTQcapture"
-                        target="_blank"
-                        title="Go to MTQcapture's YouTube Channel.">
+                    <a href="https://www.youtube.com/user/MTQcapture" target="_blank" title="MTQcapture's YouTube Channel.">
                         <i class="ionicons ion-social-youtube"></i>
                         MTQcapture
                     </a>
                 </li>
-
             </ul>
-
         {% endif %}
-
-        {% endcomment %}
-
         {% if page.page_type == "guide" %}
-
             <ul
                 class="site-header__links">
-
                 <li>
-                    <a
-                        href="https://github.com/joshdrink/FFXIVPocketGuide/issues/new"
-                        target="_blank"
-                        title="Submit feedback for {{ page.title }}.">
+                    <a href="https://github.com/joshdrink/FFXIVPocketGuide/issues/new" target="_blank" title="Submit feedback for {{ page.title }}.">
                         <i class="ionicons ion-social-github"></i>
                         Provide Feedback
                     </a>
                 </li>
-
                 <li>
-                    <a
-                        href="{{ page.mtq_vid }}"
-                        target="_blank"
-                        title="Visit the video guide for this duty.">
-                        <i class="ionicons ion-social-youtube"></i>
-                        Video Guide
-                    </a>
+                    {% if page.mtq_vid1 %}
+                        <a href="{{ page.mtq_vid1 }}" target="_blank" title="Visit the video guide from MTQcapture for this duty.">
+                            <i class="ionicons ion-social-youtube"></i>
+                            MTQcapture Video Guide
+                        </a>
+                    {% endif %}
+                    {% if page.mtq_vid2 %}
+                        <a href="{{ page.mtq_vid2 }}" target="_blank" title="Visit part 2 of the video guide from MTQcapture for this duty.">
+                            <i class="ionicons ion-social-youtube"></i>
+                            MTQcapture Video Guide #2
+                        </a>
+                    {% endif %}
                 </li>
-
             </ul>
-
         {% endif %}
-
     </div>
-
 </header>

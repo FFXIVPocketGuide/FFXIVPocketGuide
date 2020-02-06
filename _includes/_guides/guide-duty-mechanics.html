@@ -1,11 +1,7 @@
 {% comment %} ==================================================================
-
     // Guide Duty Mechanics
-
 =============================================================== {% endcomment %}
-
 <div class="guide__accordion">
-
     <div class="guide__accordion-trigger--01" data-menu-target="guideNotes">
         <i class="material-icons">expand_more</i>
         <h2 class="guide__accordion-trigger-title">
@@ -20,7 +16,6 @@
 
         <!-- Opens the Notes Loop -->
         {% for mechanic in page.duty_mechanics %}
-
             <div class="guide__accordion-copy-wrapper">
 
                 <!-- Event Title -->
@@ -29,7 +24,6 @@
                 <!-- Opens the Step Loop -->
                 {% if mechanic.duty_mechanic_steps %}
                     <div class="guide__mechanics-wrapper">
-
                         {% for step in mechanic.duty_mechanic_steps %}
 
                             <!-- Mechanics Group Title -->
@@ -41,16 +35,10 @@
                                     <li class="guide__mechanics-item">{{ note.duty_mechanic_step_note }}</li>
                                 {% endfor %}
                             </ul>
-
                         {% endfor %}
-
                     </div>
                 {% endif %}
-
             </div>
-
         {% endfor %}
-
     </div>
-
 </div>
