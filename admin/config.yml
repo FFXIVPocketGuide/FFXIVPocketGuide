@@ -21,6 +21,7 @@ field_roles: &field_roles
   widget: "select"
   multiple: true
   options: ["Tank", "Healer", "Melee DPS", "Ranged DPS", "Everyone"]
+  required: false
 
 field_tags: &field_tags
   label: "Tags"
@@ -28,18 +29,19 @@ field_tags: &field_tags
   widget: "select"
   multiple: true
   options: ["Cone AoE", "Circular AoE", "Puddle AoE", "Donut AoE", "Column AoE", "Area AoE", "Point Blank AoE", "Raid Wide AoE", "Proximity AoE", "Cross AoE", "Figure 8 AoE", "Knockback", "Cleave", "Buff", "Debuff", "Tankbuster", "Stack", "Spread", "Tether", "Stun", "Mechanic", "Animation", "Spawn", "Ultimate", "Active Time Maneuver", "Marker"]
+  required: false
 
 field_dutyActions: &field_dutyActions
   label: "Duty Actions"
   name: "dutyActions"
   widget: "list"
-  field: {label: "Duty Action Name", name: "action", widget: "string"}
+  field: {label: "Duty Action Name", name: "action", widget: "string", required: false}
 
 field_notes: &field_notes
   label: "Notes"
   name: "notes"
   widget: "list"
-  field: {label: "Note Text", name: "note", widget: "text"}
+  field: {label: "Note Text", name: "note", widget: "text", required: false}
 
 field_related_phases: &field_related_phases
   label: "Related Phases"
@@ -63,26 +65,28 @@ fields_template: &common_fields
       - {label: "Stormblood", value: "sb"}
       - {label: "Heavensward", value: "hw"}
       - {label: "A Realm Reborn", value: "arr"}
+    hint: "The expansion to which the duty belongs. Used by front-end for categorizing the Guide."
+  - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number"}
+  - {label: "Patch Name", name: "patchName", widget: "string"}
   - {label: "Title", name: "title", widget: "string"}
   - {label: "Slug", name: "slug", widget: "string"}
-  - {label: "Description", name: "description", widget: "text"}
+  - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
+  - {label: "Player Level", name: "plvl", valueType: "int", widget: "number"}
+  - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number"}
+  - {label: "Description", name: "description", widget: "text", required: false}
   - label: "Images"
     name: "image"
     widget: "object"
     fields:
       - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false}
       - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false}
-  - {label: "Terms", name: "terms", widget: "list", field: {label: Term, name: term, widget: string}}
-  - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number"}
-  - {label: "Patch Name", name: "patchName", widget: "string"}
-  - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
-  - {label: "Player Level", name: "plvl", valueType: "int", widget: "number"}
-  - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number"}
+    required: false
+  - {label: "Terms", name: "terms", widget: "list", field: {label: Term, name: term, widget: string}, required: false}
   - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string"}
   - {label: "Minion(s)", name: "minion", required: false, widget: "string"}
   - {label: "Triple Triad Cards", name: "triple-triad", required: false, widget: "list", field: {label: "Card Name", name: "card-name", widget: "string"}}
-  - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"]}
-  - {label: "MTQ Capture Video", name: "mtqvid", widget: "string"}
+  - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"], required: false}
+  - {label: "MTQ Capture Video", name: "mtqvid", widget: "string", required: false}
   - label: "Beginning Duty Mechanic"
     name: "mechanics"
     required: false
@@ -93,11 +97,11 @@ fields_template: &common_fields
         name: "steps"
         widget: "list"
         fields:
-          - {label: "Note Number", name: "step", widget: "number", valueType: "int"}
+          - {label: "Note Number", name: "step", widget: "number", valueType: "int", required: false}
           - label: "Mechanic Notes"
             name: "notes"
             widget: "list"
-            field: {label: "Mechanic Note", name: "note", widget: "text"}
+            field: {label: "Mechanic Note", name: "note", widget: "text", required: false}
   - label: "Bosses"
     name: "bosses"
     widget: "list"
@@ -111,7 +115,7 @@ fields_template: &common_fields
           - label: "Alert"
             name: "alerts"
             widget: "list"
-            field: {label: "Alert Text", name: "alert", widget: "text"}
+            field: {label: "Alert Text", name: "alert", widget: "text", required: false}
           - label: "Mechanics"
             name: "mechanics"
             widget: "list"
@@ -120,12 +124,12 @@ fields_template: &common_fields
               - label: "Mechanic Notes"
                 name: "notes"
                 widget: "list"
-                field: {label: "Mechanic Note", name: "note", widget: "text"}
+                field: {label: "Mechanic Note", name: "note", widget: "text", required: false}
           - label: "Attack Sequence"
             name: "attacks"
             widget: "list"
             fields: 
-              - {label: "Attack Name", name: "attack", widget: "string"}
+              - {label: "Attack Name", name: "attack", widget: "string", required: false}
               - {label: "Duty Action", name: "dutyActions", required: false, widget: "boolean"}
       - label: "Boss Attacks"
         name: "attacks"
