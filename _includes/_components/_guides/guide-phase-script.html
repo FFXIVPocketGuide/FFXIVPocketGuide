@@ -1,13 +1,10 @@
 <div class="guide__script-wrapper">
-
     <!-- Skill Script Title -->
     <h5 class="guide__mechanics-title">Attack Script</h5>
-
     <!-- Boss Attack Loop -->
     <ul class="guide__script-list">
         {% for attack in phase.boss_phase_script %}
             <li class="guide__script-attack {% if attack.boss_phase_script_attack_duty_action == true %}duty-action{% endif %}">{{ attack.boss_phase_script_attack_name }}</li>
         {% endfor %}
     </ul>
-
 </div>

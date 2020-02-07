@@ -1,129 +1,92 @@
 {% comment %} ==================================================================
-
     // Guide Metadata
-
 =============================================================== {% endcomment %}
-
 <div class="guide-metadata">
-
-    <ul 
-        class="guide-metadata__menu">
-
-        <h5 
-            class="guide-metadata__subtitle">
+    <ul class="guide-metadata__menu">
+        <h5 class="guide-metadata__subtitle">
             In This Guide:
         </h5>
-
         {% if page.duty_mechanics != empty %}
-
             <li>
-                <a 
-                    class="guide-metadata__menu-link--new"
-                    data-menu-trigger="guideNotes"
-                    href="#" 
-                    title="Go to the Guide Mechanics">
-                    {% if page.instance_type == "Dungeon" %}Dungeon Mechanics{% endif %}
-                    {% if page.instance_type == "Trial" %}Trial Mechanics{% endif %}
-                    {% if page.instance_type == "Raid" %}Raid Mechanics{% endif %}
+                <a class="guide-metadata__menu-link--new" data-menu-trigger="guideNotes" href="#" title="Go to the Guide Mechanics">
+                    {% if page.instance_type == "dungeon" %}Dungeon Mechanics{% endif %}
+                    {% if page.instance_type == "trial" %}Trial Mechanics{% endif %}
+                    {% if page.instance_type == "raid" %}Raid Mechanics{% endif %}
                 </a>
             </li>
-
         {% endif %}
-
         {% if page.bosses %}
-
             {% for boss in page.bosses %}
-
                 <li>
-                    <a 
-                        class="guide-metadata__menu-link--new"
-                        data-menu-trigger="{{ boss.boss_name }}"
-                        href="#"
-                        title="Go to {{ boss.boss_name }}">
+                    <a class="guide-metadata__menu-link--new" data-menu-trigger="{{ boss.boss_name }}" href="#" title="Go to {{ boss.boss_name }}">
                         {{ boss.boss_name }}
                     </a>
-
                     {% if page.bosses.size == 1 %}
-
-                        <ul 
+                        <ul
                             class="guide-metadata__submenu">
-
                             {% for phase in boss.boss_phases %}
-
                                 <li>
-                                    <a 
-                                        class="guide-metadata__menu-link--new"
-                                        data-menu-trigger="{{ phase.boss_phase_title }}"
-                                        href="#" 
-                                        title="Go to {{ phase.boss_phase_title }}">
+                                    <a class="guide-metadata__menu-link--new" data-menu-trigger="{{ phase.boss_phase_title }}" href="#" title="Go to {{ phase.boss_phase_title }}">
                                         {{ phase.boss_phase_title }}
                                     </a>
                                 </li>
-
                             {% endfor %}
-
                         </ul>
-
                     {% endif %}
-
                 </li>
-
             {% endfor %}
-
         {% endif %}
-
     </ul>
-
-    <div
-        class="guide-metadata__wrapper">
-
-        <h5 
-            class="guide-metadata__subtitle">
-            Player Level: <span>{{ page.plvl }}</span>
-        </h5>
-
+    <div class="guide-metadata__wrapper">
+        {% if page.quest %}
+            {% if page.quest_location %}
+                <h5 class="guide-metadata__subtitle">
+                    Quest: <span>{{ page.quest }}</span>
+                </h5>
+                <h5 class="guide-metadata__subtitle">
+                    Quest: <span>{{ page.quest_location }}</span>
+                </h5>
+            {% endif %}
+        {% endif %}
         {% if page.ilvl > 0 %}
-            <h5 
-                class="guide-metadata__subtitle">
+            <h5 class="guide-metadata__subtitle">
                 Item Level: <span>{{ page.ilvl }}</span>
             </h5>
         {% else %}
-            <h5 
-                class="guide-metadata__subtitle">
+            <h5 class="guide-metadata__subtitle">
                 Item Level: <span>N/A</span>
             </h5>
         {% endif %}
-
+        <h5 class="guide-metadata__subtitle">
+            Player Level: <span>{{ page.plvl }}</span>
+        </h5>
         {% if page.patch_number %}
-            <h5 
-                class="guide-metadata__subtitle">
+            <h5 class="guide-metadata__subtitle">
                 Patch {{ page.patch_number }}:<span>{{ page.patch_name }}</span>
             </h5>
         {% endif %}
-
         {% if page.partners %}
-            <h5 
-                class="guide-metadata__subtitle">Partners:
+            <h5 class="guide-metadata__subtitle">Partners:
             {% for partner in page.partners %}
                 <span>
-                    <a 
-                        href="{{ partner.partner-link }}" 
-                        target="_blank"
-                        title="Go view {{ partner.partner-title }}'s Guide">
+                    <a href="{{ partner.partner-link }}" target="_blank" title="Go view {{ partner.partner-title }}'s Guide">
                         {{ partner.partner-title }}
                     </a>
                 </span>
             {% endfor %}
             </h5>
         {% endif %}
-
         {% if page.orchestrion %}
-            <h5 
-                class="guide-metadata__subtitle">
-                Orchestrion Roll:<span>{{ page.orchestrion }}</span>
+            <h5 class="guide-metadata__subtitle">
+                Orchestrion Roll:
             </h5>
+            {% for orchestrion in page.orchestrion %}
+                <li>
+                    <a class="guide-metadata__menu-link--new">
+                        {{ orchestrion }}
+                    </a>
+                </li>
+            {% endfor %}
         {% endif %}
-
     </div>
-
 </div>

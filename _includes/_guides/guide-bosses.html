@@ -1,11 +1,7 @@
 {% comment %} ==================================================================
-
     // Guide Bosses
-
 =============================================================== {% endcomment %}
-
 <div class="guide__accordion">
-
     <div class="guide__accordion-trigger--01 active" data-menu-target="guideBosses">
         <i class="material-icons">expand_more</i>
         <h2 class="guide__accordion-trigger-title">
@@ -20,21 +16,17 @@
 
         <!-- Opens the Boss Loop -->
         {% for boss in page.bosses %}
-
             <div class="guide__accordion-trigger--02" data-menu-target="{{ boss.boss_name }}">
                 <i class="material-icons">expand_more</i>
                 <h3 class="guide__accordion-trigger-title">
                     {{ boss.boss_name }}
                 </h3>
             </div>
-
             <div class="guide__accordion-content--02">
 
                 <!-- Opens the Phase Loop -->
                 {% for phase in boss.boss_phases %}
-
                     <div data-menu-target="{{ phase.boss_phase_title }}"></div>
-
                     <div class="guide__accordion-copy-wrapper">
 
                         <!-- Event Title -->
@@ -57,22 +49,14 @@
                             <!-- Include Guide Skill Script -->
                             {% include _components/_guides/guide-phase-script.html %}
                         {% endif %}
-
                     </div>
-
                     {% for attack in phase.boss_phase_attacks %}
 
                         <!-- Include Attack Template -->
                         {% include _components/_guides/guide-attack.html %}
-
                     {% endfor %}
-
                 {% endfor %}
-
             </div>
-
         {% endfor %}
-
     </div>
-
 </div>

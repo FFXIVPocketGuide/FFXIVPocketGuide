@@ -1,17 +1,12 @@
 <div class="guide__combo-tag-wrapper">
-
     <h5 class="guide__attack-notes-title">{{ attack.attack_name }}</h5>
-
     {% for role in attack.attack_roles %}
         <span class="guide__combo-tag--role">{{ role }}</span>
     {% endfor %}
-
     {% if attack.attack_duty_action %}
         <span class="guide__combo-tag--duty-action">Duty Action</span>
     {% endif %}
-
     {% for tag in attack.attack_tags %}
         <span class="guide__combo-tag--attack">{{ tag }}</span>
     {% endfor %}
-
 </div>

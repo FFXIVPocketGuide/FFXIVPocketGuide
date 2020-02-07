@@ -1,41 +1,21 @@
 {% for guide in sorted reversed %}
-
     {% if page.page_category == "all" %}
-
         {% assign counter = counter | plus: 1 %}
-
         {% include summary.html %}
-
     {% elsif page.page_category == "dungeons" %}
-
         {% if guide.instanceType == "dungeon" or guide.instance_type == "Dungeon" %}
-
             {% assign counter = counter | plus: 1 %}
-
             {% include summary.html %}
-
         {% endif %}
-
     {% elsif page.page_category == "trials" %}
-
         {% if guide.instanceType == "trial" or guide.instance_type == "Trial" %}
-
             {% assign counter = counter | plus: 1 %}
-
             {% include summary.html %}
-
         {% endif %}
-
     {% elsif page.page_category == "raids" %}
-
         {% if guide.instanceType == "raid" or guide.instance_type == "Raid" %}
-
             {% assign counter = counter | plus: 1 %}
-
             {% include summary.html %}
-
         {% endif %}
-
     {% endif %}
-
 {% endfor %}

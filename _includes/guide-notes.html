@@ -1,8 +1,5 @@
-
 <!-- Guide Notes =========================================================== -->
-
 <div class="guide__accordion">
-
     <div class="guide__accordion-trigger--01" id="guideNotes">
         <i class="material-icons">expand_more</i>
         <h2 class="guide__accordion-trigger-title">
@@ -11,24 +8,17 @@
             {% if page.instanceType == "trial" %}Trial Notes{% endif %}
         </h2>
     </div>
-
     <!-- Guide Event Accordion Content -->
     <div class="guide__accordion-content--01">
-
         <!-- Opens the Notes Loop -->
         {% for mechanic in page.mechanics %}
-
             <div class="guide__accordion-copy-wrapper">
-
                 <!-- Event Title -->
                 <h3 class="guide__accordion-title">{{ mechanic.title }}</h3>
-
                 <!-- Opens the Step Loop -->
                 {% if mechanic.steps %}
                     <div class="guide__mechanics-wrapper">
-
                         {% for step in mechanic.steps %}
-
                             <!-- Mechanics Group Title -->
                             <h4 class="guide__mechanics-title">Step {{ step.step }}</h4>
 
@@ -38,16 +28,17 @@
                                     <li class="guide__mechanics-item">{{ note.note }}</li>
                                 {% endfor %}
                             </ul>
-
+                            <ul class="guide__mechanics-list">
+                            {% for image in step.images %}
+                                <div class="guide__attack-image-item">
+                                    <img src="{{ image.url }}" alt="{{ image.alt }}">
+                                </div>
+                            {% endfor %}
+                            </ul>
                         {% endfor %}
-
                     </div>
                 {% endif %}
-
             </div>
-
         {% endfor %}
-
     </div>
-
 </div>

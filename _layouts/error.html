@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
     {% include head.html %}
-
         <!-- jQuery -->
         <script type="text/javascript" src="{{ "/assets/vendor/jquery.min.js" | prepend: site.baseurl }}"></script>
-
         <!-- Modernizr -->
         <script type="text/javascript" src="{{ "/assets/vendor/modernizr.js" | prepend: site.baseurl }}"></script>
-
         <!-- Ionicons -->
         <link rel="stylesheet" href="{{ "/assets/vendor/ionicons.min.css" | prepend: site.baseurl }}" type="text/css" media="all" />
-
         <!-- Normalize -->
         <link rel="stylesheet" href="{{ "/assets/vendor/normalize.css" | prepend: site.baseurl }}" type="text/css" media="all" />
-
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
-
     </head>
-
     <body class="{{ page.pageClass }}">
-
         <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MRL2GS"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MRL2GS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
         <!-- End Google Tag Manager (noscript) -->
-
         <section class="section--error" style="background-image: url('{{ "/assets/img/guide_error.jpg" | prepend: site.baseurl }}');">
-
             <div class="error__content-wrapper">
-
                 <h1 class="error__title heading--01">404</h1>
                 <h3 class="error__subtitle heading--03">Uh oh! The Sylphs stole the page you were looking for!</h3>
                 <div class="error__notice">
@@ -44,18 +33,15 @@
                         <a href="/sb/ala-mhigo" title="Visit A12S">Ala Mhigo</a><br>
                         <a href="/sb/the-drowned-city-of-skalla" title="Visit A12S">The Drowned City of Skalla</a><br>
                     </p>
-                    <p class="error__notice-copy"><strong>We apologize for any inconvenience or confusion.</strong></p>
+                    <p class="error__notice-copy">
+                        <strong>We apologize for any inconvenience or confusion.</strong>
+                    </p>
                 </div>
                 <div class="error__button-wrapper">
                     <a href="/" title="Return to the Pocket Guide homepage." class="error__button button--small--white">Return Home</a>
                 </div>
-
             </div>
-
         </section>
-
         {% include scripts.html %}
-
     </body>
-
 </html>

@@ -1,37 +1,25 @@
 <div class="guide__combo-tag-wrapper">
-
     {% if attack.combo %}
-
         <h5 class="guide__attack-notes-title">{{ combo.title }}</h5>
-
         {% for role in combo.roles %}
             <span class="guide__combo-tag--role">{{ role.role }}</span>
         {% endfor %}
-
         {% for action in combo.dutyActions %}
             <span class="guide__combo-tag--duty-action">Duty Action</span>
         {% endfor %}
-
         {% for tag in combo.tags %}
             <span class="guide__combo-tag--attack">{{ tag.tag }}</span>
         {% endfor %}
-
     {% elsif attack.variation %}
-
         <h5 class="guide__attack-notes-title">{{ variation.title }}</h5>
-
         {% for role in variation.roles %}
             <span class="guide__combo-tag--role">{{ role.role }}</span>
         {% endfor %}
-
         {% for action in variation.dutyActions %}
             <span class="guide__combo-tag--duty-action">Duty Action</span>
         {% endfor %}
-
         {% for tag in variation.tags %}
             <span class="guide__combo-tag--attack">{{ tag.tag }}</span>
         {% endfor %}
-
     {% endif %}
-
 </div>

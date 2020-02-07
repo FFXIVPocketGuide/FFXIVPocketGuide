@@ -1,0 +1,11 @@
+<!-- Event Skill Script -->
+<div class="guide__script-wrapper">
+    <!-- Boss Image Loop -->
+    <ul class="guide__script-list">
+        {% for image in phase.images %}
+            <div class="guide__attack-image-item">
+                <img style="max-height: 500px" src="{{ image.url }}" alt="{{ image.alt }}">
+            </div>
+        {% endfor %}
+    </ul>
+</div>

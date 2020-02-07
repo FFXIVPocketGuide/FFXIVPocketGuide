@@ -1,8 +1,5 @@
-
 <!-- Guide Bosses ========================================================== -->
-
 <div class="guide__accordion">
-
     <div class="guide__accordion-trigger--01 active" id="guideBosses">
         <i class="material-icons">expand_more</i>
         <h2 class="guide__accordion-trigger-title">
@@ -14,10 +11,8 @@
             {% endif %}
         </h2>
     </div>
-
     <!-- Guide Event Accordion Content -->
     <div class="guide__accordion-content--01 active">
-
         <!-- Opens the Boss Loop -->
         {% for boss in page.bosses %}
             {% if page.bosses.size > 1 %}                
@@ -27,66 +22,49 @@
                         {{ boss.title }}
                     </h3>
                 </div>
-
                 <div class="guide__accordion-content--02">
             {% endif %}
-
-
                 <!-- Opens the Sequence Loop -->
                 {% for phase in boss.sequence %}
-
                     <div class="guide__accordion-copy-wrapper" id="phase{{ phase.phase }}">
-
-                        <!-- Event Title -->
-                        <h4 class="guide__accordion-title">Phase {{ phase.phase }} Alerts</h4>
-
                         <!-- Opens the Alerts Loop -->
                         {% if phase.alerts %}
+                            <!-- Event Title -->
+                            <h4 class="guide__accordion-title">Phase {{ phase.phase }} Alerts</h4>
                             <!-- Include Guide Alerts -->
                             {% include _components/guide-alerts.html %}
                         {% endif %}
-
                         <!-- Opens the Mechanics Loops -->
                         {% if phase.mechanics %}
                             <!-- Include Guide Mechanics -->
                             {% include _components/guide-mechanics.html %}
                         {% endif %}
-
                         <!-- Opens the Attack Loop -->
                         {% if phase.attacks %}
                             <!-- Include Guide Skill Script -->
                             {% include _components/guide-script.html %}
                         {% endif %}
-
+                        <!-- Opens the Image Loop -->
+                        {% if phase.images %}
+                            <!-- Include Guide Image Script -->
+                            {% include _components/guide-images.html %}
+                        {% endif %}
                     </div>
-
                     <!-- Determines the current phase. -->
                     {% assign currentPhase = phase.phase %}
-
                     <!-- Enters the boss attack loop. -->
                     {% for attack in boss.attacks %}
-
                         <!-- Enters the attack's phases. -->
                         {% for attackPhase in attack.phases %}
-
                             <!-- Checks to see if any of the attack's phases are equal to the current phase. -->
                             {% if attackPhase.phase == currentPhase %}
-
                                 <!-- Include Attack Template -->
                                 {% include _components/guide-attack.html %}
-
                             {% endif %}
-
                         {% endfor %}
-
                     {% endfor %}
-
                 {% endfor %}
-
             {% if page.bosses.size > 1 %}</div>{% endif %}
-
         {% endfor %}
-
     </div>
-
 </div>

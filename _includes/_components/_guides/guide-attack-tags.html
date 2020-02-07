@@ -1,63 +1,37 @@
 <div class="guide__accordion-tag-wrapper">
-
     {% if attack.template == "combo-attack" %}
-
         {% assign duty = 0 %}
-
         {% for attack in attack.combo_attacks %}
-
             {% if attack.attack_duty_action %}
-
                 {% assign duty = 1 %}
-
             {% endif %}
-
         {% endfor %}
-
         {% if duty > 0 %}
             <span class="guide__accordion-tag--duty-action">Duty Action</span>
         {% endif %}
-
         <span class="guide__accordion-tag--combo">Combo</span>
-
     {% elsif attack.template == "attack-w-variations" %}
-
         {% assign duty = 0 %}
-
         {% for attack in attack.variation_attacks %}
-
             {% if attack.attack_duty_action %}
-
                 {% assign duty = 1 %}
-
             {% endif %}
-
         {% endfor %}
-
         {% if duty > 0 %}
             <span class="guide__accordion-tag--duty-action">Duty Action</span>
         {% endif %}
-
         <span class="guide__accordion-tag--variation">Variation</span>
-
     {% else %}
-
         {% assign roles = attack.attack_roles | sort %}
-
         {% for role in roles %}
             <span class="guide__accordion-tag--role">{{ role }}</span>
         {% endfor %}
-
         {% if attack.attack_duty_action %}
             <span class="guide__accordion-tag--duty-action">Duty Action</span>
         {% endif %}
-
         {% assign tags = attack.attack_tags | sort %}
-
         {% for tag in tags %}
             <span class="guide__accordion-tag--attack">{{ tag }}</span>
         {% endfor %}
-
     {% endif %}
-
 </div>

@@ -1,6 +1,4 @@
-
 <!-- Attack Template ======================================================= -->
-
 <div 
     class="guide__accordion-trigger--03{% if attack.attack_duty_action %}--dutyAction{% elsif attack.template == 'combo-attack' %}--combo{% elsif attack.template == 'attack-w-variations' %}--variation{% else %}--attack{% endif %}">
     <i class="material-icons">expand_more</i>
@@ -16,13 +14,10 @@
         {% include _components/_guides/guide-attack-tags.html %}
     </h4>
 </div>
-
 <div 
     class="guide__accordion-content--03{% if attack.attack_duty_action %}--dutyAction{% elsif attack.template == 'combo-attack' %}--combo{% elsif attack.template == 'attack-w-variations' %}--variation{% else %}--attack{% endif %}">
-
     <div 
         class="guide__accordion-copy-wrapper">
-
         <!-- Standard Attacks -->
         {% if attack.template == "combo-attack" %}
             {% if attack.combo_notes %}
@@ -45,24 +40,19 @@
         {% else %}
             {% include _components/_guides/guide-attack-notes.html %}
         {% endif %}
-
         <!-- Combo Attacks -->
         {% for attack in attack.combo_attacks %}
             {% include _components/_guides/guide-subattack-tags.html %}
             {% include _components/_guides/guide-attack-notes.html %}
             {% include _components/_guides/guide-attack-images.html %}
         {% endfor %}
-
         <!-- Variation Attacks -->
         {% for attack in attack.variation_attacks %}
             {% include _components/_guides/guide-subattack-tags.html %}
             {% include _components/_guides/guide-attack-notes.html %}
             {% include _components/_guides/guide-attack-images.html %}
         {% endfor %}
-
         <!-- Attack Images -->
         {% include _components/_guides/guide-attack-images.html %}
-
     </div>
-
 </div>

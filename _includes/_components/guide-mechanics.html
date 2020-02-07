@@ -1,18 +1,13 @@
 <!-- Event Mechanics -->
 <div class="guide__mechanics-wrapper">
-
     {% for mechanic in phase.mechanics %}
-
         <!-- Mechanic Title -->
         <h5 class="guide__mechanics-title">{{ mechanic.title }}</h5>
-
         <!-- Mechanics List -->
         <ul class="guide__mechanics-list">
             {% for note in mechanic.notes %}
                 <li class="guide__mechanics-item">{{ note.note }}</li>
             {% endfor %}
         </ul>
-
     {% endfor %}
-
 </div>

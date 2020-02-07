@@ -1,37 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
     <head>
-
         {% include head.html %}
-
     </head>
-
     <body class="{{ page.page_type }} {{ page.page_category }}">
-
         <div class="layout">
-
             <!-- Include Sidebar -->
             {% include sidebar.html %}
-
             <div class="layout__wrapper">
-
                 <!-- Include Header -->
                 {% include header.html %}
-
                 <!-- Include Guide Layout -->
                 {% include guide-layout.html %}
-
                 <!-- Include Footer -->
                 {% include footer.html %}
-
             </div>
-
         </div>
-
         {% include scripts.html %}
-
     </body>
-
 </html>
