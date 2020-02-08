@@ -42,7 +42,7 @@ The expansion to which the duty belongs. Used by front-end for categorizing the 
 
 description | `text`
 
-Guide's description with name of duty and names of bosses within.
+Guide's description (Shows up in Google Search) with name of duty and names of bosses within.
 
 Ex. *Read our Guide on the 8 man raid Omega: Deltascape V2.0 (Normal) where you'll face off against Catastrophe.*
 

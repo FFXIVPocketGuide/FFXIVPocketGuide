@@ -66,65 +66,66 @@ fields_template: &common_fields
       - {label: "Heavensward", value: "hw"}
       - {label: "A Realm Reborn", value: "arr"}
     hint: "The expansion to which the duty belongs. Used by front-end for categorizing the Guide."
-  - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number"}
-  - {label: "Patch Name", name: "patchName", widget: "string"}
-  - {label: "Title", name: "title", widget: "string"}
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number", hint: "Patch Number of Duty. Ex. 4.0"}
+  - {label: "Patch Name", name: "patchName", widget: "string", hint: "The name of the patch. Ex. Shadowbringers, Dreams of Ice, or Under the Moonlight"}
+  - {label: "Title", name: "title", widget: "string", hint: "Name of the Duty. Show match what's in the Duty Finder. Ex. Malikah's Well"}
+  - {label: "Slug", name: "slug", widget: "string", hint: "Simplified name of the duty for use in the URL and file name. Use hyphens for spaces and lower case, only characters. Ex. malikahs-well"}
   - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
-  - {label: "Player Level", name: "plvl", valueType: "int", widget: "number"}
-  - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number"}
-  - {label: "Description", name: "description", widget: "text", required: false}
+  - {label: "Player Level", name: "plvl", valueType: "int", widget: "number", hint: "Player level of the duty."}
+  - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number", hint: "Minimum item level of the duty."}
+  - {label: "Description", name: "description", widget: "text", required: false, hint: "Guide's description (Shows up in Google Search) with name of duty and names of bosses within. Ex. Read our Guide on the dungeon Hells' Lid (Normal) where you'll face off against Otake-maru, Kamaitachi, and Genbu."}
   - label: "Images"
     name: "image"
     widget: "object"
     fields:
-      - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false}
-      - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false}
+      - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Primary image (1500px Wide)"}
+      - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Thumbnail image (500px Wide)"}
     required: false
-  - {label: "Terms", name: "terms", widget: "list", field: {label: Term, name: term, widget: string}, required: false}
-  - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string"}
-  - {label: "Minion(s)", name: "minion", required: false, widget: "string"}
-  - {label: "Triple Triad Cards", name: "triple-triad", required: false, widget: "list", field: {label: "Card Name", name: "card-name", widget: "string"}}
+  - {label: "Terms", name: "terms", widget: "list", field: {label: Term, name: term, widget: string}, required: false, hint: "Multiple Search Terms (Include Nicknames, Name, Bosses, and Difficulty Ex. Stormblood, SB, The Sirensong Sea, Lugat, The Governor, Lorelei, Normal"}
+  - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string", hint: "The name of the orchestrion roll(s) that drop from the duty. Ex. Primal Judgement"}
+  - {label: "Minion(s)", name: "minion", required: false, widget: "string", hint: "The name of the minion(s) that drop from the duty. Ex. Forgiven Hate"}
+  - {label: "Triple Triad Card(s)", name: "triple-triad", required: false, widget: "list", field: {label: "Card Name", name: "card-name", widget: "string"}, hint: "The name of the card(s) that drop from the duty. Ex. Seeker of Solitude Card"}
   - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"], required: false}
-  - {label: "MTQ Capture Video", name: "mtqvid", widget: "string", required: false}
+  - {label: "MTQ Capture Video", name: "mtqvid", widget: "string", required: false, hint: "Link connected to the MTQ youtube guide of duty."}
   - label: "Beginning Duty Mechanic"
     name: "mechanics"
     required: false
     widget: "list"
     fields:
-      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Name", name: "title", widget: "string", hint: "Name of the mechanic. Ex. Coloured Coral"}
       - label: "Mechanics"
         name: "steps"
         widget: "list"
         fields:
-          - {label: "Note Number", name: "step", widget: "number", valueType: "int", required: false}
+          - {label: "Note Number", name: "step", widget: "number", valueType: "int", required: false, hint: "Number list of steps. Ex. 01, 02, 03, etc."}
           - label: "Mechanic Notes"
             name: "notes"
             widget: "list"
-            field: {label: "Mechanic Note", name: "note", widget: "text", required: false}
+            field: {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Notes of specific attacks or mechanics. Ex. Early in the dungeon there is a room off to the side with an item that can be interacted with - it contains a message with a colour on it."}
   - label: "Bosses"
     name: "bosses"
     widget: "list"
     fields:
-      - {label: "Boss Name", name: "title", widget: "string"}
+      - {label: "Boss Name", name: "title", widget: "string", hint: "Name of Boss. Ex. Otake-maru"}
+      - {label: "Boss Id", name: "id", widget: "string", hint: "Boss ID (Used in Sidebar Menu Navigation) Ex. boss01, boss02, boss03, etc."}
       - label: "Phases"
         name: "sequence"
         widget: "list"
         fields:
-          - {label: "Phase Number", name: "phase", widget: "number", valueType: "int"}
+          - {label: "Phase Number", name: "phase", widget: "number", valueType: "int", hint: "Number of the phase. Dungeons usually only needs 01 on all. Ex. 01, 02, 03, etc."}
           - label: "Alert"
             name: "alerts"
             widget: "list"
-            field: {label: "Alert Text", name: "alert", widget: "text", required: false}
+            field: {label: "Alert Text", name: "alert", widget: "text", required: false, hint: "Notes about the phase. Ex. The boss will occasionally target a random player and chase them around the arena while it vomits lava - this player should keep moving away from the boss."}
           - label: "Mechanics"
             name: "mechanics"
             widget: "list"
             fields: 
-              - {label: "Mechanic Title", name: "title", widget: "string"}
+              - {label: "Mechanic Title", name: "title", widget: "string", hint: "Name of the mechanic. Ex. Volcanic Debris (Include Duty Gauges in relevant phase Ex. Vril)"}
               - label: "Mechanic Notes"
                 name: "notes"
                 widget: "list"
-                field: {label: "Mechanic Note", name: "note", widget: "text", required: false}
+                field: {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary."}
           - label: "Attack Sequence"
             name: "attacks"
             widget: "list"
@@ -176,7 +177,7 @@ collections:
   - name: "shb"
     label: "Shadowbringers"
     delete: false
-    label_singular: "Guide"
+    label_singular: "Shadowbringers Guide"
     folder: "_posts/shb"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
@@ -187,7 +188,7 @@ collections:
   - name: "sb"
     label: "Stormblood"
     delete: false
-    label_singular: "Guide"
+    label_singular: "Stormblood Guide"
     folder: "_posts/sb"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
@@ -198,7 +199,7 @@ collections:
   - name: "hw"
     label: "Heavensward"
     delete: false
-    label_singular: "Guide"
+    label_singular: "Heavensward Guide"
     folder: "_posts/hw"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
@@ -209,7 +210,7 @@ collections:
   - name: "arr"
     label: "A Realm Reborn"
     delete: false
-    label_singular: "Guide"
+    label_singular: "A Realm Reborn Guide"
     folder: "_posts/arr"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
