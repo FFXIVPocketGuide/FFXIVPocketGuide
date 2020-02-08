@@ -73,6 +73,8 @@ fields_template: &common_fields
   - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
   - {label: "Player Level", name: "plvl", valueType: "int", widget: "number", hint: "Player level of the duty."}
   - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number", hint: "Minimum item level of the duty."}
+  - {label: "Guide Created Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "MM/DD/YYYY", timeFormat: false, hint: "Created Date for Guide. Leave as the default current date."}
+  - {label: "Sorting Order", name: "order", widget: "number", valueType: "int", required: false, hint: "Concatenate the Player Level and Item Level. Used for sorting the guide on the home page. Ex. 70300" }
   - {label: "Description", name: "description", widget: "text", required: false, hint: "Guide's description (Shows up in Google Search) with name of duty and names of bosses within. Ex. Read our Guide on the dungeon Hells' Lid (Normal) where you'll face off against Otake-maru, Kamaitachi, and Genbu."}
   - label: "Images"
     name: "image"
@@ -170,8 +172,6 @@ fields_template: &common_fields
                   *common_attack_fields
   # Hidden fields
   - {label: "Layout", name: "layout", widget: "hidden", default: "guide_post"}
-  - {label: "Date", name: "date", widget: "hidden", default: "{{year}}-{{month}}-{{day}}"}
-  - {label: "Order", name: "order", widget: "hidden", default: "{{plvl}}{{ilvl}}"}
 
 collections:
   - name: "shb"
