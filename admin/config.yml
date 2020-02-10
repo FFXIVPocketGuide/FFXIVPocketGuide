@@ -41,7 +41,8 @@ field_notes: &field_notes
   label: "Notes"
   name: "notes"
   widget: "list"
-  field: {label: "Note Text", name: "note", widget: "text", required: false}
+  fields: 
+    - {label: "Note Text", name: "note", widget: "text", required: false}
 
 field_related_phases: &field_related_phases
   label: "Related Phases"
