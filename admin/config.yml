@@ -35,7 +35,8 @@ field_dutyActions: &field_dutyActions
   label: "Duty Actions"
   name: "dutyActions"
   widget: "list"
-  field: {label: "Duty Action Name", name: "action", widget: "string", required: false}
+  fields: 
+    - {label: "Duty Action Name", name: "action", widget: "string", required: false}
 
 field_notes: &field_notes
   label: "Notes"
@@ -48,7 +49,8 @@ field_related_phases: &field_related_phases
   label: "Related Phases"
   name: "phases"
   widget: "list"
-  field: {name: "phase", widget: "number", valueType: "int"}
+  fields: 
+    - {name: "phase", widget: "number", valueType: "int"}
 
 common_attack_fields: &common_attack_fields
   - *field_attack_name
@@ -84,10 +86,22 @@ fields_template: &common_fields
       - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Primary image (1500px Wide)"}
       - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Thumbnail image (500px Wide)"}
     required: false
-  - {label: "Terms", name: "terms", widget: "list", field: {label: Term, name: term, widget: string}, required: false, hint: "Multiple Search Terms (Include Nicknames, Name, Bosses, and Difficulty Ex. Stormblood, SB, The Sirensong Sea, Lugat, The Governor, Lorelei, Normal"}
+  - label: "Terms"
+    name: "terms"
+    widget: "list"
+    fields: 
+      - {label: Term, name: term, widget: string}
+    required: false
+    hint: "Multiple Search Terms (Include Nicknames, Name, Bosses, and Difficulty Ex. Stormblood, SB, The Sirensong Sea, Lugat, The Governor, Lorelei, Normal"
   - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string", hint: "The name of the orchestrion roll(s) that drop from the duty. Ex. Primal Judgement"}
   - {label: "Minion(s)", name: "minion", required: false, widget: "string", hint: "The name of the minion(s) that drop from the duty. Ex. Forgiven Hate"}
-  - {label: "Triple Triad Card(s)", name: "triple-triad", required: false, widget: "list", field: {label: "Card Name", name: "card-name", widget: "string"}, hint: "The name of the card(s) that drop from the duty. Ex. Seeker of Solitude Card"}
+  - label: "Triple Triad Card(s)"
+    name: "triple-triad"
+    required: false
+    widget: "list"
+    fields: 
+      - {label: "Card Name", name: "card-name", widget: "string"}
+    hint: "The name of the card(s) that drop from the duty. Ex. Seeker of Solitude Card"
   - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"], required: false}
   - {label: "MTQ Capture Video", name: "mtqvid", widget: "string", required: false, hint: "Link connected to the MTQ youtube guide of duty."}
   - label: "Beginning Duty Mechanic"
@@ -104,7 +118,8 @@ fields_template: &common_fields
           - label: "Mechanic Notes"
             name: "notes"
             widget: "list"
-            field: {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Notes of specific attacks or mechanics. Ex. Early in the dungeon there is a room off to the side with an item that can be interacted with - it contains a message with a colour on it."}
+            fields: 
+              - {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Notes of specific attacks or mechanics. Ex. Early in the dungeon there is a room off to the side with an item that can be interacted with - it contains a message with a colour on it."}
   - label: "Bosses"
     name: "bosses"
     widget: "list"
@@ -119,7 +134,8 @@ fields_template: &common_fields
           - label: "Alert"
             name: "alerts"
             widget: "list"
-            field: {label: "Alert Text", name: "alert", widget: "text", required: false, hint: "Notes about the phase. Ex. The boss will occasionally target a random player and chase them around the arena while it vomits lava - this player should keep moving away from the boss."}
+            fields: 
+              - {label: "Alert Text", name: "alert", widget: "text", required: false, hint: "Notes about the phase. Ex. The boss will occasionally target a random player and chase them around the arena while it vomits lava - this player should keep moving away from the boss."}
           - label: "Mechanics"
             name: "mechanics"
             widget: "list"
@@ -128,7 +144,8 @@ fields_template: &common_fields
               - label: "Mechanic Notes"
                 name: "notes"
                 widget: "list"
-                field: {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary."}
+                fields: 
+                  - {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary."}
           - label: "Attack Sequence"
             name: "attacks"
             widget: "list"
