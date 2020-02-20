@@ -30,6 +30,8 @@
     <div class="site-header__grid"
         {% if page.page_type == "index" %}
             style="background-image: url('{{ "/assets/img/4-5.jpg" | prepend: site.baseurl }}')"
+        {% elsif page.image.url %}
+            style="background-image: url('{{ page.image.url }}')"
         {% elsif page.image %}
             style="background-image: url('{% for image in page.image %}{{ image.url }}{% endfor %}')"
         {% else %}

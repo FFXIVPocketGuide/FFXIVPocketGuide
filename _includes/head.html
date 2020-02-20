@@ -72,7 +72,7 @@
     {% else %}
         <meta 
             property="og:image" 
-            content="{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}" />
+            content="{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image.urlSmall %}{{ page.image.urlSmall }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}" />
     {% endif %}
 
 <!-- Google Fonts -->
@@ -152,7 +152,7 @@
               "@type": "NewsArticle",
               "headline": "{{ page.title }}{% if page.difficulty %} ({{ page.difficulty }}){% endif %}",
               "image": [
-                "{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}"
+                "{{ site.url }}{% if page.cover %}{{ page.cover }}{% elsif page.image.urlSmall %}{{ page.image.urlSmall }}{% elsif page.image %}{% for image in page.image %}{{ image.urlSmall }}{% endfor %}{% endif %}"
               ]
             }
         </script>
