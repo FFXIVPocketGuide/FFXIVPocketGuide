@@ -83,8 +83,8 @@ fields_template: &common_fields
     name: "image"
     widget: "object"
     fields:
-      - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Primary image (1500px Wide)"}
-      - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Thumbnail image (500px Wide)"}
+      - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Primary image (1500px Wide)", required: false}
+      - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Thumbnail image (500px Wide)", required: false}
     required: false
   - label: "Terms"
     name: "terms"
