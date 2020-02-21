@@ -6,8 +6,20 @@
 
 <div class="index">
 
+    <br />
+
+    <div class="index__announcement" id="shadowbringersContent">
+        <div class="wrapper">
+            <p><strong>A Small Spark!</strong></p>
+            <p>Over the last few months there has been increased interest in taking on the work involved in bringing the Pocket Guide back. These awesome players have been working to take the Pocket Guide in a more manageable direction so that content can once again begin to be added. There isn't exactly a timeline for this work to be published just yet, but if you'd like to cheer them on or send them your thanks, they can be found here in the footer as collaborators.</p>
+            <p>If you have interest in contributing to this work, or are interested in publishing content down the road, please reach out to us over on <a href="https://github.com/FFXIVPocketGuide/FFXIVPocketGuide" title="Visit the Pocket Guide on Github.">Github</a>.</p>
+        </div>
+    </div>
+
+    <br />
+
     <!-- Shadowbringers Guide Index ======================================== -->
-    
+
     {% assign counter = 0 %}
 
     {% for guide in site.categories.shb %}
@@ -24,26 +36,11 @@
             <h2 class="index-divider__title">Shadowbringers</h2>
 		</div>
 
-    	<div class="index__announcement" id="shadowbringersContent">
-        	<div class="wrapper">
-            	<p><strong>A Small Spark!</strong></p>
-            	<p>Over the last few months there has been increased interest in taking on the work involved in bringing the Pocket Guide back. These awesome players have been working to take the Pocket Guide in a more manageable direction so that content can once again begin to be added. There isn't exactly a timeline for this work to be published just yet, but if you'd like to cheer them on or send them your thanks, they can be found here in the footer as collaborators.</p>
-            	<p>If you have interest in contributing to this work, or are interested in publishing content down the road, please reach out to us over on <a href="https://github.com/FFXIVPocketGuide/FFXIVPocketGuide" title="Visit the Pocket Guide on Github.">Github</a>.</p>
-        	</div>
-		</div>
-
-        <br />
-
         <div class="index__list" data-expansion="shb">
-
-    {% endif %}
-
-    {% assign sorted = site.categories.shb | sort:"order" %}
-
-    {% include _components/index-list.html %}
-
-    {% if counter > 0 %}
-		</div>
+            {% assign sorted = site.categories.shb | sort:"order" %}
+            {% include _components/index-list.html %}  
+        </div>
+        
     {% endif %}
 
     <!-- Stormblood Guide Index ============================================ -->

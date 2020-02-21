@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: FFXIVPocketGuide/DevFFXIVPocketGuide
+  repo: FFXIVPocketGuide/FFXIVPocketGuide
   branch: master
   base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
   auth_endpoint: /ffxiv-pg-oauth/auth
