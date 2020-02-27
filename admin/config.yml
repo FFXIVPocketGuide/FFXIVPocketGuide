@@ -191,6 +191,7 @@ fields_template: &common_fields
                   *common_attack_fields
   # Hidden fields
   - {label: "Layout", name: "layout", widget: "hidden", default: "guide_post"}
+  - {label: "CMS Used", name: "cms", widget: "hidden", default: "netlify-cms"}
 
 collections:
   - name: "shb"
@@ -200,7 +201,8 @@ collections:
     folder: "_posts/shb"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
-    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
+    filter: { field: "cms", value: "netlify-cms" }
     fields:
       *common_fields
 
@@ -211,7 +213,8 @@ collections:
     folder: "_posts/sb"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
-    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
+    filter: { field: "cms", value: "netlify-cms" }
     fields:
       *common_fields
 
@@ -222,7 +225,8 @@ collections:
     folder: "_posts/hw"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
-    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
+    filter: { field: "cms", value: "netlify-cms" }
     fields: 
       *common_fields
 
@@ -233,6 +237,7 @@ collections:
     folder: "_posts/arr"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
-    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
+    summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
+    filter: { field: "cms", value: "netlify-cms" }
     fields: 
       *common_fields
