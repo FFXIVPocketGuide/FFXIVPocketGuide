@@ -46,6 +46,14 @@ field_notes: &field_notes
   fields: 
     - {label: "Note Text", name: "note", widget: "text", required: false}
 
+field_attack_images: &field_attack_images
+  label: "Attack Images"
+  name: "images"
+  widget: "list"
+  fields:
+    - {label: "Image Upload", name: "url", widget: "image", allowMultiple: false, required: false, hint: "Include any choreography layouts/maps related to the attack."}
+    - {label: "Image Alt Text", name: "alt", widget: "string", required: false, hint: "Text to be displayed if the image cannot be loaded"}
+
 field_related_phases: &field_related_phases
   label: "Related Phases"
   name: "phases"
@@ -59,6 +67,7 @@ common_attack_fields: &common_attack_fields
   - *field_tags
   - *field_dutyActions
   - *field_notes
+  - *field_attack_images
 
 fields_template: &common_fields
   - label: "Expansion"
@@ -166,6 +175,7 @@ fields_template: &common_fields
               - *field_tags
               - *field_dutyActions
               - *field_notes
+              - *field_attack_images
               - *field_related_phases
           - label: "Combo Attack"
             name: "combo"
