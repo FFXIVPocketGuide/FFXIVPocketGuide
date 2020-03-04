@@ -10,37 +10,41 @@
                 <a href="#" data-id="guideNotes" title="Go to the Guide Notes" class="guide-metadata__menu-link">
                     {% if page.instanceType == "dungeon" %}Dungeon Notes{% endif %}
                     {% if page.instanceType == "raid" %}Raid Notes{% endif %}
-                    {% if page.instanceType == "trial" %}Trial Notes{% endif %}
                 </a>
             </li>
         {% endif %}
         {% if page.bosses.size > 1 %}
             <li>
-                <a href="#" data-id="guideBosses" title="Go to the Guide Bosse" class="guide-metadata__menu-link">
+                <a href="#" data-id="guideBosses" title="Go to the Guide Bosses" class="guide-metadata__menu-link">
                     {% if page.instanceType == "dungeon" %}Dungeon Bosses{% endif %}
                     {% if page.instanceType == "raid" %}Raid Bosses{% endif %}
-                    {% if page.instanceType == "trial" %}Trial Bosses{% endif %}
                 </a>
                 <ul class="guide-metadata__submenu">
                     {% for boss in page.bosses %}
                         <li>
-                            <a href="#" data-id="{{ boss.id }}" title="Go to {{ boss.title }}" class="guide-metadata__menu-link">{{ boss.title }}</a>
+                            <a href="#" data-id="{{ boss.title | slugify }}" title="Go to {{ boss.title }}" class="guide-metadata__menu-link">{{ boss.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>
             </li>
-        {% endif %}
-        {% if page.sequence %}
-            <li>
-                <a href="#" data-id="guideSummary" title="Go to the Guide Summary" class="guide-metadata__menu-link">Fight Summary</a>
-                <ul class="guide-metadata__submenu">
-                    {% for phase in page.sequence %}
-                        <li>
-                            <a href="#" data-id="phase{{ phase.phase }}" title="Go to {{ phase.phase }}" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </li>
+        {% else %}
+            {% if page.sequence %}
+                {% assign phases = page.sequence %}
+            {% elsif page.bosses[0].sequence %}
+                {% assign phases = page.bosses[0].sequence %}
+            {% endif %}
+            {% if phases %}
+                <li>
+                    <a href="#" data-id="guideSummary" title="Go to the Guide Summary" class="guide-metadata__menu-link">Fight Summary</a>
+                    <ul class="guide-metadata__submenu">
+                        {% for phase in phases %}
+                            <li>
+                                <a href="#" data-id="phase{{ phase.phase }}" title="Go to Phase {{ phase.phase }}" class="guide-metadata__menu-link">Phase: {{ phase.phase }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endif %}
         {% endif %}
     </ul>
     <div class="guide-metadata__wrapper">

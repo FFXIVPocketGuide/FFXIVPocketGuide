@@ -42,7 +42,7 @@ The expansion to which the duty belongs. Used by front-end for categorizing the 
 
 description | `text`
 
-Guide's description with name of duty and names of bosses within.
+Guide's description (Shows up in Google Search) with name of duty and names of bosses within.
 
 Ex. *Read our Guide on the 8 man raid Omega: Deltascape V2.0 (Normal) where you'll face off against Catastrophe.*
 
@@ -80,6 +80,16 @@ The name of the patch that it's from.
 
 Ex. *Stormblood, Dreams of Ice*
 
+### Guide Created Date
+
+date | `datetime`
+
+Date of when guide was created. Leave as the default current date.
+
+Supported Value: `Year-Month-Day`
+
+Ex. *2018-02-05*
+
 ### Difficulty
 
 difficulty | `select`
@@ -112,6 +122,16 @@ ilvl | `number`
 Minimum item level of the duty.
 
 Ex. *435*
+
+### Sorting Order
+
+order | `number`
+
+The concatenation of the player level and item level of the duty. Used for sorting the guide on the home page.
+
+Supported Value: `{{plvl}}{{ilvl}}`
+
+Ex. *61435*
 
 ### Orchestrion
 
@@ -155,26 +175,6 @@ Ex. *https://youtu.be/tT3-1Yb787w*
 
 <details>
 <summary>Hidden Fields (Site Administration Only)</summary>
-
-### Date
-
-date | `date` `hidden`
-
-Date of when guide was created. 
-
-Supported Value: `Year-Month-Day`
-
-Ex. *2018-02-05*
-
-### Order
-
-order | `number` `hidden`
-
-The combination of the player level and item level of the duty.
-
-Supported Value: `{{plvl}}{{ilvl}}`
-
-Ex. *61435*
 
 ### Layout
 
