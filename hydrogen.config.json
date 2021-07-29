@@ -1,0 +1,15 @@
+{
+  "debug": false,
+  "folders": {
+    "markup": [
+      "_includes",
+      "_layouts"
+    ],
+    "scripts": "assets/scripts",
+    "styles": "assets/styles"
+  },
+  "flexgrid": {
+    "enabled": true,
+    "columns": 3
+  }
+}
