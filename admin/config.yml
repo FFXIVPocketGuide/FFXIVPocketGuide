@@ -41,6 +41,57 @@ expansions: &expansions
     - Shadowbringers
     - Endwalker
 
+boss-phases: &boss-phases
+  label: 'Fight Phases'
+  name: 'phases'
+  widget: 'list'
+  fields:
+    - { label: 'Phase Number', name: 'key', widget: 'number', value_type: 'int' }
+    - label: 'Phase Notes'
+      name: 'notes'
+      widget: 'list'
+      fields:
+        - { label: 'Note', name: 'note', widget: 'string' }
+    - label: 'Duty Actions'
+      name: 'duty-actions'
+      widget: 'list'
+      fields:
+        - { label: 'Action Name', name: 'name', widget: 'string' }
+        - label: 'Action Notes'
+          name: 'notes'
+          widget: 'list'
+          fields:
+            - { label: 'Note', name: 'note', widget: 'string' }
+    - label: 'Attack Sequence'
+      name: 'attack-sequence'
+      widget: 'list'
+      fields:
+        - { label: 'Attack Name', name: 'name', widget: 'string' }
+        - { label: 'Duty Action Requirement', name: 'duty-action-requirement', widget: boolean }
+
+attack-regular: &attack-regular
+  label: 'Regular Attack'
+  name: 'attack-regular'
+  widget: object
+  fields:
+    - { label: 'Attack Name', name: 'name', widget: 'string' }
+    - { label: 'Related Phases', name: 'phases', widget: 'list' }
+
+guide-bosses: &guide-bosses
+  label: 'Bosses'
+  name: 'bosses'
+  widget: 'list'
+  fields:
+    - { label: 'Boss Name', name: 'name', widget: 'string' }
+    - *boss-phases
+    - label: 'Boss Attacks'
+      name: 'attacks'
+      widget: 'list'
+      types:
+        - *attack-regular
+        - *attack-combo
+        - *attack-variation
+
 common-guide-fields: &common-guide-fields
   - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'guide' }
   - *guide-types
@@ -53,6 +104,7 @@ common-guide-fields: &common-guide-fields
   - *expansions
   - { label: 'Patch', name: 'patch', widget: 'number', value_type: 'float' }
   - { label: 'Search Terms', name: 'search-terms', widget: 'list', hint: 'Comma separate each term.' }
+  - *guide-bosses
 
 collections:
   - name: '2.0-a-realm-reborn'
