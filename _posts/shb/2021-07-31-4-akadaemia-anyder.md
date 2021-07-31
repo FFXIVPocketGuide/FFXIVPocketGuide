@@ -136,6 +136,86 @@ bosses:
               Healers need to pay attention each time it hits.
         phases:
           - phase: 3
+  - title: Marquis Morbol
+    id: boss02
+    sequence:
+      - phase: 1
+        alerts:
+          - alert: When the boss raises its tendrils, it will slam them down - stand between
+              them, and stick to the boss' side to avoid the bile at the end.
+          - alert: Avoid the glowing purple sections of the arena.
+        attacks:
+          - {}
+    attacks:
+      - type: regular
+        title: Sap Shower
+        roles:
+          - Everyone
+        tags:
+          - Circular AoE
+          - Marker
+        notes:
+          - note: All players will be targeted with an orange marker. Avoid overlapping with
+              others.
+        phases:
+          - phase: 2
+      - type: regular
+        title: Arbor Storm
+        roles:
+          - Healer
+        tags:
+          - Raid Wide AoE
+        notes:
+          - note: Healers should keep an eye on the group when this is cast.
+        phases:
+          - phase: 2
+      - type: combo
+        title: Extensible Tendrils and Bile Vomit
+        phases:
+          - phase: 1
+        combo:
+          - title: Extensible Tendrils
+            roles:
+              - Everyone
+            tags:
+              - Area AoE
+            notes:
+              - note: The boss will raise its tendrils and slam them down onto the ground.
+              - note: Stand in its "armpits" to avoid taking damage.
+              - note: This will happen 5 times in a row before Bile Vomit.
+              - {}
+          - title: Bile Vomit
+            roles:
+              - Everyone
+            tags:
+              - Cone AoE
+            notes:
+              - note: This attack has no cast bar.
+              - note: The boss will use this attack directly in front immediately after the 5th
+                  tendril slam. Tanks should avoid the front of the boss by
+                  standing to its sides.
+      - type: regular
+        title: Blossom
+        roles:
+          - Everyone
+        tags:
+          - Area AoE
+          - Debuff
+        phases:
+          - phase: 1
+        notes:
+          - note: The boss will cause various flowered areas in the arena to glow purple.
+          - note: Avoid standing in these or you'll receive heavy and vulnerability up
+              debuffs.
+  - title: "Guardian Force: Quetzalcoatl"
+    id: boss03
+    sequence:
+      - phase: 1
+        alerts:
+          - alert: After the boss targets everyone with circle AoEs, run into the purple
+              orbs to get a damage up buff.
+          - alert: After the boss knocks everyone back, run into its hit box to avoid
+              damage.
 layout: guide_post
 cms: netlify-cms
 ---
