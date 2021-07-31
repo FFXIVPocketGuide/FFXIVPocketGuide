@@ -22,6 +22,7 @@ terms:
   - term: Guardian Force Quetzalcoatl
 instanceType: dungeon
 mtqvid: https://youtu.be/I3GrCd_jNlA
+mechanics: []
 bosses:
   - title: Cladoselache and Dodiolus
     id: boss01
