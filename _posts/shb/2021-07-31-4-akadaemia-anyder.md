@@ -216,6 +216,72 @@ bosses:
               orbs to get a damage up buff.
           - alert: After the boss knocks everyone back, run into its hit box to avoid
               damage.
+    attacks:
+      - type: regular
+        title: Shockbolt
+        roles:
+          - Tank
+          - Healer
+        tags:
+          - Tankbuster
+        notes:
+          - note: Cooldown and heal as necessary.
+        phases:
+          - phase: 1
+      - type: regular
+        title: Thunderbolt
+        roles:
+          - Healer
+        tags:
+          - Raid Wide AoE
+        images: []
+        phases:
+          - phase: 1
+        notes:
+          - note: Healers should top everyone up in preparation for this heavy raid-wide
+              damage.
+      - type: regular
+        title: Thunderstorm
+        roles:
+          - Everyone
+        tags:
+          - Circular AoE
+          - Buff
+        phases:
+          - phase: 1
+        notes:
+          - note: Players and the arena will be targeted by circle AoEs. Avoid overlapping
+              with other players.
+          - note: After the AoE hits, some will drop purple orbs that can be collected for a
+              damage up buff.
+      - type: regular
+        title: Shocking Plumage
+        roles:
+          - Everyone
+        tags:
+          - Cone AoE
+        phases:
+          - phase: 1
+        notes:
+          - note: 4 cone AoEs will spawn from the boss in all directions. Stand between
+              them.
+      - type: regular
+        title: Winding Current
+        roles:
+          - Everyone
+        tags:
+          - Area AoE
+          - Knockback
+        notes:
+          - note: The boss will teleport to the south side of the arena and knock all
+              players north.
+          - note: Orb AoEs will be scattered around the arena that grow during the cast -
+              these get very large so try to avoid them.
+          - note: The boss will hit the entire arena with damage - the only safe zone is
+              directly in its hitbox - players will need to cross the arena,
+              dodging the orb AoEs.
+        phases:
+          - phase: 1
 layout: guide_post
 cms: netlify-cms
 ---
