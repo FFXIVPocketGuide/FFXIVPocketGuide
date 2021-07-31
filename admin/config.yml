@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: FFXIVPocketGuide/FFXIVPocketGuide
-  branch: master
+  branch: guide/5.0-akadaemia-anyder
   base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
   auth_endpoint: /ffxiv-pg-oauth/auth
   open_authoring: true

@@ -68,6 +68,7 @@ GEM
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.6.1)
+    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -78,9 +79,10 @@ DEPENDENCIES
   jekyll-feed
   jekyll-sitemap
   minima (~> 2.0)
+  wdm (>= 0.1.0)
 
 RUBY VERSION
-   ruby 2.6.4p104
+   ruby 2.6.5p114
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
