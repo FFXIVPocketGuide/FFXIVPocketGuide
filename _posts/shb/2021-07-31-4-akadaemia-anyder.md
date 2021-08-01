@@ -12,6 +12,9 @@ order: 80409
 description: "Read our guide for the FFXIV dungeon Akadaemia Anyder, where
   you'll face off against Cladoselache, Doliodus, Marquis Morbol, and Guardian
   Force: Quetzalcoatl."
+image:
+  url: /assets/img/akadaemia-anyder-full.jpg
+  urlSmall: /assets/img/akadaemia-anyder-small.jpg
 terms:
   - term: dungeon
   - term: shadowbringers
