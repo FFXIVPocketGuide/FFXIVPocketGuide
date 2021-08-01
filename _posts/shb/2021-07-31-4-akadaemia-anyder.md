@@ -25,7 +25,6 @@ terms:
   - term: Guardian Force Quetzalcoatl
 instanceType: dungeon
 mtqvid: https://youtu.be/I3GrCd_jNlA
-mechanics: []
 bosses:
   - title: Cladoselache and Dodiolus
     id: boss01
@@ -148,8 +147,6 @@ bosses:
           - alert: When the boss raises its tendrils, it will slam them down - stand between
               them, and stick to the boss' side to avoid the bile at the end.
           - alert: Avoid the glowing purple sections of the arena.
-        attacks:
-          - {}
     attacks:
       - type: regular
         title: Sap Shower
@@ -187,7 +184,6 @@ bosses:
               - note: The boss will raise its tendrils and slam them down onto the ground.
               - note: Stand in its "armpits" to avoid taking damage.
               - note: This will happen 5 times in a row before Bile Vomit.
-              - {}
           - title: Bile Vomit
             roles:
               - Everyone
@@ -238,7 +234,6 @@ bosses:
           - Healer
         tags:
           - Raid Wide AoE
-        images: []
         phases:
           - phase: 1
         notes:

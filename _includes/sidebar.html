@@ -91,6 +91,15 @@
                     </a>
                 </li>
 
+                <li>
+                  <a
+                    {% if page.page_category == "updates" %}class="active"{% endif %}
+                    href="/updates"
+                    title="See what's new with the Pocket Guide.">
+                    <img src='{{ "/assets/img/new.png" | prepend: site.baseurl }}' alt="A new icon." style="width: 1.5rem; vertical-align: middle; margin-bottom: .2rem; margin-right: .5rem;">Updates
+                  </a>
+                </li>
+
             </ul>
 
         </div>
