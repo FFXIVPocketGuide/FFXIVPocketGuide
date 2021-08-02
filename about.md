@@ -1,5 +1,5 @@
 ---
-layout: updates
+layout: about
 title: "Pocket Guide Announcements"
-page_category: "updates"
+page_category: "about"
 ---

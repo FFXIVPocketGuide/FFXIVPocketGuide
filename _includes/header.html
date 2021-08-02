@@ -15,7 +15,7 @@
     {% endcomment %}
 
     <div class="site-header__grid"
-        {% if page.page_type == "index" %}
+        {% if page.page_type == "index" or page.page_category == "about" %}
             style="background-image: url('{{ "/assets/img/5-5.jpg" | prepend: site.baseurl }}')"
         {% elsif page.image.url %}
             style="background-image: url('{{ page.image.url }}')"
@@ -47,6 +47,8 @@
                     Raid Guides
                     <br>
                     <br>
+                {% elsif page.page_category == "about" %}
+                    All About the Guide
                 {% else %}
                     {{ page.title }}<span
                         {% if page.difficulty == "Hard" %}

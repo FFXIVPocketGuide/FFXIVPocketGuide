@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: FFXIVPocketGuide/FFXIVPocketGuide
-  branch: guide/5.0-akadaemia-anyder
+  branch: master
   base_url: https://us-central1-thinking-window-255219.cloudfunctions.net
   auth_endpoint: /ffxiv-pg-oauth/auth
   open_authoring: true
@@ -80,15 +80,19 @@ attack-tags: &attack-tags
     - Buff
     - Cleave
     - Debuff
+    - Divebomb
+    - Gaze
     - Knockback
+    - Line-of-sight
     - Marker (Blue)
-    - Marker (Dice)
     - Marker (Green)
+    - Marker (Icon)
     - Marker (Orange)
     - Marker (Purple)
     - Marker (Red)
     - Marker (Yellow)
     - Minion
+    - Pull
     - Puddle
     - Raid-wide Damage
     - Spread

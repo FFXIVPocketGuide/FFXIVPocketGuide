@@ -29,6 +29,13 @@
     <ul class="sidebar__menu">
       <li>
         <a
+          {% if page.page_category == "about" %}class="active"{% endif %}
+          href="/about"
+          title="See what's new with the Pocket Guide.">
+          <img src='{{ "/assets/img/new.png" | prepend: site.baseurl }}' alt="A new icon." style="width: 1.5rem; vertical-align: middle; margin-bottom: .2rem; margin-right: .5rem;">About</a>
+      </li>
+      <li>
+        <a
           {% if page.page_category == "all" %}class="active"{% endif %}
           href="/"
           title="View All Guides.">All Guides</a>
@@ -53,13 +60,6 @@
           {% if page.instanceType == "raid" or page.instance_type == "Raid" or page.guide-type == "Raid" %}class="active"{% endif %}
           href="/raids"
           title="View Raid Guides.">Raids</a>
-      </li>
-      <li>
-        <a
-          {% if page.page_category == "updates" %}class="active"{% endif %}
-          href="/updates"
-          title="See what's new with the Pocket Guide.">
-          <img src='{{ "/assets/img/new.png" | prepend: site.baseurl }}' alt="A new icon." style="width: 1.5rem; vertical-align: middle; margin-bottom: .2rem; margin-right: .5rem;">Updates</a>
       </li>
     </ul>
   </div>
