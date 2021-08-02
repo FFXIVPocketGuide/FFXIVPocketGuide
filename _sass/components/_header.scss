@@ -132,10 +132,13 @@ header {
         font-weight: 400; 
 
         &.hard {
-            color: $palette--yellow;
+          color: $palette--yellow;
         }
 
-        &.savage,
+        &.savage {
+          color: #f48a20;
+        }
+
         &.extreme {
             color: $palette--red;
         }

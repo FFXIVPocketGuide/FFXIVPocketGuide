@@ -91,7 +91,10 @@
             color: $palette--yellow;
         }
 
-        &.savage,
+        &.savage {
+          color: #f48a20;
+        }
+
         &.extreme {
             color: $palette--red;
         }
