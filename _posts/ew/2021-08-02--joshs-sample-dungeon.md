@@ -9,7 +9,7 @@ patch: 6
 difficulty: Normal
 player-level: 90
 item-level: 500
-order: "{{ player-level }}{{ item-level }}"
+order: 90500
 description: Read our guide for the FFXIV dungeon Josh's Sample Dungeon
   (Normal), where you'll face off against Josh, Theo, and Joel.
 hero-image: /assets/img/4-3.jpg
@@ -40,9 +40,9 @@ bosses:
           - attack: Sarcasm
             duty-action: true
           - attack: Side Glare
-            duty-action: true
+            duty-action: false
           - attack: Snarky Remark
-            duty-action: true
+            duty-action: false
         attacks:
           - type: Regular
             name: Sarcasm

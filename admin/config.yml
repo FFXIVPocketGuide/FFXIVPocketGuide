@@ -278,8 +278,9 @@ guide-fields: &guide-fields
     required: true
   - label: "Guide Order"
     name: "order"
-    widget: "hidden"
-    default: "{{ player-level }}{{ item-level }}"
+    widget: "number"
+    value_type: "int"
+    hint: "This number determines where in the expansion the guide will fall on the homepage. Please combine the player level and item level together for best results. (e.g. 80 + 255 = 80255 )"
   - label: "Page Description"
     name: "description"
     widget: "string"
