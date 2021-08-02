@@ -18,29 +18,40 @@
 
     <!-- <br /> -->
 
-    <!-- Shadowbringers Guide Index ======================================== -->
+    <!-- Endwalker Guide Index ======================================== -->
 
     {% assign counter = 0 %}
-
-    {% for guide in site.categories.shb %}
-
-        {% include _components/index-counter.html %}
-
+    {% for guide in site.categories.ew %}
+      {% include _components/index-counter.html %}
     {% endfor %}
 
     {% if counter > 0 %}
+      <a id="endwalker"></a>
+      <div class="index-divider" data-expansion="ew">
+        <h2 class="index-divider__title">Endwalker</h2>
+      </div>
+      <div class="index__list" data-expansion="ew">
+        {% assign sorted = site.categories.ew | sort:"order" %}
+        {% include _components/index-list.html %}  
+      </div>
+    {% endif %}
 
-        <a id="shadowbringers"></a>
+    <!-- Shadowbringers Guide Index ======================================== -->
 
-        <div class="index-divider" data-expansion="shb">
-            <h2 class="index-divider__title">Shadowbringers</h2>
-		</div>
+    {% assign counter = 0 %}
+    {% for guide in site.categories.shb %}
+      {% include _components/index-counter.html %}
+    {% endfor %}
 
-        <div class="index__list" data-expansion="shb">
-            {% assign sorted = site.categories.shb | sort:"order" %}
-            {% include _components/index-list.html %}  
-        </div>
-        
+    {% if counter > 0 %}
+      <a id="shadowbringers"></a>
+      <div class="index-divider" data-expansion="shb">
+        <h2 class="index-divider__title">Shadowbringers</h2>
+      </div>
+      <div class="index__list" data-expansion="shb">
+        {% assign sorted = site.categories.shb | sort:"order" %}
+        {% include _components/index-list.html %}  
+      </div>
     {% endif %}
 
     <!-- Stormblood Guide Index ============================================ -->

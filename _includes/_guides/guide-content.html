@@ -6,18 +6,22 @@
 
 <div class="guide-content">
 
-    <!-- Duty Mechanics -->
+  <!-- Duty Mechanics -->
+  {% if page.layout == "new-guide" %}
+    <!-- New Guides -->
+    {% if page.instance-mechanics and page.instance-mechanics != empty %}
+      {% include _guides/guide-duty-mechanics.html %}
+    {% endif %}
+  {% else %}
+    <!-- Old Guides -->
     {% if page.duty_mechanics != empty %}
-    
-        {% include _guides/guide-duty-mechanics.html %}
-
+      {% include _guides/guide-duty-mechanics.html %}
     {% endif %}
+  {% endif %}
 
-    <!-- Bosses -->
-    {% if page.bosses %}
-
-        {% include _guides/guide-bosses.html %}
-
-    {% endif %}
+  <!-- Bosses -->
+  {% if page.bosses %}
+    {% include _guides/guide-bosses.html %}
+  {% endif %}
 
 </div>

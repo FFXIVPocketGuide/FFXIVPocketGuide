@@ -16,8 +16,9 @@
             {% if guide.cover %}
                 style="background-image: url('{{ guide.cover }}')" 
             {% elsif guide.image.urlSmall %}
-                {{ guide.image.urlSmall }}
                 style="background-image: url('{{ guide.image.urlSmall }}')" 
+            {% elsif guide.list-image %}
+              style="background-image: url('{{ guide.list-image }}')" 
             {% elsif guide.image %}
                 style="background-image: url('{% for image in guide.image %}{{ image.urlSmall }}{% endfor %}')" 
             {% endif %}>
@@ -26,7 +27,11 @@
 
         <h3 
             class="index-item__title" 
-            data-terms="{% for term in guide.terms %}{{ term.term }}&#32;{% endfor %}">
+            {% if guide.layout == "new-guide" %}
+              data-terms="{{ guide.title }}&#32;{{ guide.guide-type }}&#32;{{ guide.categories }}&#32;{% for term in guide.search-terms %}{{ term }}&#32;{% endfor %}"
+            {% else %}
+              data-terms="{% for term in guide.terms %}{{ term.term }}&#32;{% endfor %}"
+            {% endif %}>
             {{ guide.title }}
             <span
                 {% if guide.difficulty == "Hard" %}

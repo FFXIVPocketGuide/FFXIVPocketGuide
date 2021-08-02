@@ -1,0 +1,5 @@
+patches:
+  - patch: 6.0
+    name: Endwalker
+  - patch: 5.0
+    name: Shadowbringers

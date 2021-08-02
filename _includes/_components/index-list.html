@@ -8,7 +8,7 @@
 
     {% elsif page.page_category == "dungeons" %}
 
-        {% if guide.instanceType == "dungeon" or guide.instance_type == "Dungeon" %}
+        {% if guide.instanceType == "dungeon" or guide.instance_type == "Dungeon" or guide.guide-type == "Dungeon"%}
 
             {% assign counter = counter | plus: 1 %}
 
@@ -18,7 +18,7 @@
 
     {% elsif page.page_category == "trials" %}
 
-        {% if guide.instanceType == "trial" or guide.instance_type == "Trial" %}
+        {% if guide.instanceType == "trial" or guide.instance_type == "Trial" or guide.guide-type == "Trial"%}
 
             {% assign counter = counter | plus: 1 %}
 
@@ -28,7 +28,7 @@
 
     {% elsif page.page_category == "raids" %}
 
-        {% if guide.instanceType == "raid" or guide.instance_type == "Raid" %}
+        {% if guide.instanceType == "raid" or guide.instance_type == "Raid" or guide.guide-type == "Raid"%}
 
             {% assign counter = counter | plus: 1 %}
 
