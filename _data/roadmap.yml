@@ -1,15 +1,15 @@
 - name: Shadowbringers Story Guides
   pinned: false
   icon: 🧾
-  link: 
+  link: https://github.com/FFXIVPocketGuide/FFXIVPocketGuide/issues/196
   summary: After a long hiatus, we'd like to return by completing the long list of instances offered in the Shadowbringers expansion before Endwalker releases. Want to see our progress? Check out the Github issue for more information.
 - name: Pocket Guide Beta
   pinned: true
   icon: 💎
-  link:
+  link: https://github.com/FFXIVPocketGuide/FFXIVPocketGuide/issues/195
   summary: We want to rework and modernize the Pocket Guide. A new, bolder look and feel, better organization and mobile support, and closer integration with our content management solution. <strong>We want your feedback!</strong> Check out the Github issue for what's coming next!
 - name: Community Contributions
   pinned: false
   icon: 🤝
-  link:
+  link: https://github.com/FFXIVPocketGuide/FFXIVPocketGuide/issues/197
   summary: We're hoping to simplify the guide creation process so that we can onboard fans and players who are willing to invest their time creating guides for others. The process will involve transcription, content entry, and then a review with one of the guide's team members. Your name will even go up on the page to show the world how great you are.
