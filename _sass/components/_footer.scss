@@ -16,7 +16,7 @@ section.footer {
     }
 
     @media screen and (orientation: landscape) and (min-width: 70em) {
-        padding: calc(#{$unit} * 5) 0;
+        padding: calc(#{$unit} * 3) 0;
     }
 
 }

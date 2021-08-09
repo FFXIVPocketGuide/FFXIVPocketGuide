@@ -14,16 +14,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: FFXIV Pocket Guide
-email: imjoshdrink@gmail.com
+email: josh.beveridge@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
-  A collection of mobile friendly guides to help players navigate group content in Final Fantasy XIV. Guide content has been compiled from video guides produced by MTQCapture.
+  A collection of mobile friendly guides to help players navigate group content in Final Fantasy XIV.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ffxiv.joshdrink.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ffxivpocketguide.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-repository: joshdrink/joshdrink.github.io
+repository: https://github.com/FFXIVPocketGuide/FFXIVPocketGuide
 
 twitter_username: ff14pocketguide
-github_username:  joshdrink
+github_username:  JoshBeveridge
 
 # Build settings
 markdown: kramdown

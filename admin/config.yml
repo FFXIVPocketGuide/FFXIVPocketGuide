@@ -7,214 +7,340 @@ backend:
   open_authoring: true
 
 publish_mode: editorial_workflow
+show_preview_links: false
 
 media_folder: "assets/img"
 
-# COMMON ATTACK FIELDS
-field_attack_name: &field_attack_name
+mechanic-fields: &mechanic-fields
+  label: "Instance-wide Mechanics"
+  name: "instance-mechanics"
+  widget: "list"
+  fields:
+    - label: "Mechanic Name"
+      name: "name"
+      widget: "string"
+    - label: "Mechanic Steps"
+      name: "steps"
+      widget: "list"
+      fields:
+        - label: "Step Name or Number"
+          name: "name"
+          widget: "string"
+        - label: "Step Notes"
+          name: "notes"
+          widget: "list"
+          field:
+            label: "Step Note"
+            name: ""
+            widget: "string"
+
+attack-name: &attack-name
   label: "Attack Name"
-  name: "title"
+  name: "name"
   widget: "string"
 
-field_roles: &field_roles
-  label: "Roles"
+attack-duty-action: &attack-duty-action
+  label: "Duty Action"
+  name: "duty-action"
+  widget: "list"
+  field:
+    label: "Duty Action Name"
+    name: ""
+    widget: "string"
+
+attack-roles: &attack-roles
+  label: "Required Party Roles"
   name: "roles"
   widget: "select"
   multiple: true
-  options: ["Tank", "Healer", "Melee DPS", "Ranged DPS", "Everyone"]
-  required: false
+  options:
+    - "Everyone"
+    - "Tank"
+    - "Healer"
+    - "Melee DPS"
+    - "Ranged DPS"
 
-field_tags: &field_tags
-  label: "Tags"
+attack-tags: &attack-tags
+  label: "Attack Types"
   name: "tags"
   widget: "select"
   multiple: true
-  options: ["Cone AoE", "Circular AoE", "Puddle AoE", "Donut AoE", "Column AoE", "Area AoE", "Point Blank AoE", "Raid Wide AoE", "Proximity AoE", "Cross AoE", "Figure 8 AoE", "Knockback", "Cleave", "Buff", "Debuff", "Tankbuster", "Stack", "Spread", "Tether", "Stun", "Mechanic", "Animation", "Spawn", "Ultimate", "Active Time Maneuver", "Marker"]
-  required: false
+  options:
+    - Active Time Maneuver
+    - Animation
+    - AoE (Area)
+    - AoE (Cone)
+    - AoE (Circle)
+    - AoE (Column)
+    - AoE (Cross)
+    - AoE (Donut)
+    - AoE (Figure 8)
+    - AoE (Point-blank)
+    - AoE (Proximity)
+    - Buff
+    - Cleave
+    - Debuff
+    - Divebomb
+    - Gaze
+    - Knockback
+    - Line-of-sight
+    - Marker (Blue)
+    - Marker (Green)
+    - Marker (Icon)
+    - Marker (Orange)
+    - Marker (Purple)
+    - Marker (Red)
+    - Marker (Yellow)
+    - Minion
+    - Pull
+    - Puddle
+    - Raid-wide Damage
+    - Spread
+    - Stack
+    - Stun
+    - Tankbuster
+    - Tether
+    - Ultimate
+    - Unique Mechanic
 
-field_dutyActions: &field_dutyActions
-  label: "Duty Actions"
-  name: "dutyActions"
-  widget: "list"
-  fields: 
-    - {label: "Duty Action Name", name: "action", widget: "string", required: false}
-
-field_notes: &field_notes
-  label: "Notes"
+attack-notes: &attack-notes
+  label: "Attack Notes"
   name: "notes"
   widget: "list"
-  fields: 
-    - {label: "Note Text", name: "note", widget: "text", required: false}
+  field:
+    label: "Details"
+    name: ""
+    widget: "string"
 
-field_attack_images: &field_attack_images
+attack-images: &attack-images
   label: "Attack Images"
   name: "images"
   widget: "list"
+  hint: "Useful for highlighting particular choreography on the arena or specific iconographies or telegraphs."
   fields:
-    - {label: "Image Upload", name: "url", widget: "image", allowMultiple: false, required: false, hint: "Include any choreography layouts/maps related to the attack."}
-    - {label: "Image Alt Text", name: "alt", widget: "string", required: false, hint: "Text to be displayed if the image cannot be loaded"}
+    - label: "Image Upload"
+      name: "image"
+      widget: "image"
+    - label: "Image Alt Text"
+      name: "alt"
+      widget: "string"
+      hint: "Used to describe the image to assistive technologies."
 
-field_related_phases: &field_related_phases
-  label: "Related Phases"
-  name: "phases"
+boss-fields: &boss-fields
+  label: "Bosses"
+  name: "bosses"
   widget: "list"
-  fields: 
-    - {name: "phase", widget: "number", valueType: "int"}
+  fields:
+    - label: "Boss Name"
+      name: "name"
+      widget: "string"
+      required: true
+    - label: "Fight Phases"
+      name: "phases"
+      summary: "Boss Phase"
+      widget: "list"
+      fields:
+        - label: "Phase Notes"
+          name: "notes"
+          widget: "list"
+          field:
+            label: "Phase Note"
+            name: ""
+            widget: "string"
+        - label: "Attack Script"
+          name: "script"
+          widget: "list"
+          hint: "An optional list of attacks showing their order during the fight. This is particularly useful for choreograhed fights."
+          fields:
+            - label: "Attack Name"
+              name: "attack"
+              widget: "string"
+            - label: "Is a duty action required for this attack?"
+              name: "duty-action"
+              widget: "boolean"
+              required: false
+        - label: "Boss Attacks"
+          name: "attacks"
+          widget: "list"
+          types:
+            - label: "Regular Attack"
+              name: "Regular"
+              summary: '{{fields.name}}'
+              widget: "object"
+              fields:
+                - *attack-name
+                - *attack-duty-action
+                - *attack-roles
+                - *attack-tags
+                - *attack-notes
+                - *attack-images
+            - label: "Combo Attack"
+              name: "Combo"
+              summary: '{{fields.name}}'
+              widget: "object"
+              fields:
+                - label: "Combo Name"
+                  name: "name"
+                  widget: "string"
+                - label: "Attacks in the Combo"
+                  name: "combos"
+                  widget: "list"
+                  fields:
+                    - *attack-name
+                    - *attack-duty-action
+                    - *attack-roles
+                    - *attack-tags
+                    - *attack-notes
+                    - *attack-images
+            - label: "Attack with Variations"
+              name: "Variation"
+              summary: '{{fields.name}}'
+              widget: "object"
+              fields:
+                - label: "Attack Name"
+                  name: "name"
+                  widget: "string"
+                - label: "Variations of the Attack"
+                  name: "variations"
+                  widget: "list"
+                  fields:
+                    - *attack-name
+                    - *attack-duty-action
+                    - *attack-roles
+                    - *attack-tags
+                    - *attack-notes
+                    - *attack-images
 
-common_attack_fields: &common_attack_fields
-  - *field_attack_name
-  - *field_roles
-  - *field_tags
-  - *field_dutyActions
-  - *field_notes
-  - *field_attack_images
-
-fields_template: &common_fields
+guide-fields: &guide-fields
+  - label: "Guide Layout"
+    name: "layout"
+    widget: "hidden"
+    required: true
+    default: "new-guide"
+  - label: "Content Management System"
+    name: "cms"
+    widget: "hidden"
+    required: true
+    default: "netlify-cms"
+  - label: "Type of Instance"
+    name: "guide-type"
+    widget: "select"
+    options:
+      - "Dungeon"
+      - "Trial"
+      - "Raid"
+    required: true
+  - label: "Instance Title"
+    name: "title"
+    widget: "string"
+    required: true
+  - label: "Page URL"
+    name: "slug"
+    widget: "string"
+    required: true
+    hint: "Used as the page's identifier in the resulting URL. We suggest simply a lowercase version of the Instance Title, with spaces replaced by dashes. e.g. Akadaemia Anyder > akadaemia-anyder"
   - label: "Expansion"
     name: "categories"
     widget: "select"
-    options: 
-      - {label: "Shadowbringers", value: "shb"}
-      - {label: "Stormblood", value: "sb"}
-      - {label: "Heavensward", value: "hw"}
-      - {label: "A Realm Reborn", value: "arr"}
-    hint: "The expansion to which the duty belongs. Used by front-end for categorizing the Guide."
-  - {label: "Patch Number", name: "patchNumber", valueType: "float", widget: "number", hint: "Patch Number of Duty. Ex. 4.0"}
-  - {label: "Patch Name", name: "patchName", widget: "string", hint: "The name of the patch. Ex. Shadowbringers, Dreams of Ice, or Under the Moonlight"}
-  - {label: "Title", name: "title", widget: "string", hint: "Name of the Duty. Show match what's in the Duty Finder. Ex. Malikah's Well"}
-  - {label: "Slug", name: "slug", widget: "string", hint: "Simplified name of the duty for use in the URL and file name. Use hyphens for spaces and lower case, only characters. Ex. malikahs-well"}
-  - {label: "Difficulty", name: "difficulty", widget: "select", options: ["Normal", "Hard", "Extreme", "Savage", "Ultimate"]}
-  - {label: "Player Level", name: "plvl", valueType: "int", widget: "number", hint: "Player level of the duty."}
-  - {label: "Item Level", name: "ilvl", valueType: "int", widget: "number", hint: "Minimum item level of the duty."}
-  - {label: "Guide Created Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "MM/DD/YYYY", timeFormat: false, hint: "Created Date for Guide. Leave as the default current date."}
-  - {label: "Sorting Order", name: "order", widget: "number", valueType: "int", required: false, hint: "Concatenate the Player Level and Item Level. Used for sorting the guide on the home page. Ex. 70300" }
-  - {label: "Description", name: "description", widget: "text", required: false, hint: "Guide's description (Shows up in Google Search) with name of duty and names of bosses within. Ex. Read our Guide on the dungeon Hells' Lid (Normal) where you'll face off against Otake-maru, Kamaitachi, and Genbu."}
-  - label: "Images"
-    name: "image"
-    widget: "object"
-    fields:
-      - {label: "Primary Banner Image", name: "url", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Primary image (1500px Wide)", required: false}
-      - {label: "Thumbnail Image", name: "urlSmall", widget: "image", allowMultiple: false, hint: "Upload an image representing the duty. Thumbnail image (500px Wide)", required: false}
+    options:
+      - label: "Endwalker"
+        value: "ew"
+      - label: "Shadowbringers"
+        value: "shb"
+      - label: "Stormblood"
+        value: "sb"
+      - label: "Heavensward"
+        value: "hw"
+      - label: "A Realm Reborn"
+        value: "arr"
+    required: true
+  - label: "Patch"
+    name: "patch"
+    widget: "number"
+    value_type: "float"
+    required: true
+  - label: "Difficulty"
+    name: "difficulty"
+    widget: "select"
+    options:
+      - "Normal"
+      - "Hard"
+      - "Extreme"
+      - "Savage"
+      - "Ultimate"
+      - "Unreal"
+    required: true
+  - label: "Minimum Player Level"
+    name: "player-level"
+    widget: "number"
+    value_type: "int"
+    required: true
+  - label: "Minimum Item Level"
+    name: "item-level"
+    widget: "number"
+    value_type: "int"
+    required: true
+  - label: "Guide Order"
+    name: "order"
+    widget: "number"
+    value_type: "int"
+    hint: "This number determines where in the expansion the guide will fall on the homepage. Please combine the player level and item level together for best results. (e.g. 80 + 255 = 80255 )"
+  - label: "Page Description"
+    name: "description"
+    widget: "string"
+    default: "Read our guide for the FFXIV [dungeon, trial, raid] [instance name] ([difficulty]), where you'll face off against [boss 1], [boss 2], and [boss 3]."
+    required: true
+  - label: "Main Banner Image"
+    name: "hero-image"
+    widget: "image"
+    allowMultiple: false
     required: false
-  - label: "Terms"
-    name: "terms"
-    widget: "list"
-    fields: 
-      - {label: Term, name: term, widget: string}
+  - label: "Thumbnail Image"
+    name: "list-image"
+    widget: "image"
+    allowMultiple: false
     required: false
-    hint: "Multiple Search Terms (Include Nicknames, Name, Bosses, and Difficulty Ex. Stormblood, SB, The Sirensong Sea, Lugat, The Governor, Lorelei, Normal"
-  - {label: "Orchestrion Roll", name: "orchestrion", required: false, widget: "string", hint: "The name of the orchestrion roll(s) that drop from the duty. Ex. Primal Judgement"}
-  - {label: "Minion(s)", name: "minion", required: false, widget: "string", hint: "The name of the minion(s) that drop from the duty. Ex. Forgiven Hate"}
-  - label: "Triple Triad Card(s)"
-    name: "triple-triad"
+    hint: "This image will be displayed on the list of guides."
+  - label: "Search Terms"
+    name: "search-terms"
+    widget: "list"
     required: false
-    widget: "list"
-    fields: 
-      - {label: "Card Name", name: "card-name", widget: "string"}
-    hint: "The name of the card(s) that drop from the duty. Ex. Seeker of Solitude Card"
-  - {label: "Instance Type", name: "instanceType", widget: "select", options: ["dungeon", "trial", "raid"], required: false}
-  - {label: "MTQ Capture Video", name: "mtqvid", widget: "string", required: false, hint: "Link connected to the MTQ youtube guide of duty."}
-  - label: "Beginning Duty Mechanic"
-    name: "mechanics"
+    hint: "Comma separate a list of terms, nicknames, etc. that are relevant to this instance."
+  - label: "Link to Video Guide"
+    name: "video-url"
+    widget: "string"
     required: false
-    widget: "list"
-    fields:
-      - {label: "Name", name: "title", widget: "string", hint: "Name of the mechanic. Ex. Coloured Coral"}
-      - label: "Mechanics"
-        name: "steps"
-        widget: "list"
-        fields:
-          - {label: "Note Number", name: "step", widget: "number", valueType: "int", required: false, hint: "Number list of steps. Ex. 01, 02, 03, etc."}
-          - label: "Mechanic Notes"
-            name: "notes"
-            widget: "list"
-            fields: 
-              - {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Notes of specific attacks or mechanics. Ex. Early in the dungeon there is a room off to the side with an item that can be interacted with - it contains a message with a colour on it."}
-  - label: "Bosses"
-    name: "bosses"
-    widget: "list"
-    fields:
-      - {label: "Boss Name", name: "title", widget: "string", hint: "Name of Boss. Ex. Otake-maru"}
-      - {label: "Boss Id", name: "id", widget: "string", hint: "Boss ID (Used in Sidebar Menu Navigation) Ex. boss01, boss02, boss03, etc."}
-      - label: "Phases"
-        name: "sequence"
-        widget: "list"
-        fields:
-          - {label: "Phase Number", name: "phase", widget: "number", valueType: "int", hint: "Number of the phase. Dungeons usually only needs 01 on all. Ex. 01, 02, 03, etc."}
-          - label: "Alert"
-            name: "alerts"
-            widget: "list"
-            fields: 
-              - {label: "Alert Text", name: "alert", widget: "text", required: false, hint: "Notes about the phase. Ex. The boss will occasionally target a random player and chase them around the arena while it vomits lava - this player should keep moving away from the boss."}
-          - label: "Mechanics"
-            name: "mechanics"
-            widget: "list"
-            fields: 
-              - {label: "Mechanic Title", name: "title", widget: "string", hint: "Name of the mechanic. Ex. Volcanic Debris (Include Duty Gauges in relevant phase Ex. Vril)"}
-              - label: "Mechanic Notes"
-                name: "notes"
-                widget: "list"
-                fields: 
-                  - {label: "Mechanic Note", name: "note", widget: "text", required: false, hint: "Throughout the fight, circular AoEs will appear at random, dropping boulders from the ceiling - avoid as necessary."}
-          - label: "Attack Sequence"
-            name: "attacks"
-            widget: "list"
-            fields: 
-              - {label: "Attack Name", name: "attack", widget: "string", required: false}
-              - {label: "Duty Action", name: "dutyActions", required: false, widget: "boolean"}
-      - label: "Boss Attacks"
-        name: "attacks"
-        widget: "list"
-        types:
-          - label: "Regular Attack"
-            name: "regular"
-            widget: object
-            fields:
-              - *field_attack_name
-              - *field_roles
-              - *field_tags
-              - *field_dutyActions
-              - *field_notes
-              - *field_attack_images
-              - *field_related_phases
-          - label: "Combo Attack"
-            name: "combo"
-            widget: object
-            fields:
-              - {label: "Attack Name", name: "title", widget: "string"}
-              - *field_related_phases
-              - label: "Sub-Attacks"
-                name: "combo"
-                widget: list
-                fields:
-                  *common_attack_fields
-          - label: "Variation Attack"
-            name: "variation"
-            widget: object
-            fields:
-              - {label: "Attack Name", name: "title", widget: "string"}
-              - *field_related_phases
-              - label: "Sub-Attacks"
-                name: "variation"
-                widget: list
-                fields:
-                  *common_attack_fields
-  # Hidden fields
-  - {label: "Layout", name: "layout", widget: "hidden", default: "guide_post"}
-  - {label: "CMS Used", name: "cms", widget: "hidden", default: "netlify-cms"}
+  - *mechanic-fields
+  - *boss-fields
 
 collections:
+  - name: "ew"
+    label: "Endwalker"
+    delete: false
+    label_singular: "Endwalker Guide"
+    folder: "_posts/ew"
+    create: true
+    editor:
+      preview: false
+    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
+    filter: { field: "cms", value: "netlify-cms" }
+    fields:
+      *guide-fields
+
   - name: "shb"
     label: "Shadowbringers"
     delete: false
     label_singular: "Shadowbringers Guide"
     folder: "_posts/shb"
     create: true
+    editor:
+      preview: false
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields:
-      *common_fields
+      *guide-fields
 
   - name: "sb"
     label: "Stormblood"
@@ -222,11 +348,13 @@ collections:
     label_singular: "Stormblood Guide"
     folder: "_posts/sb"
     create: true
+    editor:
+      preview: false
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields:
-      *common_fields
+      *guide-fields
 
   - name: "hw"
     label: "Heavensward"
@@ -234,11 +362,13 @@ collections:
     label_singular: "Heavensward Guide"
     folder: "_posts/hw"
     create: true
+    editor:
+      preview: false
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields: 
-      *common_fields
+      *guide-fields
 
   - name: "arr"
     label: "A Realm Reborn"
@@ -246,8 +376,10 @@ collections:
     label_singular: "A Realm Reborn Guide"
     folder: "_posts/arr"
     create: true
+    editor:
+      preview: false
     slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields: 
-      *common_fields
+      *guide-fields

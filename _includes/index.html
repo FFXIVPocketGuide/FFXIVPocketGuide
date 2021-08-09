@@ -6,41 +6,52 @@
 
 <div class="index">
 
-    <br />
+    <!-- <br /> -->
 
-    <div class="index__announcement" id="shadowbringersContent">
+    <!-- <div class="index__announcement" id="shadowbringersContent">
         <div class="wrapper">
             <p><strong>COVID Update</strong></p>
             <p>Hey folks, I just wanted to let everyone know that, like most of the world, work on the Pocket Guide has slowed thanks to COVID-19 and its widespread effects on all of our lives. That being said, the work we described to increase the feasibility of contribution and publishing new guides has moved forward significantly thanks to our collaborators. Keep an eye out for further progress soon!</p>
             <p>If you have interest in contributing to this work, or are interested in publishing content down the road, please reach out to us over on <a href="https://github.com/FFXIVPocketGuide/FFXIVPocketGuide" title="Visit the Pocket Guide on Github.">Github</a>.</p>
         </div>
-    </div>
+    </div> -->
 
-    <br />
+    <!-- <br /> -->
+
+    <!-- Endwalker Guide Index ======================================== -->
+
+    {% assign counter = 0 %}
+    {% for guide in site.categories.ew %}
+      {% include _components/index-counter.html %}
+    {% endfor %}
+
+    {% if counter > 0 %}
+      <a id="endwalker"></a>
+      <div class="index-divider" data-expansion="ew">
+        <h2 class="index-divider__title">Endwalker</h2>
+      </div>
+      <div class="index__list" data-expansion="ew">
+        {% assign sorted = site.categories.ew | sort:"order" %}
+        {% include _components/index-list.html %}  
+      </div>
+    {% endif %}
 
     <!-- Shadowbringers Guide Index ======================================== -->
 
     {% assign counter = 0 %}
-
     {% for guide in site.categories.shb %}
-
-        {% include _components/index-counter.html %}
-
+      {% include _components/index-counter.html %}
     {% endfor %}
 
     {% if counter > 0 %}
-
-        <a id="shadowbringers"></a>
-
-        <div class="index-divider" data-expansion="shb">
-            <h2 class="index-divider__title">Shadowbringers</h2>
-		</div>
-
-        <div class="index__list" data-expansion="shb">
-            {% assign sorted = site.categories.shb | sort:"order" %}
-            {% include _components/index-list.html %}  
-        </div>
-        
+      <a id="shadowbringers"></a>
+      <div class="index-divider" data-expansion="shb">
+        <h2 class="index-divider__title">Shadowbringers</h2>
+      </div>
+      <div class="index__list" data-expansion="shb">
+        {% assign sorted = site.categories.shb | sort:"order" %}
+        {% include _components/index-list.html %}  
+      </div>
     {% endif %}
 
     <!-- Stormblood Guide Index ============================================ -->

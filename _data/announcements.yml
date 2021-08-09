@@ -1,0 +1,9 @@
+- pinned: true
+  date: 2021/AUG/02
+  content: You can now access the guide by simply using <a href="https://ffxiv.guide" title="Try out our new, shorter URL!" target="_blank" rel="noreferrer">ffxiv.guide</a>!
+- pinned: true
+  date: 2021/AUG/02
+  content: We're planning to open up a Discord channel for the guide. Check back for more updates!
+- pinned: false
+  date: 2021/AUG/02
+  content: We're now piloting a new content management solution using Netlify CMS. Want to contribute? <a href="https://github.com/FFXIVPocketGuide/FFXIVPocketGuide" title="Check us out on Github." target="_blank" rel="noreferrer">Get in touch!</a>
