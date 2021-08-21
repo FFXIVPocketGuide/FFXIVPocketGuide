@@ -1,0 +1,273 @@
+---
+layout: guide_post
+cms: netlify-cms
+guide-type: Dungeon
+title: Holminster Switch
+slug: holminster-switch
+categories: shb
+patch: 5
+difficulty: Normal
+player-level: 71
+item-level: 370
+order: 71370
+description: Read our guide for the FFXIV dungeon Holminster Switch (Normal),
+  where you'll face off against Forgiven Dissonance, Tesleen, the Forgiven, and
+  Lightwarden Philia..
+hero-image: /assets/img/untitled.png
+list-image: /assets/img/untitled.png
+search-terms:
+  - shb
+  - holminster
+  - switch
+  - shadowbringers
+  - forgiven
+  - dissonance
+  - tesleen
+  - forgiven
+  - lightwarden
+  - philia
+date: 2021-08-02
+video-url: https://www.youtube.com/watch?v=qrI4Zn5CfzM
+bosses:
+  - name: Forgiven Dissonance
+    phases:
+      - attacks:
+          - type: Regular
+            name: Path of Light
+            duty-action: []
+            roles:
+              - Healer
+            tags:
+              - Raid-wide Damage
+            notes:
+              - Will hit the group for high damage - heal as necessary.
+          - type: Combo
+            name: Brazen Bull and Thumbscrew
+            combos:
+              - name: Brazen Bull
+                roles:
+                  - Everyone
+                tags:
+                  - AoE (Area)
+                notes:
+                  - The boss will move to the center and spawn orbs in a variety
+                    of patterns.
+                  - These orbs will trigger column AoE's from their location,
+                    covering the arena in criss-cross patterns.
+                  - Safe zones will be targeted by Thumbscrew, so be careful.
+              - name: Thumbscrew
+                roles:
+                  - Everyone
+                tags:
+                  - Divebomb
+                  - AoE (Column)
+                notes:
+                  - While the orbs from Brazen Bull trigger their column AoEs,
+                    the boss will face the safe zone and divebomb to the edge of
+                    the arena.
+                  - This part of the attack is telegraphed with a distinct blue
+                    column.
+          - type: Regular
+            name: Gibbet Cage
+            roles:
+              - Everyone
+            tags:
+              - AoE (Point-blank)
+            notes:
+              - The boss will attack with a point-blank AoE from its location -
+                move away to avoid being hit.
+          - type: Regular
+            name: Wooden Horse
+            roles:
+              - Everyone
+            tags:
+              - AoE (Cone)
+            notes:
+              - While on the edge of the arena, the boss can attack in a large
+                cone, that will cover most of the arena.
+          - type: Regular
+            name: Pillory
+            roles:
+              - Tank
+              - Healer
+            tags:
+              - Tankbuster
+            notes:
+              - This will hit the tank for high damage - cooldown and heal as
+                necessary.
+        notes:
+          - There are a lot of AoEs going on in this fight - pay attention to
+            patterns to learn the safe spots.
+  - name: Tesleen, the Forgiven
+    phases:
+      - notes:
+          - When players are marked with 1, 2, 3, or 4, this will indicate the
+            order the boss attacks them, so all players should avoid each other
+            while this attack plays out.
+        attacks:
+          - type: Regular
+            name: The Tickler
+            roles:
+              - Tank
+              - Healer
+            tags:
+              - Tankbuster
+            notes:
+              - This will hit the tank for high damage - cooldown and heal as
+                necessary.
+          - type: Regular
+            name: Scold's Bridle
+            roles:
+              - Healer
+            tags:
+              - Raid-wide Damage
+            notes:
+              - This will hit the whole party for high damage - heal as
+                necessary.
+          - type: Regular
+            name: Fevered Flagellation
+            roles:
+              - Everyone
+            tags:
+              - Marker (Icon)
+              - Spread
+            notes:
+              - Each player will be marked with a number from 1 through 4.
+              - The boss will attack each player in the order of their marker.
+              - All players should avoid each other to avoid splash damage.
+          - type: Regular
+            name: Exorcise
+            roles:
+              - Everyone
+            tags:
+              - Puddle
+              - Stack
+            notes:
+              - 4 puddles will be placed on the arena.
+              - 1 player will be marked with a stack marker and everyone should
+                stack on their location.
+              - Note that where you stack, a 5th puddle will drop, so
+                immediately move out when possible.
+  - name: Lightwarden Philia
+    phases:
+      - notes:
+          - When a player is chained by the boss, attack the chain on them as
+            fast as possible or they will die.
+          - Pay attention to which leg the boss lifts and move to the opposite
+            side of the arena.
+          - During fierce beating, it's safer to be on the boss' right side, so
+            if you can position there, great.
+        attacks:
+          - type: Regular
+            name: Scavenger's Daughter
+            roles:
+              - Healer
+            tags:
+              - Raid-wide Damage
+            notes:
+              - The boss will hit the group with raid-wide damage - heal as
+                necessary.
+          - type: Regular
+            name: Headcrusher
+            roles:
+              - Tank
+              - Healer
+            tags:
+              - Tankbuster
+            notes:
+              - This attack will hit the tank for high damage - cooldown and
+                heal as necessary.
+          - type: Regular
+            name: Pendulum
+            roles:
+              - Tank
+              - Everyone
+            tags:
+              - Spread
+              - AoE (Proximity)
+            notes:
+              - The tank will be marked with a spread marker - all players
+                should move as far away from them as possible.
+              - At the same time, a proximity AoE will be placed in the center
+                of the arena - all players, tank included should move to the
+                edge of the arena.
+              - For optimal damage reduction, the tank should run to the edge
+                the boss is facing, while everyone else should go to the edge
+                behind the boss.
+          - type: Regular
+            name: Chain Down
+            roles:
+              - Everyone
+            tags:
+              - Stun
+              - Marker (Red)
+              - AoE (Cone)
+            notes:
+              - A random player will be chained in place, and the boss will
+                target them with a large cone AoE.
+              - All remaining players should immediately destroy the chain
+                holding the player in place and then leave the danger area.
+              - The cone AoE will persist for a bit, so avoid running into it
+                before it finishes.
+          - type: Regular
+            name: Knout
+            roles:
+              - Everyone
+            tags:
+              - AoE (Area)
+            notes:
+              - The boss will lift one of its legs and slam it down on that side
+                of the arena.
+              - Players should move to the opposite side to avoid damage.
+          - type: Regular
+            name: Taphephobia
+            roles:
+              - Everyone
+            tags:
+              - Marker (Purple)
+              - AoE (Circle)
+            notes:
+              - All players will be marked with a purple marker - avoid other
+                players.
+          - type: Regular
+            name: Into the Light
+            roles:
+              - Everyone
+            tags:
+              - Line-of-sight
+            notes:
+              - One player will be marked with a line-of-sight marker - all
+                players should stand in a line between the boss and the player
+                to soak damage.
+          - type: Combo
+            name: Fierce Beating
+            combos:
+              - name: Point-blank AoE
+                roles:
+                  - Everyone
+                tags:
+                  - AoE (Point-blank)
+                notes:
+                  - Throughout the duration of Fierce Beating, the boss' hitbox
+                    will always be a damage zone.
+              - name: Ground Smash
+                roles:
+                  - Everyone
+                tags:
+                  - AoE (Column)
+                notes:
+                  - The boss will slam its fists down in front of it.
+                  - After the attack executes, the boss will turn and perform
+                    the attack again. This will continue until it completes a
+                    full circle.
+              - name: Tailswipe
+                roles:
+                  - Everyone
+                tags:
+                  - AoE (Cone)
+                notes:
+                  - At the same time that the boss is smashing the ground in
+                    front of it, it will also attack in a wide cone with its
+                    tail.
+                  - The safe zone is on boss' sides, but not in its hitbox.
+---
