@@ -322,7 +322,7 @@ collections:
     create: true
     editor:
       preview: false
-    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields:
@@ -336,7 +336,7 @@ collections:
     create: true
     editor:
       preview: false
-    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields:
@@ -350,7 +350,7 @@ collections:
     create: true
     editor:
       preview: false
-    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields:
@@ -364,7 +364,7 @@ collections:
     create: true
     editor:
       preview: false
-    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields: 
@@ -378,7 +378,7 @@ collections:
     create: true
     editor:
       preview: false
-    slug: "{{year}}-{{month}}-{{day}}-{{patchNumber}}-{{fields.slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}"
     summary: "{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}"
     filter: { field: "cms", value: "netlify-cms" }
     fields: 
