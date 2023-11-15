@@ -1,0 +1,39 @@
+{
+  "name": "ffxivpocketguide",
+  "version": "2.0.0",
+  "description": "A mobile-friendly content guide for Final Fantasy XIV.",
+  "homepage": "https://ffxiv.guide",
+  "main": ".eleventy.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FFXIVPocketGuide/FFXIVPocketGuide"
+  },
+  "scripts": {
+    "start": "eleventy --serve",
+    "debug": "set DEBUG=* & eleventy",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Josh Beveridge",
+    "url": "https://joshbeveridge.ca"
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@hydrogen-css/hydrogen": "^2.0.3"
+  },
+  "browserslist": [
+    "last 1 version and not dead"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "bracketSpacing": true,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleAttributePerLine": true,
+    "printWidth": 100
+  }
+}

@@ -1,0 +1,6 @@
+node_modules
+README.md
+hydrogen.config.json
+package.json
+package-lock.json
+temp

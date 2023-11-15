@@ -1,1 +1,0 @@
-const GuidePreview = createClass();
