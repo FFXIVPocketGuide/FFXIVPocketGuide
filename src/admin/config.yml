@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: FFXIVPocketGuide/FFXIVPocketGuide
   branch: rebuild
 
 publish_mode: editorial_workflow
