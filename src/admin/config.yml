@@ -315,7 +315,7 @@ collections:
     label: 'Endwalker'
     delete: false
     label_singular: 'Endwalker Guide'
-    folder: '_posts/ew'
+    folder: 'src/guides/ew'
     create: true
     editor:
       preview: false
@@ -328,7 +328,7 @@ collections:
     label: 'Shadowbringers'
     delete: false
     label_singular: 'Shadowbringers Guide'
-    folder: '_posts/shb'
+    folder: 'src/guides/shb'
     create: true
     editor:
       preview: false
@@ -341,7 +341,7 @@ collections:
     label: 'Stormblood'
     delete: false
     label_singular: 'Stormblood Guide'
-    folder: '_posts/sb'
+    folder: 'src/guides/sb'
     create: true
     editor:
       preview: false
@@ -354,7 +354,7 @@ collections:
     label: 'Heavensward'
     delete: false
     label_singular: 'Heavensward Guide'
-    folder: '_posts/hw'
+    folder: 'src/guides/hw'
     create: true
     editor:
       preview: false
@@ -367,7 +367,7 @@ collections:
     label: 'A Realm Reborn'
     delete: false
     label_singular: 'A Realm Reborn Guide'
-    folder: '_posts/arr'
+    folder: 'src/guides/arr'
     create: true
     editor:
       preview: false
