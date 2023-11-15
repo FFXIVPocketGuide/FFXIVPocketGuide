@@ -55,6 +55,7 @@ module.exports = function (eleventyConfig) {
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
     './src/static/scripts/app.js': './static/scripts/app.js',
+    './src/static/css/app.css': './static/css/app.css',
     './src/static/robots.txt': './robots.txt',
     './src/static/CNAME': './CNAME',
     './src/static/assets': './static/assets',
