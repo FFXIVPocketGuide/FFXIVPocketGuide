@@ -20,4 +20,8 @@ search-terms:
   - golbez
   - azdaja
 video-url: https://www.youtube.com/watch?v=f0h9cB0AOqg
+bosses:
+  - phases:
+      - {}
+    name: Golbez
 ---
