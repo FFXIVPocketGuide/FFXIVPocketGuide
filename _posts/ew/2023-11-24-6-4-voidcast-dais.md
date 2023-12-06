@@ -13,6 +13,8 @@ order: 90615
 description: Read our guide for the FFXIV [dungeon, trial, raid] [instance name]
   ([difficulty]), where you'll face off against [boss 1], [boss 2], and [boss
   3].
+hero-image: /assets/img/voidcast-dais-1500x300.jpg
+list-image: /assets/img/voidcast-dais-500x120.jpg
 search-terms:
   - endwalker
   - voidcast
