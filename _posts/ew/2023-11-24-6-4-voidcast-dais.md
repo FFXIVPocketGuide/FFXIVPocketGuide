@@ -26,8 +26,9 @@ instance-mechanics: []
 bosses:
   - phases:
       - notes:
-          - "Crescent Balade (later Azdaja's Shadow): Bow turns to random player
-            for massive frontal cleave on half the room. Move behind the boss."
+          - "Crescent Balade (later Azdaja's Shadow): Boss turns to random
+            player for massive frontal cleave on half the room. Move behind the
+            boss."
         attacks:
           - type: Regular
             name: Terrastorm
@@ -55,7 +56,7 @@ bosses:
               - AoE (Area)
             notes:
               - 2 walls of ice with spikes on one side. These quadrants will be
-                targeted for AoE. Move behind the walls
+                targeted for AoE. Move behind the spikes.
           - type: Regular
             name: Void Meteors
             roles:
@@ -63,7 +64,7 @@ bosses:
             tags:
               - Tankbuster
             notes:
-              - targets both tanks.
+              - Targets both tanks.
           - type: Regular
             name: Lingering spark
             roles:
@@ -147,7 +148,7 @@ bosses:
               - AoE (Circle)
             notes:
               - 2 large rocks appear above the arena and will create large AoE
-                attacks with short telegraph. Move away.
+                attacks with short telegraphs. Move away.
           - type: Regular
             name: Gale Sphere
             roles:
@@ -164,8 +165,8 @@ bosses:
             tags:
               - AoE (Area)
             notes:
-              - Circle AoE will move long each side before coming back in the
-                centre. Move to centre first then to the side.
+              - Circle AoEs will move long each side before coming back in the
+                centre. Move to centre first, then to the sides.
           - type: Regular
             name: Eventide Fall
             roles:
