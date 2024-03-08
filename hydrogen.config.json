@@ -7,7 +7,7 @@
     "settings": "https://hydrogen.design/en/docs/configuration/"
   },
   "input": [
-    "src/_includes"
+    "src"
   ],
   "output": "_site/static/css",
   "modes": {
@@ -120,11 +120,25 @@
         {
           "key": "black",
           "default": {
-            "color": "#212130",
+            "color": "rgb(22, 22, 30)",
             "modifiers": []
           },
           "dark": {
             "color": "rgba(255, 255, 255, 1)",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "foreground",
+          "default": {
+            "color": "rgba(255, 255, 255, 1)",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "background",
+          "default": {
+            "color": "#eaeaea",
             "modifiers": []
           }
         },
