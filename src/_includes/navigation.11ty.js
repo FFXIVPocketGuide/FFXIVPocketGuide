@@ -9,14 +9,14 @@ function render(data, location) {
   return String.raw`
     <nav 
       id="nav"
-      data-h2-background="base:all(linear-gradient(to right, black.9, black.9), url('/static/assets/nav.jpg'))"
-      data-h2-background-position="base(center, center)"
-      data-h2-background-size="base(cover, cover)"
+      data-h2-background-position="base(center)"
+      data-h2-background-size="base(cover)"
       data-h2-border-right="l-tablet(1px solid black.2)"
       data-h2-color="base:all(white)"
       data-h2-height="base(100vh)"
       data-h2-location="base(0px, auto, auto, auto)"
-      data-h2-position="base(sticky)">
+      data-h2-position="base(sticky)"
+      style="background-image: linear-gradient(to right, rgba(22, 22, 30, .9), rgba(22, 22, 30, .9)), url('/static/assets/nav.jpg');">
       <a
         href="/"
         title="Return to the homepage.">
