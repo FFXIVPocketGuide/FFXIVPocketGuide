@@ -11,7 +11,7 @@
   ],
   "output": "_site/static/css",
   "modes": {
-    "method": "preference",
+    "method": "toggle",
     "dark": {
       "auto_apply_styles": true,
       "swap_default_modifiers": true
@@ -131,28 +131,29 @@
         {
           "key": "foreground",
           "default": {
-            "color": "rgba(255, 255, 255, 1)",
+            "color": "white",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#303142",
             "modifiers": []
           }
         },
         {
           "key": "background",
           "default": {
-            "color": "#eaeaea",
+            "color": "#f4f8ff",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#212130",
             "modifiers": []
           }
         },
         {
           "key": "primary",
           "default": {
-            "color": "#9D5CFF",
-            "modifiers": []
-          }
-        },
-        {
-          "key": "secondary",
-          "default": {
-            "color": "#53FFE0",
+            "color": "#FF575C",
             "modifiers": []
           }
         },

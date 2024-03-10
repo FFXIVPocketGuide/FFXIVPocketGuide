@@ -1,0 +1,11 @@
+{
+  "title": "Holminster Switch",
+  "type": "dungeon",
+  "difficulty": "normal",
+  "patch": "5.0",
+  "plvl": "71",
+  "ilvl": "370",
+  "order": "71370",
+  "img": "holminster-switch.png",
+  "bosses": []
+}

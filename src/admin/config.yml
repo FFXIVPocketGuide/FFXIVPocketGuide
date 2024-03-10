@@ -6,7 +6,7 @@ backend:
 publish_mode: editorial_workflow
 show_preview_links: true
 
-media_folder: 'static/assets/guides/images'
+media_folder: 'static/assets/guides'
 
 mechanic-fields: &mechanic-fields
   label: 'Instance-wide Mechanics'
@@ -209,52 +209,17 @@ boss-fields: &boss-fields
                     - *attack-images
 
 guide-fields: &guide-fields
-  - label: 'Guide Layout'
-    name: 'layout'
-    widget: 'hidden'
-    required: true
-    default: 'new-guide'
-  - label: 'Content Management System'
-    name: 'cms'
-    widget: 'hidden'
-    required: true
-    default: 'netlify-cms'
-  - label: 'Type of Instance'
-    name: 'guide-type'
+  - label: 'Instance type'
+    name: 'type'
     widget: 'select'
     options:
-      - 'Dungeon'
-      - 'Trial'
-      - 'Raid'
+      - 'dungeon'
+      - 'trial'
+      - 'raid'
     required: true
-  - label: 'Instance Title'
+  - label: 'Instance title'
     name: 'title'
     widget: 'string'
-    required: true
-  - label: 'Page URL'
-    name: 'slug'
-    widget: 'string'
-    required: true
-    hint: "Used as the page's identifier in the resulting URL. We suggest simply a lowercase version of the Instance Title, with spaces replaced by dashes. e.g. Akadaemia Anyder > akadaemia-anyder"
-  - label: 'Expansion'
-    name: 'categories'
-    widget: 'select'
-    options:
-      - label: 'Endwalker'
-        value: 'ew'
-      - label: 'Shadowbringers'
-        value: 'shb'
-      - label: 'Stormblood'
-        value: 'sb'
-      - label: 'Heavensward'
-        value: 'hw'
-      - label: 'A Realm Reborn'
-        value: 'arr'
-    required: true
-  - label: 'Patch'
-    name: 'patch'
-    widget: 'number'
-    value_type: 'float'
     required: true
   - label: 'Difficulty'
     name: 'difficulty'
@@ -267,111 +232,141 @@ guide-fields: &guide-fields
       - 'Ultimate'
       - 'Unreal'
     required: true
-  - label: 'Minimum Player Level'
-    name: 'player-level'
-    widget: 'number'
-    value_type: 'int'
+  - label: 'Expansion'
+    name: 'categories'
+    widget: 'select'
+    options:
+      - label: 'Endwalker'
+        value: 'endwalker'
+      - label: 'Shadowbringers'
+        value: 'shadowbringers'
+      - label: 'Stormblood'
+        value: 'stormblood'
+      - label: 'Heavensward'
+        value: 'heavensward'
+      - label: 'A Realm Reborn'
+        value: 'arealmreborn'
     required: true
-  - label: 'Minimum Item Level'
-    name: 'item-level'
+  - label: 'Patch'
+    name: 'patch'
     widget: 'number'
-    value_type: 'int'
+    value_type: 'string'
+    hint: 'For expansion releases, please ensure to always include the decimal and 0. e.g. 5.0'
     required: true
-  - label: 'Guide Order'
+  - label: 'Minimum player level'
+    name: 'plvl'
+    widget: 'number'
+    value_type: 'string'
+    required: true
+  - label: 'Minimum item level'
+    name: 'ilvl'
+    widget: 'number'
+    value_type: 'string'
+    required: true
+  - label: 'Guide order'
     name: 'order'
     widget: 'number'
-    value_type: 'int'
+    value_type: 'string'
     hint: 'This number determines where in the expansion the guide will fall on the homepage. Please combine the player level and item level together for best results. (e.g. 80 + 255 = 80255 )'
-  - label: 'Page Description'
-    name: 'description'
-    widget: 'string'
-    default: "Read our guide for the FFXIV [dungeon, trial, raid] [instance name] ([difficulty]), where you'll face off against [boss 1], [boss 2], and [boss 3]."
-    required: true
-  - label: 'Main Banner Image'
-    name: 'hero-image'
+  - label: 'Image'
+    name: 'img'
     widget: 'image'
     hint: "1500px by 300px. This image will be displayed in the guide's header background."
     allowMultiple: false
-    required: false
-  - label: 'Thumbnail Image'
-    name: 'list-image'
-    widget: 'image'
-    allowMultiple: false
-    required: false
-    hint: '500px by 120px. This image will be displayed on the list of guides.'
-  - label: 'Search Terms'
+    required: true
+  - label: 'Search terms'
     name: 'search-terms'
     widget: 'list'
     required: false
-    hint: 'Comma separate a list of terms, nicknames, etc. that are relevant to this instance.'
-  - label: 'Link to Video Guide'
-    name: 'video-url'
+    hint: "Comma separate a list of terms, nicknames, etc. that are relevant to this instance. Note that the name, expansion, difficulty, and boss names are all added automatically by the system, so there's no need to include them here."
+  - label: 'Video guide'
+    name: 'video'
     widget: 'string'
     required: false
+    hint: 'Generally speaking this is a link to the relevant MTQCapture video guide.'
   - *mechanic-fields
   - *boss-fields
 
 collections:
-  - name: 'ew'
+  - name: 'dawntrail'
+    label: 'Dawntrail'
+    delete: false
+    extension: json
+    label_singular: 'Dawntrail Guide'
+    folder: 'src/_data/guides/7-dawntrail'
+    create: true
+    editor:
+      preview: true
+    slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
+    summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
+    filter: { field: 'cms', value: 'netlify-cms' }
+    fields: *guide-fields
+
+  - name: 'endwalker'
     label: 'Endwalker'
     delete: false
+    extension: json
     label_singular: 'Endwalker Guide'
-    folder: 'src/guides/ew'
+    folder: 'src/_data/guides/6-endwalker'
     create: true
     editor:
-      preview: false
+      preview: true
     slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
     summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
     filter: { field: 'cms', value: 'netlify-cms' }
     fields: *guide-fields
 
-  - name: 'shb'
+  - name: 'shadowbringers'
     label: 'Shadowbringers'
     delete: false
+    extension: json
     label_singular: 'Shadowbringers Guide'
-    folder: 'src/guides/shb'
+    folder: 'src/_data/guides/5-shadowbringers'
     create: true
     editor:
-      preview: false
+      preview: true
     slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
     summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
     filter: { field: 'cms', value: 'netlify-cms' }
     fields: *guide-fields
 
-  - name: 'sb'
+  - name: 'stormblood'
     label: 'Stormblood'
     delete: false
+    extension: json
     label_singular: 'Stormblood Guide'
-    folder: 'src/guides/sb'
+    folder: 'src/_data/guides/4-stormblood'
     create: true
     editor:
-      preview: false
+      preview: true
     slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
     summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
     filter: { field: 'cms', value: 'netlify-cms' }
     fields: *guide-fields
 
-  - name: 'hw'
+  - name: 'heavensward'
     label: 'Heavensward'
     delete: false
+    extension: json
     label_singular: 'Heavensward Guide'
-    folder: 'src/guides/hw'
+    folder: 'src/_data/guides/3-heavensward'
     create: true
     editor:
-      preview: false
+      preview: true
     slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
     summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
     filter: { field: 'cms', value: 'netlify-cms' }
     fields: *guide-fields
 
-  - name: 'arr'
+  - name: 'a-realm-reborn'
     label: 'A Realm Reborn'
     delete: false
+    extension: json
     label_singular: 'A Realm Reborn Guide'
-    folder: 'src/guides/arr'
+    folder: 'src/_data/guides/2-a-realm-reborn'
     create: true
     editor:
-      preview: false
+      preview: true
     slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
     summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
     filter: { field: 'cms', value: 'netlify-cms' }

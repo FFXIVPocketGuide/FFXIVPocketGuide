@@ -13,7 +13,7 @@ let data = {
     data: 'guide_data',
     size: 1,
   },
-  guide_data: guide_data.stormblood,
+  guide_data: guide_data.dawntrail,
   permalink: function (data) {
     return data.pagination.items[0].slug;
   },

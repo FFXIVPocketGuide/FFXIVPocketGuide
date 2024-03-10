@@ -1,0 +1,28 @@
+{
+  "type": "dungeon",
+  "title": "Brayflox's Longstop",
+  "difficulty": "normal",
+  "expansion": "arealmreborn",
+  "patch": "2.0",
+  "plvl": "32",
+  "ilvl": "000",
+  "order": "32000",
+  "img": "brayfloxs-longstop.jpg",
+  "search-terms": [],
+  "video": "https://youtu.be/1n8mJ7GeXQ0",
+  "orchestrion": "",
+  "bosses": [
+    {
+      "name": "Great Yellow Pelican"
+    },
+    {
+      "name": "Inferno Drake"
+    },
+    {
+      "name": "Hellbender"
+    },
+    {
+      "name": "Aiatar"
+    }
+  ]
+}

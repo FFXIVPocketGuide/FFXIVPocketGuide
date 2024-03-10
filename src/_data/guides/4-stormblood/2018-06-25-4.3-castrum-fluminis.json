@@ -1,0 +1,19 @@
+{
+  "type": "trial",
+  "title": "Castrum Fluminis",
+  "difficulty": "hard",
+  "expansion": "stormblood",
+  "patch": "4.3",
+  "plvl": "70",
+  "ilvl": "335",
+  "order": "70335",
+  "img": "castrum-fluminis.jpg",
+  "search-terms": [],
+  "video": "https://youtu.be/v3WrS6tGy8I",
+  "orchestrion": "",
+  "bosses": [
+    {
+      "name": "Tsukuyomi"
+    }
+  ]
+}

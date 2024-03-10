@@ -5,6 +5,7 @@
 const expansions = require('./_data/expansions');
 
 // Local component imports
+const Base = require('./_layouts/base.11ty');
 const GuideBlock = require('./_includes/guide-block.11ty');
 
 // Script ==========================================================================================
@@ -17,133 +18,96 @@ function render(data) {
   for (var key in expansions) {
     if (guide_data[key].length > 0) {
       let expac_guides = String.raw`
-      <h2 
-        id="${key}"
-        data-h2-font-size="base(h5)"
-        data-h2-margin="base(x2, 0, x.5, 0)">${expansions[key].name}</h2>
-      <ul
-        data-h2-display="base(grid)"
-        data-h2-gap="base(x.25)"
-        data-h2-grid-template-columns="base(1fr) p-tablet(1fr 1fr) laptop(1fr 1fr 1fr)"
-        data-h2-list-style="base(none)"
-        data-h2-padding="base(0)">`;
+      <details 
+        open 
+        data-h2-content="base:children[summary::marker]('+') base:selectors[[open]]:children[summary::marker]('−')"
+        data-h2-margin="base(x2, 0, 0, 0)">
+        <summary
+          data-h2-cursor="base(pointer)"
+          data-h2-margin="base(0, 0, x.5, 0)">
+          <h2 
+            id="${key}"
+            data-h2-display="base(inline-block)"
+            data-h2-font-family="base('Cinzel', sans-serif)"
+            data-h2-font-size="base(h4)"
+            data-h2-font-weight="base(500)"
+            data-h2-margin="base(0)"
+            data-h2-vertical-align="base(middle)">${expansions[key].name}</h2>  
+        </summary>
+        <!--  -->
+        <ul
+          data-h2-border-left="base(1px solid black.2)"
+          data-h2-display="base(grid)"
+          data-h2-gap="base(x.25)"
+          data-h2-grid-template-columns="base(1fr) p-tablet(1fr 1fr) laptop(1fr 1fr 1fr)"
+          data-h2-list-style="base(none)"
+          data-h2-margin="base(0, 0, 0, x.15)"
+          data-h2-padding="base(0, 0, 0, x.65)">`;
       guide_data[key].forEach((guide) => {
         expac_guides = expac_guides + String.raw`<li>${GuideBlock.render(data, guide)}</li>`;
       });
-      guide_markup = guide_markup + expac_guides + String.raw`</li></ul>`;
+      guide_markup = guide_markup + expac_guides + String.raw`</li></ul></details>`;
     }
   }
-  return String.raw`
-    <!DOCTYPE html>
-    <html data-h2>
-      <head>
-        <title>The FFXIV Pocket Guide - Discover mobile friendly written guides to your favourite dungeons, trials, and raids.</title>
-        <link 
-          rel="stylesheet" 
-          href="static/css/hydrogen.css" />
-      </head>
-      <body 
-        data-h2-background="base(background)"
-        data-h2-font-family="base(sans)">
-        <a 
-          href="#nav"
-          data-h2-visually-hidden="base(invisible) base:focus-visible(visible)">Skip to navigation</a>
-        <a 
-          href="#content"
-          data-h2-visually-hidden="base(invisible) base:focus-visible(visible)">Skip to content</a>
-        <div
-          data-h2-display="base(grid)"
-          data-h2-grid-template-columns="base(1fr) l-tablet(1fr 5fr)">
-          <nav 
-            id="nav"
-            data-h2-background="base(linear-gradient(to right, black.9, black.9), url('/static/assets/nav.jpg'))"
-            data-h2-background-position="base(center)"
-            data-h2-background-size="base(cover)"
-            data-h2-color="base(white)"
-            data-h2-height="base(100vh)">
-            <img 
-              src="/static/assets/icon.svg" 
-              alt="The FFXIV meteor icon."
-              data-h2-display="base(block)"
-              data-h2-margin="base(x3, auto, 0, auto)"
-              data-h2-max-width="base(x5)"
-              data-h2-width="base(100%)" />
-            <ul
-              data-h2-list-style="base(none)"
-              data-h2-margin="base:children[>li](x1, 0)"
-              data-h2-padding="base(x2, x2, x1, x2)"
-              data-h2-text-align="base(center)">
-              <li>
-                <a 
-                  href=""
-                  title="">Home</a>
-              </li>
-              <li
-                data-h2-border-top="base(solid 1px white.2)"
-                data-h2-padding="base(x1, 0, 0, 0)">
-                <a 
-                  href=""
-                  title="">Dungeons</a>
-              </li>
-              <li>
-                <a 
-                  href=""
-                  title="">Trials</a>
-              </li>
-              <li>
-                <a 
-                  href=""
-                  title="">Raids</a>
-              </li>
-              <li 
-                data-h2-border-top="base(solid 1px white.2)"
-                data-h2-padding="base(x1, 0, 0, 0)">
-                <a 
-                  href=""
-                  title="">About us</a>
-              </li>
-              <li>
-                <a 
-                  href=""
-                  title="">Contribute</a>
-              </li>
-              <li>
-                <a 
-                  href=""
-                  title="">Github</a>
-              </li>
-            </ul>
-          </nav>
-          <div>
-            <div data-h2-container="base(center, large, x3)">
-              <div
-                data-h2-background="base(black)"
-                data-h2-color="base(white)"
-                data-h2-padding="base(x3, x1)"
-                data-h2-radius="base(0, 0, 10px, 10px)"
-                data-h2-text-align="base(center)">
-                <h1 
-                  data-h2-font-weight="base(700)">The FFXIV Pocket Guide</h1>
-              </div>
-              <label
-                data-h2-display="base(block)"
-                data-h2-margin="base(x2, 0)">
-                <span 
-                  data-h2-display="base(block)">Search for a guide...<span>
-                <input 
-                  type="text"
-                  data-h2-display="base(block)"
-                  data-h2-width="base(100%)"/>
-              </label>
-              <main id="content">
-                ${guide_markup}
-              </main>
-            </div>
-          </div>
-        </div>
-      </body>
-    </html>
+  let children = String.raw`
+    <div>
+      <label
+        data-h2-display="base(block)"
+        data-h2-margin="base(-x1, 0, x.5, 0)">
+        <span 
+          data-h2-display="base(block)"
+          data-h2-font-size="base(caption)">Find a guide</span>
+        <input 
+          type="text"
+          placeholder="CTRL+/"
+          data-h2-border="base(1px solid black.3)"
+          data-h2-display="base(block)"
+          data-h2-padding="base(x.5)"
+          data-h2-radius="base(5px)"
+          data-h2-width="base(100%)"/>
+      </label>
+      <ul
+        data-h2-background="base:children[button](primary.2) base:children[button:hover](primary.4) base:children[button.active](primary.8)"
+        data-h2-border="base:children[button](1px solid primary.dark) base:children[button.active](1px solid primary.darker)"
+        data-h2-color="base:children[button](primary.dark) base:children[button.active](primary.darker)"
+        data-h2-cursor="base:children[button](pointer)"
+        data-h2-display="base:children[>li](inline)"
+        data-h2-font-size="base:children[button](caption)"
+        data-h2-list-style="base(none)"
+        data-h2-margin="base(0, 0, x2, 0)"
+        data-h2-padding="base(0) base:children[button](x.15, x.5)"
+        data-h2-radius="base:children[button](100px)"
+        data-h2-transition="base:children[button](all .2s ease)">
+        <li>
+          <button class="active">All guides</button>
+        </li>
+        <li>
+          <span
+            data-h2-color="base(black.3)"
+            data-h2-display="base(inline-block)"
+            data-h2-margin="base(0, x.25)">•</span>
+        </li>
+        <li>
+          <button>Dungeons</button>
+        </li>
+        <li>
+          <button>Trials</button>
+        </li>
+        <li>
+          <button>Raids</button>
+        </li>
+      </ul>
+    </div>
+    ${guide_markup}
   `;
+  return Base.render(
+    data,
+    'Home',
+    'The FFXIV Pocket Guide',
+    'Mobile-friendly guides for instanced content in Final Fantasy XIV.',
+    'home',
+    children
+  );
 }
 
 module.exports = {

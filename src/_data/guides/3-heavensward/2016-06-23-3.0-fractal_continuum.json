@@ -1,0 +1,25 @@
+{
+  "type": "dungeon",
+  "title": "The Fractal Continuum",
+  "difficulty": "normal",
+  "expansion": "heavensward",
+  "patch": "3.0",
+  "plvl": "60",
+  "ilvl": "145",
+  "order": "60145",
+  "img": "fractal-continuum.jpg",
+  "search-terms": [],
+  "video": "https://youtu.be/65IIbIpaeGE",
+  "orchestrion": "",
+  "bosses": [
+    {
+      "name": "Phantom Ray"
+    },
+    {
+      "name": "Minotaur"
+    },
+    {
+      "name": "The Curator"
+    }
+  ]
+}

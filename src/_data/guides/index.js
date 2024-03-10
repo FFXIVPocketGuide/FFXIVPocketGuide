@@ -20,12 +20,25 @@ try {
     let data = [];
     // Grab the files found in the expac's directory
     let files = glob.sync(
-      path.resolve(process.cwd(), `./src/_data/guides/${expansions[key].path}/**/*.js`)
+      path.resolve(process.cwd(), `./src/_data/guides/${expansions[key].path}/**/*.json`)
     );
     // Loop through the files, get their individual data, and store it
     files.forEach((file) => {
       let guide = require(file);
-      guide.slug = `/guides/${key}/${slugify(guide.name, { lower: true })}/`;
+      guide.slug = `/guides/${key}/${slugify(guide.title, { lower: true })}/`;
+      let bosses = String.raw``;
+      guide.bosses.forEach((boss, index, array) => {
+        if (index === array.length - 1 && array.length > 1) {
+          bosses = bosses + String.raw`and ${boss.name}`;
+        } else if (array.length === 1) {
+          bosses = bosses + String.raw`${boss.name}`;
+        } else {
+          bosses = bosses + String.raw`${boss.name}, `;
+        }
+      });
+      guide.description = String.raw`Read the guide for the FFXIV ${guide.type} ${guide.title} (${
+        guide.difficulty[0].toUpperCase() + guide.difficulty.substring(1)
+      }), where you'll face off against ${bosses}.`;
       data = data.concat(guide);
     });
     // Sort the expac's guide data by their order value and then add the expac to the guide data object

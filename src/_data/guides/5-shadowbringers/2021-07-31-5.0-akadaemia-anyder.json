@@ -1,0 +1,24 @@
+{
+  "type": "dungeon",
+  "title": "Akadaemia Anyder",
+  "difficulty": "normal",
+  "expansion": "shadowbringers",
+  "patch": "5.0",
+  "plvl": "80",
+  "ilvl": "410",
+  "order": "80410",
+  "img": "akadaemia-anyder.jpg",
+  "search-terms": [],
+  "video": "https://youtu.be/I3GrCd_jNlA",
+  "bosses": [
+    {
+      "name": "Cladoselache and Dodiolus"
+    },
+    {
+      "name": "Marquis Morbol"
+    },
+    {
+      "name": "Guardian Force: Quetzalcoatl"
+    }
+  ]
+}
