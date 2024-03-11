@@ -1,3 +1,5 @@
+# local_backend: true
+
 backend:
   name: git-gateway
   repo: FFXIVPocketGuide/FFXIVPocketGuide
@@ -9,44 +11,47 @@ show_preview_links: true
 media_folder: 'static/assets/guides'
 
 mechanic-fields: &mechanic-fields
-  label: 'Instance-wide Mechanics'
-  name: 'instance-mechanics'
+  label: 'Instance-wide mechanics'
+  label_singular: 'mechanic'
+  name: 'mechanics'
   widget: 'list'
   fields:
-    - label: 'Mechanic Name'
+    - label: 'Name'
       name: 'name'
       widget: 'string'
-    - label: 'Mechanic Steps'
+    - label: 'Steps'
+      label_singular: 'step'
       name: 'steps'
       widget: 'list'
       fields:
-        - label: 'Step Name or Number'
+        - label: 'Step name or number'
           name: 'name'
           widget: 'string'
-        - label: 'Step Notes'
+        - label: 'Notes'
+          label_singular: 'note'
           name: 'notes'
           widget: 'list'
           field:
-            label: 'Step Note'
-            name: ''
+            label: 'Note'
+            name: 'note'
             widget: 'string'
 
 attack-name: &attack-name
-  label: 'Attack Name'
+  label: 'Attack name'
   name: 'name'
   widget: 'string'
 
 attack-duty-action: &attack-duty-action
-  label: 'Duty Action'
-  name: 'duty-action'
+  label: 'Duty action'
+  name: 'action'
   widget: 'list'
   field:
-    label: 'Duty Action Name'
-    name: ''
+    label: 'Action name'
+    name: 'name'
     widget: 'string'
 
 attack-roles: &attack-roles
-  label: 'Required Party Roles'
+  label: 'Party roles'
   name: 'roles'
   widget: 'select'
   multiple: true
@@ -58,12 +63,12 @@ attack-roles: &attack-roles
     - 'Ranged DPS'
 
 attack-tags: &attack-tags
-  label: 'Attack Types'
+  label: 'Type of attack'
   name: 'tags'
   widget: 'select'
   multiple: true
   options:
-    - Active Time Maneuver
+    - Active time maneuver
     - Animation
     - AoE (Area)
     - AoE (Cone)
@@ -91,40 +96,81 @@ attack-tags: &attack-tags
     - Minion
     - Pull
     - Puddle
-    - Raid-wide Damage
+    - Raid-wide damage
     - Spread
     - Stack
     - Stun
     - Tankbuster
     - Tether
     - Ultimate
-    - Unique Mechanic
+    - Unique mechanic
 
 attack-notes: &attack-notes
-  label: 'Attack Notes'
+  label: 'Notes'
+  label_singular: 'note'
   name: 'notes'
   widget: 'list'
   field:
-    label: 'Details'
-    name: ''
+    label: 'Note'
+    name: 'note'
     widget: 'string'
 
 attack-images: &attack-images
-  label: 'Attack Images'
+  label: 'Attack images'
+  label_singular: 'image'
   name: 'images'
   widget: 'list'
   hint: 'Useful for highlighting particular choreography on the arena or specific iconographies or telegraphs.'
   fields:
-    - label: 'Image Upload'
+    - label: 'Image upload'
       name: 'image'
       widget: 'image'
-    - label: 'Image Alt Text'
+    - label: 'Image alt text'
       name: 'alt'
       widget: 'string'
       hint: 'Used to describe the image to assistive technologies.'
 
+attack: &attack
+  label: 'Boss attacks'
+  label_singular: 'attack'
+  name: 'attacks'
+  widget: 'list'
+  types:
+    - label: 'Regular attack'
+      label_singular: 'attack'
+      name: 'regular'
+      summary: '{{fields.name}}'
+      widget: 'object'
+      fields:
+        - *attack-name
+        - *attack-duty-action
+        - *attack-roles
+        - *attack-tags
+        - *attack-notes
+        - *attack-images
+    - label: 'Attack with variations'
+      name: 'variation'
+      summary: '{{fields.name}}'
+      widget: 'object'
+      fields:
+        - label: 'General name'
+          name: 'name'
+          widget: 'string'
+        - label: 'Variations of the attack'
+          label_singular: 'attack'
+          name: 'variations'
+          widget: 'list'
+          fields:
+            - *attack-name
+            - *attack-duty-action
+            - *attack-roles
+            - *attack-tags
+            - *attack-notes
+            - *attack-images
+
 boss-fields: &boss-fields
   label: 'Bosses'
+  label_singular: 'boss'
   name: 'bosses'
   widget: 'list'
   fields:
@@ -132,81 +178,44 @@ boss-fields: &boss-fields
       name: 'name'
       widget: 'string'
       required: true
+    - *attack
     - label: 'Fight Phases'
+      label_singular: 'phase'
       name: 'phases'
-      summary: 'Boss Phase'
       widget: 'list'
       fields:
-        - label: 'Phase Notes'
+        - label: 'Notes'
+          label_singular: 'note'
           name: 'notes'
           widget: 'list'
+          hint: 'These notes should be used to describe general events or things to keep an eye out for during this particular phase.'
           field:
-            label: 'Phase Note'
-            name: ''
+            label: 'Note'
+            name: 'note'
             widget: 'string'
-        - label: 'Attack Script'
-          name: 'script'
+        - label: 'Attack sequence'
+          label_singular: 'attack group'
+          name: 'sequence'
           widget: 'list'
-          hint: 'An optional list of attacks showing their order during the fight. This is particularly useful for choreographed fights.'
+          hint: 'An optional list of attacks showing their order during the fight. This is particularly useful for choreographed fights. Attack groups can be used to collect a series of attacks to indicate repeated cycles. Because most attacks happen in isolation, it will be common to only have a single attack in any given group.'
           fields:
-            - label: 'Attack Name'
-              name: 'attack'
-              widget: 'string'
-            - label: 'Is a duty action required for this attack?'
-              name: 'duty-action'
+            - label: 'Group type'
+              name: 'type'
+              widget: 'select'
+              options:
+                - { label: 'Single attack', value: 'single' }
+                - { label: 'Linear combo', value: 'combo' }
+                - { label: 'Possible options', value: 'possible' }
+              hint: 'Use "Single attack" if there is only 1 attack in the group. Use "Linear combo" when there are a series of attacks that happen in quick succession. Use "Possible options" when the boss will perform 1 of many possible attacks.'
+            - label: 'Does this group repeat?'
+              name: 'repeat'
               widget: 'boolean'
               required: false
-        - label: 'Boss Attacks'
-          name: 'attacks'
-          widget: 'list'
-          types:
-            - label: 'Regular Attack'
-              name: 'Regular'
-              summary: '{{fields.name}}'
-              widget: 'object'
-              fields:
-                - *attack-name
-                - *attack-duty-action
-                - *attack-roles
-                - *attack-tags
-                - *attack-notes
-                - *attack-images
-            - label: 'Combo Attack'
-              name: 'Combo'
-              summary: '{{fields.name}}'
-              widget: 'object'
-              fields:
-                - label: 'Combo Name'
-                  name: 'name'
-                  widget: 'string'
-                - label: 'Attacks in the Combo'
-                  name: 'combos'
-                  widget: 'list'
-                  fields:
-                    - *attack-name
-                    - *attack-duty-action
-                    - *attack-roles
-                    - *attack-tags
-                    - *attack-notes
-                    - *attack-images
-            - label: 'Attack with Variations'
-              name: 'Variation'
-              summary: '{{fields.name}}'
-              widget: 'object'
-              fields:
-                - label: 'Attack Name'
-                  name: 'name'
-                  widget: 'string'
-                - label: 'Variations of the Attack'
-                  name: 'variations'
-                  widget: 'list'
-                  fields:
-                    - *attack-name
-                    - *attack-duty-action
-                    - *attack-roles
-                    - *attack-tags
-                    - *attack-notes
-                    - *attack-images
+            - label: 'Attacks'
+              label_singular: 'attack'
+              name: 'attacks'
+              widget: 'list'
+              field: { label: 'Attack', name: 'attack', widget: 'string' }
 
 guide-fields: &guide-fields
   - label: 'Instance type'
@@ -225,49 +234,44 @@ guide-fields: &guide-fields
     name: 'difficulty'
     widget: 'select'
     options:
-      - 'Normal'
-      - 'Hard'
-      - 'Extreme'
-      - 'Savage'
-      - 'Ultimate'
-      - 'Unreal'
-    required: true
-  - label: 'Expansion'
-    name: 'categories'
-    widget: 'select'
-    options:
-      - label: 'Endwalker'
-        value: 'endwalker'
-      - label: 'Shadowbringers'
-        value: 'shadowbringers'
-      - label: 'Stormblood'
-        value: 'stormblood'
-      - label: 'Heavensward'
-        value: 'heavensward'
-      - label: 'A Realm Reborn'
-        value: 'arealmreborn'
+      - 'normal'
+      - 'hard'
+      - 'extreme'
+      - 'savage'
+      - 'ultimate'
+      - 'unreal'
     required: true
   - label: 'Patch'
     name: 'patch'
-    widget: 'number'
-    value_type: 'string'
-    hint: 'For expansion releases, please ensure to always include the decimal and 0. e.g. 5.0'
+    widget: 'object'
+    fields:
+      - label: 'Patch number'
+        name: 'number'
+        widget: 'string'
+        value_type: 'string'
+        hint: 'For expansion releases, please ensure to always include the decimal and 0. e.g. 5.0'
+      - label: 'Patch name'
+        name: 'name'
+        widget: 'string'
+        value_type: 'string'
     required: true
   - label: 'Minimum player level'
     name: 'plvl'
-    widget: 'number'
+    widget: 'string'
     value_type: 'string'
     required: true
+    hint: 'This number should always be 3 digits. Prefix double or single digit numbers with 0s. (e.g. 034)'
   - label: 'Minimum item level'
     name: 'ilvl'
-    widget: 'number'
+    widget: 'string'
     value_type: 'string'
     required: true
+    hint: 'This number should always be 3 digits. Prefix double or single digit numbers with 0s. (e.g. 034)'
   - label: 'Guide order'
     name: 'order'
-    widget: 'number'
+    widget: 'string'
     value_type: 'string'
-    hint: 'This number determines where in the expansion the guide will fall on the homepage. Please combine the player level and item level together for best results. (e.g. 80 + 255 = 80255 )'
+    hint: 'This number determines where in the expansion the guide will fall on the homepage and should always be 6 digits. Please combine the player level and item level together for best results. (e.g. 080 + 255 = 80255)'
   - label: 'Image'
     name: 'img'
     widget: 'image'
@@ -275,10 +279,15 @@ guide-fields: &guide-fields
     allowMultiple: false
     required: true
   - label: 'Search terms'
-    name: 'search-terms'
+    name: 'terms'
     widget: 'list'
     required: false
     hint: "Comma separate a list of terms, nicknames, etc. that are relevant to this instance. Note that the name, expansion, difficulty, and boss names are all added automatically by the system, so there's no need to include them here."
+  - label: 'Orchestrion roll'
+    name: 'orchestrion'
+    widget: 'string'
+    value_type: 'string'
+    required: false
   - label: 'Video guide'
     name: 'video'
     widget: 'string'
@@ -296,10 +305,9 @@ collections:
     folder: 'src/_data/guides/7-dawntrail'
     create: true
     editor:
-      preview: true
-    slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
-    summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
-    filter: { field: 'cms', value: 'netlify-cms' }
+      preview: false
+    slug: '{{slug}}-{{title}}'
+    summary: '{{title}} ({{difficulty}})'
     fields: *guide-fields
 
   - name: 'endwalker'
@@ -310,10 +318,9 @@ collections:
     folder: 'src/_data/guides/6-endwalker'
     create: true
     editor:
-      preview: true
-    slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
-    summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
-    filter: { field: 'cms', value: 'netlify-cms' }
+      preview: false
+    slug: '{{slug}}-{{title}}'
+    summary: '{{title}} ({{difficulty}})'
     fields: *guide-fields
 
   - name: 'shadowbringers'
@@ -324,10 +331,9 @@ collections:
     folder: 'src/_data/guides/5-shadowbringers'
     create: true
     editor:
-      preview: true
-    slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
-    summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
-    filter: { field: 'cms', value: 'netlify-cms' }
+      preview: false
+    slug: '{{slug}}-{{title}}'
+    summary: '{{title}} ({{difficulty}})'
     fields: *guide-fields
 
   - name: 'stormblood'
@@ -338,10 +344,9 @@ collections:
     folder: 'src/_data/guides/4-stormblood'
     create: true
     editor:
-      preview: true
-    slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
-    summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
-    filter: { field: 'cms', value: 'netlify-cms' }
+      preview: false
+    slug: '{{slug}}-{{title}}'
+    summary: '{{title}} ({{difficulty}})'
     fields: *guide-fields
 
   - name: 'heavensward'
@@ -352,10 +357,9 @@ collections:
     folder: 'src/_data/guides/3-heavensward'
     create: true
     editor:
-      preview: true
-    slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
-    summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
-    filter: { field: 'cms', value: 'netlify-cms' }
+      preview: false
+    slug: '{{slug}}-{{title}}'
+    summary: '{{title}} ({{difficulty}})'
     fields: *guide-fields
 
   - name: 'a-realm-reborn'
@@ -366,8 +370,7 @@ collections:
     folder: 'src/_data/guides/2-a-realm-reborn'
     create: true
     editor:
-      preview: true
-    slug: '{{year}}-{{month}}-{{day}}-{{patch}}-{{fields.slug}}'
-    summary: '{{title}} ({{difficulty}}) -- {{year}}/{{month}}/{{day}}'
-    filter: { field: 'cms', value: 'netlify-cms' }
+      preview: false
+    slug: '{{slug}}-{{title}}'
+    summary: '{{title}} ({{difficulty}})'
     fields: *guide-fields

@@ -1,0 +1,158 @@
+{
+  "img": "/static/assets/guides/alexander-the-soul-of-the-creator-savage.jpg",
+  "terms": [
+    "A12S"
+  ],
+  "patch": {
+    "number": "3.4",
+    "name": "Soul Surrender"
+  },
+  "order": "060245",
+  "plvl": "060",
+  "title": "Alexander: The Soul of the Creator",
+  "ilvl": "245",
+  "type": "raid",
+  "video": "https://youtu.be/v3WrS6tGy8I",
+  "bosses": [
+    {
+      "name": "Alexander Prime",
+      "attacks": [
+        {
+          "type": "regular",
+          "name": "Divine spear",
+          "roles": [
+            "Everyone"
+          ],
+          "tags": [
+            "Cleave"
+          ],
+          "notes": [
+            "This frontal cleave has high damage - face Alexander to the north, away from the raid."
+          ],
+          "images": [
+            {
+              "image": "/static/assets/guides/fractal-continuum.jpg",
+              "alt": "Test alt text"
+            }
+          ]
+        },
+        {
+          "type": "variation",
+          "name": "Sacrament",
+          "variations": [
+            {
+              "name": "Sacrament",
+              "roles": [
+                "Everyone"
+              ],
+              "tags": [
+                "AoE (Column)"
+              ],
+              "notes": [
+                "This column AoE shoots in 4 directions with Alexander at the center - safe zones are the boss' diagonals."
+              ]
+            },
+            {
+              "name": "Radiant sacrament",
+              "roles": [
+                "Everyone"
+              ],
+              "tags": [
+                "AoE (Donut)"
+              ],
+              "notes": [
+                "This attack covers the whole arena in a donut AoE - the only safe zone is inside Alexander's hitbox."
+              ]
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "notes": [
+            "Tanks should pull Alexander and face him to the north away from the raid while the rest of the group stacks behind him.",
+            "Players marked with Red Markers should move away from the group and not stack during 'Incinerating Heat'.",
+            "Healers should watch out for successive 'Mega Holy' attacks.",
+            "Players should stack to bait 'Gravitational Anomaly' puddles into one area to maximize safe space.",
+            "Alexander will cast either Sacrament or Radiant Sacrament - safe spots are in his diagonals or in his hitbox respectively."
+          ],
+          "sequence": [
+            {
+              "attacks": [
+                "Divine spear"
+              ],
+              "type": "single",
+              "repeat": true
+            },
+            {
+              "type": "single",
+              "attacks": [
+                "Punishing heat"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "single",
+              "attacks": [
+                "Divine spear"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "combo",
+              "attacks": [
+                "Blazing scourge",
+                "Incinerating heat"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "single",
+              "attacks": [
+                "Mega holy"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "single",
+              "attacks": [
+                "Mega holy"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "single",
+              "attacks": [
+                "Gravitational anomaly"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "possible",
+              "attacks": [
+                "Sacrament",
+                "Radiant sacrament"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "single",
+              "attacks": [
+                "Divine spear"
+              ],
+              "repeat": false
+            },
+            {
+              "type": "single",
+              "attacks": [
+                "Punishing heat"
+              ],
+              "repeat": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "difficulty": "savage"
+}

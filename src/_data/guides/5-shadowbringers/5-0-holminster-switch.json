@@ -2,11 +2,14 @@
   "title": "Holminster Switch",
   "type": "dungeon",
   "difficulty": "normal",
-  "patch": "5.0",
+  "patch": {
+    "number": "5.0",
+    "name": "Shadowbringers"
+  },
   "plvl": "71",
   "ilvl": "370",
   "order": "71370",
-  "img": "holminster-switch.png",
+  "img": "/static/assets/guides/holminster-switch.png",
   "terms": [],
   "bosses": []
 }

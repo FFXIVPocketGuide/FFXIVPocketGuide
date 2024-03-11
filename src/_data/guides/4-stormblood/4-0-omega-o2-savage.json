@@ -2,11 +2,14 @@
   "title": "Omega: Deltascape V2.0",
   "type": "raid",
   "difficulty": "savage",
-  "patch": "4.0",
+  "patch": {
+    "number": "4.0",
+    "name": "Stormblood"
+  },
   "plvl": "70",
   "ilvl": "315",
   "order": "70315",
-  "img": "omega-o2-savage.jpg",
+  "img": "/static/assets/guides/omega-o2-savage.jpg",
   "terms": [],
   "bosses": []
 }

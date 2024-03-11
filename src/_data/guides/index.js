@@ -33,22 +33,28 @@ try {
         guide.difficulty,
         expansions[key].name.toLowerCase(),
       ];
-      guide.bosses.forEach((boss, index, array) => {
-        if (index === array.length - 1 && array.length > 1) {
-          bosses = bosses + String.raw`and ${boss.name}`;
-          bossesArray = bossesArray.concat([boss.name.toLowerCase()]);
-        } else if (array.length === 1) {
-          bosses = bosses + String.raw`${boss.name}`;
-          bossesArray = bossesArray.concat([boss.name.toLowerCase()]);
-        } else {
-          bosses = bosses + String.raw`${boss.name}, `;
-          bossesArray = bossesArray.concat([boss.name.toLowerCase()]);
-        }
-      });
+      if (guide.bosses) {
+        guide.bosses.forEach((boss, index, array) => {
+          if (index === array.length - 1 && array.length > 1) {
+            bosses = bosses + String.raw`and ${boss.name}`;
+            bossesArray = bossesArray.concat([boss.name.toLowerCase()]);
+          } else if (array.length === 1) {
+            bosses = bosses + String.raw`${boss.name}`;
+            bossesArray = bossesArray.concat([boss.name.toLowerCase()]);
+          } else {
+            bosses = bosses + String.raw`${boss.name}, `;
+            bossesArray = bossesArray.concat([boss.name.toLowerCase()]);
+          }
+        });
+      }
       guide.description = String.raw`Read the guide for the FFXIV ${guide.type} ${guide.title} (${
         guide.difficulty[0].toUpperCase() + guide.difficulty.substring(1)
       }), where you'll face off against ${bosses}.`;
-      guide.terms = guide.terms.concat(bossesArray);
+      if (guide.terms) {
+        guide.terms = guide.terms.concat(bossesArray);
+      } else {
+        guide.terms = bossesArray;
+      }
       data = data.concat(guide);
     });
     // Sort the expac's guide data by their order value and then add the expac to the guide data object

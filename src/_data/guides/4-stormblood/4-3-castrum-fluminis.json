@@ -2,16 +2,17 @@
   "type": "trial",
   "title": "Castrum Fluminis",
   "difficulty": "hard",
-  "expansion": "stormblood",
-  "patch": "4.3",
+  "patch": {
+    "number": "4.3",
+    "name": "Under the Moonlight"
+  },
   "plvl": "70",
   "ilvl": "335",
   "order": "70335",
-  "img": "castrum-fluminis.jpg",
-  "search-terms": [],
+  "img": "/static/assets/guides/castrum-fluminis.jpg",
+  "terms": [],
   "video": "https://youtu.be/v3WrS6tGy8I",
   "orchestrion": "",
-  "terms": [],
   "bosses": [
     {
       "name": "Tsukuyomi"

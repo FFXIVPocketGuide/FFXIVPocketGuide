@@ -2,11 +2,14 @@
   "title": "The Pool of Tribute",
   "type": "trial",
   "difficulty": "hard",
-  "patch": "4.0",
+  "patch": {
+    "number": "4.0",
+    "name": "Stormblood"
+  },
   "plvl": "63",
   "ilvl": "000",
   "order": "63000",
-  "img": "pool-of-tribute-hard.jpg",
+  "img": "/static/assets/guides/pool-of-tribute-hard.jpg",
   "terms": [],
   "bosses": []
 }

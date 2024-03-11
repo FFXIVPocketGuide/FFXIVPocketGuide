@@ -2,11 +2,14 @@
   "title": "Bardam's Mettle",
   "type": "dungeon",
   "difficulty": "normal",
-  "patch": "4.0",
+  "patch": {
+    "number": "4.0",
+    "name": "Stormblood"
+  },
   "plvl": "65",
   "ilvl": "000",
   "order": "65000",
-  "img": "bardams-mettle.jpg",
+  "img": "/static/assets/guides/bardams-mettle.jpg",
   "terms": [],
   "bosses": []
 }

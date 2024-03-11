@@ -1,0 +1,154 @@
+{
+  "img": "/static/assets/guides/ala-mhigo.jpg",
+  "order": "070001",
+  "patch": {
+    "number": "4.0",
+    "name": "Stormblood"
+  },
+  "mechanics": [
+    {
+      "name": "Mechanic 01",
+      "steps": [
+        {
+          "name": "1",
+          "notes": [
+            "Note 01",
+            "Note 02"
+          ]
+        }
+      ]
+    }
+  ],
+  "plvl": "070",
+  "orchestrion": "Orchestrion 01",
+  "title": "Ala Mhigo",
+  "ilvl": "000",
+  "type": "dungeon",
+  "video": "https://youtu.be/I1Le_MATl5k",
+  "bosses": [
+    {
+      "name": "Test Boss",
+      "phases": [
+        {
+          "notes": [
+            "Phase 01, note 01",
+            "Phase 01, note 02"
+          ],
+          "sequence": [
+            {
+              "group": [
+                "Attack 01"
+              ]
+            },
+            {
+              "group": [
+                "Attack 02",
+                "Attack 03"
+              ]
+            }
+          ]
+        },
+        {
+          "notes": [
+            "Phase 02, note 01",
+            "Phase 02, note 02"
+          ],
+          "sequence": [
+            {
+              "group": [
+                "Attack 01",
+                "Attack 02"
+              ]
+            },
+            {
+              "group": [
+                "Attack 03"
+              ]
+            }
+          ]
+        }
+      ],
+      "attacks": [
+        {
+          "type": "regular",
+          "name": "Attack 01",
+          "action": [],
+          "roles": [
+            "Everyone"
+          ],
+          "tags": [
+            "AoE (Area)"
+          ],
+          "notes": [
+            "Attack 01, note 01",
+            "Attack 01, note 02"
+          ],
+          "images": [
+            {
+              "image": "/static/assets/guides/ala-mhigo.jpg",
+              "alt": "Attack 01, alt text"
+            }
+          ]
+        },
+        {
+          "type": "combo",
+          "name": "Attack 02",
+          "combos": [
+            {
+              "name": "Attack 02, combo 01",
+              "action": [
+                "New duty action"
+              ],
+              "roles": [
+                "Tank",
+                "Ranged DPS"
+              ],
+              "tags": [
+                "AoE (Area)",
+                "AoE (Column)"
+              ],
+              "notes": [
+                "Attack 02, note 01",
+                "Attack 02, note 02"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "variation",
+          "name": "Attack 03",
+          "variations": [
+            {
+              "name": "Attack 03, variation 01",
+              "roles": [
+                "Tank"
+              ],
+              "tags": [
+                "Animation"
+              ],
+              "notes": [
+                "Attack 03, note 01"
+              ]
+            },
+            {
+              "name": "Attack 03, variation 02",
+              "action": [
+                "New duty action"
+              ],
+              "roles": [
+                "Healer"
+              ],
+              "tags": [
+                "AoE (Circle)"
+              ],
+              "notes": [
+                "Attack 03, note 01"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "difficulty": "normal"
+}

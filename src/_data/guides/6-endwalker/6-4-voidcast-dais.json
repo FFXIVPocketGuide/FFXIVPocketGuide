@@ -2,16 +2,17 @@
   "type": "trial",
   "title": "The Voidcast Dais",
   "difficulty": "normal",
-  "expansion": "heavensward",
-  "patch": "6.4",
+  "patch": {
+    "number": "6.4",
+    "name": "The Dark Throne"
+  },
   "plvl": "90",
   "ilvl": "615",
   "order": "90615",
-  "img": "voidcast-dais.jpg",
-  "search-terms": [],
+  "img": "/static/assets/guides/voidcast-dais.jpg",
+  "terms": [],
   "video": "https://www.youtube.com/watch?v=f0h9cB0AOqg",
   "orchestrion": "",
-  "terms": [],
   "bosses": [
     {
       "name": "Golbez"

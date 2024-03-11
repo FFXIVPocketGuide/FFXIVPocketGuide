@@ -6,6 +6,8 @@
 var data = {};
 
 function render(data, title, heroImage, heroTitle, heroSubtitle, location, children) {
+  // Local data imports
+  const guideData = require('../_data/guides');
   // Local component imports
   const ThemeSwitcher = require('../_includes/theme-switcher.11ty');
   const Navigation = require('../_includes/navigation.11ty');
@@ -33,8 +35,10 @@ function render(data, title, heroImage, heroTitle, heroSubtitle, location, child
   }
   return String.raw`
     <!DOCTYPE html>
-    <html data-h2>
+    <html lang="en" data-h2 style="scroll-behavior: smooth;">
       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${title} - The FFXIV Pocket Guide - Discover mobile friendly written guides to your favourite dungeons, trials, and raids.</title>
         <script>
           let hydrogen = document.querySelector('html');
@@ -58,6 +62,7 @@ function render(data, title, heroImage, heroTitle, heroSubtitle, location, child
         <link 
           rel="stylesheet" 
           href="/static/css/hydrogen.css" />
+        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </head>
       <body 
         data-h2-background="base(background)"
@@ -75,7 +80,7 @@ function render(data, title, heroImage, heroTitle, heroSubtitle, location, child
             data-h2-location="base(0, auto, auto, auto)"
             data-h2-position="base(sticky)"
             data-h2-z-index="base(5)">
-            <div data-h2-container="base(center, large, x3)">
+            <div data-h2-container="base(center, large, x1) l-tablet(center, large, x3)">
               <div
                 data-h2-display="base(flex)"
                 data-h2-flex-direction="base(row)"
@@ -99,7 +104,7 @@ function render(data, title, heroImage, heroTitle, heroSubtitle, location, child
               data-h2-padding="base(x4, 0)"
               data-h2-position="base(relative)"
               style="background-image: linear-gradient(to right, rgba(22, 22, 30, .8), rgba(22, 22, 30, .8)), url('${heroImage}');">
-              <div data-h2-container="base(center, large, x3)">
+              <div data-h2-container="base(center, large, x1) l-tablet(center, large, x3)">
                 <div
                   data-h2-display="base(flex)"
                   data-h2-align-items="base(center)"
@@ -113,7 +118,7 @@ function render(data, title, heroImage, heroTitle, heroSubtitle, location, child
               </div>
             </div>
             <div 
-              data-h2-container="base(center, large, x3)"
+              data-h2-container="base(center, large, x1) l-tablet(center, large, x3)"
               data-h2-flex-grow="base(1)">
               <main 
                 id="content"

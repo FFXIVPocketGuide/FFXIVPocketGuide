@@ -43,7 +43,7 @@ function render(data, guide) {
         data-h2-transition="base(outline 0s linear, color .2s ease, box-shadow .2s ease, transform .2s ease) base:selectors[::before](all .2s ease)"
         data-h2-width="base:selectors[::before](100%)"
         data-h2-z-index="base(0) base:hover(1)"
-        style="background-image: url('/static/assets/guides/${guide.img}');">
+        style="background-image: url('${guide.img}');">
         <span
           data-h2-font-size="base(h6)"
           data-h2-position="base(relative)">${guide.title}</span>
