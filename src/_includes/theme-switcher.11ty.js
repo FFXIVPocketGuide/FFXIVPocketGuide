@@ -10,42 +10,32 @@ function render(data) {
     <div 
       id="switcher"
       data-h2-background-color="
-        base:children[button](primary.darkest.15)
-        base:dark:children[button](primary.lightest.35)
+        base:all:children[button](primary.lightest.35)
         base:all:children[button:focus-visible](focus)
 
-        base:selectors[.pref]:children[#pref](primary.darkest.8)
-        base:dark:selectors[.pref]:children[#pref](primary.lightest.8)
+        base:all:selectors[.pref]:children[#pref](primary.lightest.8)
         base:all:selectors[.pref]:children[#pref:focus-visible](focus)
 
-        base:selectors[.light]:children[#light](primary.darkest.8)
-        base:dark:selectors[.light]:children[#light](primary.lightest.8)
+        base:all:selectors[.light]:children[#light](primary.lightest.8)
         base:all:selectors[.light]:children[#light:focus-visible](focus)
 
-        base:selectors[.dark]:children[#dark](primary.darkest.8)
-        base:dark:selectors[.dark]:children[#dark](primary.lightest.8)
+        base:all:selectors[.dark]:children[#dark](primary.lightest.8)
         base:all:selectors[.dark]:children[#dark:focus-visible](focus)"
       data-h2-fill="
-        base:children[svg *](black)
-        base:dark:children[svg *](white)
+        base:all:children[svg *](white)
         base:all:children[button:focus-visible svg *](black)
 
-        base:selectors[.pref]:children[#pref svg *](primary.lightest)
-        base:dark:selectors[.pref]:children[#pref svg *](primary.darkest)
+        base:all:selectors[.pref]:children[#pref svg *](primary.darkest)
         base:all:selectors[.pref]:children[#pref:focus-visible svg *](black)
 
-        base:selectors[.light]:children[#light svg *](primary.lightest)
-        base:dark:selectors[.light]:children[#light svg *](primary.darkest)
+        base:all:selectors[.light]:children[#light svg *](primary.darkest)
         base:all:selectors[.light]:children[#light:focus-visible svg *](black)
 
-        base:selectors[.dark]:children[#dark svg *](primary.lightest)
-        base:dark:selectors[.dark]:children[#dark svg *](primary.darkest)
-        base:all:selectors[.dark]:children[#dark:focus-visible svg *](black)"
-      data-h2-position="base(absolute)"
-      data-h2-location="base(x1, x1, auto, auto)">
+        base:all:selectors[.dark]:children[#dark svg *](primary.darkest)
+        base:all:selectors[.dark]:children[#dark:focus-visible svg *](black)">
       <div 
-        data-h2-background-color="base(foreground)"
-        data-h2-border="base(1px solid primary.darkest.20)"
+        data-h2-background-color="base(transparent)"
+        data-h2-border="base:all(1px solid white.2)"
         data-h2-radius="base(50px)"
         data-h2-padding="base(x.25)"
         data-h2-position="base(relative)">

@@ -15,6 +15,7 @@ function render(data) {
   return Base.render(
     data,
     'Become a contributor',
+    '/static/assets/nav.jpg',
     'Become a contributor',
     'Find out how you can become a contributor to the site.',
     'contribute',

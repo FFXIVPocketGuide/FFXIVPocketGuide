@@ -3,9 +3,6 @@
 // Local data imports
 const guide_data = require('../_data/guides');
 
-// Local component imports
-const guide_layout = require('../_layouts/guide.11ty');
-
 // Page data =======================================================================================
 
 let data = {
@@ -22,6 +19,8 @@ let data = {
 // Script ==========================================================================================
 
 function render(data) {
+  // Local component imports
+  const guide_layout = require('../_layouts/guide.11ty');
   return guide_layout.render(data, data.pagination.items[0]);
 }
 

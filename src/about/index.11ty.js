@@ -15,6 +15,7 @@ function render(data) {
   return Base.render(
     data,
     'About the guide',
+    '/static/assets/nav.jpg',
     'About the guide',
     'Learn more about who maintains the site, how the guide is updated, and more.',
     'about',
